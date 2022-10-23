@@ -1,4 +1,4 @@
-# GLPI REST API:  Documentation
+# Dokumentasi API GLPI (Referensi Pengembang Untuk Integrasi Sistem Informasi)
 
 ## Summary
 
