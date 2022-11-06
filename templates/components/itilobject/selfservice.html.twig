@@ -198,21 +198,21 @@
                         'entities_id': entities_id,
                         'itiltemplate': itiltemplate,
                         'field_options': right_field_options,
-                        'canupdate': true,
+                        'canupdate': false,
                         'returned_itemtypes': ['User'],
                         'display_actortypes': ['observer'],
                         'display_labels': false,
                         'disable_assign_to_me': true,
                      }) }}
                   {% endset %}
-                  {# {{ fields.field(
+                  {{ fields.field(
                      'observer',
                      observer_field,
                      _n('Watcher', 'Watchers', get_plural_number()),
                      right_field_options|merge({
                         required: itiltemplate.isMandatoryField('_users_id_observer') or itiltemplate.isMandatoryField('_groups_id_observer')
                      })
-                  ) }} #}
+                  ) }}
                {% endif %}
 
                {{ fields.dropdownField(
