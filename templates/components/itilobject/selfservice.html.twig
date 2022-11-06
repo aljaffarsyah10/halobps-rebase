@@ -182,12 +182,12 @@
                      </div>
                   {% endset %}
 
-                  {{ fields.field(
+                  {# {{ fields.field(
                      'items_id',
                      associated_items,
                      _n('Associated element', 'Associated elements', get_plural_number()),
                      right_field_options
-                  ) }}
+                  ) }} #}
                {% endif %}
 
                {% if not itiltemplate.isHiddenField('_users_id_observer') or not itiltemplate.isHiddenField('_groups_id_observer') %}
@@ -198,7 +198,7 @@
                         'entities_id': entities_id,
                         'itiltemplate': itiltemplate,
                         'field_options': right_field_options,
-                        'canupdate': true,
+                        'canupdate': false,
                         'returned_itemtypes': ['User'],
                         'display_actortypes': ['observer'],
                         'display_labels': false,
