@@ -36,13 +36,17 @@
       </div> {# .page-wrapper #}
    </div> {# .page #}
 
-   <div class="floating-buttons d-inline-flex">
+   {# <div class="floating-buttons d-inline-flex">
       <span class="btn btn-secondary d-none me-1" id="backtotop">
          <i class="fas fa-arrow-up" title="{{ __('Back to top of the page') }}">
             <span class="visually-hidden">{{ __('Top of the page') }}</span>
          </i>
       </span>
+   </div> #}
+   <div class="footer d-flex flex-column">
+      <span class="text-center">GLPI - Gestionnaire Libre de Parc Informatique</span>
    </div>
+
 
    {% if config('maintenance_mode') %}
       <div id="maintenance-float">
