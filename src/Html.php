@@ -1412,24 +1412,24 @@ HTML;
         $default_asset_dashboard = defined('TU_USER') ? "" : Glpi\Dashboard\Grid::getDefaultDashboardForMenu('assets');
         $default_asset_helpdesk  = defined('TU_USER') ? "" : Glpi\Dashboard\Grid::getDefaultDashboardForMenu('helpdesk');
 
+        // $menu = [
+        //     'assets' => [
+        //         'title' => _n('Asset', 'Assets', Session::getPluralNumber()),
+        //         'types' => array_merge([
+        //             'Computer', 'Monitor', 'Software',
+        //             'NetworkEquipment', 'Peripheral', 'Printer',
+        //             'CartridgeItem', 'ConsumableItem', 'Phone',
+        //             'Rack', 'Enclosure', 'PDU', 'PassiveDCEquipment', 'Unmanaged', 'Cable'
+        //         ], $CFG_GLPI['devices_in_menu']),
+        //         'icon'    => 'ti ti-package'
+        //     ],
+        // ];
+
+        // if ($can_read_dashboard && strlen($default_asset_dashboard) > 0) {
+        //     $menu['assets']['default_dashboard'] = '/front/dashboard_assets.php';
+        // }
+
         $menu = [
-            'assets' => [
-                'title' => _n('Asset', 'Assets', Session::getPluralNumber()),
-                'types' => array_merge([
-                    'Computer', 'Monitor', 'Software',
-                    'NetworkEquipment', 'Peripheral', 'Printer',
-                    'CartridgeItem', 'ConsumableItem', 'Phone',
-                    'Rack', 'Enclosure', 'PDU', 'PassiveDCEquipment', 'Unmanaged', 'Cable'
-                ], $CFG_GLPI['devices_in_menu']),
-                'icon'    => 'ti ti-package'
-            ],
-        ];
-
-        if ($can_read_dashboard && strlen($default_asset_dashboard) > 0) {
-            $menu['assets']['default_dashboard'] = '/front/dashboard_assets.php';
-        }
-
-        $menu += [
             'helpdesk' => [
                 'title' => __('Assistance'),
                 'types' => [
