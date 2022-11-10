@@ -67,21 +67,22 @@ class Html
 
         $value = Html::entity_decode_deep($value);
 
-       // Change <email@domain> to email@domain so it is not removed by htmLawed
-       // Search for strings that is an email surrounded by `<` and `>` but that cannot be an HTML tag:
-       // - absence of quotes indicate that values is not part of an HTML attribute,
-       // - absence of > ensure that ending `>` has not been reached.
+        // Change <email@domain> to email@domain so it is not removed by htmLawed
+        // Search for strings that is an email surrounded by `<` and `>` but that cannot be an HTML tag:
+        // - absence of quotes indicate that values is not part of an HTML attribute,
+        // - absence of > ensure that ending `>` has not been reached.
         $regex = "/(<[^\"'>]+?@[^>\"']+?>)/";
         $value = preg_replace_callback($regex, function ($matches) {
             return substr($matches[1], 1, (strlen($matches[1]) - 2));
         }, $value);
 
-       // Clean MS office tags
+        // Clean MS office tags
         $value = str_replace(["<![if !supportLists]>", "<![endif]>"], '', $value);
 
         if ($striptags) {
-           // Strip ToolTips
-            $specialfilter = ['@<div[^>]*?tooltip_picture[^>]*?>.*?</div[^>]*?>@si',
+            // Strip ToolTips
+            $specialfilter = [
+                '@<div[^>]*?tooltip_picture[^>]*?>.*?</div[^>]*?>@si',
                 '@<div[^>]*?tooltip_text[^>]*?>.*?</div[^>]*?>@si',
                 '@<div[^>]*?tooltip_picture_border[^>]*?>.*?</div[^>]*?>@si',
                 '@<div[^>]*?invisible[^>]*?>.*?</div[^>]*?>@si'
@@ -92,14 +93,15 @@ class Html
             $value = preg_replace("/(&nbsp;| |\xC2\xA0)+/", " ", $value);
         }
 
-        $search = ['@<script[^>]*?>.*?</script[^>]*?>@si', // Strip out javascript
+        $search = [
+            '@<script[^>]*?>.*?</script[^>]*?>@si', // Strip out javascript
             '@<style[^>]*?>.*?</style[^>]*?>@si', // Strip out style
             '@<title[^>]*?>.*?</title[^>]*?>@si', // Strip out title
             '@<!DOCTYPE[^>]*?>@si', // Strip out !DOCTYPE
         ];
         $value = preg_replace($search, '', $value);
 
-       // Neutralize not well formatted html tags
+        // Neutralize not well formatted html tags
         $value = preg_replace("/(<)([^>]*<)/", "&lt;$2", $value);
 
         $config = Toolbox::getHtmLawedSafeConfig();
@@ -110,8 +112,8 @@ class Html
 
         $value = htmLawed($value, $config);
 
-       // Special case : remove the 'denied:' for base64 img in case the base64 have characters
-       // combinaison introduce false positive
+        // Special case : remove the 'denied:' for base64 img in case the base64 have characters
+        // combinaison introduce false positive
         foreach (['png', 'gif', 'jpg', 'jpeg'] as $imgtype) {
             $value = str_replace(
                 'src="denied:data:image/' . $imgtype . ';base64,',
@@ -301,13 +303,15 @@ class Html
         if (is_array($value)) {
             return array_map(__METHOD__, $value);
         }
-        $order   = ['\r\n',
+        $order   = [
+            '\r\n',
             '\n',
             "\\'",
             '\"',
             '\\\\'
         ];
-        $replace = ["\n",
+        $replace = [
+            "\n",
             "\n",
             "'",
             '"',
@@ -330,7 +334,7 @@ class Html
     {
         global $CFG_GLPI;
 
-       // Php 5.3 : number_format() expects parameter 1 to be double,
+        // Php 5.3 : number_format() expects parameter 1 to be double,
         if ($number == "") {
             $number = 0;
         } else if ($number == "-") { // used for not defines value (from Infocom::Amort, p.e.)
@@ -343,12 +347,12 @@ class Html
             $decimal = $forcedecimal;
         }
 
-       // Edit : clean display for mysql
+        // Edit : clean display for mysql
         if ($edit) {
             return number_format($number, $decimal, '.', '');
         }
 
-       // Display : clean display
+        // Display : clean display
         switch ($_SESSION['glpinumber_format']) {
             case 0: // French
                 return number_format($number, $decimal, '.', ' ');
@@ -389,7 +393,7 @@ class Html
         }
         $time = floor($time);
 
-       // Force display seconds if time is null
+        // Force display seconds if time is null
         if ($time < MINUTE_TIMESTAMP) {
             $display_sec = true;
         }
@@ -398,19 +402,19 @@ class Html
         if ($use_days) {
             if ($units['day'] > 0) {
                 if ($display_sec) {
-                     //TRANS: %1$s is the sign (-or empty), %2$d number of days, %3$d number of hours,
-                     //       %4$d number of minutes, %5$d number of seconds
-                     return sprintf(
-                         __('%1$s%2$d days %3$d hours %4$d minutes %5$d seconds'),
-                         $sign,
-                         $units['day'],
-                         $units['hour'],
-                         $units['minute'],
-                         $units['second']
-                     );
+                    //TRANS: %1$s is the sign (-or empty), %2$d number of days, %3$d number of hours,
+                    //       %4$d number of minutes, %5$d number of seconds
+                    return sprintf(
+                        __('%1$s%2$d days %3$d hours %4$d minutes %5$d seconds'),
+                        $sign,
+                        $units['day'],
+                        $units['hour'],
+                        $units['minute'],
+                        $units['second']
+                    );
                 }
-              //TRANS:  %1$s is the sign (-or empty), %2$d number of days, %3$d number of hours,
-              //        %4$d number of minutes
+                //TRANS:  %1$s is the sign (-or empty), %2$d number of days, %3$d number of hours,
+                //        %4$d number of minutes
                 return sprintf(
                     __('%1$s%2$d days %3$d hours %4$d minutes'),
                     $sign,
@@ -427,8 +431,8 @@ class Html
 
         if ($units['hour'] > 0) {
             if ($display_sec) {
-               //TRANS:  %1$s is the sign (-or empty), %2$d number of hours, %3$d number of minutes,
-               //        %4$d number of seconds
+                //TRANS:  %1$s is the sign (-or empty), %2$d number of hours, %3$d number of minutes,
+                //        %4$d number of seconds
                 return sprintf(
                     __('%1$s%2$d hours %3$d minutes %4$d seconds'),
                     $sign,
@@ -437,13 +441,13 @@ class Html
                     $units['second']
                 );
             }
-           //TRANS: %1$s is the sign (-or empty), %2$d number of hours, %3$d number of minutes
+            //TRANS: %1$s is the sign (-or empty), %2$d number of hours, %3$d number of minutes
             return sprintf(__('%1$s%2$d hours %3$d minutes'), $sign, $units['hour'], $units['minute']);
         }
 
         if ($units['minute'] > 0) {
             if ($display_sec) {
-               //TRANS:  %1$s is the sign (-or empty), %2$d number of minutes,  %3$d number of seconds
+                //TRANS:  %1$s is the sign (-or empty), %2$d number of minutes,  %3$d number of seconds
                 return sprintf(
                     __('%1$s%2$d minutes %3$d seconds'),
                     $sign,
@@ -451,7 +455,7 @@ class Html
                     $units['second']
                 );
             }
-           //TRANS: %1$s is the sign (-or empty), %2$d number of minutes
+            //TRANS: %1$s is the sign (-or empty), %2$d number of minutes
             return sprintf(
                 _n('%1$s%2$d minute', '%1$s%2$d minutes', $units['minute']),
                 $sign,
@@ -460,7 +464,7 @@ class Html
         }
 
         if ($display_sec) {
-           //TRANS:  %1$s is the sign (-or empty), %2$d number of seconds
+            //TRANS:  %1$s is the sign (-or empty), %2$d number of seconds
             return sprintf(
                 _n('%1$s%2$s second', '%1$s%2$s seconds', $units['second']),
                 $sign,
@@ -493,10 +497,10 @@ class Html
         }
 
         return str_pad($units['hour'], 2, '0', STR_PAD_LEFT)
-         . ':'
-         . str_pad($units['minute'], 2, '0', STR_PAD_LEFT)
-         . ':'
-         . str_pad($units['second'], 2, '0', STR_PAD_LEFT);
+            . ':'
+            . str_pad($units['minute'], 2, '0', STR_PAD_LEFT)
+            . ':'
+            . str_pad($units['second'], 2, '0', STR_PAD_LEFT);
     }
 
 
@@ -742,7 +746,7 @@ class Html
     {
         global $CFG_GLPI, $DEBUG_SQL, $SQL_TOTAL_REQUEST, $TIMER_DEBUG, $PLUGIN_HOOKS;
 
-       // Only for debug mode so not need to be translated
+        // Only for debug mode so not need to be translated
         if ($_SESSION['glpi_use_mode'] == Session::DEBUG_MODE) { // mode debug
             if ($rand === null) {
                 $rand = mt_rand();
@@ -988,7 +992,7 @@ class Html
         $out               = "";
         $multiple          = false;
         $close_string      = '';
-       // Manage multiple confirmation
+        // Manage multiple confirmation
         foreach ($string as $tab) {
             if (is_array($tab)) {
                 $multiple      = true;
@@ -998,7 +1002,7 @@ class Html
                 $close_string .= "return true;} else { return false;}";
             }
         }
-       // manage simple confirmation
+        // manage simple confirmation
         if (!$multiple) {
             $out          .= "if (window.confirm('";
             $out          .= implode('\n', $string);
@@ -1055,7 +1059,7 @@ HTML;
 
         if ($params['message'] !== null) {
             $out .= Html::scriptBlock(self::jsGetElementbyID($id . '_text') . ".html(\"" .
-                                addslashes($params['message']) . "\");");
+                addslashes($params['message']) . "\");");
         }
 
         if (
@@ -1063,7 +1067,7 @@ HTML;
             && ($params['percent'] <= 100)
         ) {
             $out .= Html::scriptBlock(self::jsGetElementbyID($id . '_text') . ".css('width', '" .
-                                $params['percent'] . "%' );");
+                $params['percent'] . "%' );");
         }
 
         if (!$params['display']) {
@@ -1209,17 +1213,17 @@ HTML;
     ) {
         global $CFG_GLPI, $PLUGIN_HOOKS;
 
-       // complete title with id if exist
+        // complete title with id if exist
         if ($add_id && isset($_GET['id']) && $_GET['id']) {
             $title = sprintf(__('%1$s - %2$s'), $title, $_GET['id']);
         }
 
-       // Send UTF8 Headers
+        // Send UTF8 Headers
         header("Content-Type: text/html; charset=UTF-8");
-       // Allow only frame from same server to prevent click-jacking
+        // Allow only frame from same server to prevent click-jacking
         header('x-frame-options:SAMEORIGIN');
 
-       // Send extra expires header
+        // Send extra expires header
         self::header_nocache();
 
         $theme = $_SESSION['glpipalette'] ?? 'auror';
@@ -1249,7 +1253,7 @@ HTML;
         $tpl_vars['css_files'][] = ['path' => 'public/lib/photoswipe.css'];
         Html::requireJs('photoswipe');
 
-       //on demand JS
+        //on demand JS
         if ($sector != 'none' || $item != 'none' || $option != '') {
             $jslibs = [];
             if (isset($CFG_GLPI['javascript'][$sector])) {
@@ -1345,23 +1349,23 @@ HTML;
             Html::requireJs('rateit');
         }
 
-       //file upload is required... almost everywhere.
+        //file upload is required... almost everywhere.
         Html::requireJs('fileupload');
 
-       // load fuzzy search everywhere
+        // load fuzzy search everywhere
         Html::requireJs('fuzzy');
 
-       // load glpi dailog everywhere
+        // load glpi dailog everywhere
         Html::requireJs('glpi_dialog');
 
-       // load log filters everywhere
+        // load log filters everywhere
         Html::requireJs('log_filters');
 
         if (isset($_SESSION['glpihighcontrast_css']) && $_SESSION['glpihighcontrast_css']) {
             $tpl_vars['high_contrast'] = true;
         }
 
-       // Add specific css for plugins
+        // Add specific css for plugins
         if (isset($PLUGIN_HOOKS[Hooks::ADD_CSS]) && count($PLUGIN_HOOKS[Hooks::ADD_CSS])) {
             foreach ($PLUGIN_HOOKS[Hooks::ADD_CSS] as $plugin => $files) {
                 if (!Plugin::isPluginActive($plugin)) {
@@ -1389,7 +1393,7 @@ HTML;
 
         $tpl_vars['js_files'][] = ['path' => 'public/lib/base.js'];
 
-       // Search
+        // Search
         $tpl_vars['js_modules'][] = ['path' => 'js/modules/Search/ResultsView.js'];
         $tpl_vars['js_modules'][] = ['path' => 'js/modules/Search/Table.js'];
 
@@ -1412,24 +1416,24 @@ HTML;
         $default_asset_dashboard = defined('TU_USER') ? "" : Glpi\Dashboard\Grid::getDefaultDashboardForMenu('assets');
         $default_asset_helpdesk  = defined('TU_USER') ? "" : Glpi\Dashboard\Grid::getDefaultDashboardForMenu('helpdesk');
 
+        // $menu = [
+        //     'assets' => [
+        //         'title' => _n('Asset', 'Assets', Session::getPluralNumber()),
+        //         'types' => array_merge([
+        //             'Computer', 'Monitor', 'Software',
+        //             'NetworkEquipment', 'Peripheral', 'Printer',
+        //             'CartridgeItem', 'ConsumableItem', 'Phone',
+        //             'Rack', 'Enclosure', 'PDU', 'PassiveDCEquipment', 'Unmanaged', 'Cable'
+        //         ], $CFG_GLPI['devices_in_menu']),
+        //         'icon'    => 'ti ti-package'
+        //     ],
+        // ];
+
+        // if ($can_read_dashboard && strlen($default_asset_dashboard) > 0) {
+        //     $menu['assets']['default_dashboard'] = '/front/dashboard_assets.php';
+        // }
+
         $menu = [
-            'assets' => [
-                'title' => _n('Asset', 'Assets', Session::getPluralNumber()),
-                'types' => array_merge([
-                    'Computer', 'Monitor', 'Software',
-                    'NetworkEquipment', 'Peripheral', 'Printer',
-                    'CartridgeItem', 'ConsumableItem', 'Phone',
-                    'Rack', 'Enclosure', 'PDU', 'PassiveDCEquipment', 'Unmanaged', 'Cable'
-                ], $CFG_GLPI['devices_in_menu']),
-                'icon'    => 'ti ti-package'
-            ],
-        ];
-
-        if ($can_read_dashboard && strlen($default_asset_dashboard) > 0) {
-            $menu['assets']['default_dashboard'] = '/front/dashboard_assets.php';
-        }
-
-        $menu += [
             'helpdesk' => [
                 'title' => __('Assistance'),
                 'types' => [
@@ -1519,7 +1523,7 @@ HTML;
         ) {
             $menu = self::getMenuInfos();
 
-           // Permit to plugins to add entry to others sector !
+            // Permit to plugins to add entry to others sector !
             if (isset($PLUGIN_HOOKS["menu_toadd"]) && count($PLUGIN_HOOKS["menu_toadd"])) {
                 foreach ($PLUGIN_HOOKS["menu_toadd"] as $plugin => $items) {
                     if (!Plugin::isPluginActive($plugin)) {
@@ -1542,8 +1546,8 @@ HTML;
                         }
                     }
                 }
-               // Move Setup menu ('config') to the last position in $menu (always last menu),
-               // in case some plugin inserted a new top level menu
+                // Move Setup menu ('config') to the last position in $menu (always last menu),
+                // in case some plugin inserted a new top level menu
                 $categories = array_keys($menu);
                 $menu += array_splice($menu, array_search('config', $categories, true), 1);
             }
@@ -1552,7 +1556,7 @@ HTML;
                 if (isset($entries['types']) && count($entries['types'])) {
                     foreach ($entries['types'] as $type) {
                         if ($data = $type::getMenuContent()) {
-                          // Multi menu entries management
+                            // Multi menu entries management
                             if (isset($data['is_multi_entries']) && $data['is_multi_entries']) {
                                 if (!isset($menu[$category]['content'])) {
                                     $menu[$category]['content'] = [];
@@ -1565,17 +1569,17 @@ HTML;
                                 $menu[$category]['title'] = $data['title'];
                             }
                             if (!isset($menu[$category]['default']) && isset($data['default'])) {
-                                   $menu[$category]['default'] = $data['default'];
+                                $menu[$category]['default'] = $data['default'];
                             }
                         }
                     }
                 }
-               // Define default link :
-                if (! isset($menu[$category]['default']) && isset($menu[$category]['content']) && count($menu[$category]['content'])) {
+                // Define default link :
+                if (!isset($menu[$category]['default']) && isset($menu[$category]['content']) && count($menu[$category]['content'])) {
                     foreach ($menu[$category]['content'] as $val) {
                         if (isset($val['page'])) {
-                             $menu[$category]['default'] = $val['page'];
-                             break;
+                            $menu[$category]['default'] = $val['page'];
+                            break;
                         }
                     }
                 }
@@ -1602,7 +1606,7 @@ HTML;
             }
 
             $_SESSION['glpimenu'] = $menu;
-           // echo 'menu load';
+            // echo 'menu load';
         } else {
             $menu = $_SESSION['glpimenu'];
         }
@@ -1820,12 +1824,12 @@ HTML;
     {
         global $CFG_GLPI, $FOOTER_LOADED, $PLUGIN_HOOKS;
 
-       // If in modal : display popFooter
+        // If in modal : display popFooter
         if (isset($_REQUEST['_in_modal']) && $_REQUEST['_in_modal']) {
             return self::popFooter();
         }
 
-       // Print foot for every page
+        // Print foot for every page
         if ($FOOTER_LOADED) {
             return;
         }
@@ -1851,7 +1855,7 @@ HTML;
             'js_files' => [],
         ];
 
-       // On demand scripts
+        // On demand scripts
         foreach ($_SESSION['glpi_js_toload'] ?? [] as $scripts) {
             if (!is_array($scripts)) {
                 $scripts = [$scripts];
@@ -1862,9 +1866,9 @@ HTML;
         }
         $_SESSION['glpi_js_toload'] = [];
 
-       // Locales for js libraries
+        // Locales for js libraries
         if (isset($_SESSION['glpilanguage'])) {
-           // select2
+            // select2
             $filename = sprintf(
                 'public/lib/select2/js/i18n/%s.js',
                 $CFG_GLPI["languages"][$_SESSION['glpilanguage']][2]
@@ -1979,7 +1983,7 @@ HTML;
     {
         global $HEADER_LOADED;
 
-       // Print a nice HTML-head for help page
+        // Print a nice HTML-head for help page
         if ($HEADER_LOADED) {
             return;
         }
@@ -1987,12 +1991,12 @@ HTML;
 
         self::includeHeader($title);
 
-       // force layout to horizontal if not connected
+        // force layout to horizontal if not connected
         if (!Session::getLoginUserID()) {
             $_SESSION['glpipage_layout'] = "horizontal";
         }
 
-       // construct menu from passed links
+        // construct menu from passed links
         $menu = [];
         foreach ($links as $label => $url) {
             $menu[] = [
@@ -2077,8 +2081,8 @@ HTML;
         if (!empty($CFG_GLPI['founded_new_version'] ?? null)) {
             $current_version     = preg_replace('/^((\d+\.?)+).*$/', '$1', GLPI_VERSION);
             $founded_new_version = version_compare($current_version, $CFG_GLPI['founded_new_version'], '<')
-            ? $CFG_GLPI['founded_new_version']
-            : null;
+                ? $CFG_GLPI['founded_new_version']
+                : null;
         }
 
         $user = Session::getLoginUserID() !== false ? User::getById(Session::getLoginUserID()) : null;
@@ -2125,15 +2129,15 @@ HTML;
             return;
         }
         $HEADER_LOADED = true;
-       // Print a nice HTML-head with no controls
+        // Print a nice HTML-head with no controls
 
-       // Detect root_doc in case of error
+        // Detect root_doc in case of error
         Config::detectRootDoc();
 
-       // Send UTF8 Headers
+        // Send UTF8 Headers
         header("Content-Type: text/html; charset=UTF-8");
 
-       // Send extra expires header if configured
+        // Send extra expires header if configured
         self::header_nocache();
 
         if (isCommandLine()) {
@@ -2177,7 +2181,7 @@ HTML;
     ) {
         global $HEADER_LOADED;
 
-       // Print a nice HTML-head for every page
+        // Print a nice HTML-head for every page
         if ($HEADER_LOADED) {
             return;
         }
@@ -2202,7 +2206,7 @@ HTML;
         }
         $FOOTER_LOADED = true;
 
-       // Print foot
+        // Print foot
         self::loadJavascript();
         echo "</body></html>";
     }
@@ -2339,7 +2343,7 @@ HTML;
                       name='_checkall_$rand' id='checkall_$rand'
                       onclick= \"if ( checkAsCheckboxes(this, '$container_id')) {return true;}\">";
 
-       // permit to shift select checkboxes
+        // permit to shift select checkboxes
         $out .= Html::scriptBlock("\$(function() {\$('#$container_id input[type=\"checkbox\"]').shiftSelectable();});");
 
         return $out;
@@ -2377,22 +2381,22 @@ HTML;
             !empty($params['tag_for_massive'])
             || !empty($params['container_id'])
         ) {
-           // Filtering on the container !
+            // Filtering on the container !
             if (!empty($params['container_id'])) {
                 $criterion = '#' . $params['container_id'] . ' ';
             } else {
                 $criterion = '';
             }
 
-           // We only want the checkbox input
+            // We only want the checkbox input
             $criterion .= 'input[type="checkbox"]';
 
-           // Only the given massive tag !
+            // Only the given massive tag !
             if (!empty($params['tag_for_massive'])) {
                 $criterion .= '[data-glpicore-cb-massive-tags~="' . $params['tag_for_massive'] . '"]';
             }
 
-           // Only enabled checkbox
+            // Only enabled checkbox
             $criterion .= ':enabled';
 
             return addslashes($criterion);
@@ -2637,7 +2641,7 @@ HTML;
     {
         global $CFG_GLPI;
 
-       /// TODO : permit to pass several itemtypes to show possible actions of all types : need to clean visibility management after
+        /// TODO : permit to pass several itemtypes to show possible actions of all types : need to clean visibility management after
 
         $p['ontop']             = true;
         $p['num_displayed']     = -1;
@@ -2689,7 +2693,7 @@ HTML;
             $p['extraparams']['item_items_id'] = $p['item']->getID();
         }
 
-       // Manage modal window
+        // Manage modal window
         if (isset($_REQUEST['_is_modal']) && $_REQUEST['_is_modal']) {
             $p['extraparams']['hidden']['_is_modal'] = 1;
         }
@@ -2714,7 +2718,7 @@ HTML;
                 }
             }
         } else {
-           // Create Modal window on top
+            // Create Modal window on top
             if (
                 $p['ontop']
                 || (isset($p['forcecreate']) && $p['forcecreate'])
@@ -2767,7 +2771,7 @@ HTML;
                 !$p['ontop']
                 || (isset($p['forcecreate']) && $p['forcecreate'])
             ) {
-               // Clean selection
+                // Clean selection
                 $_SESSION['glpimassiveactionselected'] = [];
             }
         }
@@ -2840,26 +2844,26 @@ HTML;
         }
 
         $required = $p['required'] == true
-         ? " required='required'"
-         : "";
+            ? " required='required'"
+            : "";
         $disabled = !$p['canedit']
-         ? " disabled='disabled'"
-         : "";
+            ? " disabled='disabled'"
+            : "";
 
         $calendar_btn = $p['calendar_btn']
-         ? "<a class='input-button' data-toggle>
+            ? "<a class='input-button' data-toggle>
                <i class='input-group-text far fa-calendar-alt fa-lg pointer'></i>
             </a>"
-         : "";
+            : "";
         $clear_btn = $p['clear_btn'] && $p['maybeempty'] && $p['canedit']
-         ? "<a data-clear  title='" . __s('Clear') . "'>
+            ? "<a data-clear  title='" . __s('Clear') . "'>
                <i class='input-group-text fas fa-times-circle pointer'></i>
             </a>"
-         : "";
+            : "";
 
         $mode = $p['range']
-         ? "mode: 'range',"
-         : "";
+            ? "mode: 'range',"
+            : "";
 
         $output = <<<HTML
       <div class="input-group flex-grow-1 flatpickr d-flex align-items-center" id="showdate{$p['rand']}">
@@ -2873,18 +2877,18 @@ HTML;
         $date_format = Toolbox::getDateFormat('js');
 
         $min_attr = !empty($p['min'])
-         ? "minDate: '{$p['min']}',"
-         : "";
+            ? "minDate: '{$p['min']}',"
+            : "";
         $max_attr = !empty($p['max'])
-         ? "maxDate: '{$p['max']}',"
-         : "";
+            ? "maxDate: '{$p['max']}',"
+            : "";
         $multiple_attr = $p['multiple']
-         ? "mode: 'multiple',"
-         : "";
+            ? "mode: 'multiple',"
+            : "";
 
         $value = is_array($p['value'])
-         ? json_encode($p['value'])
-         : "'{$p['value']}'";
+            ? json_encode($p['value'])
+            : "'{$p['value']}'";
 
         $locale = Locale::parseLocale($_SESSION['glpilanguage']);
         $js = <<<JS
@@ -3021,33 +3025,33 @@ JS;
         }
 
         if (!empty($p['mintime'])) {
-           // Check time in interval
+            // Check time in interval
             if (!empty($hour_value) && ($hour_value < $p['mintime'])) {
                 $hour_value = $p['mintime'];
             }
         }
 
         if (!empty($p['maxtime'])) {
-           // Check time in interval
+            // Check time in interval
             if (!empty($hour_value) && ($hour_value > $p['maxtime'])) {
                 $hour_value = $p['maxtime'];
             }
         }
 
-       // reconstruct value to be valid
+        // reconstruct value to be valid
         if (!empty($date_value)) {
             $p['value'] = $date_value . ' ' . $hour_value;
         }
 
         $required = $p['required'] == true
-         ? " required='required'"
-         : "";
+            ? " required='required'"
+            : "";
         $disabled = !$p['canedit']
-         ? " disabled='disabled'"
-         : "";
+            ? " disabled='disabled'"
+            : "";
         $clear    = $p['maybeempty'] && $p['canedit']
-         ? "<i class='input-group-text fas fa-times-circle fa-lg pointer' data-clear role='button' title='" . __s('Clear') . "'></i>"
-         : "";
+            ? "<i class='input-group-text fas fa-times-circle fa-lg pointer' data-clear role='button' title='" . __s('Clear') . "'></i>"
+            : "";
 
         $output = <<<HTML
          <div class="input-group flex-grow-1 flatpickr" id="showdate{$p['rand']}">
@@ -3061,11 +3065,11 @@ HTML;
         $date_format = Toolbox::getDateFormat('js') . " H:i:S";
 
         $min_attr = !empty($p['min'])
-         ? "minDate: '{$p['min']}',"
-         : "";
+            ? "minDate: '{$p['min']}',"
+            : "";
         $max_attr = !empty($p['max'])
-         ? "maxDate: '{$p['max']}',"
-         : "";
+            ? "maxDate: '{$p['max']}',"
+            : "";
 
         $locale = Locale::parseLocale($_SESSION['glpilanguage']);
         $js = <<<JS
@@ -3154,33 +3158,33 @@ JS;
         }
 
         if (!empty($p['mintime'])) {
-           // Check time in interval
+            // Check time in interval
             if (!empty($hour_value) && ($hour_value < $p['mintime'])) {
                 $hour_value = $p['mintime'];
             }
         }
         if (!empty($p['maxtime'])) {
-           // Check time in interval
+            // Check time in interval
             if (!empty($hour_value) && ($hour_value > $p['maxtime'])) {
                 $hour_value = $p['maxtime'];
             }
         }
-       // reconstruct value to be valid
+        // reconstruct value to be valid
         if (!empty($hour_value)) {
             $p['value'] = $hour_value;
         }
 
         $required = $p['required'] == true
-         ? " required='required'"
-         : "";
+            ? " required='required'"
+            : "";
         $disabled = !$p['canedit']
-         ? " disabled='disabled'"
-         : "";
+            ? " disabled='disabled'"
+            : "";
         $clear    = $p['maybeempty'] && $p['canedit']
-         ? "<a data-clear  title='" . __s('Clear') . "'>
+            ? "<a data-clear  title='" . __s('Clear') . "'>
                <i class='input-group-text fas fa-times-circle pointer'></i>
             </a>"
-         : "";
+            : "";
 
         $output = <<<HTML
          <div class="input-group flex-grow-1 flatpickr" id="showtime{$p['rand']}">
@@ -3249,7 +3253,7 @@ JS;
         }
         $rand   = mt_rand();
         $output = '';
-       // Validate value
+        // Validate value
         if (
             ($value != 'NOW')
             && ($value != 'TODAY')
@@ -3280,7 +3284,8 @@ JS;
         $output    .= Dropdown::showFromArray(
             "_select_$element",
             $dates,
-            ['value'   => $value,
+            [
+                'value'   => $value,
                 'display' => false,
                 'rand'    => $rand
             ]
@@ -3291,7 +3296,8 @@ JS;
         $contentid  = Html::cleanId("displaygenericdate$element$rand");
         $output    .= "<span id='$contentid'></span>";
 
-        $params     = ['value'         => '__VALUE__',
+        $params     = [
+            'value'         => '__VALUE__',
             'name'          => $element,
             'withtime'      => $p['with_time'],
             'specificvalue' => $specific_value
@@ -3458,7 +3464,7 @@ JS;
             $format_use = "Y-m-d";
         }
 
-       // Parsing relative date
+        // Parsing relative date
         switch ($val) {
             case 'NOW':
                 return date($format_use, $specifictime);
@@ -3467,7 +3473,7 @@ JS;
                 return date("Y-m-d", $specifictime);
         }
 
-       // Search on begin of month / year
+        // Search on begin of month / year
         if (strstr($val, 'BEGIN')) {
             $hour   = 0;
             $minute = 0;
@@ -3488,7 +3494,7 @@ JS;
             return date($format_use, mktime($hour, $minute, $second, $month, $day, $year));
         }
 
-       // Search on Last monday, sunday...
+        // Search on Last monday, sunday...
         if (strstr($val, 'LAST')) {
             $lastday = str_replace("LAST", "LAST ", $val);
             $hour   = 0;
@@ -3501,14 +3507,14 @@ JS;
             return date($format_use, mktime($hour, $minute, $second, $month, $day, $year));
         }
 
-       // Search on +- x days, hours...
+        // Search on +- x days, hours...
         if (preg_match("/^(-?)(\d+)(\w+)$/", $val, $matches)) {
             if (in_array($matches[3], ['YEAR', 'MONTH', 'WEEK', 'DAY', 'HOUR', 'MINUTE'])) {
                 $nb = intval($matches[2]);
                 if ($matches[1] == '-') {
                     $nb = -$nb;
                 }
-               // Use it to have a clean delay computation (MONTH / YEAR have not always the same duration)
+                // Use it to have a clean delay computation (MONTH / YEAR have not always the same duration)
                 $hour   = date("H", $specifictime);
                 $minute = date("i", $specifictime);
                 $second = 0;
@@ -3580,7 +3586,7 @@ JS;
         ];
         $options = array_merge($default_options, $options);
 
-       //append now date if needed
+        //append now date if needed
         if ($options['add_now']) {
             $now = time();
             $options['dates'][$now . "_now"] = [
@@ -3592,12 +3598,12 @@ JS;
 
         ksort($options['dates']);
 
-       // format dates
+        // format dates
         foreach ($options['dates'] as &$data) {
             $data['date'] = date("Y-m-d H:i:s", $data['timestamp']);
         }
 
-       // get Html
+        // get Html
         $out = TemplateRenderer::getInstance()->render(
             'components/dates_timeline.html.twig',
             [
@@ -3659,14 +3665,14 @@ JS;
             }
         }
 
-       // No empty content to have a clean display
+        // No empty content to have a clean display
         if (empty($content)) {
             $content = "&nbsp;";
         }
         $rand = mt_rand();
         $out  = '';
 
-       // Force link for popup
+        // Force link for popup
         if (!empty($param['popup'])) {
             $param['link'] = '#';
         }
@@ -3687,7 +3693,7 @@ JS;
                 $out .= '>';
             }
             if (isset($param['img'])) {
-               //for compatibility. Use fontawesome instead.
+                //for compatibility. Use fontawesome instead.
                 $out .= "<img id='tooltip$rand' src='" . $param['img'] . "'>";
             } else {
                 $out .= "<span id='tooltip$rand' class='fas {$param['awesome-class']} fa-fw'></span>";
@@ -3709,7 +3715,8 @@ JS;
             $out .= Ajax::createIframeModalWindow(
                 'tooltippopup' . $rand,
                 $param['popup'],
-                ['display' => false,
+                [
+                    'display' => false,
                     'width'   => 600,
                     'height'  => 300
                 ]
@@ -3793,7 +3800,7 @@ JS;
 
         $output = "<input " . $params['option'] . " type='text' id='text$name' class='form-control' name='" . $params['name'] . "'
                 value=\"" . self::cleanInputText($params['value']) . "\"" .
-                ($params['required'] ? ' required="required"' : '') . ">";
+            ($params['required'] ? ' required="required"' : '') . ">";
 
         if (!isset($options['display']) || $options['display']) {
             echo $output;
@@ -3820,7 +3827,7 @@ JS;
     {
         global $CFG_GLPI, $DB;
 
-       // load tinymce lib
+        // load tinymce lib
         Html::requireJs('tinymce');
 
         $language = $_SESSION['glpilanguage'];
@@ -3832,9 +3839,9 @@ JS;
         }
         $language_url = $CFG_GLPI['root_doc'] . '/public/lib/tinymce-i18n/langs6/' . $language . '.js';
 
-       // Apply all GLPI styles to editor content
+        // Apply all GLPI styles to editor content
         $content_css = preg_replace('/^.*href="([^"]+)".*$/', '$1', self::scss(('css/palettes/' . $_SESSION['glpipalette'] ?? 'auror') . '.scss', ['force_no_version' => true]))
-         . ',' . preg_replace('/^.*href="([^"]+)".*$/', '$1', self::css('public/lib/base.css', ['force_no_version' => true]));
+            . ',' . preg_replace('/^.*href="([^"]+)".*$/', '$1', self::css('public/lib/base.css', ['force_no_version' => true]));
 
         $cache_suffix = '?v=' . FrontEnd::getVersionCacheKey(GLPI_VERSION);
         $readonlyjs   = $readonly ? 'true' : 'false';
@@ -3874,7 +3881,7 @@ JS;
                 'language_url' => $language_url
             ]);
         }
-       // init tinymce
+        // init tinymce
         $js = <<<JS
          $(function() {
             var is_dark = $('html').css('--is-dark').trim() === 'true';
@@ -3996,7 +4003,8 @@ JS;
     {
         $values = json_encode($values);
 
-        echo Html::scriptBlock(<<<JAVASCRIPT
+        echo Html::scriptBlock(
+            <<<JAVASCRIPT
          $(
             function() {
                var editor_id = $('{$selector}').attr('id');
@@ -4054,8 +4062,9 @@ JAVASCRIPT
         $link_id = "template_documentation_" . mt_rand();
         self::addTemplateDocumentationLink($preset_target, $link_id);
 
-       // Move link before the given textarea
-        echo Html::scriptBlock(<<<JAVASCRIPT
+        // Move link before the given textarea
+        echo Html::scriptBlock(
+            <<<JAVASCRIPT
          $(
             function() {
                $('{$selector}').parent().append($('#{$link_id}'));
@@ -4081,25 +4090,25 @@ JAVASCRIPT
     public static function printAjaxPager($title, $start, $numrows, $additional_info = '', $display = true, $additional_params = '')
     {
         $list_limit = $_SESSION['glpilist_limit'];
-       // Forward is the next step forward
+        // Forward is the next step forward
         $forward = $start + $list_limit;
 
-       // This is the end, my friend
+        // This is the end, my friend
         $end = $numrows - $list_limit;
 
-       // Human readable count starts here
+        // Human readable count starts here
         $current_start = $start + 1;
 
-       // And the human is viewing from start to end
+        // And the human is viewing from start to end
         $current_end = $current_start + $list_limit - 1;
         if ($current_end > $numrows) {
             $current_end = $numrows;
         }
-       // Empty case
+        // Empty case
         if ($current_end == 0) {
             $current_start = 0;
         }
-       // Backward browsing
+        // Backward browsing
         if ($current_start - $list_limit <= 0) {
             $back = 0;
         } else {
@@ -4111,14 +4120,14 @@ JAVASCRIPT
         }
 
         $out = '';
-       // Print it
+        // Print it
         $out .= "<div><table class='tab_cadre_pager'>";
         if (!empty($title)) {
             $out .= "<tr><th colspan='6'>$title</th></tr>";
         }
         $out .= "<tr>\n";
 
-       // Back and fast backward button
+        // Back and fast backward button
         if (!$start == 0) {
             $out .= "<th class='left'><a href='javascript:reloadTab(\"start=0$additional_params\");'>
                      <i class='fa fa-step-backward' title=\"" . __s('Start') . "\"></i></a></th>";
@@ -4134,13 +4143,13 @@ JAVASCRIPT
             $out .= $additional_info;
             $out .= "</td>";
         }
-       // Print the "where am I?"
+        // Print the "where am I?"
         $out .= "<td width='50%' class='tab_bg_2 b'>";
-       //TRANS: %1$d, %2$d, %3$d are page numbers
+        //TRANS: %1$d, %2$d, %3$d are page numbers
         $out .= sprintf(__('From %1$d to %2$d of %3$d'), $current_start, $current_end, $numrows);
         $out .= "</td>\n";
 
-       // Forward and fast forward button
+        // Forward and fast forward button
         if ($forward < $numrows) {
             $out .= "<th class='right'><a href='javascript:reloadTab(\"start=$forward$additional_params\");'>
                      <i class='fa fa-chevron-right' title=\"" . __s('Next') . "\"></i></a></th>";
@@ -4148,7 +4157,7 @@ JAVASCRIPT
                      <i class='fa fa-step-forward' title=\"" . __s('End') . "\"></i></a></th>";
         }
 
-       // End pager
+        // End pager
         $out .= "</tr></table></div>";
 
         if ($display) {
@@ -4175,7 +4184,7 @@ JAVASCRIPT
 
         if (count($tab)) {
             echo "<table class='array-debug table table-striped'>";
-           // For debug / no gettext
+            // For debug / no gettext
             echo "<tr><th>KEY</th><th>=></th><th>VALUE</th></tr>";
 
             foreach ($tab as $key => $val) {
@@ -4200,9 +4209,9 @@ JAVASCRIPT
                 } else {
                     if (is_bool($val)) {
                         if ($val) {
-                              echo 'true';
+                            echo 'true';
                         } else {
-                             echo 'false';
+                            echo 'false';
                         }
                     } else {
                         if (is_object($val)) {
@@ -4252,35 +4261,35 @@ JAVASCRIPT
         global $CFG_GLPI;
 
         $list_limit = $_SESSION['glpilist_limit'];
-       // Forward is the next step forward
+        // Forward is the next step forward
         $forward = $start + $list_limit;
 
-       // This is the end, my friend
+        // This is the end, my friend
         $end = $numrows - $list_limit;
 
-       // Human readable count starts here
+        // Human readable count starts here
 
         $current_start = $start + 1;
 
-       // And the human is viewing from start to end
+        // And the human is viewing from start to end
         $current_end = $current_start + $list_limit - 1;
         if ($current_end > $numrows) {
             $current_end = $numrows;
         }
 
-       // Empty case
+        // Empty case
         if ($current_end == 0) {
             $current_start = 0;
         }
 
-       // Backward browsing
+        // Backward browsing
         if ($current_start - $list_limit <= 0) {
             $back = 0;
         } else {
             $back = $start - $list_limit;
         }
 
-       // Print it
+        // Print it
         echo "<div><table class='table align-middle'>";
         echo "<tr>";
 
@@ -4289,7 +4298,7 @@ JAVASCRIPT
         } else {
             $fulltarget = $target . "&" . $parameters;
         }
-       // Back and fast backward button
+        // Back and fast backward button
         if (!$start == 0) {
             echo "<th class='left'>";
             echo "<a href='$fulltarget&amp;start=0' class='btn btn-sm btn-ghost-secondary me-2'
@@ -4302,7 +4311,7 @@ JAVASCRIPT
             echo "</a></th>";
         }
 
-       // Print the "where am I?"
+        // Print the "where am I?"
         echo "<td width='31%' class='tab_bg_2'>";
         self::printPagerForm("$fulltarget&amp;start=$start");
         echo "</td>";
@@ -4349,11 +4358,11 @@ JAVASCRIPT
         }
 
         echo "<td width='20%' class='b'>";
-       //TRANS: %1$d, %2$d, %3$d are page numbers
+        //TRANS: %1$d, %2$d, %3$d are page numbers
         printf(__('From %1$d to %2$d of %3$d'), $current_start, $current_end, $numrows);
         echo "</td>";
 
-       // Forward and fast forward button
+        // Forward and fast forward button
         if ($forward < $numrows) {
             echo "<th class='right'>";
             echo "<a href='$fulltarget&amp;start=$forward' class='btn btn-sm btn-ghost-secondary'
@@ -4366,7 +4375,7 @@ JAVASCRIPT
             echo "</a>";
             echo "</th>";
         }
-       // End pager
+        // End pager
         echo "</tr></table></div>";
     }
 
@@ -4424,12 +4433,12 @@ JAVASCRIPT
     {
 
         if (($num > 0) && ($num < $tot)) {
-           // TRANS %1$d %2$d are numbers (displayed, total)
+            // TRANS %1$d %2$d are numbers (displayed, total)
             $cpt = "<span class='primary-bg primary-fg count'>" .
-            sprintf(__('%1$d on %2$d'), $num, $tot) . "</span>";
+                sprintf(__('%1$d on %2$d'), $num, $tot) . "</span>";
         } else {
-           // $num is 0, so means configured to display nothing
-           // or $num == $tot
+            // $num is 0, so means configured to display nothing
+            // or $num == $tot
             $cpt = "<span class='primary-bg primary-fg count'>$tot</span>";
         }
         return sprintf(__('%1$s %2$s'), $string, $cpt);
@@ -4473,9 +4482,9 @@ JAVASCRIPT
         $fields          = array_merge($button, $fields);
         $javascriptArray = [];
         foreach ($fields as $name => $value) {
-           /// TODO : trouble :  urlencode not available for array / do not pass array fields...
+            /// TODO : trouble :  urlencode not available for array / do not pass array fields...
             if (!is_array($value)) {
-               // Javascript no gettext
+                // Javascript no gettext
                 $javascriptArray[] = "'$name': '" . urlencode($value) . "'";
             }
         }
@@ -4485,7 +4494,7 @@ JAVASCRIPT
         if (!empty($btoption)) {
             $link .= ' ' . $btoption . ' ';
         }
-       // Do not force class if already defined
+        // Do not force class if already defined
         if (!strstr($btoption, 'class=')) {
             if (empty($btimage)) {
                 $link .= " class='btn btn-primary' ";
@@ -4613,7 +4622,7 @@ JAVASCRIPT
      **/
     public static function cleanId($id)
     {
-        return str_replace(['[',']'], '_', $id);
+        return str_replace(['[', ']'], '_', $id);
     }
 
 
@@ -4851,7 +4860,7 @@ JAVASCRIPT
             'selected'  => $value
         ];
 
-       // manage multiple select (with multiple values)
+        // manage multiple select (with multiple values)
         if ($params['multiple']) {
             $values = array_combine($params['values'], $params['valuesnames']);
             $options['multiple'] = 'multiple';
@@ -4859,7 +4868,7 @@ JAVASCRIPT
         } else {
             $values = [];
 
-           // simple select (multiple = no)
+            // simple select (multiple = no)
             if ($value !== null) {
                 $values = ["$value" => $valuename];
             }
@@ -4883,7 +4892,7 @@ JAVASCRIPT
         $js = "
          var params_$field_id = {";
         foreach ($params as $key => $val) {
-           // Specific boolean case
+            // Specific boolean case
             if (is_bool($val)) {
                 $js .= "$key: " . ($val ? 1 : 0) . ",\n";
             } else {
@@ -4971,7 +4980,7 @@ JAVASCRIPT
          ";
         if (!empty($on_change)) {
             $js .= " $('#$field_id').on('change', function(e) {" .
-                  stripslashes($on_change) . "});";
+                stripslashes($on_change) . "});";
         }
 
         $js .= " $('label[for=$field_id]').on('click', function(){ $('#$field_id').select2('open'); });";
@@ -4984,7 +4993,7 @@ JAVASCRIPT
 
         $output .= Html::scriptBlock('$(function() {' . $js . '});');
 
-       // display select tag
+        // display select tag
         $options['class'] = $params['class'] ?? 'form-select';
         $output .= self::select($name, $values, $options);
 
@@ -5073,7 +5082,7 @@ JAVASCRIPT
             }
             unset($options['confirm']);
         }
-       // Do not escape title if it is an image or a i tag (fontawesome)
+        // Do not escape title if it is an image or a i tag (fontawesome)
         if (!preg_match('/<i(mg)?.*/', $text)) {
             $text = Html::cleanInputText($text);
         }
@@ -5176,9 +5185,8 @@ JAVASCRIPT
             $select .= sprintf(
                 '<option value="%1$s"%2$s>%3$s</option>',
                 self::cleanInputText($key),
-                ($selected != false && (
-                $key == $selected
-                || is_array($selected) && in_array($key, $selected))
+                ($selected != false && ($key == $selected
+                    || is_array($selected) && in_array($key, $selected))
                 ) ? ' selected="selected"' : '',
                 Html::entities_deep($value)
             );
@@ -5213,7 +5221,7 @@ JAVASCRIPT
             unset($options['image']);
         }
 
-       // Set default class to submit
+        // Set default class to submit
         if (!isset($options['class'])) {
             $options['class'] = 'btn';
         }
@@ -5393,7 +5401,7 @@ HTML;
         }
 
         $type = (isset($options['type']) && $options['type'] === 'module') ||
-         preg_match('/^js\/modules\//', $url) === 1 ? 'module' : 'text/javascript';
+            preg_match('/^js\/modules\//', $url) === 1 ? 'module' : 'text/javascript';
 
         if ($minify === true) {
             $url = self::getMiniFile($url);
@@ -5595,7 +5603,7 @@ HTML;
         }
 
         if (!$p['only_uploaded_files']) {
-           // manage file upload without tinymce editor
+            // manage file upload without tinymce editor
             $display .= "<span class='b'>" . __('Drag and drop your file here, or') . '</span><br>';
         }
         $display .= "<input id='fileupload{$p['rand']}' type='file' name='_uploader_" . $p['name'] . "[]'
@@ -5604,13 +5612,13 @@ HTML;
                       data-uploader-name=\"{$p['name']}\"
                       data-url='" . $CFG_GLPI["root_doc"] . "/ajax/fileupload.php'
                       data-form-data='{\"name\": \"_uploader_" . $p['name'] . "\", \"showfilesize\": \"" . $p['showfilesize'] . "\"}'"
-                      . ($p['multiple'] ? " multiple='multiple'" : "")
-                      . ($p['onlyimages'] ? " accept='.gif,.png,.jpg,.jpeg'" : "") . ">";
+            . ($p['multiple'] ? " multiple='multiple'" : "")
+            . ($p['onlyimages'] ? " accept='.gif,.png,.jpg,.jpeg'" : "") . ">";
 
         $progressall_js = '';
         if (!$p['only_uploaded_files']) {
             $display .= "<div id='progress{$p['rand']}' style='display:none'>" .
-                 "<div class='uploadbar' style='width: 0%;'></div></div>";
+                "<div class='uploadbar' style='width: 0%;'></div></div>";
             $progressall_js = "
             progressall: function(event, data) {
                var progress = parseInt(data.loaded / data.total * 100, 10);
@@ -5629,14 +5637,14 @@ HTML;
          $('#fileupload{$p['rand']}').fileupload({
             dataType: 'json',
             pasteZone: " . ($p['pasteZone'] !== false
-                           ? "$('#{$p['pasteZone']}')"
-                           : "false") . ",
+            ? "$('#{$p['pasteZone']}')"
+            : "false") . ",
             dropZone:  " . ($p['dropZone'] !== false
-                           ? "$('#{$p['dropZone']}')"
-                           : "false") . ",
+            ? "$('#{$p['dropZone']}')"
+            : "false") . ",
             acceptFileTypes: " . ($p['onlyimages']
-                                    ? "/(\.|\/)(gif|jpe?g|png)$/i"
-                                 : DocumentType::getUploadableFilePattern()) . ",
+            ? "/(\.|\/)(gif|jpe?g|png)$/i"
+            : DocumentType::getUploadableFilePattern()) . ",
             maxFileSize: {$max_file_size},
             maxChunkSize: {$max_chunk_size},
             add: function (e, data) {
@@ -5717,7 +5725,7 @@ HTML;
      */
     public static function textarea($options = [])
     {
-       //default options
+        //default options
         $p['name']              = 'text';
         $p['filecontainer']     = 'fileupload_info';
         $p['rand']              = mt_rand();
@@ -5733,14 +5741,14 @@ HTML;
         $p['required']          = false;
         $p['uploads']           = [];
 
-       //merge default options with options parameter
+        //merge default options with options parameter
         $p = array_merge($p, $options);
 
         $required = $p['required'] ? 'required="required"' : '';
         $display = '';
         $display .= "<textarea class='form-control' name='" . $p['name'] . "' id='" . $p['editor_id'] . "'
                              rows='" . $p['rows'] . "' cols='" . $p['cols'] . "' $required>" .
-                  $p['value'] . "</textarea>";
+            $p['value'] . "</textarea>";
 
         if ($p['enable_richtext']) {
             $display .= Html::initEditorSystem($p['editor_id'], $p['rand'], false, false, $p['enable_images']);
@@ -5784,17 +5792,17 @@ HTML;
     {
         global $CFG_GLPI;
 
-       //default options
+        //default options
         $p['filecontainer']     = 'fileupload_info';
         $p['name']              = 'filename';
         $p['editor_id']         = '';
         $p['display']           = true;
         $p['uploads']           = [];
 
-       //merge default options with options parameter
+        //merge default options with options parameter
         $p = array_merge($p, $options);
 
-       // div who will receive and display file list
+        // div who will receive and display file list
         $display = "<div id='" . $p['filecontainer'] . "' class='fileupload_info'>";
         if (isset($p['uploads']['_' . $p['name']])) {
             foreach ($p['uploads']['_' . $p['name']] as $uploadId => $upload) {
@@ -5901,7 +5909,7 @@ HTML;
             $number_columns += 1;
         }
 
-       // count checked
+        // count checked
         foreach ($columns as $col_name => $column) {
             $nb_cb_per_col[$col_name] = [
                 'total'   => 0,
@@ -5927,11 +5935,11 @@ HTML;
                             is_array($content)
                             && array_key_exists('checked', $content)
                         ) {
-                            $nb_cb_per_col[$col_name]['total'] ++;
-                            $nb_cb_per_row[$row_name]['total'] ++;
+                            $nb_cb_per_col[$col_name]['total']++;
+                            $nb_cb_per_row[$row_name]['total']++;
                             if ($content['checked']) {
-                                $nb_cb_per_col[$col_name]['checked'] ++;
-                                $nb_cb_per_row[$row_name]['checked'] ++;
+                                $nb_cb_per_col[$col_name]['checked']++;
+                                $nb_cb_per_row[$row_name]['checked']++;
                             }
                         }
                     }
@@ -6176,7 +6184,7 @@ HTML;
             $base_path = parse_url($CFG_GLPI['url_base'], PHP_URL_PATH);
         }
 
-       // Add only image files : try to detect mime type
+        // Add only image files : try to detect mime type
         $ok   = false;
         $mime = '';
         if (isset($document->fields['filepath'])) {
@@ -6192,17 +6200,17 @@ HTML;
         $out = '';
         if ($addLink) {
             $out .= '<a '
-                 . 'href="' . $base_path . '/front/document.send.php?docid=' . $document_id . $more_link . '" '
-                 . 'target="_blank" '
-                 . '>';
+                . 'href="' . $base_path . '/front/document.send.php?docid=' . $document_id . $more_link . '" '
+                . 'target="_blank" '
+                . '>';
         }
         $out .= '<img ';
         if (isset($document->fields['tag'])) {
             $out .= 'alt="' . $document->fields['tag'] . '" ';
         }
         $out .= 'width="' . $width . '" '
-              . 'src="' . $base_path . '/front/document.send.php?docid=' . $document_id . $more_link . '" '
-              . '/>';
+            . 'src="' . $base_path . '/front/document.send.php?docid=' . $document_id . $more_link . '" '
+            . '/>';
         if ($addLink) {
             $out .= '</a>';
         }
@@ -6220,12 +6228,12 @@ HTML;
     {
         $message = "<a href=\"https://glpi-project.org/\" title=\"Powered by Teclib and contributors\" class=\"copyright\">";
         $message .= "GLPI ";
-       // if required, add GLPI version (eg not for login page)
+        // if required, add GLPI version (eg not for login page)
         if ($withVersion) {
             $message .= GLPI_VERSION . " ";
         }
         $message .= "Copyright (C) 2015-" . GLPI_YEAR . " Teclib' and contributors" .
-         "</a>";
+            "</a>";
         return $message;
     }
 
@@ -6241,7 +6249,7 @@ HTML;
         global $CFG_GLPI, $PLUGIN_HOOKS;
 
         if (isset($_SESSION['glpi_js_toload'][$name])) {
-           //already in stack
+            //already in stack
             return;
         }
         switch ($name) {
@@ -6264,7 +6272,7 @@ HTML;
                 $_SESSION['glpi_js_toload'][$name][] = 'js/flatpickr_buttons_plugin.js';
                 if (isset($_SESSION['glpilanguage'])) {
                     $filename = "public/lib/flatpickr/l10n/" .
-                    strtolower($CFG_GLPI["languages"][$_SESSION['glpilanguage']][3]) . ".js";
+                        strtolower($CFG_GLPI["languages"][$_SESSION['glpilanguage']][3]) . ".js";
                     if (file_exists(GLPI_ROOT . '/' . $filename)) {
                         $_SESSION['glpi_js_toload'][$name][] = $filename;
                         break;
@@ -6276,7 +6284,7 @@ HTML;
                 if (isset($_SESSION['glpilanguage'])) {
                     foreach ([2, 3] as $loc) {
                         $filename = "public/lib/fullcalendar/core/locales/" .
-                         strtolower($CFG_GLPI["languages"][$_SESSION['glpilanguage']][$loc]) . ".js";
+                            strtolower($CFG_GLPI["languages"][$_SESSION['glpilanguage']][$loc]) . ".js";
                         if (file_exists(GLPI_ROOT . '/' . $filename)) {
                             $_SESSION['glpi_js_toload'][$name][] = $filename;
                             break;
@@ -6367,10 +6375,10 @@ HTML;
     {
         global $CFG_GLPI, $PLUGIN_HOOKS;
 
-       // transfer core variables to javascript side
+        // transfer core variables to javascript side
         echo self::getCoreVariablesForJavascript(true);
 
-       //load on demand scripts
+        //load on demand scripts
         if (isset($_SESSION['glpi_js_toload'])) {
             foreach ($_SESSION['glpi_js_toload'] as $key => $script) {
                 if (is_array($script)) {
@@ -6384,17 +6392,17 @@ HTML;
             }
         }
 
-       //locales for js libraries
+        //locales for js libraries
         if (isset($_SESSION['glpilanguage'])) {
-           // select2
+            // select2
             $filename = "public/lib/select2/js/i18n/" .
-                     $CFG_GLPI["languages"][$_SESSION['glpilanguage']][2] . ".js";
+                $CFG_GLPI["languages"][$_SESSION['glpilanguage']][2] . ".js";
             if (file_exists(GLPI_ROOT . '/' . $filename)) {
                 echo Html::script($filename);
             }
         }
 
-       // Some Javascript-Functions which we may need later
+        // Some Javascript-Functions which we may need later
         echo Html::script('js/common.js');
         self::redefineAlert();
         self::redefineConfirm();
@@ -6413,7 +6421,7 @@ HTML;
             echo Html::scriptBlock($js);
         }
 
-       // Add specific javascript for plugins
+        // Add specific javascript for plugins
         if (isset($PLUGIN_HOOKS[Hooks::ADD_JAVASCRIPT]) && count($PLUGIN_HOOKS[Hooks::ADD_JAVASCRIPT])) {
             foreach ($PLUGIN_HOOKS[Hooks::ADD_JAVASCRIPT] as $plugin => $files) {
                 if (!Plugin::isPluginActive($plugin)) {
@@ -6491,7 +6499,7 @@ HTML;
 
         if ($full) {
             $debug = (isset($_SESSION['glpi_use_mode'])
-                   && $_SESSION['glpi_use_mode'] == Session::DEBUG_MODE ? true : false);
+                && $_SESSION['glpi_use_mode'] == Session::DEBUG_MODE ? true : false);
             $cfg_glpi = "var CFG_GLPI  = " . json_encode(Config::getSafeConfig(true), $debug ? JSON_PRETTY_PRINT : 0) . ";";
         }
 
@@ -6519,7 +6527,7 @@ HTML;
     private static function getMiniFile($file_path)
     {
         $debug = (isset($_SESSION['glpi_use_mode'])
-         && $_SESSION['glpi_use_mode'] == Session::DEBUG_MODE ? true : false);
+            && $_SESSION['glpi_use_mode'] == Session::DEBUG_MODE ? true : false);
 
         $file_minpath = str_replace(['.css', '.js'], ['.min.css', '.min.js'], $file_path);
         if (file_exists(GLPI_ROOT . '/' . $file_minpath)) {
@@ -6570,10 +6578,10 @@ HTML;
 
         $text = "";
         if ($timer > 0) {
-           // set timer to millisecond from minutes
+            // set timer to millisecond from minutes
             $timer = $timer * MINUTE_TIMESTAMP * 1000;
 
-           // call callback function to $timer interval
+            // call callback function to $timer interval
             $text = self::scriptBlock("window.setInterval(function() {
                $callback
             }, $timer);");
@@ -6636,12 +6644,12 @@ HTML;
 
 HTML;
                 return $html;
-            break;
+                break;
 
             default:
                 $fuzzy_entries = [];
 
-               // retrieve menu
+                // retrieve menu
                 foreach ($_SESSION['glpimenu'] as $firstlvl) {
                     if (isset($firstlvl['content'])) {
                         foreach ($firstlvl['content'] as $menu) {
@@ -6657,8 +6665,8 @@ HTML;
                                             $fuzzy_entries[] = [
                                                 'url'   => $submenu['page'],
                                                 'title' => $firstlvl['title'] . " > " .
-                                               $menu['title'] . " > " .
-                                               $submenu['title']
+                                                    $menu['title'] . " > " .
+                                                    $submenu['title']
                                             ];
                                         }
                                     }
@@ -6677,9 +6685,9 @@ HTML;
                     }
                 }
 
-               // return the entries to ajax call
+                // return the entries to ajax call
                 return json_encode($fuzzy_entries);
-            break;
+                break;
         }
     }
 
@@ -6700,11 +6708,11 @@ HTML;
         if (strpos($hexcolor, '#') !== false) {
             $hexcolor = trim($hexcolor, '#');
         }
-       // convert 3-digit hex to 6-digits.
+        // convert 3-digit hex to 6-digits.
         if (strlen($hexcolor) == 3) {
             $hexcolor = $hexcolor[0] + $hexcolor[0]
-                   + $hexcolor[1] + $hexcolor[1]
-                   + $hexcolor[2] + $hexcolor[2];
+                + $hexcolor[1] + $hexcolor[1]
+                + $hexcolor[2] + $hexcolor[2];
         }
         if (strlen($hexcolor) != 6) {
             throw new \Exception('Invalid HEX color.');
@@ -6716,23 +6724,23 @@ HTML;
 
         if ($bw) {
             return ($r * 0.299 + $g * 0.587 + $b * 0.114) > 100
-            ? ($sbw
-               ? '#303030'
-               : '#000000')
-             : ($sbw
-               ? '#DFDFDF'
-               : '#FFFFFF');
+                ? ($sbw
+                    ? '#303030'
+                    : '#000000')
+                : ($sbw
+                    ? '#DFDFDF'
+                    : '#FFFFFF');
         }
-       // invert color components
+        // invert color components
         $r = 255 - $r;
         $g = 255 - $g;
         $b = 255 - $b;
 
-       // pad each with zeros and return
+        // pad each with zeros and return
         return "#"
-         + str_pad($r, 2, '0', STR_PAD_LEFT)
-         + str_pad($g, 2, '0', STR_PAD_LEFT)
-         + str_pad($b, 2, '0', STR_PAD_LEFT);
+            + str_pad($r, 2, '0', STR_PAD_LEFT)
+            + str_pad($g, 2, '0', STR_PAD_LEFT)
+            + str_pad($b, 2, '0', STR_PAD_LEFT);
     }
 
     /**
@@ -6775,14 +6783,14 @@ HTML;
         $ckey .= '_' . $file;
 
         if (!str_ends_with($file, '.scss')) {
-           // Prevent include of file if ext is not .scss
+            // Prevent include of file if ext is not .scss
             $file .= '.scss';
         }
 
-       // Requested file path
+        // Requested file path
         $path = GLPI_ROOT . '/' . $file;
 
-       // Alternate file path (prefixed by a "_", i.e. "_highcontrast.scss").
+        // Alternate file path (prefixed by a "_", i.e. "_highcontrast.scss").
         $pathargs = explode('/', $file);
         $pathargs[] = '_' . array_pop($pathargs);
         $pathalt = GLPI_ROOT . '/' . implode('/', $pathargs);
@@ -6795,14 +6803,14 @@ HTML;
             $path = $pathalt;
         }
 
-       // Prevent import of a file from ouside GLPI dir
+        // Prevent import of a file from ouside GLPI dir
         $path = realpath($path);
         if (!str_starts_with($path, realpath(GLPI_ROOT))) {
             trigger_error('Requested file ' . $path . ' is outside GLPI file tree.', E_USER_WARNING);
             return '';
         }
 
-       // Fix issue with Windows directory separator
+        // Fix issue with Windows directory separator
         $path = str_replace(DIRECTORY_SEPARATOR, '/', $path);
 
         $import = '@import "' . $path . '";';
@@ -6815,7 +6823,7 @@ HTML;
             $args['reload'] = true;
         }
 
-       // Enable imports of ".scss" files from "css/lib", when path starts with "~".
+        // Enable imports of ".scss" files from "css/lib", when path starts with "~".
         $scss->addImportPath(
             function ($path) {
                 $file_chunks = [];
@@ -6913,11 +6921,11 @@ CSS;
             $import_filename = basename($import_url) . ($has_extension ? '' : '.scss');
 
             if ($is_from_lib) {
-               // Search file in libs
+                // Search file in libs
                 $potential_paths[] = GLPI_ROOT . '/css/lib/' . $import_dirname . '/' . $import_filename;
                 $potential_paths[] = GLPI_ROOT . '/css/lib/' . $import_dirname . '/_' . $import_filename;
             } else {
-               // Search using path relative to current file
+                // Search using path relative to current file
                 $potential_paths[] = dirname($filepath) . '/' . $import_dirname . '/' . $import_filename;
                 $potential_paths[] = dirname($filepath) . '/' . $import_dirname . '/_' . $import_filename;
             }
