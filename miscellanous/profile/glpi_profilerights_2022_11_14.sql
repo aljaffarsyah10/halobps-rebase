@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 09 Nov 2022 pada 11.44
--- Versi server: 5.7.24
+-- Waktu pembuatan: 14 Nov 2022 pada 05.09
+-- Versi server: 10.9.3-MariaDB-log
 -- Versi PHP: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `glpi_profilerights` (
   `id` int(10) UNSIGNED NOT NULL,
-  `profiles_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `profiles_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `rights` int(11) NOT NULL DEFAULT '0'
+  `rights` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 
 --
@@ -55,7 +55,7 @@ INSERT INTO `glpi_profilerights` (`id`, `profiles_id`, `name`, `rights`) VALUES
 (14, 1, 'contract', 0),
 (15, 1, 'infocom', 0),
 (16, 1, 'knowbase', 2048),
-(17, 1, 'reservation', 1024),
+(17, 1, 'reservation', 0),
 (18, 1, 'reports', 0),
 (19, 1, 'dropdown', 0),
 (20, 1, 'device', 0),
@@ -124,8 +124,8 @@ INSERT INTO `glpi_profilerights` (`id`, `profiles_id`, `name`, `rights`) VALUES
 (83, 2, 'contract', 0),
 (84, 2, 'infocom', 0),
 (85, 2, 'knowbase', 10241),
-(86, 2, 'reservation', 1025),
-(87, 2, 'reports', 1),
+(86, 2, 'reservation', 0),
+(87, 2, 'reports', 0),
 (88, 2, 'dropdown', 0),
 (89, 2, 'device', 0),
 (90, 2, 'typedoc', 1),
@@ -152,8 +152,8 @@ INSERT INTO `glpi_profilerights` (`id`, `profiles_id`, `name`, `rights`) VALUES
 (111, 2, 'ticket', 168989),
 (112, 2, 'followup', 5),
 (113, 2, 'task', 1),
-(114, 6, 'projecttask', 1025),
-(115, 7, 'projecttask', 1025),
+(114, 6, 'projecttask', 0),
+(115, 7, 'projecttask', 0),
 (116, 2, 'planning', 1),
 (117, 1, 'state', 0),
 (118, 1, 'taskcategory', 0),
@@ -198,8 +198,8 @@ INSERT INTO `glpi_profilerights` (`id`, `profiles_id`, `name`, `rights`) VALUES
 (157, 3, 'contract', 0),
 (158, 3, 'infocom', 0),
 (159, 3, 'knowbase', 14359),
-(160, 3, 'reservation', 1055),
-(161, 3, 'reports', 1),
+(160, 3, 'reservation', 0),
+(161, 3, 'reports', 0),
 (162, 3, 'dropdown', 23),
 (163, 3, 'device', 23),
 (164, 3, 'typedoc', 23),
@@ -226,8 +226,8 @@ INSERT INTO `glpi_profilerights` (`id`, `profiles_id`, `name`, `rights`) VALUES
 (185, 3, 'ticket', 261151),
 (186, 3, 'followup', 31767),
 (187, 3, 'task', 13329),
-(188, 3, 'projecttask', 1121),
-(189, 4, 'projecttask', 1121),
+(188, 3, 'projecttask', 0),
+(189, 4, 'projecttask', 0),
 (190, 5, 'projecttask', 0),
 (191, 3, 'planning', 3073),
 (192, 7, 'taskcategory', 23),
@@ -271,10 +271,10 @@ INSERT INTO `glpi_profilerights` (`id`, `profiles_id`, `name`, `rights`) VALUES
 (230, 4, 'contract', 0),
 (231, 4, 'infocom', 0),
 (232, 4, 'knowbase', 15383),
-(233, 4, 'reservation', 1055),
-(234, 4, 'reports', 1),
+(233, 4, 'reservation', 0),
+(234, 4, 'reports', 0),
 (235, 4, 'dropdown', 23),
-(236, 4, 'device', 23),
+(236, 4, 'device', 0),
 (237, 4, 'typedoc', 23),
 (238, 4, 'link', 23),
 (239, 4, 'config', 3),
@@ -292,16 +292,16 @@ INSERT INTO `glpi_profilerights` (`id`, `profiles_id`, `name`, `rights`) VALUES
 (251, 4, 'entity', 3327),
 (252, 4, 'transfer', 23),
 (253, 4, 'logs', 1),
-(254, 4, 'reminder_public', 159),
-(255, 4, 'rssfeed_public', 159),
-(256, 4, 'bookmark_public', 23),
+(254, 4, 'reminder_public', 0),
+(255, 4, 'rssfeed_public', 0),
+(256, 4, 'bookmark_public', 0),
 (257, 4, 'backup', 1045),
 (258, 4, 'ticket', 261151),
 (259, 4, 'followup', 31767),
 (260, 4, 'task', 13329),
-(261, 7, 'project', 1151),
+(261, 7, 'project', 0),
 (262, 1, 'projecttask', 0),
-(263, 2, 'projecttask', 1025),
+(263, 2, 'projecttask', 0),
 (264, 4, 'planning', 3073),
 (265, 6, 'taskcategory', 0),
 (266, 6, 'cable_management', 0),
@@ -373,9 +373,9 @@ INSERT INTO `glpi_profilerights` (`id`, `profiles_id`, `name`, `rights`) VALUES
 (332, 5, 'ticket', 140295),
 (333, 5, 'followup', 12295),
 (334, 5, 'task', 8193),
-(335, 4, 'project', 1151),
-(336, 5, 'project', 1151),
-(337, 6, 'project', 1151),
+(335, 4, 'project', 0),
+(336, 5, 'project', 0),
+(337, 6, 'project', 0),
 (338, 5, 'planning', 1),
 (339, 5, 'taskcategory', 0),
 (340, 5, 'cable_management', 0),
@@ -417,8 +417,8 @@ INSERT INTO `glpi_profilerights` (`id`, `profiles_id`, `name`, `rights`) VALUES
 (376, 6, 'contract', 0),
 (377, 6, 'infocom', 0),
 (378, 6, 'knowbase', 14359),
-(379, 6, 'reservation', 1055),
-(380, 6, 'reports', 1),
+(379, 6, 'reservation', 0),
+(380, 6, 'reports', 0),
 (381, 6, 'dropdown', 0),
 (382, 6, 'device', 0),
 (383, 6, 'typedoc', 0),
@@ -445,8 +445,8 @@ INSERT INTO `glpi_profilerights` (`id`, `profiles_id`, `name`, `rights`) VALUES
 (404, 6, 'followup', 13319),
 (405, 6, 'task', 13329),
 (406, 1, 'project', 0),
-(407, 2, 'project', 1025),
-(408, 3, 'project', 1151),
+(407, 2, 'project', 0),
+(408, 3, 'project', 0),
 (409, 6, 'planning', 1),
 (410, 4, 'taskcategory', 23),
 (411, 4, 'cable_management', 0),
@@ -489,8 +489,8 @@ INSERT INTO `glpi_profilerights` (`id`, `profiles_id`, `name`, `rights`) VALUES
 (448, 7, 'contract', 0),
 (449, 7, 'infocom', 0),
 (450, 7, 'knowbase', 14359),
-(451, 7, 'reservation', 1055),
-(452, 7, 'reports', 1),
+(451, 7, 'reservation', 0),
+(452, 7, 'reports', 0),
 (453, 7, 'dropdown', 0),
 (454, 7, 'device', 0),
 (455, 7, 'typedoc', 0),
@@ -582,12 +582,12 @@ INSERT INTO `glpi_profilerights` (`id`, `profiles_id`, `name`, `rights`) VALUES
 (541, 8, 'printer', 0),
 (542, 8, 'problem', 1057),
 (543, 8, 'profile', 1),
-(544, 8, 'project', 1057),
-(545, 8, 'projecttask', 33),
+(544, 8, 'project', 0),
+(545, 8, 'projecttask', 0),
 (546, 8, 'queuednotification', 1),
 (547, 8, 'reminder_public', 1),
-(548, 8, 'reports', 1),
-(549, 8, 'reservation', 1),
+(548, 8, 'reports', 0),
+(549, 8, 'reservation', 0),
 (550, 8, 'rssfeed_public', 1),
 (551, 8, 'rule_dictionnary_dropdown', 1),
 (552, 8, 'rule_dictionnary_printer', 1),
@@ -706,7 +706,7 @@ INSERT INTO `glpi_profilerights` (`id`, `profiles_id`, `name`, `rights`) VALUES
 (665, 1, 'dashboard', 0),
 (666, 2, 'dashboard', 0),
 (667, 3, 'dashboard', 0),
-(668, 4, 'dashboard', 23),
+(668, 4, 'dashboard', 0),
 (669, 5, 'dashboard', 0),
 (670, 6, 'dashboard', 0),
 (671, 7, 'dashboard', 0),
@@ -772,7 +772,7 @@ ALTER TABLE `glpi_profilerights`
 -- AUTO_INCREMENT untuk tabel `glpi_profilerights`
 --
 ALTER TABLE `glpi_profilerights`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=713;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=714;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
