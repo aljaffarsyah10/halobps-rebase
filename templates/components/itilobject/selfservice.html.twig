@@ -231,8 +231,34 @@
                   __('Title'),
                   right_field_options
                ) }}
+            
 
+            {# if ticekt type == demand, fileupload is mandatory #}
+            {% if params['type'] == constant('Ticket::DEMAND_TYPE') %}
                {{ fields.textareaField(
+                  'content',
+                  params['content'],
+                  __('Description Request'),
+                  right_field_options|merge({
+                     'enable_richtext': true,
+                     'enable_fileupload': true,
+                     'enable_mentions': true,   
+                  }),
+               ) }} 
+            {% else %}
+               {{ fields.textareaField(
+                  'content',
+                  params['content'],
+                  __('Description Incident'),
+                  right_field_options|merge({
+                     'enable_richtext': true,
+                     'enable_fileupload': true,
+                  })
+               ) }}
+            {% endif %}
+
+
+               {# {{ fields.textareaField(
                   'content',
                   params['content'],
                   __('Description'),
@@ -240,7 +266,7 @@
                      'enable_richtext': true,
                      'enable_fileupload': true,
                   })
-               ) }}
+               ) }} #}
             {% if params['type'] == constant('Ticket::DEMAND_TYPE') %}
                     {% set download_button %}
                         <a class="btn btn-primary" id = "formLink" href="https://laci.bps.go.id/s/553ErqvWBVUUr6K" target="_blank">
