@@ -240,9 +240,11 @@
                   {% set uploads = uploads|merge({'_filename': params._filename, '_tag_filename': params._tag_filename}) %}
                {% endif %}
 
-               {{ fields.textareaField(
+
+               {# {{ fields.textareaField(
                   'content',
                   params['content'],
+>>>>>>> 2c796a74 (field minor)
                   __('Description'),
                   right_field_options|merge({
                      'enable_richtext': true,
