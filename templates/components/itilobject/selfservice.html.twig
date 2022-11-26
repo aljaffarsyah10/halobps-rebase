@@ -239,6 +239,28 @@
                {% if params._filename is defined %}
                   {% set uploads = uploads|merge({'_filename': params._filename, '_tag_filename': params._tag_filename}) %}
                {% endif %}
+            {# if ticekt type == demand, fileupload is mandatory #}
+            {% if params['type'] == constant('Ticket::DEMAND_TYPE') %}
+               {{ fields.textareaField(
+                  'content',
+                  params['content'],
+                  __('Description Request'),
+                  right_field_options|merge({
+                     'enable_richtext': true,
+                     'enable_fileupload': true,
+                  }),
+               ) }} 
+            {% else %}
+               {{ fields.textareaField(
+                  'content',
+                  params['content'],
+                  __('Description Incident'),
+                  right_field_options|merge({
+                     'enable_richtext': true,
+                     'enable_fileupload': true,
+                  })
+               ) }}
+            {% endif %}
 
 
                {# {{ fields.textareaField(
