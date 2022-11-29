@@ -197,7 +197,7 @@
       'enable_fileupload': false,
       'enable_mentions': false,
       'entities_id': session('glpiactive_entity'),
-      'uploads': []
+      'uploads': [],
    }|merge(options) %}
 
    {% if options.fields_template.isMandatoryField(name) %}
@@ -230,7 +230,7 @@
              'editor_id': id,
              'multiple': true,
              'uploads': options.uploads,
-             'required': options.fields_template.isMandatoryField('_documents_id')
+             'required': options.enable_mentions,
          }]) %}
       {% endset %}
    {% elseif not options.readonly and not options.enable_fileupload and options.enable_richtext and options.enable_images %}
