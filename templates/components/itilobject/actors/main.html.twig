@@ -84,7 +84,8 @@
    {% endif %}
 {% endif %}
 
-{% if 'observer' in display_actortypes and (not itiltemplate.isHiddenField('_users_id_observer') or not itiltemplate.isHiddenField('_groups_id_observer')) %}
+{# By Gede Putra Nugraha #}
+{# {% if 'observer' in display_actortypes and (not itiltemplate.isHiddenField('_users_id_observer') or not itiltemplate.isHiddenField('_groups_id_observer')) %}
    {% set observer_field %}
       {{ include('components/itilobject/actors/field.html.twig', {
          'item': item,
@@ -111,7 +112,7 @@
    {% else %}
       {{ observer_field }}
    {% endif %}
-{% endif %}
+{% endif %} #}
 
 {% if 'assign' in display_actortypes and (not itiltemplate.isHiddenField('_users_id_assign') or not itiltemplate.isHiddenField('_groups_id_assign') or not itiltemplate.isHiddenField('_supplier_id_assign')) %}
    {% set assign_field %}
