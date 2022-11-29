@@ -230,7 +230,7 @@
              'editor_id': id,
              'multiple': true,
              'uploads': options.uploads,
-             'required': options.enable_mentions,
+             'required': options.fields_template.isMandatoryField('_documents_id')
          }]) %}
       {% endset %}
    {% elseif not options.readonly and not options.enable_fileupload and options.enable_richtext and options.enable_images %}
