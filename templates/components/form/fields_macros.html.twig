@@ -195,6 +195,7 @@
       'enable_richtext': false,
       'enable_images': true,
       'enable_fileupload': false,
+      'required': false,
       'enable_mentions': false,
       'entities_id': session('glpiactive_entity'),
       'uploads': [],
@@ -211,7 +212,7 @@
                 style="width: 100%;"
                 {{ options.disabled ? 'disabled' : '' }}
                 {{ options.readonly ? 'readonly' : '' }}
-                {{ options.required ? 'required' : '' }}>{{ options.enable_richtext ? value|safe_html|escape : value|verbatim_value }}</textarea>
+                {{ 'required' }}>{{ options.enable_richtext ? value|safe_html|escape : value|verbatim_value }}</textarea>
    {% endset %}
 
    {% if options.enable_richtext %}
@@ -230,7 +231,7 @@
              'editor_id': id,
              'multiple': true,
              'uploads': options.uploads,
-             'required': options.fields_template.isMandatoryField('_documents_id')
+             'required': options.required
          }]) %}
       {% endset %}
    {% elseif not options.readonly and not options.enable_fileupload and options.enable_richtext and options.enable_images %}
