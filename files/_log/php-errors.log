@@ -1,0 +1,10 @@
+[2022-12-04 11:16:15] glpiphplog.WARNING: Test logger  
+[2022-12-04 11:16:40] glpiphplog.WARNING: Test logger  
+[2022-12-04 11:16:42] glpiphplog.WARNING: Test logger  
+[2022-12-04 12:55:35] glpiphplog.WARNING: Test logger  
+[2022-12-04 12:55:36] glpiphplog.WARNING: Test logger  
+[2022-12-04 12:57:57] glpiphplog.WARNING: Test logger  
+[2022-12-04 13:58:25] glpiphplog.DEBUG: Html::compileScss() in /Applications/MAMP/htdocs/halobps/src/Html.php line 6857
+Compile css/palettes/auror.scss  {"user":"@yosrals-MacBook-Pro.local"} 
+[2022-12-04 13:58:57] glpiphplog.CRITICAL:   *** PHP Error (1): Maximum execution time of 30 seconds exceeded in /Applications/MAMP/htdocs/halobps/vendor/scssphp/scssphp/src/SourceMap/Base64VLQ.php at line 60  
+[2022-12-04 14:18:19] glpiphplog.WARNING: Test logger  
