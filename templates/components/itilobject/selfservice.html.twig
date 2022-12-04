@@ -166,7 +166,8 @@
                   right_field_options
                ) }}
 
-               {% if session('glpiactiveprofile')['helpdesk_hardware'] and session('glpiactiveprofile')['helpdesk_item_type']|length %}
+                {# By Najwa Azrai #}
+               {# {% if session('glpiactiveprofile')['helpdesk_hardware'] and session('glpiactiveprofile')['helpdesk_item_type']|length %}
                   {% set associated_items %}
                      <a class="btn btn-sm btn-ghost-secondary mt-2" role="button"
                         id="btn-collapse-items{{ rand }}"
@@ -182,15 +183,15 @@
                      </div>
                   {% endset %}
 
-                  {# {{ fields.field(
+                  {{ fields.field(
                      'items_id',
                      associated_items,
                      _n('Associated element', 'Associated elements', get_plural_number()),
                      right_field_options
-                  ) }} #}
-               {% endif %}
+                  ) }}
+               {% endif %} #}
 
-               {% if not itiltemplate.isHiddenField('_users_id_observer') or not itiltemplate.isHiddenField('_groups_id_observer') %}
+               {# {% if not itiltemplate.isHiddenField('_users_id_observer') or not itiltemplate.isHiddenField('_groups_id_observer') %}
                   {% set observer_field %}
 
                      {{ include('components/itilobject/actors/main.html.twig', {
@@ -213,7 +214,7 @@
                         required: itiltemplate.isMandatoryField('_users_id_observer') or itiltemplate.isMandatoryField('_groups_id_observer')
                      })
                   ) }}
-               {% endif %}
+               {% endif %} #}
 
                {{ fields.dropdownField(
                   'Location',
@@ -233,7 +234,7 @@
                ) }}
             
 
-            {# if ticekt type == demand, fileupload is mandatory #}
+            {# if ticekt type == demand, fileupload is required #}
             {% if params['type'] == constant('Ticket::DEMAND_TYPE') %}
                {{ fields.textareaField(
                   'content',
@@ -256,16 +257,6 @@
                ) }}
             {% endif %}
 
-
-               {# {{ fields.textareaField(
-                  'content',
-                  params['content'],
-                  __('Description'),
-                  right_field_options|merge({
-                     'enable_richtext': true,
-                     'enable_fileupload': true,
-                  })
-               ) }} #}
             {% if params['type'] == constant('Ticket::DEMAND_TYPE') %}
                     {% set download_button %}
                         <a class="btn btn-primary" id = "formLink" href="https://laci.bps.go.id/s/553ErqvWBVUUr6K" target="_blank">

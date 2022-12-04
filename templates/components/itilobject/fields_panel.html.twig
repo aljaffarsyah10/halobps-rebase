@@ -285,7 +285,7 @@
       </div>
    </div>
 
-   {% if item_ticket is defined and item_ticket is not null %}
+   {# {% if item_ticket is defined and item_ticket is not null %}
       {% set items_show = headers_states['items'] is not defined or headers_states['items'] == "true" ? true : false %}
       <div class="accordion-item">
          <h2 class="accordion-header" id="items-heading" title="{{ _n('Item', 'Items', get_plural_number()) }}" data-bs-toggle="tooltip">
@@ -306,8 +306,9 @@
             </div>
          </div>
       </div>
-   {% endif %}
+   {% endif %} #}
 
+  {% if session('glpiactiveprofile')['id'] == 4 %} 
    {% if item.getType() == 'Ticket' %}
       {% set la_content %}
          {{ include('components/itilobject/service_levels.html.twig') }}
@@ -336,6 +337,8 @@
          </div>
       {% endif %}
    {% endif %}
+{% endif %}
+
 
    {% if item.getType() in ['Problem', 'Change'] %}
       {% set analysis_fields = {
