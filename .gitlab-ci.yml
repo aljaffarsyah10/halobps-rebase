@@ -10,6 +10,6 @@ deployment-halosis-dev:
     - development
   script:
     - DEPLOYPATH=/var/www/html
-    - sudo -u www-data /usr/bin/rsync -rlP --delete --exclude '/.git' --exclude '/.gitignore' --exclude '/.gitlab-ci.yml' . $DEPLOYPATH --verbose
+    - sudo -u www-data /usr/bin/rsync -rlP --delete --exclude '/.git' --exclude '/README.md' --exclude '/.gitignore' --exclude '/.gitlab-ci.yml' . $DEPLOYPATH --verbose
     - sudo -u www-data /usr/bin/find $DEPLOYPATH/ -type d -exec /usr/bin/chmod 750 '{}' \;
     - sudo -u www-data /usr/bin/find $DEPLOYPATH/ -type f -exec /usr/bin/chmod 640 '{}' \;
