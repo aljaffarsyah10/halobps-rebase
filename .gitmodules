@@ -1,0 +1,3 @@
+[submodule "plugins/plugins/phpsaml"]
+	path = plugins/plugins/phpsaml
+	url = https://github.com/robrichards/xmlseclibs
