@@ -8,3 +8,84 @@
 Compile css/palettes/auror.scss  {"user":"@yosrals-MacBook-Pro.local"} 
 [2022-12-04 13:58:57] glpiphplog.CRITICAL:   *** PHP Error (1): Maximum execution time of 30 seconds exceeded in /Applications/MAMP/htdocs/halobps/vendor/scssphp/scssphp/src/SourceMap/Base64VLQ.php at line 60  
 [2022-12-04 14:18:19] glpiphplog.WARNING: Test logger  
+[2022-12-04 16:11:49] glpiphplog.DEBUG: Html::compileScss() in /Applications/MAMP/htdocs/halobps/src/Html.php line 6857
+Compile css/palettes/auror.scss  {"user":"@yosrals-MacBook-Pro.local"} 
+[2022-12-04 16:12:20] glpiphplog.CRITICAL:   *** PHP Error (1): Maximum execution time of 30 seconds exceeded in /Applications/MAMP/htdocs/halobps/vendor/scssphp/scssphp/src/SourceMap/Base64VLQ.php at line 60  
+[2022-12-04 16:28:49] glpiphplog.DEBUG: Html::compileScss() in /Applications/MAMP/htdocs/halobps/src/Html.php line 6857
+Compile css/palettes/auror.scss  {"user":"2@yosrals-MacBook-Pro.local"} 
+[2022-12-04 16:29:19] glpiphplog.CRITICAL:   *** PHP Error (1): Maximum execution time of 30 seconds exceeded in /Applications/MAMP/htdocs/halobps/vendor/scssphp/scssphp/src/SourceMap/Base64VLQ.php at line 60  
+[2022-12-04 16:30:57] glpiphplog.DEBUG: Html::compileScss() in /Applications/MAMP/htdocs/halobps/src/Html.php line 6857
+Compile css/palettes/auror.scss  {"user":"2@yosrals-MacBook-Pro.local"} 
+[2022-12-04 16:31:28] glpiphplog.CRITICAL:   *** PHP Error (1): Maximum execution time of 30 seconds exceeded in /Applications/MAMP/htdocs/halobps/vendor/scssphp/scssphp/src/SourceMap/Base64VLQ.php at line 60  
+[2022-12-04 17:15:16] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/2002): Operation timed out in /Applications/MAMP/htdocs/halobps/src/DBmysql.php at line 250
+  Backtrace :
+  src/DBmysql.php:250                                mysqli->real_connect()
+  src/DBmysql.php:209                                DBmysql->connect()
+  src/DBConnection.php:412                           DBmysql->__construct()
+  src/DBConnection.php:501                           DBConnection::switchToMaster()
+  inc/config.php:116                                 DBConnection::establishDBConnection()
+  inc/includes.php:53                                include_once()
+  ajax/fuzzysearch.php:37                            include()
+  
+[2022-12-04 17:16:16] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/2002): Operation timed out in /Applications/MAMP/htdocs/halobps/src/DBmysql.php at line 250
+  Backtrace :
+  src/DBmysql.php:250                                mysqli->real_connect()
+  src/DBmysql.php:209                                DBmysql->connect()
+  src/DBConnection.php:412                           DBmysql->__construct()
+  src/DBConnection.php:501                           DBConnection::switchToMaster()
+  inc/config.php:116                                 DBConnection::establishDBConnection()
+  inc/includes.php:53                                include_once()
+  front/ticket.php:36                                include()
+  
+[2022-12-04 17:17:16] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/2002): Operation timed out in /Applications/MAMP/htdocs/halobps/src/DBmysql.php at line 250
+  Backtrace :
+  src/DBmysql.php:250                                mysqli->real_connect()
+  src/DBmysql.php:209                                DBmysql->connect()
+  src/DBConnection.php:412                           DBmysql->__construct()
+  src/DBConnection.php:501                           DBConnection::switchToMaster()
+  inc/config.php:116                                 DBConnection::establishDBConnection()
+  inc/includes.php:53                                include_once()
+  ajax/fuzzysearch.php:37                            include()
+  
+[2022-12-08 10:15:32] glpiphplog.WARNING:   *** PHP User Warning (512): Usage of "utf8_unicode_ci" charset/collation detected, should be "utf8mb4_unicode_ci" in /Applications/MAMP/htdocs/halobps/src/DBmysql.php at line 1995
+  Backtrace :
+  src/DBmysql.php:1995                               trigger_error()
+  src/DBmysql.php:361                                DBmysql->checkForDeprecatedTableOptions()
+  plugins/phpsaml/hook.php:73                        DBmysql->query()
+  src/Plugin.php:787                                 plugin_phpsaml_install()
+  :                                                  Plugin->install()
+  src/Marketplace/Controller.php:545                 call_user_func()
+  src/Marketplace/Controller.php:435                 Glpi\Marketplace\Controller->setPluginState()
+  ajax/marketplace.php:82                            Glpi\Marketplace\Controller->installPlugin()
+  
+[2022-12-08 10:15:32] glpiphplog.WARNING:   *** PHP User Warning (512): Usage of signed integers in primary or foreign keys is discouraged, please use unsigned integers instead in `glpi_plugin_phpsaml_configs`.`id`. in /Applications/MAMP/htdocs/halobps/src/DBmysql.php at line 2033
+  Backtrace :
+  src/DBmysql.php:2033                               trigger_error()
+  src/DBmysql.php:361                                DBmysql->checkForDeprecatedTableOptions()
+  plugins/phpsaml/hook.php:73                        DBmysql->query()
+  src/Plugin.php:787                                 plugin_phpsaml_install()
+  :                                                  Plugin->install()
+  src/Marketplace/Controller.php:545                 call_user_func()
+  src/Marketplace/Controller.php:435                 Glpi\Marketplace\Controller->setPluginState()
+  ajax/marketplace.php:82                            Glpi\Marketplace\Controller->installPlugin()
+  
+[2022-12-10 07:55:28] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/2002): Operation timed out in /Applications/MAMP/htdocs/halobps/src/DBmysql.php at line 250
+  Backtrace :
+  src/DBmysql.php:250                                mysqli->real_connect()
+  src/DBmysql.php:209                                DBmysql->connect()
+  src/DBConnection.php:412                           DBmysql->__construct()
+  src/DBConnection.php:501                           DBConnection::switchToMaster()
+  inc/config.php:116                                 DBConnection::establishDBConnection()
+  inc/includes.php:53                                include_once()
+  front/central.php:36                               include()
+  
+[2022-12-10 07:56:28] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/2002): Operation timed out in /Applications/MAMP/htdocs/halobps/src/DBmysql.php at line 250
+  Backtrace :
+  src/DBmysql.php:250                                mysqli->real_connect()
+  src/DBmysql.php:209                                DBmysql->connect()
+  src/DBConnection.php:412                           DBmysql->__construct()
+  src/DBConnection.php:501                           DBConnection::switchToMaster()
+  inc/config.php:116                                 DBConnection::establishDBConnection()
+  inc/includes.php:53                                include_once()
+  front/locale.php:41                                include()
+  
