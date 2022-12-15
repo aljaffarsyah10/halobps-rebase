@@ -1,0 +1,23 @@
+--- classes/mock/generator.php
++++ classes/mock/generator.php
+@@ -664,7 +664,7 @@ class generator
+ 
+         $returnType = $this->getReflectionType($method);
+         $returnTypeName = $this->getReflectionTypeName($returnType);
+-        $isNullable = $returnTypeName !== 'mixed' && $this->isNullable($returnType);
++        $isNullable = $returnType->allowsNull() === true;
+ 
+         switch (true) {
+             case $returnTypeName === 'self':
+@@ -702,11 +707,6 @@ class generator
+         return $returnTypeCode;
+     }
+ 
+-    protected function isNullable(\reflectionType $type)
+-    {
+-        return $type->allowsNull() === true;
+-    }
+-
+     protected function hasReturnType(\reflectionMethod $method)
+     {
+         $hasReturnType = $method->hasReturnType() === true;
