@@ -3937,28 +3937,16 @@ JS;
                   if ($('#$id').attr('required') == 'required') {
                      $('#$id').removeAttr('required'); // Necessary to bypass browser validation
 
-                     editor.on('submit', function (e) {
-                        if ($('#$id').val() == '') {
-                           alert(__('The description field is mandatory'));
-                           e.preventDefault();
-
-                           // Prevent other events to run
-                           // Needed to not break single submit forms
-                           e.stopPropagation();
-                        }
-                     });
-                     editor.on('keyup', function (e) {
-                        editor.save();
-                        if ($('#$id').val() == '') {
-                           $(editor.container).addClass('required');
-                        } else {
-                           $(editor.container).removeClass('required');
-                        }
-                     });
+                    //  editor.on('keyup', function (e) {
+                    //     editor.save();
+                    //     if ($('#$id').val() == '') {
+                    //        $(editor.container).addClass('required');
+                    //     } else {
+                    //        $(editor.container).removeClass('required');
+                    //     }
+                    //  });
                      editor.on('init', function (e) {
-                        if (strip_tags($('#$id').val()) == '') {
-                           $(editor.container).addClass('required');
-                        }
+                        $('.tox.tox-tinymce').addClass('form-control');
                      });
                      editor.on('paste', function (e) {
                         // Remove required on paste event
