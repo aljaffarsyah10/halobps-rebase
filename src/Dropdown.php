@@ -41,7 +41,7 @@ use Glpi\Toolbox\Sanitizer;
 class Dropdown
 {
    //Empty value displayed in a dropdown
-    const EMPTY_VALUE = '-----';
+    const EMPTY_VALUE = '';
 
     /**
      * Print out an HTML "<select>" for a dropdown with preselected value
@@ -326,7 +326,7 @@ class Dropdown
                 false
             );
             $options_tooltip['link_class'] = 'btn btn-outline-secondary';
-            $icons .= Html::showToolTip($comment, $options_tooltip);
+            // $icons .= Html::showToolTip($comment, $options_tooltip);
 
             // Add icon
             if (
@@ -390,7 +390,7 @@ class Dropdown
                     $item->getFromDB($params['value']);
                 }
                 $icons .= "<span id='$kblink_id'>";
-                $icons .= '&nbsp;' . $item->getLinks();
+                // $icons .= '&nbsp;' . $item->getLinks();
                 $icons .= "</span>";
                 $icons .= '</div>';
             }
@@ -402,7 +402,7 @@ class Dropdown
         }
 
         if (strlen($icons) > 0) {
-            $output = "<div class='btn-group btn-group-sm " . ($params['width'] == "100%" ? "w-150" : "") . "' role='group'>{$output} {$icons}</div>";
+            $output = "<div class='btn-group btn-group-sm " . ($params['width'] == "100%" ? "w-full" : "") . "' role='group'>{$output} {$icons}</div>";
         }
 
         $output .= Ajax::commonDropdownUpdateItem($params, false);

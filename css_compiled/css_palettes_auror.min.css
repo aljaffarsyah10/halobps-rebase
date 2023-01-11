@@ -31587,6 +31587,10 @@ input.submit:focus:not([disabled]):not(.disabled),
   padding: 10px;
   font-weight: bold;
 }
+#page .tox-tinymce.form-control {
+  border: 1px solid #d9dbde !important;
+  border-radius: 4px !important;
+}
 #page .tox-tinymce.required,
 .qtip .tox-tinymce.required,
 .modal .modal-body .tox-tinymce.required {
