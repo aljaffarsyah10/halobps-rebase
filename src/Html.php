@@ -3962,18 +3962,6 @@ JS;
                   if ($('#$id').attr('required') == 'required') {
                      $('#$id').removeAttr('required'); // Necessary to bypass browser validation
 
-                     editor.on('submit', function (e) {
-                        if ($('#$id').val() == '') {
-                           const field = $('#$id').closest('.form-field').find('label').text().replace('*', '').trim();
-                           alert({$mandatory_field_msg}.replace('%s', field));
-                           e.preventDefault();
-
-                           // Prevent other events to run
-                           // Needed to not break single submit forms
-                           e.stopPropagation();
-                        }
-                     });
-
                     //  editor.on('keyup', function (e) {
                     //     editor.save();
                     //     if ($('#$id').val() == '') {
