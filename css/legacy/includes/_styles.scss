@@ -145,9 +145,9 @@
    }
 
    /* ################--------------- form ---------------#################### */
-   .tox-tinymce.required {
-      border: 1px rgba(255, 0, 0, 0.6) solid !important;
-      border-left-width: 3px !important;
+   .tox-tinymce.form-control {
+      border: 1px solid #d9dbde !important;
+      border-radius: 4px !important;
    }
 
    span.required {

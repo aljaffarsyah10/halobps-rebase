@@ -146,25 +146,30 @@
                {% elseif params['type'] == constant('Ticket::DEMAND_TYPE') %}
                   {% set condition = condition|merge({'is_request': 1}) %}
                {% endif %}
-               {{ fields.dropdownField(
-                  'ITILCategory',
-                  'itilcategories_id',
-                  params['itilcategories_id'],
-                  _n('Category', 'Categories', 1),
-                  cat_params|merge({'condition': condition}),
-               ) }}
 
-               {{ fields.field(
-                  'urgency',
-                  item.dropdownUrgency({
-                     'value': params['urgency'],
-                     'width': '100%',
-                     'display': false,
-                     'required': right_field_options.fields_template.isMandatoryField('urgency'),
-                  }),
-                  __('Urgency'),
-                  right_field_options
-               ) }}
+               {% if params['type'] == constant('Ticket::DEMAND_TYPE') %}
+                    {{ fields.dropdownField(
+                        'ITILCategory',
+                        'itilcategories_id',
+                        params['itilcategories_id'],
+                        _n('Category', 'Categories', 1),
+                        cat_params|merge({
+                            'condition': condition,
+                            'required': true
+                        }),
+                    ) }}
+                    {{ fields.field(
+                        'urgency',
+                        item.dropdownUrgency({
+                            'value': params['urgency'],
+                            'width': '100%',
+                            'display': false,
+                            'required': right_field_options.fields_template.isMandatoryField('urgency'),
+                        }),
+                        __('Urgency'),
+                        right_field_options
+                    ) }}
+               {% endif %}
 
                 {# By Najwa Azrai #}
                {# {% if session('glpiactiveprofile')['helpdesk_hardware'] and session('glpiactiveprofile')['helpdesk_item_type']|length %}
@@ -230,11 +235,13 @@
                   'name',
                   params['name'],
                   __('Title'),
-                  right_field_options
+                  right_field_options|merge({
+                    'required': true
+                  })
                ) }}
             
 
-            {# if ticekt type == demand, fileupload is required #}
+            {# if ticket type == demand, fileupload is required #}
             {% if params['type'] == constant('Ticket::DEMAND_TYPE') %}
                {{ fields.textareaField(
                   'content',
