@@ -1,3 +1,4 @@
 .DS_store
-file/*
+files/*/*
 !.gitignore
+!files/.htaccess
