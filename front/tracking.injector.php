@@ -66,6 +66,19 @@ if (isset($_POST['_actors']) && is_string($_POST['_actors'])) {
     }
 }
 if (isset($_POST['add'])) {
+
+    /** Add category field validation */
+    if (isset($_POST['type']) && $_POST['type'] == Ticket::DEMAND_TYPE) {
+        if (isset($_POST['itilcategories_id']) && $_POST['itilcategories_id'] == 0) {
+            Session::addMessageAfterRedirect(sprintf(
+                __('Mandatory fields are not filled. Please correct: %s'),
+                __('Category')
+            ), false, ERROR);
+            Html::redirect($CFG_GLPI["root_doc"] . "/front/helpdesk.public.php?create_ticket=1");
+        }
+    }
+
+
     if (!$CFG_GLPI["use_anonymous_helpdesk"]) {
         $track->check(-1, CREATE, $_POST);
     } else {
@@ -74,7 +87,7 @@ if (isset($_POST['add'])) {
     $_POST['check_delegatee'] = true;
     if (isset($_UPOST['_actors'])) {
         $_POST['_actors'] = json_decode($_UPOST['_actors'], true);
-       // with self-service, we only have observers
+        // with self-service, we only have observers
         unset($_POST['_actors']['requester'], $_POST['_actors']['assign']);
     }
     if ($track->add($_POST)) {
