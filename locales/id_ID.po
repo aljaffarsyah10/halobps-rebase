@@ -1101,7 +1101,7 @@ msgstr "%s Mio"
 #: src/Document.php:523
 #, php-format
 msgid "%s Mio max"
-msgstr ""
+msgstr "Maksimal %s MB"
 
 #: front/knowbaseitem_comment.form.php:67
 #, php-format
@@ -6444,7 +6444,7 @@ msgstr ""
 
 #: src/Ticket.php:5166 src/Html.php:1635 src/Profile.php:2766
 msgid "Create a ticket"
-msgstr ""
+msgstr "Buat Tiket"
 
 #: src/ProjectTask_Ticket.php:195
 msgid "Create a ticket from this task"
@@ -6499,7 +6499,7 @@ msgstr "Buat Direktori %s"
 
 #: src/Ticket.php:126
 msgid "Create ticket"
-msgstr ""
+msgstr "Buat Tiket"
 
 #: templates/components/form/header.html.twig
 #: templates/components/form/dates.html.twig
@@ -9593,7 +9593,7 @@ msgstr ""
 
 #: src/Html.php:5567
 msgid "File(s)"
-msgstr ""
+msgstr "File"
 
 #: src/GLPIUploadHandler.php:106
 msgid "Filetype not allowed"
@@ -19487,7 +19487,7 @@ msgstr "mode sederhana"
 #: src/ITILTemplate.php:400 src/Profile.php:3241
 #: src/ITILTemplateMandatoryField.php:174
 msgid "Simplified interface"
-msgstr "antarmuka disederhanakan"
+msgstr "Antarmuka sederhana"
 
 #: src/Config.php:353
 msgid "Simplified interface help link"
