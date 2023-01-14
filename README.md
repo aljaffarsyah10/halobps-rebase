@@ -16,9 +16,8 @@
   | ------------ | ----------- | ----------- |
   | 9.4.X | 5.6 | 7.4 |
   | 9.5.X | 7.2 | 8.0 |
-  | 10.0.X | 7.4 | 8.2 |
+  | 10.0.X | 7.4 | 8.1 |
 - Mandatory PHP extensions:
-
   - dom, fileinfo, json, session, simplexml (these are enabled in PHP by default)
   - curl (access to remote resources, like inventory agents, marketplace API, RSS feeds, ...)
   - gd (pictures handling)
@@ -27,14 +26,14 @@
   - mysqli (communication with database server)
   - zlib (handling of compressed communication with inventory agents, installation of gzip packages from marketplace, PDF generation)
 
-- Suggested PHP extensions
+* Suggested PHP extensions
 
   - exif (security enhancement on images validation)
   - ldap (usage of authentication through remote LDAP server)
   - openssl (email sending using SSL/TLS)
   - zip and bz2 (installation of zip and bz2 packages from marketplace)
 
-- Supported browsers:
+* Supported browsers:
   - Edge
   - Firefox (including 2 latest ESR versions)
   - Chrome
@@ -48,6 +47,15 @@
 ```bash
 $ php bin/console dependencies install
 ```
+
+- Jika dalam pengembangan masih terdapat file sisa cache atau session (terutama pada folder `files` dan `log`), hapus menggunakan commands berikut:
+
+```bash
+$ php bin/console glpi:cache:clear (hapus sessions dan caches ketika aplikasi berjalan)
+$ php bin/console glpi:system:clear:cache (hapus pengaturan umum tersimpan ketika aplikasi berjalan)
+```
+
+> :warning: run command di atas dapat menyebabkan **beberapa plugin ter-restart atau beberapa preferensi ter-reset**!
 
 - Jika dalam pengembangan masih terdapat file sisa cache atau session (terutama pada folder `files` dan `log`), hapus menggunakan commands berikut:
 
