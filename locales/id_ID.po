@@ -46,7 +46,7 @@ msgstr "Alat \"Migration cleaner\""
 
 #: src/Agent.php:374
 msgid "\"deviceid\" is mandatory!"
-msgstr ""
+msgstr "\"deviceid\" wajib diisi!"
 
 #: src/System/Requirement/DbConfiguration.php:81
 msgid "\"innodb_large_prefix\" must be enabled."
@@ -1095,7 +1095,7 @@ msgstr "%s Kanban"
 #: src/MailCollector.php:2227
 #, php-format
 msgid "%s Mio"
-msgstr "%s Mio"
+msgstr "%s MB"
 
 #. TRANS: %s is a size
 #: src/Document.php:523
@@ -2148,7 +2148,7 @@ msgstr ""
 
 #: src/Item_Devices.php:1596
 msgid "A device ID is mandatory"
-msgstr ""
+msgstr "ID perangkat wajib diisi"
 
 #: src/Project.php:2479 src/CommonITILObject.php:8803
 msgctxt "filters"
@@ -6415,7 +6415,7 @@ msgstr "Buat perubahan untuk masalah ini"
 
 #: src/Change_Ticket.php:424
 msgid "Create a change from this ticket"
-msgstr ""
+msgstr "Buat perubahan untuk tiket ini"
 
 #: templates/install/step3.html.twig
 msgid "Create a new database or use an existing one:"
@@ -6427,7 +6427,7 @@ msgstr "Buat nama jaringan baru"
 
 #: src/Problem_Ticket.php:429
 msgid "Create a problem from this ticket"
-msgstr ""
+msgstr "Buat masalah dari tiket ini"
 
 #: src/Project.php:1489
 msgid "Create a sub project from this project"
@@ -6440,15 +6440,15 @@ msgstr "Buat sub tugas dari tugas proyek ini"
 #: src/CommonITILObject.php:6491
 msgctxt "button"
 msgid "Create a task"
-msgstr ""
+msgstr "Buat tugas"
 
 #: src/Ticket.php:5166 src/Html.php:1635 src/Profile.php:2766
 msgid "Create a ticket"
-msgstr "Buat Tiket"
+msgstr "Buat tiket"
 
 #: src/ProjectTask_Ticket.php:195
 msgid "Create a ticket from this task"
-msgstr ""
+msgstr "Buat tiket dari tugas ini"
 
 #: src/TicketValidation.php:105
 msgid "Create a validation request for a request"
@@ -6473,11 +6473,11 @@ msgstr ""
 
 #: src/TicketValidation.php:108
 msgid "Create for incident"
-msgstr ""
+msgstr "Buat Tiket Gangguan"
 
 #: src/TicketValidation.php:104
 msgid "Create for request"
-msgstr ""
+msgstr "Buat Tiket Permintaan"
 
 #: src/CommonITILRecurrentCron.php:51
 msgid "Create recurrent tickets and changes"
@@ -7506,7 +7506,7 @@ msgstr "Dereferenced ketika locating (tetapi tidak ketika pencarian)"
 
 #: templates/components/itilobject/selfservice.html.twig
 msgid "Describe the incident or request"
-msgstr "Jelaskan Permasalahan/Tindakan"
+msgstr "Jelaskan gangguan/permintaan"
 
 #: templates/anonymous_helpdesk.html.twig
 msgid "Describe your issue"
@@ -8071,7 +8071,7 @@ msgstr "Penyalinan dokumen berhasil."
 
 #: src/Config.php:3655
 msgid "Document files maximum size (Mio)"
-msgstr ""
+msgstr "Ukuran data maksimal (Mb)"
 
 #: src/DocumentCategory.php:44
 msgid "Document heading"
@@ -8229,7 +8229,7 @@ msgstr ""
 
 #: src/Html.php:5597
 msgid "Drag and drop your file here, or"
-msgstr ""
+msgstr "Seret dan lepaskan berkas Anda di sini, atau"
 
 #: js/impact.js:2300
 msgid "Draw a line between two assets to add an impact relation"
@@ -9589,7 +9589,7 @@ msgstr "Ukuran berkas terlalu besar untuk ditambahkan."
 
 #: src/GLPIUploadHandler.php:110
 msgid "File upload aborted"
-msgstr ""
+msgstr "Pengunggahan file dibatalkan"
 
 #: src/Html.php:5567
 msgid "File(s)"
@@ -11157,11 +11157,11 @@ msgstr ""
 
 #: src/Ticket.php:3667 src/Ticket.php:3685 src/ITILCategory.php:474
 msgid "Incident"
-msgstr ""
+msgstr "Gangguan"
 
 #: js/impact.js:2444
 msgid "Incidents"
-msgstr ""
+msgstr "Gangguan"
 
 #: src/Toolbox.php:1970
 msgid "Incoming mail folder (optional, often INBOX)"
@@ -12360,7 +12360,7 @@ msgstr ""
 
 #: src/KnowbaseItem.php:1971
 msgid "Last updated entries"
-msgstr ""
+msgstr "Entri terakhir yang diperbarui"
 
 #: src/Notepad.php:258 src/NotificationTargetCommonITILObject.php:1763
 msgid "Last updater"
@@ -13345,7 +13345,7 @@ msgstr ""
 
 #: src/NetworkPort.php:988
 msgid "Mbps"
-msgstr ""
+msgstr "Mbps"
 
 #: templates/pages/assets/rack.html.twig
 msgid "Measured power (in watts)"
@@ -13354,22 +13354,22 @@ msgstr ""
 #: src/CommonITILObject.php:3054
 msgctxt "impact"
 msgid "Medium"
-msgstr "Pertengahan"
+msgstr "Sedang"
 
 #: src/CommonITILObject.php:2810
 msgctxt "priority"
 msgid "Medium"
-msgstr "Pertengahan"
+msgstr "Sedang"
 
 #: templates/anonymous_helpdesk.html.twig src/CommonITILObject.php:2932
 msgctxt "urgency"
 msgid "Medium"
-msgstr "Pertengahan"
+msgstr "Sedang"
 
 #: src/Project.php:1839 src/Project.php:2516 src/ProjectTask.php:1555
 msgid "Member"
 msgid_plural "Members"
-msgstr[0] ""
+msgstr[0] "Anggota"
 
 #: src/Cache/CacheManager.php:551
 msgid "Memcached"
@@ -14971,12 +14971,12 @@ msgstr ""
 #: src/Problem.php:671
 msgctxt "status"
 msgid "Not solved"
-msgstr "Tidak dipecahkan"
+msgstr "Belum terselesaikan"
 
 #: src/Ticket.php:5735 src/Dashboard/Grid.php:1249
 #: src/NotificationTargetTicket.php:145 src/NotificationTargetTicket.php:806
 msgid "Not solved tickets"
-msgstr ""
+msgstr "Tiket-tiket belum terselesaikan"
 
 #: src/CommonITILValidation.php:534
 msgid "Not subject to approval"
@@ -19631,16 +19631,16 @@ msgstr[0] "Jenis solusi"
 
 #: src/Change_Ticket.php:302 src/Problem_Ticket.php:333
 msgid "Solve tickets"
-msgstr ""
+msgstr "Selesaikan tiket-tiket"
 
 #: src/Dashboard/Provider.php:1596
 msgid "Solved"
-msgstr "Dipecahkan"
+msgstr "Selesai"
 
 #: src/Ticket.php:3712 src/Dashboard/Provider.php:1249 src/Problem.php:665
 msgctxt "status"
 msgid "Solved"
-msgstr "Dipecahkan"
+msgstr "Selesai"
 
 #: src/Stat/Data/Sglobal/StatDataTicketNumber.php:61
 #: src/Stat/Data/Graph/StatDataTicketAverageTime.php:58
@@ -19988,7 +19988,7 @@ msgstr ""
 
 #: templates/components/itilobject/selfservice.html.twig
 msgid "Submit message"
-msgstr ""
+msgstr "Kirimkan tiket"
 
 #: src/RuleImportComputer.php:94 src/RuleLocation.php:75
 #: src/RuleImportEntity.php:112
@@ -23868,7 +23868,7 @@ msgstr ""
 
 #: src/Ticket.php:1742
 msgid "You cannot create a ticket for this user"
-msgstr ""
+msgstr "Anda tidak dapat membuat tiket untuk pengguna ini"
 
 #: front/itilsolution.form.php:53
 msgid "You cannot solve this item!"
@@ -23876,11 +23876,11 @@ msgstr "Anda tidak dapat menyelesaikan barang ini!"
 
 #: src/CommonITILObject.php:2410
 msgid "You cannot use predefined description verbatim"
-msgstr ""
+msgstr "Anda tidak dapat menggunakan deskripsi yang sudah didefinisikan tekstualnya"
 
 #: install/install.php:378
 msgid "You didn't select a database!"
-msgstr ""
+msgstr "Anda belum memilih database!"
 
 #: front/lock.form.php:84
 #, php-format
@@ -23972,7 +23972,7 @@ msgstr ""
 
 #: src/User.php:150
 msgid "You must define a default profile to create a new user"
-msgstr ""
+msgstr "Anda harus mendefinisikan profil bawaan untuk membuat pengguna baru"
 
 #: src/Item_Rack.php:992
 msgid "You must define an horizontal position for this item"
