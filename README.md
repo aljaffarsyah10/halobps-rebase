@@ -1,4 +1,4 @@
-![HALO BPS](https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg/1280px-Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg.png)
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg/1280px-Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg.png' alt='HaloSIS-BPS' width='200' height='150' class='center'> 
 
 ## Proyek Pengembangan HALOBPS Berbasis Open Source Software GLPI (PHP)
 * Pengembangan ulang HALOSIS dan modul lainnya yang diperlukan (mapping aset, roadmap pengadaan TI, ticketing, report, dll.)
@@ -11,7 +11,6 @@
 * A web server (Apache, Nginx, IIS, etc.)
 * MariaDB >= 10.2 or MySQL >= 5.7
 * PHP (See compatibility matrix below)
-
     | GLPI Version | Minimum PHP | Maximum PHP |
     | ------------ | ----------- | ----------- |
     | 9.4.X        | 5.6         | 7.4         |
@@ -45,6 +44,12 @@ Setelah selesai, masuk ke direktori ```glpi``` lalu run:
 ```bash
 $ php bin/console dependencies install
 ```
+* Jika dalam pengembangan masih terdapat file sisa cache atau session (terutama pada folder ```files``` dan ```log```), hapus menggunakan commands berikut:
+```bash
+$ php bin/console glpi:cache:clear (hapus sessions dan caches ketika aplikasi berjalan)
+$ php bin/console glpi:system:clear:cache (hapus pengaturan umum tersimpan ketika aplikasi berjalan)
+```
+> :warning: run command di atas dapat menyebabkan **beberapa plugin ter-restart atau beberapa preferensi ter-reset**!
 
 ## Dokumentasi GLPI
 
