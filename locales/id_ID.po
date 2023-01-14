@@ -1095,7 +1095,7 @@ msgstr "%s Kanban"
 #: src/MailCollector.php:2227
 #, php-format
 msgid "%s Mio"
-msgstr "%s Mb"
+msgstr "%s MB"
 
 #. TRANS: %s is a size
 #: src/Document.php:523
@@ -2148,7 +2148,7 @@ msgstr ""
 
 #: src/Item_Devices.php:1596
 msgid "A device ID is mandatory"
-msgstr "ID Perangkat wajib diisi"
+msgstr "ID perangkat wajib diisi"
 
 #: src/Project.php:2479 src/CommonITILObject.php:8803
 msgctxt "filters"
@@ -7506,7 +7506,7 @@ msgstr "Dereferenced ketika locating (tetapi tidak ketika pencarian)"
 
 #: templates/components/itilobject/selfservice.html.twig
 msgid "Describe the incident or request"
-msgstr "Jelaskan Gangguan/Permintaan"
+msgstr "Jelaskan gangguan/permintaan"
 
 #: templates/anonymous_helpdesk.html.twig
 msgid "Describe your issue"
@@ -14570,7 +14570,7 @@ msgstr "Tak ada berkas tersedia"
 
 #: src/Inventory/Conf.php:196
 msgid "No file to import!"
-msgstr ""
+msgstr "Tidak ada file untuk diimpor"
 
 #: src/RuleCollection.php:1146 src/GLPIUploadHandler.php:58
 msgid "No file was uploaded"
@@ -14582,7 +14582,7 @@ msgstr "Tak ada cartridge kosong"
 
 #: src/Ticket.php:870
 msgid "No generated survey"
-msgstr ""
+msgstr "Tidak ada survei yang dihasilkan"
 
 #: src/AuthLDAP.php:2330 src/AuthLDAP.php:2333
 msgid "No group to be imported"
@@ -14649,19 +14649,19 @@ msgstr "Tidak ada item ditampilkan"
 
 #: src/Rule.php:2476
 msgid "No item type defined"
-msgstr ""
+msgstr "Tidak ada jenis item yang ditentukan"
 
 #: src/Contract.php:1778
 msgid "No item."
-msgstr ""
+msgstr "Tidak ada item."
 
 #: src/Console/Migration/RacksPluginToCoreCommand.php:680
 msgid "No items found."
-msgstr ""
+msgstr "Tidak ada item yang ditemukan."
 
 #: src/Console/Migration/RacksPluginToCoreCommand.php:776
 msgid "No items specifications found."
-msgstr ""
+msgstr "Tidak ada spesifikasi item yang ditemukan."
 
 #: src/RuleImportAsset.php:2388
 msgid "No itemtype defined"
@@ -14726,7 +14726,7 @@ msgstr ""
 
 #: src/Problem.php:1432 src/Problem.php:1479
 msgid "No problem found."
-msgstr ""
+msgstr "Tidak ada masalah yang ditemukan."
 
 #: src/Problem.php:1044 src/Problem.php:1281
 msgid "No problem in progress."
@@ -14767,15 +14767,15 @@ msgstr "Tak ada batasan"
 
 #: src/MapGeolocation.php:91 src/NetworkPortConnectionLog.php:124
 msgid "No result found"
-msgstr ""
+msgstr "Tidak ada hasil yang ditemukan"
 
 #: src/Impact.php:1046
 msgid "No results"
-msgstr ""
+msgstr "Tidak ada hasil"
 
 #: src/KnowbaseItem_Revision.php:118
 msgid "No revisions"
-msgstr ""
+msgstr "Tidak ada revisi"
 
 #: templates/pages/assets/rack.html.twig ajax/dcroom_size.php:65
 msgid "No room found or selected"
@@ -14792,7 +14792,7 @@ msgstr "Tak ada elemen terpilih atau operasi yang buruk"
 
 #: src/MassiveAction.php:384
 msgid "No selected items"
-msgstr ""
+msgstr "Tidak ada item yang dipilih"
 
 #: src/DCRoom.php:416
 msgid "No server room found"
@@ -14808,7 +14808,7 @@ msgstr ""
 
 #: src/Project.php:2177
 msgid "No status"
-msgstr ""
+msgstr "Tidak ada status"
 
 #: src/CronTask.php:987
 msgid "No task with Run mode = CLI, fix your tasks configuration"
@@ -14971,12 +14971,12 @@ msgstr ""
 #: src/Problem.php:671
 msgctxt "status"
 msgid "Not solved"
-msgstr "Tidak diselesaikan"
+msgstr "Belum terselesaikan"
 
 #: src/Ticket.php:5735 src/Dashboard/Grid.php:1249
 #: src/NotificationTargetTicket.php:145 src/NotificationTargetTicket.php:806
 msgid "Not solved tickets"
-msgstr ""
+msgstr "Tiket-tiket belum terselesaikan"
 
 #: src/CommonITILValidation.php:534
 msgid "Not subject to approval"
@@ -19631,16 +19631,16 @@ msgstr[0] "Jenis solusi"
 
 #: src/Change_Ticket.php:302 src/Problem_Ticket.php:333
 msgid "Solve tickets"
-msgstr ""
+msgstr "Selesaikan tiket-tiket"
 
 #: src/Dashboard/Provider.php:1596
 msgid "Solved"
-msgstr "Diselesaikan"
+msgstr "Selesai"
 
 #: src/Ticket.php:3712 src/Dashboard/Provider.php:1249 src/Problem.php:665
 msgctxt "status"
 msgid "Solved"
-msgstr "Diselesaikan"
+msgstr "Selesai"
 
 #: src/Stat/Data/Sglobal/StatDataTicketNumber.php:61
 #: src/Stat/Data/Graph/StatDataTicketAverageTime.php:58
@@ -19648,7 +19648,7 @@ msgstr "Diselesaikan"
 msgctxt "ticket"
 msgid "Solved"
 msgid_plural "Solved"
-msgstr[0] "Diselesaikan"
+msgstr[0] "Dipecahkan"
 
 #: src/Stat/Data/Location/StatDataSolved.php:51
 #, php-format
@@ -23876,11 +23876,11 @@ msgstr "Anda tidak dapat menyelesaikan barang ini!"
 
 #: src/CommonITILObject.php:2410
 msgid "You cannot use predefined description verbatim"
-msgstr "Anda tidak dapat menggunakan deskripsi yang telah ditentukan secara verbatim"
+msgstr "Anda tidak dapat menggunakan deskripsi yang sudah didefinisikan tekstualnya"
 
 #: install/install.php:378
 msgid "You didn't select a database!"
-msgstr "Anda belum memilih database"
+msgstr "Anda belum memilih database!"
 
 #: front/lock.form.php:84
 #, php-format
@@ -23972,7 +23972,7 @@ msgstr ""
 
 #: src/User.php:150
 msgid "You must define a default profile to create a new user"
-msgstr "Anda harus menentukan profil default untuk membuat pengguna baru"
+msgstr "Anda harus mendefinisikan profil bawaan untuk membuat pengguna baru"
 
 #: src/Item_Rack.php:992
 msgid "You must define an horizontal position for this item"
