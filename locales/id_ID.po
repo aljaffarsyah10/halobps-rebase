@@ -15060,7 +15060,11 @@ msgstr ""
 msgid "No file available"
 msgstr "Tak ada berkas tersedia"
 
-#: src/RuleCollection.php:1197 src/UploadHandler.php:379
+#: src/Inventory/Conf.php:196
+msgid "No file to import!"
+msgstr "Tidak ada file untuk diimpor"
+
+#: src/RuleCollection.php:1146 src/GLPIUploadHandler.php:58
 msgid "No file was uploaded"
 msgstr "Tidak ada file yang diupload"
 
