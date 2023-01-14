@@ -40,6 +40,86 @@ global $CFG_GLPI;
 
 include('../inc/includes.php');
 
+function hasFilledSurvey()
+{
+    global $DB;
+
+    $JOINS = [];
+    $WHERE = [
+        'is_deleted' => 0
+    ];
+    $search_users_id = [
+        'glpi_tickets_users.users_id' => Session::getLoginUserID(),
+        'glpi_tickets_users.type'     => CommonITILActor::REQUESTER
+    ];
+
+    $JOINS['INNER JOIN'] = [
+        'glpi_ticketsatisfactions' => [
+            'ON' => [
+                'glpi_ticketsatisfactions' => 'tickets_id',
+                'glpi_tickets'             => 'id'
+            ]
+        ],
+        'glpi_entities'            => [
+            'ON' => [
+                'glpi_tickets'    => 'entities_id',
+                'glpi_entities'   => 'id'
+            ]
+        ]
+    ];
+    $ORWHERE = ['AND' => $search_users_id];
+    if (Session::haveRight('ticket', Ticket::SURVEY)) {
+        $ORWHERE[] = ['glpi_tickets.users_id_recipient' => Session::getLoginUserID()];
+    }
+    $WHERE[] = ['OR' => $ORWHERE];
+
+    $WHERE = array_merge(
+        $WHERE,
+        [
+            'glpi_tickets.status'   => CommonITILObject::CLOSED,
+            [
+                'OR'                   => [
+                    'glpi_entities.inquest_duration' => 0,
+                    new \QueryExpression(
+                        'DATEDIFF(ADDDATE(' . $DB->quoteName('glpi_ticketsatisfactions.date_begin') .
+                            ', INTERVAL ' . $DB->quoteName('glpi_entities.inquest_duration')  . ' DAY), CURDATE()) > 0'
+                    )
+                ]
+            ],
+            'glpi_ticketsatisfactions.date_answered'  => null
+        ]
+    );
+
+    $criteria = [
+        'SELECT'          => ['glpi_tickets.id', 'glpi_tickets.date_mod'],
+        'DISTINCT'        => true,
+        'FROM'            => 'glpi_tickets',
+        'LEFT JOIN'       => [
+            'glpi_tickets_users'    => [
+                'ON' => [
+                    'glpi_tickets_users' => 'tickets_id',
+                    'glpi_tickets'       => 'id'
+                ]
+            ],
+            'glpi_groups_tickets'   => [
+                'ON' => [
+                    'glpi_groups_tickets'   => 'tickets_id',
+                    'glpi_tickets'          => 'id'
+                ]
+            ]
+        ],
+        'WHERE'           => $WHERE + getEntitiesRestrictCriteria('glpi_tickets'),
+        'ORDERBY'         => 'glpi_tickets.date_mod DESC'
+    ];
+    if (count($JOINS)) {
+        $criteria = array_merge_recursive($criteria, $JOINS);
+    }
+
+    $iterator = $DB->request($criteria);
+    $total_row_count = count($iterator);
+    return $total_row_count === 0;
+}
+
 // Change profile system
 if (isset($_REQUEST['newprofile'])) {
     if (isset($_SESSION["glpiprofiles"][$_REQUEST['newprofile']])) {
@@ -96,6 +176,12 @@ if (
 Session::checkValidSessionId();
 
 if (isset($_GET['create_ticket'])) {
+
+    if (!hasFilledSurvey()) {
+        Session::addMessageAfterRedirect('Harap isi survei kepuasan terlebih dahulu.', true, WARNING);
+        Html::redirect($CFG_GLPI['root_doc'] . "/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=6&criteria%5B0%5D%5Blink%5D=AND&criteria%5B1%5D%5Bfield%5D=60&criteria%5B1%5D%5Bsearchtype%5D=contains&criteria%5B1%5D%5Bvalue%5D=%5E&criteria%5B1%5D%5Blink%5D=AND&criteria%5B2%5D%5Bfield%5D=61&criteria%5B2%5D%5Bsearchtype%5D=contains&criteria%5B2%5D%5Bvalue%5D=NULL&criteria%5B2%5D%5Blink%5D=AND&criteria%5B3%5D%5Bfield%5D=4&criteria%5B3%5D%5Bsearchtype%5D=equals&criteria%5B3%5D%5Bvalue%5D=3&criteria%5B3%5D%5Blink%5D=AND&reset=reset");
+    }
+    
     Html::helpHeader(__('New ticket'), "create_ticket");
     $ticket = new Ticket();
     $ticket->showFormHelpdesk(Session::getLoginUserID());

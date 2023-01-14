@@ -1,115 +1,112 @@
-<<<<<<< HEAD
-![HALO BPS](https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg/1280px-Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg.png)
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg/1280px-Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg.png' alt='HaloSIS-BPS' width='200' height='150' class='center'>
 
 ## Proyek Pengembangan HALOBPS Berbasis Open Source Software GLPI (PHP)
-* Pengembangan ulang HALOSIS dan modul lainnya yang diperlukan (mapping aset, roadmap pengadaan TI, ticketing, report, dll.)
-* Dimodifikasi untuk keperluan BPS (halo.bps.go.id) sebagai pengganti web apps ESTIM BPS
-* Dikelola dan dikembangkan bersama mahasiswa Polstat STIS
-* Inisiasi pertama (23 Oktober 2022) private [gitlab.com]
+
+- Pengembangan ulang HALOSIS dan modul lainnya yang diperlukan (mapping aset, roadmap pengadaan TI, ticketing, report, dll.)
+- Dimodifikasi untuk keperluan BPS (halo.bps.go.id) sebagai pengganti web apps ESTIM BPS
+- Dikelola dan dikembangkan bersama mahasiswa Polstat STIS
+- Inisiasi pertama (23 Oktober 2022) private [gitlab.com]
 
 ## Persyaratan Instalasi
 
-* A web server (Apache, Nginx, IIS, etc.)
-* MariaDB >= 10.2 or MySQL >= 5.7
-* PHP (See compatibility matrix below)
+- A web server (Apache, Nginx, IIS, etc.)
+- MariaDB >= 10.2 or MySQL >= 5.7
+- PHP (See compatibility matrix below)
+  | GLPI Version | Minimum PHP | Maximum PHP |
+  | ------------ | ----------- | ----------- |
+  | 9.4.X | 5.6 | 7.4 |
+  | 9.5.X | 7.2 | 8.0 |
+  | 10.0.X | 7.4 | 8.2 |
+- Mandatory PHP extensions:
 
-    | GLPI Version | Minimum PHP | Maximum PHP |
-    | ------------ | ----------- | ----------- |
-    | 9.4.X        | 5.6         | 7.4         |
-    | 9.5.X        | 7.2         | 8.0         |
-    | 10.0.X       | 7.4         | 8.2         |
-* Mandatory PHP extensions:
-    - dom, fileinfo, json, session, simplexml (these are enabled in PHP by default)
-    - curl (access to remote resources, like inventory agents, marketplace API, RSS feeds, ...)
-    - gd (pictures handling)
-    - intl (internationalization)
-    - libxml (XML handling)
-    - mysqli (communication with database server)
-    - zlib (handling of compressed communication with inventory agents, installation of gzip packages from marketplace, PDF generation)
+  - dom, fileinfo, json, session, simplexml (these are enabled in PHP by default)
+  - curl (access to remote resources, like inventory agents, marketplace API, RSS feeds, ...)
+  - gd (pictures handling)
+  - intl (internationalization)
+  - libxml (XML handling)
+  - mysqli (communication with database server)
+  - zlib (handling of compressed communication with inventory agents, installation of gzip packages from marketplace, PDF generation)
 
-* Suggested PHP extensions
-    - exif (security enhancement on images validation)
-    - ldap (usage of authentication through remote LDAP server)
-    - openssl (email sending using SSL/TLS)
-    - zip and bz2 (installation of zip and bz2 packages from marketplace)
+- Suggested PHP extensions
 
- * Supported browsers:
-    - Edge
-    - Firefox (including 2 latest ESR versions)
-    - Chrome
+  - exif (security enhancement on images validation)
+  - ldap (usage of authentication through remote LDAP server)
+  - openssl (email sending using SSL/TLS)
+  - zip and bz2 (installation of zip and bz2 packages from marketplace)
+
+- Supported browsers:
+  - Edge
+  - Firefox (including 2 latest ESR versions)
+  - Chrome
 
 ## Khusus Tools Pengembangan
-* Pertama, [download and install composer](https://getcomposer.org/), tool manajemen dependensi PHP.
-* Kedua, [download and install npm](https://www.npmjs.com/), tool manajemen dependensi JS.
-Setelah selesai, masuk ke direktori ```glpi``` lalu run:
+
+- Pertama, [download and install composer](https://getcomposer.org/), tool manajemen dependensi PHP.
+- Kedua, [download and install npm](https://www.npmjs.com/), tool manajemen dependensi JS.
+  Setelah selesai, masuk ke direktori `glpi` lalu run:
 
 ```bash
 $ php bin/console dependencies install
 ```
 
+- Jika dalam pengembangan masih terdapat file sisa cache atau session (terutama pada folder `files` dan `log`), hapus menggunakan commands berikut:
+
+```bash
+$ php bin/console glpi:cache:clear (hapus sessions dan caches ketika aplikasi berjalan)
+$ php bin/console glpi:system:clear:cache (hapus pengaturan umum tersimpan ketika aplikasi berjalan)
+```
+
+> :warning: run command di atas dapat menyebabkan **beberapa plugin ter-restart atau beberapa preferensi ter-reset**!
+
 ## Dokumentasi GLPI
 
-<<<<<<< HEAD
-See :
-* [releases](https://github.com/glpi-project/glpi/releases) for tarball packages.
-
-
-## Documentation
-
-* [GLPI Administrator](https://glpi-install.readthedocs.io)
-    * Install & Update
-    * Command line tools
-    * Timezones
-    * Advanced configuration
-    * [Contribute to this documentation!](https://github.com/glpi-project/doc-install)
-=======
 [pdf version](https://forge.glpi-project.org/attachments/download/1901/glpidoc-0.85-en-partial.pdf).
 [markdown version](https://github.com/glpi-project/doc)
->>>>>>> 6041cd22 (rm unused files; change markdowns)
 
-* [GLPI User](https://glpi-user-documentation.readthedocs.io)
-    * First Steps with GLPI
-    * Overview of all modules
-    * Configuration & Administration
-    * Plugins & Marketplace
-    * GLPI command-line interface
-    * [Contribute to this documentation!](https://github.com/glpi-project/doc)
+- [GLPI User](https://glpi-user-documentation.readthedocs.io)
 
-* [GLPI Developer](https://glpi-developer-documentation.readthedocs.io)
-    * Source Code management
-    * Coding standards
-    * Developer API
-    * Plugins Guidelines
-    * Packaging
-    * [Contribute to this documentation!](https://github.com/glpi-project/docdev)
+  - First Steps with GLPI
+  - Overview of all modules
+  - Configuration & Administration
+  - Plugins & Marketplace
+  - GLPI command-line interface
+  - [Contribute to this documentation!](https://github.com/glpi-project/doc)
 
-* [GLPI Agent](https://glpi-agent.readthedocs.io)
-    * Installation (Windows / Linux / Mac OS / Source)
-    * Configuration / Settings
-    * Usage / Execution mode
-    * Tasks / HTTP Interface / Plugins
-    * Bug reporting / Man pages
-    * [Contribute to this documentation!](https://github.com/glpi-project/doc-agent)
+- [GLPI Developer](https://glpi-developer-documentation.readthedocs.io)
 
-* [GLPI Plugins](https://glpi-plugins.readthedocs.io)
-    * Usage and features for some GLPI plugins
-    * [Contribute to this documentation!](https://github.com/pluginsglpi/doc)
+  - Source Code management
+  - Coding standards
+  - Developer API
+  - Plugins Guidelines
+  - Packaging
+  - [Contribute to this documentation!](https://github.com/glpi-project/docdev)
+
+- [GLPI Agent](https://glpi-agent.readthedocs.io)
+
+  - Installation (Windows / Linux / Mac OS / Source)
+  - Configuration / Settings
+  - Usage / Execution mode
+  - Tasks / HTTP Interface / Plugins
+  - Bug reporting / Man pages
+  - [Contribute to this documentation!](https://github.com/glpi-project/doc-agent)
+
+- [GLPI Plugins](https://glpi-plugins.readthedocs.io)
+  - Usage and features for some GLPI plugins
+  - [Contribute to this documentation!](https://github.com/pluginsglpi/doc)
 
 ## Sumber Tambahan
 
-* [Official website](http://glpi-project.org)
-* [Demo](https://www.glpi-network.cloud)
-* [Terjemahan](https://www.transifex.com/glpi/public/)
-* [Issues](https://github.com/glpi-project/glpi/issues)
-* [Suggestions](http://suggest.glpi-project.org)
-* [Forum](http://forum.glpi-project.org)
-* [Development documentation](http://glpi-developer-documentation.readthedocs.io/en/master/)
-* [Plugin directory](http://plugins.glpi-project.org)
-* [Plugin development documentation](http://glpi-developer-documentation.readthedocs.io/en/master/plugins/index.html)
-=======
+- [Official website](http://glpi-project.org)
+- [Demo](https://www.glpi-network.cloud)
+- [Terjemahan](https://www.transifex.com/glpi/public/)
+- [Issues](https://github.com/glpi-project/glpi/issues)
+- [Suggestions](http://suggest.glpi-project.org)
+- [Forum](http://forum.glpi-project.org)
+- [Development documentation](http://glpi-developer-documentation.readthedocs.io/en/master/)
+- [Plugin directory](http://plugins.glpi-project.org)
+- # [Plugin development documentation](http://glpi-developer-documentation.readthedocs.io/en/master/plugins/index.html)
+
 # glpi
-
-
 
 ## Getting started
 
@@ -151,40 +148,50 @@ Use the built-in continuous integration in GitLab.
 - [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
 - [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
 
-***
+---
 
 # Editing this README
 
 When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
 
 ## Suggestions for a good README
+
 Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
 ## Name
+
 Choose a self-explaining name for your project.
 
 ## Description
+
 Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
 ## Badges
+
 On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
 
 ## Visuals
+
 Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
 ## Installation
+
 Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
 ## Usage
+
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
 ## Support
+
 Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
 
 ## Roadmap
+
 If you have ideas for releases in the future, it is a good idea to list them in the README.
 
 ## Contributing
+
 State if you are open to contributions and what your requirements are for accepting them.
 
 For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
@@ -192,11 +199,15 @@ For people who want to make changes to your project, it's helpful to have some d
 You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
 
 ## Authors and acknowledgment
+
 Show your appreciation to those who have contributed to the project.
 
 ## License
+
 For open source projects, say how it is licensed.
 
 ## Project status
+
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
->>>>>>> 6ed7d5e4 (Initial commit)
+
+> > > > > > > 6ed7d5e4 (Initial commit)
