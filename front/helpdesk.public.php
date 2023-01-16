@@ -215,11 +215,6 @@ if (isset($_GET['create_ticket'])) {
     $kb_popular    = "";
     $kb_recent     = "";
     $kb_lastupdate = "";
-    if (Session::haveRight('knowbase', KnowbaseItem::READFAQ)) {
-        $kb_popular    = KnowbaseItem::showRecentPopular("popular");
-        $kb_recent     = KnowbaseItem::showRecentPopular("recent");
-        $kb_lastupdate = KnowbaseItem::showRecentPopular("lastupdate");
-    }
 
     Html::requireJs('masonry');
     TemplateRenderer::getInstance()->display('pages/self-service/home.html.twig', [
@@ -232,6 +227,20 @@ if (isset($_GET['create_ticket'])) {
         'kb_recent'      => $kb_recent,
         'kb_lastupdate'  => $kb_lastupdate,
     ]);
+
+    if (Session::haveRight('knowbase', KnowbaseItem::READFAQ)) {
+        // $kb_popular    = KnowbaseItem::showRecentPopular("popular");
+        // $kb_recent     = KnowbaseItem::showRecentPopular("recent");
+        // $kb_lastupdate = KnowbaseItem::showRecentPopular("lastupdate");
+        echo "<div class='card mb-4'><div class='card-body'><table class='table mx-auto'><tr class='noHover'><td class='center top'>";
+        $kb_popular = KnowbaseItem::showRecentPopular("recent");
+            echo "</td><td class='center top'>";
+        $kb_recent = KnowbaseItem::showRecentPopular("lastupdate");
+            echo "</td><td class='center top'>";
+        $kb_lastupdate = KnowbaseItem::showRecentPopular("popular");
+            echo "</td></tr>";
+            echo "</table></div></div>";
+    };
 }
 
 Html::helpFooter();
