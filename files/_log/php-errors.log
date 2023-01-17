@@ -111,6 +111,7 @@ Compile css/palettes/auror.scss  {"user":"2@yosrals-MacBook-Pro.local"}
   front/locale.php:41                                include()
 >>>>>>> 12d6ef34 (resolve conflict development vs pusher)
   
+<<<<<<< HEAD
 [2024-05-13 05:50:32] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("syntax error, unexpected token "<<", expecting "function" or "const"")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\templates\layout\parts\user_header.html.twig" at line 81
   Backtrace :
   vendor\twig\twig\src\Template.php:335              Twig\Template->yield()
@@ -237,6 +238,8 @@ Compile css/palettes/auror.scss  {"user":"2@yosrals-MacBook-Pro.local"}
   src\Ticket.php:4062                                Glpi\Application\View\TemplateRenderer->display()
   front\helpdesk.public.php:101                      Ticket->showFormHelpdesk()
   
+=======
+>>>>>>> 356ebd0a9 (Merge remote-tracking branch 'origin/19-halaman-depan-dipercantik' into pusher)
 [2023-01-16 04:01:24] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): Error while reading greeting packet. PID=10376 in C:\xampp\htdocs\glpi-halamandepan\src\DBmysql.php at line 250
   Backtrace :
   src\DBmysql.php:250                                mysqli->real_connect()
