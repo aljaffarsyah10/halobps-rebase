@@ -4,3 +4,55 @@
 [login] 3: Failed login for  from IP ::1
 2022-12-08 10:11:28 [@yosrals-MacBook-Pro.local]
 [login] 3: glpi login from IP ::1
+2023-01-16 04:02:24 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
+2023-01-16 04:02:55 [@DESKTOP-737D8R5]
+[login] 3: glpi login from IP ::1
+2023-01-16 04:03:33 [@DESKTOP-737D8R5]
+[login] 3: Failed login for post-only from IP ::1
+2023-01-16 04:03:45 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
+2023-01-16 07:42:08 [@DESKTOP-737D8R5]
+[login] 3: glpi login from IP ::1
+2023-01-16 07:46:59 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
+2023-01-16 07:47:24 [@DESKTOP-737D8R5]
+[login] 3: glpi login from IP ::1
+2023-01-16 07:49:27 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
+2023-01-16 08:54:51 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
+2023-01-16 09:01:07 [@DESKTOP-737D8R5]
+[login] 3: glpi login from IP ::1
+2023-01-16 09:03:40 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
+2023-01-16 09:38:53 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
+2023-01-16 09:41:04 [@DESKTOP-737D8R5]
+[login] 3: Failed login for  from IP ::1
+2023-01-16 09:47:32 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
+2023-01-17 01:59:17 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP 127.0.0.1
+2023-01-17 02:00:29 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
+2023-01-17 03:02:59 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
+2023-01-17 03:03:58 [@DESKTOP-737D8R5]
+[login] 3: glpi login from IP ::1
+2023-01-17 03:09:05 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
+2023-01-17 03:15:43 [@DESKTOP-737D8R5]
+[login] 3: Failed login for user from IP ::1
+2023-01-17 03:17:31 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
+2023-01-17 03:18:18 [@DESKTOP-737D8R5]
+[login] 3: glpi login from IP ::1
+2023-01-17 03:18:34 [@DESKTOP-737D8R5]
+[login] 3: operator1 login from IP ::1
+2023-01-17 03:50:52 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
+2023-01-17 04:50:29 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
+2023-01-17 06:50:26 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
