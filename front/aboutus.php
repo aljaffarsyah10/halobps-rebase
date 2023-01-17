@@ -52,6 +52,8 @@ if (Session::getLoginUserID()) {
         __('About')            => '/front/aboutus.php'
     ]);
 }
-echo "<img src='./pics/about/HaloSIS.png' >"; 
+
+
+echo "<img src='" . $CFG_GLPI["root_doc"] . "/pics/about/HaloSIS-2.png' width=auto height= auto alt='" . "'>";
 
 Html::helpFooter();
