@@ -42,3 +42,17 @@
 [login] 3: glpi login from IP ::1
 2023-01-17 03:09:05 [@DESKTOP-737D8R5]
 [login] 3: post-only login from IP ::1
+2023-01-17 03:15:43 [@DESKTOP-737D8R5]
+[login] 3: Failed login for user from IP ::1
+2023-01-17 03:17:31 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
+2023-01-17 03:18:18 [@DESKTOP-737D8R5]
+[login] 3: glpi login from IP ::1
+2023-01-17 03:18:34 [@DESKTOP-737D8R5]
+[login] 3: operator1 login from IP ::1
+2023-01-17 03:50:52 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
+2023-01-17 04:50:29 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1
+2023-01-17 06:50:26 [@DESKTOP-737D8R5]
+[login] 3: post-only login from IP ::1

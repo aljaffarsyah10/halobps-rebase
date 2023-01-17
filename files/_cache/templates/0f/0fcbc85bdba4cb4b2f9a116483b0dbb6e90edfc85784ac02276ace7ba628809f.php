@@ -161,47 +161,14 @@ class __TwigTemplate_75c7f6e8beffd97fd04cbc52a2270532e16ba4b4823e44c7a7c9fd23878
             yield "
                </a>
 
-               <a href=\"#\" class=\"dropdown-item\" title=\"";
-            // line 91
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("About"), "html", null, true);
-            yield "\"
-                  id=\"show_about_modal_";
-            // line 92
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["rand_header"] ?? null), "html", null, true);
-            yield "\">
-                  <i class=\"ti fa-fw ti-info-circle\"></i>
-                  ";
-            // line 94
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("About"), "html", null, true);
+               ";
+            // line 101
             yield "
-                  ";
-            // line 95
-            if ( !(null === ($context["founded_new_version"] ?? null))) {
-                // line 96
-                yield "                     <span class=\"badge bg-info text-dark ms-2\">
-                        1
-                     </span>
-                  ";
-            }
-            // line 100
-            yield "               </a>
-
                <div class=\"dropdown-divider\"></div>
 
-               <a href=\"";
-            // line 104
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Glpi\Application\View\Extension\RoutingExtension']->path("/front/preference.php"), "html", null, true);
-            yield "\" class=\"dropdown-item\" title=\"";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("My settings"), "html", null, true);
-            yield "\">
-                  <i class=\"ti fa-fw ti-adjustments-alt\"></i>
-                  ";
-            // line 106
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("My settings"), "html", null, true);
-            yield "
-               </a>
-               <a href=\"";
+               ";
             // line 108
+            yield "               <a href=\"";
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Glpi\Application\View\Extension\RoutingExtension']->path(("/front/logout.php" . (((($this->extensions['Glpi\Application\View\Extension\SessionExtension']->session("glpiextauth")) ?: (false))) ? ("?noAUTO=1") : ("")))), "html", null, true);
             yield "\" class=\"dropdown-item\" title=\"";
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Logout"), "html", null, true);
@@ -325,7 +292,7 @@ class __TwigTemplate_75c7f6e8beffd97fd04cbc52a2270532e16ba4b4823e44c7a7c9fd23878
      */
     public function getDebugInfo()
     {
-        return array (  298 => 157,  293 => 155,  287 => 151,  280 => 147,  276 => 145,  268 => 139,  258 => 132,  254 => 131,  250 => 129,  248 => 128,  243 => 126,  239 => 125,  232 => 121,  228 => 120,  221 => 116,  212 => 110,  205 => 108,  200 => 106,  193 => 104,  187 => 100,  181 => 96,  179 => 95,  175 => 94,  170 => 92,  166 => 91,  160 => 88,  153 => 86,  145 => 81,  140 => 78,  137 => 76,  134 => 75,  128 => 72,  123 => 70,  117 => 69,  112 => 68,  110 => 67,  102 => 63,  100 => 62,  95 => 60,  91 => 58,  87 => 56,  85 => 53,  84 => 52,  77 => 48,  71 => 46,  69 => 45,  65 => 44,  62 => 43,  60 => 42,  53 => 40,  49 => 38,  47 => 37,  43 => 35,  41 => 34,  38 => 33,);
+        return array (  265 => 157,  260 => 155,  254 => 151,  247 => 147,  243 => 145,  235 => 139,  225 => 132,  221 => 131,  217 => 129,  215 => 128,  210 => 126,  206 => 125,  199 => 121,  195 => 120,  188 => 116,  179 => 110,  171 => 108,  166 => 101,  160 => 88,  153 => 86,  145 => 81,  140 => 78,  137 => 76,  134 => 75,  128 => 72,  123 => 70,  117 => 69,  112 => 68,  110 => 67,  102 => 63,  100 => 62,  95 => 60,  91 => 58,  87 => 56,  85 => 53,  84 => 52,  77 => 48,  71 => 46,  69 => 45,  65 => 44,  62 => 43,  60 => 42,  53 => 40,  49 => 38,  47 => 37,  43 => 35,  41 => 34,  38 => 33,);
     }
 
     public function getSourceContext()
