@@ -1420,7 +1420,7 @@ class Auth extends CommonGLPI
             if ($_SESSION['glpiactiveprofile']['create_ticket_on_login']) {
                 Html::redirect($CFG_GLPI['root_doc'] . "/front/helpdesk.public.php?create_ticket=1");
             }
-            Html::redirect($CFG_GLPI['root_doc'] . "/front/aboutus.php");
+            Html::redirect($CFG_GLPI['root_doc'] . "/front/about_us.php");
         } else {
             if ($_SESSION['glpiactiveprofile']['create_ticket_on_login']) {
                 Html::redirect(Ticket::getFormURL());
