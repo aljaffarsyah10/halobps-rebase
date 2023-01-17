@@ -22,6 +22,7 @@ Internal #1: Launch mailgateerror
 Internal #1: Launch planningrecall
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 12d6ef34 (resolve conflict development vs pusher)
 2024-05-13 04:02:47 [2@LAPTOP-3QJ309BV]
 Internal #1: Launch queuednotification
@@ -162,3 +163,5 @@ Internal #1: Launch queuednotification
 >>>>>>> 356ebd0a9 (Merge remote-tracking branch 'origin/19-halaman-depan-dipercantik' into pusher)
 2024-05-13 08:03:17 [2@LAPTOP-3QJ309BV]
 Internal #1: Launch olaticket
+=======
+>>>>>>> 1c6a7392b (#19 add about page; continue making pop-up alerts)

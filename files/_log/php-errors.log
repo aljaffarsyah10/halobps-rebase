@@ -112,6 +112,7 @@ Compile css/palettes/auror.scss  {"user":"2@yosrals-MacBook-Pro.local"}
 >>>>>>> 12d6ef34 (resolve conflict development vs pusher)
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 [2024-05-13 05:50:32] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("syntax error, unexpected token "<<", expecting "function" or "const"")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\templates\layout\parts\user_header.html.twig" at line 81
   Backtrace :
   vendor\twig\twig\src\Template.php:335              Twig\Template->yield()
@@ -269,3 +270,5 @@ Compile css/standalone/dashboard.scss  {"user":"2@DESKTOP-737D8R5"}
 [2023-01-16 07:47:26] glpiphplog.DEBUG: Html::compileScss() in C:\xampp\htdocs\glpi-halamandepan\src\Html.php line 6845
 Compile css/standalone/gridstack-grids.scss  {"user":"2@DESKTOP-737D8R5"} 
 [2023-01-17 06:49:02] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to undefined function alert() in C:\xampp\htdocs\glpi-halamandepan\front\aboutus.php at line 55  
+=======
+>>>>>>> 1c6a7392b (#19 add about page; continue making pop-up alerts)

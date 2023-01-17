@@ -1555,7 +1555,7 @@ HTML;
 
         $menu = [
             'about' => [
-                'default' => '/front/aboutus.php',
+                'default' => '/front/about_us.php',
                 'title'   => __('About'),
                 'icon'    => 'fas fa-info-circle',
             ],
