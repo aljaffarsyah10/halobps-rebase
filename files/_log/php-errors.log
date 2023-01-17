@@ -237,3 +237,31 @@ Compile css/palettes/auror.scss  {"user":"2@yosrals-MacBook-Pro.local"}
   src\Ticket.php:4062                                Glpi\Application\View\TemplateRenderer->display()
   front\helpdesk.public.php:101                      Ticket->showFormHelpdesk()
   
+[2023-01-16 04:01:24] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): Error while reading greeting packet. PID=10376 in C:\xampp\htdocs\glpi-halamandepan\src\DBmysql.php at line 250
+  Backtrace :
+  src\DBmysql.php:250                                mysqli->real_connect()
+  src\DBmysql.php:209                                DBmysql->connect()
+  src\DBConnection.php:412                           DBmysql->__construct()
+  src\DBConnection.php:501                           DBConnection::switchToMaster()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  index.php:89                                       include()
+  
+[2023-01-16 04:01:24] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/2006): MySQL server has gone away in C:\xampp\htdocs\glpi-halamandepan\src\DBmysql.php at line 250
+  Backtrace :
+  src\DBmysql.php:250                                mysqli->real_connect()
+  src\DBmysql.php:209                                DBmysql->connect()
+  src\DBConnection.php:412                           DBmysql->__construct()
+  src\DBConnection.php:501                           DBConnection::switchToMaster()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  index.php:89                                       include()
+  
+[2023-01-16 07:45:00] glpiphplog.DEBUG: Html::compileScss() in C:\xampp\htdocs\glpi-halamandepan\src\Html.php line 6845
+Compile css/palettes/auror.scss  {"user":"2@DESKTOP-737D8R5"} 
+[2023-01-16 07:47:25] glpiphplog.DEBUG: Html::compileScss() in C:\xampp\htdocs\glpi-halamandepan\src\Html.php line 6845
+Compile css/standalone/chartist.scss  {"user":"2@DESKTOP-737D8R5"} 
+[2023-01-16 07:47:25] glpiphplog.DEBUG: Html::compileScss() in C:\xampp\htdocs\glpi-halamandepan\src\Html.php line 6845
+Compile css/standalone/dashboard.scss  {"user":"2@DESKTOP-737D8R5"} 
+[2023-01-16 07:47:26] glpiphplog.DEBUG: Html::compileScss() in C:\xampp\htdocs\glpi-halamandepan\src\Html.php line 6845
+Compile css/standalone/gridstack-grids.scss  {"user":"2@DESKTOP-737D8R5"} 

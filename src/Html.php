@@ -1554,6 +1554,12 @@ HTML;
         global $PLUGIN_HOOKS;
 
         $menu = [
+            'about' => [
+                'default' => '/front/aboutus.php',
+                'title'   => __('About'),
+                'icon'    => 'fas fa-info-circle',
+            ],
+
             'home' => [
                 'default' => '/front/helpdesk.public.php',
                 'title'   => __('Home'),
