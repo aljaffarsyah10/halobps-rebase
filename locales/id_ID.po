@@ -2626,7 +2626,7 @@ msgstr ""
 
 #: src/Itil_Project.php:186
 msgid "Add a change"
-msgstr ""
+msgstr "Tambahkan perubahan"
 
 #: src/Calendar_Holiday.php:117 src/Calendar.php:98
 msgid "Add a close time"

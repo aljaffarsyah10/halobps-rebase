@@ -113,6 +113,7 @@ Compile css/palettes/auror.scss  {"user":"2@yosrals-MacBook-Pro.local"}
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [2024-05-13 05:50:32] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("syntax error, unexpected token "<<", expecting "function" or "const"")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\templates\layout\parts\user_header.html.twig" at line 81
   Backtrace :
   vendor\twig\twig\src\Template.php:335              Twig\Template->yield()
@@ -242,6 +243,9 @@ Compile css/palettes/auror.scss  {"user":"2@yosrals-MacBook-Pro.local"}
 =======
 >>>>>>> 356ebd0a9 (Merge remote-tracking branch 'origin/19-halaman-depan-dipercantik' into pusher)
 [2023-01-16 04:01:24] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): Error while reading greeting packet. PID=10376 in C:\xampp\htdocs\glpi-halamandepan\src\DBmysql.php at line 250
+=======
+[2023-01-20 05:13:54] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): Error while reading greeting packet. PID=3044 in C:\xampp\htdocs\glpi-submenu\src\DBmysql.php at line 250
+>>>>>>> 09c69ebce (perbaikan pada submenu)
   Backtrace :
   src\DBmysql.php:250                                mysqli->real_connect()
   src\DBmysql.php:209                                DBmysql->connect()
@@ -251,7 +255,11 @@ Compile css/palettes/auror.scss  {"user":"2@yosrals-MacBook-Pro.local"}
   inc\includes.php:53                                include_once()
   index.php:89                                       include()
   
+<<<<<<< HEAD
 [2023-01-16 04:01:24] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/2006): MySQL server has gone away in C:\xampp\htdocs\glpi-halamandepan\src\DBmysql.php at line 250
+=======
+[2023-01-20 05:13:54] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/2006): MySQL server has gone away in C:\xampp\htdocs\glpi-submenu\src\DBmysql.php at line 250
+>>>>>>> 09c69ebce (perbaikan pada submenu)
   Backtrace :
   src\DBmysql.php:250                                mysqli->real_connect()
   src\DBmysql.php:209                                DBmysql->connect()
@@ -261,6 +269,7 @@ Compile css/palettes/auror.scss  {"user":"2@yosrals-MacBook-Pro.local"}
   inc\includes.php:53                                include_once()
   index.php:89                                       include()
   
+<<<<<<< HEAD
 [2023-01-16 07:45:00] glpiphplog.DEBUG: Html::compileScss() in C:\xampp\htdocs\glpi-halamandepan\src\Html.php line 6845
 Compile css/palettes/auror.scss  {"user":"2@DESKTOP-737D8R5"} 
 [2023-01-16 07:47:25] glpiphplog.DEBUG: Html::compileScss() in C:\xampp\htdocs\glpi-halamandepan\src\Html.php line 6845
@@ -272,3 +281,39 @@ Compile css/standalone/gridstack-grids.scss  {"user":"2@DESKTOP-737D8R5"}
 [2023-01-17 06:49:02] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to undefined function alert() in C:\xampp\htdocs\glpi-halamandepan\front\aboutus.php at line 55  
 =======
 >>>>>>> 1c6a7392b (#19 add about page; continue making pop-up alerts)
+=======
+[2023-01-20 05:13:59] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): Error while reading greeting packet. PID=3044 in C:\xampp\htdocs\glpi-submenu\src\DBmysql.php at line 250
+  Backtrace :
+  src\DBmysql.php:250                                mysqli->real_connect()
+  src\DBmysql.php:209                                DBmysql->connect()
+  src\DBConnection.php:412                           DBmysql->__construct()
+  src\DBConnection.php:501                           DBConnection::switchToMaster()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  index.php:89                                       include()
+  
+[2023-01-20 05:13:59] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/2006): MySQL server has gone away in C:\xampp\htdocs\glpi-submenu\src\DBmysql.php at line 250
+  Backtrace :
+  src\DBmysql.php:250                                mysqli->real_connect()
+  src\DBmysql.php:209                                DBmysql->connect()
+  src\DBConnection.php:412                           DBmysql->__construct()
+  src\DBConnection.php:501                           DBConnection::switchToMaster()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  index.php:89                                       include()
+  
+[2023-01-20 08:31:31] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected 'return' (T_RETURN), expecting function (T_FUNCTION) or const (T_CONST) in C:\xampp\htdocs\glpi-submenu\src\Problem_Ticket.php at line 88
+  Backtrace :
+  :                                                  glpi_autoload()
+  :                                                  spl_autoload_call()
+  src\DbUtils.php:440                                is_subclass_of()
+  inc\db.function.php:149                            DbUtils->getItemForItemtype()
+  src\CommonGLPI.php:380                             getItemForItemtype()
+  src\Ticket.php:906                                 CommonGLPI->addStandardTab()
+  src\CommonGLPI.php:332                             Ticket->defineTabs()
+  src\CommonGLPI.php:885                             CommonGLPI->defineAllTabs()
+  src\CommonGLPI.php:1180                            CommonGLPI->showTabsContent()
+  src\CommonDBTM.php:6404                            CommonGLPI->display()
+  front\ticket.form.php:259                          CommonDBTM::displayFullPageForItem()
+  
+>>>>>>> 09c69ebce (perbaikan pada submenu)

@@ -4,3 +4,9 @@
 [login] 3: Failed login for  from IP ::1
 2022-12-08 10:11:28 [@yosrals-MacBook-Pro.local]
 [login] 3: glpi login from IP ::1
+2023-01-20 05:15:13 [@DESKTOP-737D8R5]
+[login] 3: glpi login from IP ::1
+2023-01-20 05:19:29 [@DESKTOP-737D8R5]
+[login] 3: Failed login for operator from IP ::1
+2023-01-20 05:19:37 [@DESKTOP-737D8R5]
+[login] 3: operator1 login from IP ::1

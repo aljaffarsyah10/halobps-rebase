@@ -23,6 +23,7 @@ Internal #1: Launch planningrecall
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 12d6ef34 (resolve conflict development vs pusher)
 2024-05-13 04:02:47 [2@LAPTOP-3QJ309BV]
 Internal #1: Launch queuednotification
@@ -167,3 +168,17 @@ Internal #1: Launch olaticket
 >>>>>>> 1c6a7392b (#19 add about page; continue making pop-up alerts)
 2024-05-13 08:09:19 [2@LAPTOP-3QJ309BV]
 Internal #1: Launch graph
+=======
+2023-01-20 05:15:07 [@DESKTOP-737D8R5]
+Internal #1: Launch planningrecall
+2023-01-20 05:19:23 [@DESKTOP-737D8R5]
+Internal #1: Launch mailgate
+2023-01-20 05:19:31 [@DESKTOP-737D8R5]
+Internal #1: Launch olaticket
+2023-01-20 05:25:02 [18@DESKTOP-737D8R5]
+Internal #1: Launch queuednotification
+2023-01-20 08:27:21 [18@DESKTOP-737D8R5]
+Internal #1: Launch RecurrentItems
+2023-01-20 08:33:03 [18@DESKTOP-737D8R5]
+Internal #1: Launch createinquest
+>>>>>>> 09c69ebce (perbaikan pada submenu)

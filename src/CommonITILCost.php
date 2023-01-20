@@ -43,10 +43,10 @@ abstract class CommonITILCost extends CommonDBChild
     public $dohistory        = true;
 
 
-    public static function getTypeName($nb = 0)
-    {
-        return _n('Cost', 'Costs', $nb);
-    }
+    // public static function getTypeName($nb = 0)
+    // {
+    //     return _n('Cost', 'Costs', $nb);
+    // }
 
 
     public function getItilObjectItemType()

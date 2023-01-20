@@ -66,29 +66,29 @@ class Problem_Ticket extends CommonDBRelation
     /**
      * @see CommonGLPI::getTabNameForItem()
      **/
-    public function getTabNameForItem(CommonGLPI $item, $withtemplate = 0)
-    {
+    // public function getTabNameForItem(CommonGLPI $item, $withtemplate = 0)
+    // {
 
-        if (static::canView()) {
-            $nb = 0;
-            switch ($item->getType()) {
-                case 'Ticket':
-                    if ($_SESSION['glpishow_count_on_tabs']) {
-                        $problems = self::getTicketProblemsData($item->getID());
-                        $nb = count($problems);
-                    }
-                    return self::createTabEntry(Problem::getTypeName(Session::getPluralNumber()), $nb);
+    //     if (static::canView()) {
+    //         $nb = 0;
+    //         switch ($item->getType()) {
+    //             case 'Ticket':
+    //                 if ($_SESSION['glpishow_count_on_tabs']) {
+    //                     $problems = self::getTicketProblemsData($item->getID());
+    //                     $nb = count($problems);
+    //                 }
+    //                 return self::createTabEntry(Problem::getTypeName(Session::getPluralNumber()), $nb);
 
-                case 'Problem':
-                    if ($_SESSION['glpishow_count_on_tabs']) {
-                        $tickets = self::getProblemTicketsData($item->getID());
-                        $nb = count($tickets);
-                    }
-                    return self::createTabEntry(Ticket::getTypeName(Session::getPluralNumber()), $nb);
-            }
-        }
-        return '';
-    }
+    //             case 'Problem':
+    //                 if ($_SESSION['glpishow_count_on_tabs']) {
+    //                     $tickets = self::getProblemTicketsData($item->getID());
+    //                     $nb = count($tickets);
+    //                 }
+    //                 return self::createTabEntry(Ticket::getTypeName(Session::getPluralNumber()), $nb);
+    //         }
+    //     }
+    //     return '';
+    // }
 
 
     public static function displayTabContentForItem(CommonGLPI $item, $tabnum = 1, $withtemplate = 0)
