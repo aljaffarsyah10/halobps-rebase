@@ -64,33 +64,33 @@ class Change_Ticket extends CommonDBRelation
     }
 
 
-    public function getTabNameForItem(CommonGLPI $item, $withtemplate = 0)
-    {
+    // public function getTabNameForItem(CommonGLPI $item, $withtemplate = 0)
+    // {
 
-        if (static::canView()) {
-            $nb = 0;
-            switch ($item->getType()) {
-                case 'Change':
-                    if ($_SESSION['glpishow_count_on_tabs']) {
-                        $nb = countElementsInTable(
-                            'glpi_changes_tickets',
-                            ['changes_id' => $item->getID()]
-                        );
-                    }
-                    return self::createTabEntry(Ticket::getTypeName(Session::getPluralNumber()), $nb);
+    //     if (static::canView()) {
+    //         $nb = 0;
+    //         switch ($item->getType()) {
+    //             case 'Change':
+    //                 if ($_SESSION['glpishow_count_on_tabs']) {
+    //                     $nb = countElementsInTable(
+    //                         'glpi_changes_tickets',
+    //                         ['changes_id' => $item->getID()]
+    //                     );
+    //                 }
+    //                 return self::createTabEntry(Ticket::getTypeName(Session::getPluralNumber()), $nb);
 
-                case 'Ticket':
-                    if ($_SESSION['glpishow_count_on_tabs']) {
-                        $nb = countElementsInTable(
-                            'glpi_changes_tickets',
-                            ['tickets_id' => $item->getID()]
-                        );
-                    }
-                    return self::createTabEntry(Change::getTypeName(Session::getPluralNumber()), $nb);
-            }
-        }
-        return '';
-    }
+    //             case 'Ticket':
+    //                 if ($_SESSION['glpishow_count_on_tabs']) {
+    //                     $nb = countElementsInTable(
+    //                         'glpi_changes_tickets',
+    //                         ['tickets_id' => $item->getID()]
+    //                     );
+    //                 }
+    //                 return self::createTabEntry(Change::getTypeName(Session::getPluralNumber()), $nb);
+    //         }
+    //     }
+    //     return '';
+    // }
 
 
     public static function displayTabContentForItem(CommonGLPI $item, $tabnum = 1, $withtemplate = 0)
