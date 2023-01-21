@@ -89,3 +89,125 @@ Compile css/palettes/auror.scss  {"user":"2@yosrals-MacBook-Pro.local"}
   inc/includes.php:53                                include_once()
   front/locale.php:41                                include()
   
+[2023-01-21 12:08:20] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/2002): Operation timed out in /Applications/MAMP/htdocs/glpi/src/DBmysql.php at line 250
+  Backtrace :
+  src/DBmysql.php:250                                mysqli->real_connect()
+  src/DBmysql.php:209                                DBmysql->connect()
+  src/DBConnection.php:412                           DBmysql->__construct()
+  src/DBConnection.php:501                           DBConnection::switchToMaster()
+  inc/config.php:116                                 DBConnection::establishDBConnection()
+  inc/includes.php:53                                include_once()
+  index.php:89                                       include()
+  
+[2023-01-21 12:09:33] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-21 12:09:33] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-21 12:11:28] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-21 12:11:28] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-21 12:12:50] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-21 12:12:50] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-21 12:13:57] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-21 12:13:57] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-21 12:15:22] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-21 12:15:22] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-21 12:15:50] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-21 12:15:50] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-21 12:16:10] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-21 12:16:10] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-21 12:17:16] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-21 12:17:16] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-21 12:17:26] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-21 12:17:26] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-21 12:18:01] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-21 12:18:01] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-21 12:18:20] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-21 12:18:20] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-21 12:21:11] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-21 12:21:11] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-21 12:30:58] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-21 12:30:58] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-21 12:31:14] glpiphplog.DEBUG: Html::compileScss() in /Applications/MAMP/htdocs/glpi/src/Html.php line 6851
+Compile css/standalone/chartist.scss  {"user":"2@yosrals-MacBook-Pro.local"} 
+[2023-01-21 12:31:14] glpiphplog.DEBUG: Html::compileScss() in /Applications/MAMP/htdocs/glpi/src/Html.php line 6851
+Compile css/standalone/dashboard.scss  {"user":"2@yosrals-MacBook-Pro.local"} 
+[2023-01-21 12:31:14] glpiphplog.DEBUG: Html::compileScss() in /Applications/MAMP/htdocs/glpi/src/Html.php line 6851
+Compile css/standalone/gridstack-grids.scss  {"user":"2@yosrals-MacBook-Pro.local"} 
+[2023-01-21 12:31:24] glpiphplog.DEBUG: Html::compileScss() in /Applications/MAMP/htdocs/glpi/src/Html.php line 6851
+Compile css/palettes/lightblue.scss  {"user":"2@yosrals-MacBook-Pro.local"} 
