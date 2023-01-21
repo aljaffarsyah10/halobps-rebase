@@ -25,6 +25,7 @@ Internal #1: Launch planningrecall
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 12d6ef34 (resolve conflict development vs pusher)
 2024-05-13 04:02:47 [2@LAPTOP-3QJ309BV]
 Internal #1: Launch queuednotification
@@ -188,3 +189,7 @@ Internal #1: Launch createinquest
 >>>>>>> 09c69ebce (perbaikan pada submenu)
 =======
 >>>>>>> 6f163bb9e (Merge remote-tracking branch 'origin/29-sub-menu-biaya-persetujuan-masalah-dan-perubahan-disembunyikan' into pusher)
+=======
+>>>>>>> 0efafde01 (merge #29 issue from @amanda.tabitha)
+2024-05-13 08:19:44 [2@LAPTOP-3QJ309BV]
+Internal #1: Launch reservation

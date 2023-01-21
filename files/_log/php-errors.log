@@ -115,6 +115,7 @@ Compile css/palettes/auror.scss  {"user":"2@yosrals-MacBook-Pro.local"}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [2024-05-13 05:50:32] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("syntax error, unexpected token "<<", expecting "function" or "const"")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\templates\layout\parts\user_header.html.twig" at line 81
   Backtrace :
   vendor\twig\twig\src\Template.php:335              Twig\Template->yield()
@@ -331,3 +332,5 @@ Compile css/standalone/gridstack-grids.scss  {"user":"2@DESKTOP-737D8R5"}
 >>>>>>> 09c69ebce (perbaikan pada submenu)
 =======
 >>>>>>> 6f163bb9e (Merge remote-tracking branch 'origin/29-sub-menu-biaya-persetujuan-masalah-dan-perubahan-disembunyikan' into pusher)
+=======
+>>>>>>> 0efafde01 (merge #29 issue from @amanda.tabitha)
