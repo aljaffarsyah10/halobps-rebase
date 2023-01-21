@@ -225,4 +225,21 @@ Internal #1: Launch watcher
 Internal #1: Launch queuednotificationclean
 2023-01-21 12:37:35 [@yosrals-MacBook-Pro.local]
 Internal #1: Launch mailgateerror
+<<<<<<< HEAD
 >>>>>>> 116804401 (change footer of login; add little word translation)
+=======
+2023-01-21 12:42:49 [2@yosrals-MacBook-Pro.local]
+Internal #1: Launch certificate
+2023-01-21 12:48:34 [2@yosrals-MacBook-Pro.local]
+Internal #1: Launch contract
+2023-01-21 12:54:32 [2@yosrals-MacBook-Pro.local]
+Internal #1: Launch infocom
+2023-01-21 14:11:13 [2@yosrals-MacBook-Pro.local]
+Internal #1: Launch session
+2023-01-21 14:20:46 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+>>>>>>> 1d040b893 (modify language preference; change color pallete & footer; add translation)
+2024-05-13 08:25:58 [@LAPTOP-3QJ309BV]
+Internal #1: Launch RecurrentItems
+2024-05-13 08:26:27 [2@LAPTOP-3QJ309BV]
+Internal #1: Launch closeticket

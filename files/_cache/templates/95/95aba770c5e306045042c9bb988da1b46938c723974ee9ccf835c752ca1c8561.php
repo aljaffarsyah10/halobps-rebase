@@ -48,7 +48,10 @@ class __TwigTemplate_82cae947ba4e085ffe6e7ecec105cefc9edd7691404ba9a6be661d9a181
    ";
         // line 46
         yield "   <div class=\"footer d-flex flex-column\">
-      <span class=\"text-center\">GLPI - Gestionnaire Libre de Parc Informatique</span>
+      <span class=\"text-center\">&#169; ";
+        // line 47
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, ($context["game"] ?? null), "gameDate", [], "any", false, false, false, 47), "Y"), "html", null, true);
+        yield " BPS RI, Made with &hearts; by Direktorat SIS</span>
    </div>
 
 
@@ -60,7 +63,7 @@ class __TwigTemplate_82cae947ba4e085ffe6e7ecec105cefc9edd7691404ba9a6be661d9a181
          <a href=\"";
             // line 53
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Glpi\Application\View\Extension\RoutingExtension']->path("front/config.form.php?forcetab=Config\$5"), "html", null, true);
-            yield "\">GLPI MAINTENANCE MODE</a>
+            yield "\">HaloSIS Maintenance Mode</a>
       </div>
    ";
         }
@@ -125,7 +128,7 @@ class __TwigTemplate_82cae947ba4e085ffe6e7ecec105cefc9edd7691404ba9a6be661d9a181
      */
     public function getDebugInfo()
     {
-        return array (  100 => 64,  91 => 62,  87 => 61,  84 => 60,  75 => 58,  71 => 57,  68 => 56,  62 => 53,  59 => 52,  57 => 51,  50 => 46,  47 => 38,  45 => 37,  43 => 36,  41 => 35,  38 => 33,);
+        return array (  103 => 64,  94 => 62,  90 => 61,  87 => 60,  78 => 58,  74 => 57,  71 => 56,  65 => 53,  62 => 52,  60 => 51,  53 => 47,  50 => 46,  47 => 38,  45 => 37,  43 => 36,  41 => 35,  38 => 33,);
     }
 
     public function getSourceContext()

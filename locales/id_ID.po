@@ -3388,19 +3388,19 @@ msgstr ""
 
 #: templates/components/search/controls.html.twig src/Dropdown.php:2540
 msgid "All pages in CSV"
-msgstr ""
+msgstr "Semua halaman dalam format CSV"
 
 #: templates/components/search/controls.html.twig src/Dropdown.php:2539
 msgid "All pages in SLK"
-msgstr ""
+msgstr "Semua halaman dalam format SLK"
 
 #: templates/components/search/controls.html.twig src/Dropdown.php:2537
 msgid "All pages in landscape PDF"
-msgstr ""
+msgstr "Semua halaman dalam format PDF lanskap"
 
 #: templates/components/search/controls.html.twig src/Dropdown.php:2538
 msgid "All pages in portrait PDF"
-msgstr ""
+msgstr "Semua halaman dalam format PDF potret"
 
 #: src/Console/Plugin/AbstractPluginCommand.php:94
 msgid "All plugins"
@@ -3420,7 +3420,7 @@ msgstr ""
 
 #: src/Config.php:3352
 msgid "All sections"
-msgstr ""
+msgstr "Semua bagian"
 
 #: src/KnowbaseItem.php:1466
 msgid "All unpublished articles"
@@ -3916,7 +3916,7 @@ msgstr ""
 #: src/Profile.php:1358 src/Profile.php:2095
 msgid "Asset"
 msgid_plural "Assets"
-msgstr[0] ""
+msgstr[0] "Aset"
 
 #: templates/components/infocom.html.twig
 msgid "Asset lifecycle"
@@ -4248,11 +4248,11 @@ msgstr "Agustus"
 #: front/knowbaseitemtranslation.form.php:90 src/User.php:2786
 #: src/User.php:3776 src/Auth.php:108 src/Config.php:627 src/Config.php:782
 msgid "Authentication"
-msgstr "Otentifikasi"
+msgstr "Otentikasi"
 
 #: src/Auth.php:1148
 msgid "Authentication on GLPI database"
-msgstr "Otentifikasi basisdata GLPI"
+msgstr "Otentikasi pada database GLPI"
 
 #: src/Auth.php:1161
 msgid "Authentication on a LDAP directory"
@@ -4482,7 +4482,7 @@ msgstr ""
 
 #: src/Config.php:542
 msgid "Automatically update of the elements related to the computers"
-msgstr ""
+msgstr "Update otomatis elemen yang berhubungan dengan komputer"
 
 #: front/planning.php:74 src/Planning.php:549 ajax/planningcheck.php:71
 #: ajax/planningcheck.php:73 ajax/planningcheck.php:78
@@ -6526,7 +6526,7 @@ msgstr ""
 
 #: templates/components/search/controls.html.twig src/Dropdown.php:2544
 msgid "Copy names to clipboard"
-msgstr ""
+msgstr "Salin daftar ke clipboard"
 
 #: src/Planning.php:1800 src/Dashboard/Dashboard.php:390
 #, php-format
@@ -6867,23 +6867,23 @@ msgstr ""
 
 #: templates/components/search/controls.html.twig src/Dropdown.php:2536
 msgid "Current page in CSV"
-msgstr ""
+msgstr "Laman saat ini dalam format CSV"
 
 #: templates/components/search/controls.html.twig src/Dropdown.php:2535
 msgid "Current page in SLK"
-msgstr ""
+msgstr "Laman saat ini dalam format SLK"
 
 #: templates/components/search/controls.html.twig src/Dropdown.php:2533
 msgid "Current page in landscape PDF"
-msgstr ""
+msgstr "Laman saat ini dalam format PDF lanskap"
 
 #: templates/components/search/controls.html.twig src/Dropdown.php:2534
 msgid "Current page in portrait PDF"
-msgstr ""
+msgstr "Laman saat ini dalam format PDF potret"
 
 #: src/User.php:5474
 msgid "Current password"
-msgstr ""
+msgstr "Password saat ini"
 
 #: src/Console/Rules/ReplayDictionnaryRulesCommand.php:68
 msgid "Currently only available for Software dictionary."
@@ -7081,11 +7081,11 @@ msgstr "Pengaturan sambungan ke basisdata"
 
 #: templates/install/step3.html.twig install/update.php:260
 msgid "Database connection successful"
-msgstr "Koneksi ke basis data berhasil"
+msgstr "Koneksi ke database berhasil"
 
 #: install/install.php:333 install/install.php:357
 msgid "Database created"
-msgstr "Basisdata berhasil dibuat"
+msgstr "Database berhasil dibuat"
 
 #: src/Console/Database/InstallCommand.php:279
 #, php-format
@@ -7460,7 +7460,7 @@ msgstr ""
 #: src/Search.php:7771 src/CommonDBTM.php:4937 src/Entity.php:2249
 #: src/Entity.php:2295
 msgid "Default value"
-msgstr "Nilai awal"
+msgstr "Nilai default"
 
 #: src/Entity.php:1127
 msgid "Default value for alarms on contracts"
@@ -7472,7 +7472,7 @@ msgstr ""
 
 #: src/AuthLDAP.php:453 src/Config.php:2587
 msgid "Default values"
-msgstr "Nilai awalan"
+msgstr "Nilai default"
 
 #: src/Config.php:3583
 msgid "Delay before account deactivation (in days)"
@@ -8349,7 +8349,7 @@ msgstr ""
 
 #: src/Config.php:3636
 msgid "Documents setup"
-msgstr ""
+msgstr "Pengaturan dokumen"
 
 #: src/NotificationTargetFieldUnicity.php:81
 msgid "Doer"
@@ -8514,7 +8514,7 @@ msgstr ""
 
 #: src/Config.php:1446
 msgid "Due date progression"
-msgstr ""
+msgstr "Progres tanggal jatuh tempo"
 
 #: src/NetworkPort.php:1739
 msgid "Duplex"
@@ -9976,7 +9976,7 @@ msgstr ""
 #: src/Entity.php:2281 src/Consumable.php:648 src/Config.php:3298
 #: src/Infocom.php:116 src/Infocom.php:1214 src/Cartridge.php:839
 msgid "Financial and administrative information"
-msgstr ""
+msgstr "Informasi finansial dan administratif"
 
 #: src/Profile.php:2303
 msgid "Financial and administratives information"
@@ -10444,11 +10444,11 @@ msgstr "Umum"
 #: templates/pages/admin/inventory/agent.html.twig src/Config.php:2055
 #: src/Config.php:2586 src/Profile.php:2624
 msgid "General setup"
-msgstr ""
+msgstr "Pengaturan umum"
 
 #: src/Ticket.php:5825
 msgid "Generation of satisfaction surveys"
-msgstr ""
+msgstr "Pembuatan survey kepuasan"
 
 #: src/DeviceGeneric.php:43
 msgid "Generic device"
@@ -11226,11 +11226,11 @@ msgstr "Dampak"
 
 #: src/Impact.php:68 src/Impact.php:125 src/Impact.php:757
 msgid "Impact analysis"
-msgstr ""
+msgstr "Analisis dampak"
 
 #: src/Impact.php:1801
 msgid "Impact analysis configuration"
-msgstr ""
+msgstr "Konfigurasi analisis dampak"
 
 #: src/Impact.php:1099
 msgid "Impact and depends"
@@ -11613,7 +11613,7 @@ msgstr[0] ""
 
 #: src/Config.php:1905
 msgid "Information about system installation and configuration"
-msgstr ""
+msgstr "Informasi tentang instalasi sistem dan konfigurasi"
 
 #: src/Entity.php:885 src/Entity.php:1680
 msgid "Information in inventory tool (TAG) representing the entity"
@@ -12323,7 +12323,7 @@ msgstr ""
 
 #: src/CommonDBTM.php:1514 src/Item_Ticket.php:1228
 msgid "Item successfully added"
-msgstr "Barang berhasil ditambahkan"
+msgstr "Tiket berhasil ditambahkan"
 
 #: src/NotificationTargetFieldUnicity.php:66
 msgid "Item successfully added but duplicate record on"
@@ -12332,11 +12332,11 @@ msgstr ""
 #: src/CommonDBTM.php:4437
 #, php-format
 msgid "Item successfully added but duplicate record on %s"
-msgstr "Barang berhasil ditambahkan namun terjadi duplikasi pada %s"
+msgstr "Item berhasil ditambahkan namun terjadi duplikasi pada %s"
 
 #: src/CommonDBTM.php:2199 src/Item_Ticket.php:1266
 msgid "Item successfully deleted"
-msgstr ""
+msgstr "Tiket berhasil dihapus"
 
 #: src/CommonDBTM.php:2241
 msgid "Item successfully purged"
@@ -13374,11 +13374,11 @@ msgstr ""
 
 #: src/Config.php:2593 src/PurgeLogs.php:42
 msgid "Logs purge"
-msgstr ""
+msgstr "Bersihkan log"
 
 #: src/Config.php:3212
 msgid "Logs purge configuration"
-msgstr ""
+msgstr "Pengaturan pembersihan log"
 
 #: src/NotificationTargetTicket.php:675 src/NotificationTargetTicket.php:723
 #: src/Entity.php:813 src/Location.php:107 src/Location.php:223
@@ -13726,7 +13726,7 @@ msgstr "Biaya material"
 
 #: src/Config.php:939
 msgid "Matrix of calculus for priority"
-msgstr ""
+msgstr "Matriks penghitungan prioritas"
 
 #: src/Inventory/Asset/Cartridge.php:150
 msgid "Matte"
@@ -15086,7 +15086,7 @@ msgstr "Tak ada grup yang diimpor"
 
 #: templates/components/logs.html.twig
 msgid "No historical"
-msgstr "Tak ada histori"
+msgstr "Tak ada riwayat"
 
 #: templates/components/logs.html.twig
 msgid "No historical matching your filters"
@@ -16709,7 +16709,7 @@ msgstr ""
 
 #: src/Config.php:2596
 msgid "Performance"
-msgstr ""
+msgstr "Performa"
 
 #: src/Planning.php:1707
 msgid "Period"
@@ -16836,7 +16836,7 @@ msgstr[0] ""
 #: src/Profile.php:1139 src/Profile.php:2639
 #: src/Features/PlanningEvent.php:773
 msgid "Personalization"
-msgstr ""
+msgstr "Personalisasi"
 
 #. TRANS: Test of comment for translation (mark : //TRANS)
 #: src/Phone.php:78 src/Transfer.php:4072
@@ -18310,7 +18310,7 @@ msgstr ""
 
 #: src/GLPINetwork.php:70
 msgid "Registration"
-msgstr ""
+msgstr "Registrasi"
 
 #: templates/generic_show_form.html.twig src/Domain.php:135
 msgid "Registration date"
@@ -19615,7 +19615,7 @@ msgstr ""
 
 #: src/Config.php:3431
 msgid "Security setup"
-msgstr ""
+msgstr "Pengaturan keamanan"
 
 #: src/Project.php:143 src/ProjectTask.php:185
 msgid "See (actor)"
@@ -20919,7 +20919,7 @@ msgstr ""
 
 #: src/Event.php:154 src/Config.php:2594
 msgid "System"
-msgstr "sistem"
+msgstr "Sistem"
 
 #: src/DeviceMotherboard.php:43
 msgid "System board"
@@ -22490,7 +22490,7 @@ msgstr[0] ""
 
 #: src/Config.php:1869
 msgid "Translation cache"
-msgstr ""
+msgstr "Cache penerjemahan"
 
 #: front/config.form.php:90
 msgid "Translation cache reset successful"
@@ -23752,7 +23752,7 @@ msgstr[0] ""
 
 #: src/Config.php:1842
 msgid "User data cache"
-msgstr ""
+msgstr "Data cache pengguna"
 
 #. TRANS: short for : Search result user display
 #: src/DisplayPreference.php:805

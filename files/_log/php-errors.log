@@ -458,4 +458,40 @@ Compile css/standalone/dashboard.scss  {"user":"2@yosrals-MacBook-Pro.local"}
 Compile css/standalone/gridstack-grids.scss  {"user":"2@yosrals-MacBook-Pro.local"} 
 [2023-01-21 12:31:24] glpiphplog.DEBUG: Html::compileScss() in /Applications/MAMP/htdocs/glpi/src/Html.php line 6851
 Compile css/palettes/lightblue.scss  {"user":"2@yosrals-MacBook-Pro.local"} 
+<<<<<<< HEAD
 >>>>>>> 116804401 (change footer of login; add little word translation)
+=======
+[2023-01-21 12:48:33] glpiphplog.WARNING:   *** PHP User Warning (512): Usage of "utf8_unicode_ci" charset/collation detected, should be "utf8mb4_unicode_ci" in /Applications/MAMP/htdocs/glpi/src/DBmysql.php at line 1995
+  Backtrace :
+  src/DBmysql.php:1995                               trigger_error()
+  src/DBmysql.php:361                                DBmysql->checkForDeprecatedTableOptions()
+  plugins/phpsaml/hook.php:73                        DBmysql->query()
+  src/Plugin.php:787                                 plugin_phpsaml_install()
+  front/plugin.form.php:51                           Plugin->install()
+  
+[2023-01-21 12:48:33] glpiphplog.WARNING:   *** PHP User Warning (512): Usage of signed integers in primary or foreign keys is discouraged, please use unsigned integers instead in `glpi_plugin_phpsaml_configs`.`id`. in /Applications/MAMP/htdocs/glpi/src/DBmysql.php at line 2033
+  Backtrace :
+  src/DBmysql.php:2033                               trigger_error()
+  src/DBmysql.php:361                                DBmysql->checkForDeprecatedTableOptions()
+  plugins/phpsaml/hook.php:73                        DBmysql->query()
+  src/Plugin.php:787                                 plugin_phpsaml_install()
+  front/plugin.form.php:51                           Plugin->install()
+  
+[2023-01-21 12:54:32] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Object of class DateTime could not be converted to string in /Applications/MAMP/htdocs/glpi/files/_cache/templates/49/4970cbe5162458c192530bf81ae146849db7bd1aea819d2eb580edf0e9f98fa2.php at line 52
+  Backtrace :
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_91a3feacfd94a2b7a15e15ff06199160e6a196cb63bf3f25cf7de7828648d522->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:1943                                  Glpi\Application\View\TemplateRenderer->display()
+  plugins/phpsaml/front/config.php:70                Html::footer()
+  
+[2023-01-21 14:20:44] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-21 14:20:44] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+>>>>>>> 1d040b893 (modify language preference; change color pallete & footer; add translation)

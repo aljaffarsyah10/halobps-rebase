@@ -266,7 +266,7 @@ INSERT INTO glpi_dev.glpi_configs (id,context,name,value) VALUES
 	 (150,'core','backcreated','0');
 INSERT INTO glpi_dev.glpi_configs (id,context,name,value) VALUES
 	 (151,'core','task_state','1'),
-	 (152,'core','palette','auror'),
+	 (152,'core','palette','lightblue'),
 	 (153,'core','page_layout','vertical'),
 	 (154,'core','fold_menu','0'),
 	 (155,'core','fold_search','0'),
