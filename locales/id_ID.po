@@ -13358,7 +13358,7 @@ msgstr ""
 
 #: templates/pages/login.html.twig
 msgid "Login to your account"
-msgstr ""
+msgstr "Masuk dengan akun Anda"
 
 #: src/Auth.php:666
 msgid "Login with external token disabled"
@@ -20071,7 +20071,7 @@ msgstr "Seting"
 #: src/Profile.php:158 src/Profile.php:166 src/Profile.php:1938
 #: src/Profile.php:1988 src/Profile.php:2546
 msgid "Setup"
-msgstr "Setup"
+msgstr "Pengaturan"
 
 #: src/NetworkName.php:425
 msgid ""
@@ -22318,7 +22318,7 @@ msgstr "Ukuran file yang dilampirkan terlalu besar"
 #: src/Profile.php:1313 src/Profile.php:1474 src/Profile.php:2470
 #: src/Ticket.php:3605
 msgid "Tools"
-msgstr ""
+msgstr "Alat"
 
 #: src/PDU_Rack.php:669
 msgid "Top"
