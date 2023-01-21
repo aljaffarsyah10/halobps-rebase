@@ -94,10 +94,10 @@ abstract class CommonITILValidation extends CommonDBChild
     }
 
 
-    public static function getTypeName($nb = 0)
-    {
-        return _n('Approval', 'Approvals', $nb);
-    }
+    // public static function getTypeName($nb = 0)
+    // {
+    //     return _n('Approval', 'Approvals', $nb);
+    // }
 
 
     public static function canCreate()
