@@ -1226,7 +1226,7 @@ HTML;
         // Send extra expires header
         self::header_nocache();
 
-        $theme = $_SESSION['glpipalette'] ?? 'auror';
+        $theme = $_SESSION['glpipalette'] ?? 'lightblue';
 
         $tpl_vars = [
             'lang'      => $CFG_GLPI["languages"][$_SESSION['glpilanguage']][3],
@@ -3846,7 +3846,7 @@ JS;
         $language_url = $CFG_GLPI['root_doc'] . '/public/lib/tinymce-i18n/langs6/' . $language . '.js';
 
         // Apply all GLPI styles to editor content
-        $content_css = preg_replace('/^.*href="([^"]+)".*$/', '$1', self::scss(('css/palettes/' . $_SESSION['glpipalette'] ?? 'auror') . '.scss', ['force_no_version' => true]))
+        $content_css = preg_replace('/^.*href="([^"]+)".*$/', '$1', self::scss(('css/palettes/' . $_SESSION['glpipalette'] ?? 'lightblue') . '.scss', ['force_no_version' => true]))
             . ',' . preg_replace('/^.*href="([^"]+)".*$/', '$1', self::css('public/lib/base.css', ['force_no_version' => true]));
 
         $cache_suffix = '?v=' . FrontEnd::getVersionCacheKey(GLPI_VERSION);
