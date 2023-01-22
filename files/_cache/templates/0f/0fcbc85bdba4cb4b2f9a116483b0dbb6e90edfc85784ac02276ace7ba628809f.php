@@ -183,60 +183,9 @@ class __TwigTemplate_75c7f6e8beffd97fd04cbc52a2270532e16ba4b4823e44c7a7c9fd23878
          </div>
       </div>
 
-      <div class=\"modal fade\" id=\"about_modal_";
-            // line 116
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["rand_header"] ?? null), "html", null, true);
-            yield "\" role=\"dialog\">
-         <div class=\"modal-dialog\">
-            <div class=\"modal-content\">
-               <div class=\"modal-header\">
-                  <h4 class=\"modal-title\">";
-            // line 120
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("About"), "html", null, true);
-            yield "</h4>
-                  <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"";
-            // line 121
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Close"), "html", null, true);
-            yield "\"></button>
-               </div>
-               <div class=\"modal-body\">
-                  <p><a href=\"http://glpi-project.org/\" title=\"Powered by Teclib and contributors\" class=\"copyright\">
-                     GLPI ";
-            // line 125
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(Twig\Extension\CoreExtension::constant("GLPI_VERSION"), "html", null, true);
+      ";
+            // line 143
             yield "
-                     Copyright (C) 2015-";
-            // line 126
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(Twig\Extension\CoreExtension::constant("GLPI_YEAR"), "html", null, true);
-            yield " Teclib' and contributors
-                  </a></p>
-                  ";
-            // line 128
-            if ( !(null === ($context["founded_new_version"] ?? null))) {
-                // line 129
-                yield "                     <p>
-                        <a href=\"http://www.glpi-project.org\" target=\"_blank\"
-                           title=\"";
-                // line 131
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("You will find it on the GLPI-PROJECT.org site."), "html", null, true);
-                yield "\">
-                           ";
-                // line 132
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(Twig\Extension\CoreExtension::sprintf(__("A new version is available: %s."), ($context["founded_new_version"] ?? null)), "html", null, true);
-                yield "
-                           <span class=\"badge bg-info text-dark\">
-                              1
-                           </span>
-                        </a>
-                     </p>
-                  ";
-            }
-            // line 139
-            yield "               </div>
-            </div>
-         </div>
-      </div>
-
    ";
         } elseif (Twig\Extension\CoreExtension::constant("GLPI_DEMO_MODE")) {
             // line 145
@@ -292,7 +241,7 @@ class __TwigTemplate_75c7f6e8beffd97fd04cbc52a2270532e16ba4b4823e44c7a7c9fd23878
      */
     public function getDebugInfo()
     {
-        return array (  265 => 157,  260 => 155,  254 => 151,  247 => 147,  243 => 145,  235 => 139,  225 => 132,  221 => 131,  217 => 129,  215 => 128,  210 => 126,  206 => 125,  199 => 121,  195 => 120,  188 => 116,  179 => 110,  171 => 108,  166 => 101,  160 => 88,  153 => 86,  145 => 81,  140 => 78,  137 => 76,  134 => 75,  128 => 72,  123 => 70,  117 => 69,  112 => 68,  110 => 67,  102 => 63,  100 => 62,  95 => 60,  91 => 58,  87 => 56,  85 => 53,  84 => 52,  77 => 48,  71 => 46,  69 => 45,  65 => 44,  62 => 43,  60 => 42,  53 => 40,  49 => 38,  47 => 37,  43 => 35,  41 => 34,  38 => 33,);
+        return array (  214 => 157,  209 => 155,  203 => 151,  196 => 147,  192 => 145,  188 => 143,  179 => 110,  171 => 108,  166 => 101,  160 => 88,  153 => 86,  145 => 81,  140 => 78,  137 => 76,  134 => 75,  128 => 72,  123 => 70,  117 => 69,  112 => 68,  110 => 67,  102 => 63,  100 => 62,  95 => 60,  91 => 58,  87 => 56,  85 => 53,  84 => 52,  77 => 48,  71 => 46,  69 => 45,  65 => 44,  62 => 43,  60 => 42,  53 => 40,  49 => 38,  47 => 37,  43 => 35,  41 => 34,  38 => 33,);
     }
 
     public function getSourceContext()

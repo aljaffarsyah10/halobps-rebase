@@ -1553,18 +1553,10 @@ HTML;
         /** @var array $PLUGIN_HOOKS */
         global $PLUGIN_HOOKS;
 
-        $menu = [
-            'about' => [
-                'default' => '/front/about_us.php',
-                'title'   => __('About'),
-                'icon'    => 'fas fa-info-circle',
-            ],
-
-            'home' => [
-                'default' => '/front/helpdesk.public.php',
-                'title'   => __('Home'),
-                'icon'    => 'fas fa-home',
-            ],
+        $menu['home'] = [
+            'default' => '/front/helpdesk.public.php',
+            'title'   => __('Beranda'),
+            'icon'    => 'fas fa-home',
         ];
 
         if (Session::haveRight("ticket", CREATE)) {
@@ -1598,13 +1590,13 @@ HTML;
             }
         }
 
-        if (Session::haveRightsOr("reservation", [READ, ReservationItem::RESERVEANITEM])) {
-            $menu['reservation'] = [
-                'default' => '/front/reservationitem.php',
-                'title'   => _n('Reservation', 'Reservations', Session::getPluralNumber()),
-                'icon'    => ReservationItem::getIcon(),
-            ];
-        }
+        // if (Session::haveRight("reservation", ReservationItem::RESERVEANITEM)) {
+        //     $menu['reservation'] = [
+        //         'default' => '/front/reservationitem.php',
+        //         'title'   => _n('Reservation', 'Reservations', Session::getPluralNumber()),
+        //         'icon'    => ReservationItem::getIcon(),
+        //     ];
+        // }
 
         if (Session::haveRight('knowbase', KnowbaseItem::READFAQ)) {
             $menu['faq'] = [
@@ -1613,6 +1605,12 @@ HTML;
                 'icon'    => KnowbaseItem::getIcon(),
             ];
         }
+
+        $menu['tentang_kami'] = [
+            'default' => '/front/about_us.php',
+            'title'   => __('Tentang Kami'),
+            'icon'    => 'fas fa-info-circle',
+        ];
 
         if (
             isset($PLUGIN_HOOKS["helpdesk_menu_entry"])
@@ -6262,14 +6260,13 @@ HTML;
      */
     public static function getCopyrightMessage($withVersion = true)
     {
-        $message = "<a href=\"https://glpi-project.org/\" title=\"Powered by Teclib and contributors\" class=\"copyright\">";
-        $message .= "GLPI ";
+        $message = "<a href=\"https://glpi-project.org/\" title=\"Built using GLPI\" class=\"copyright\">";
+        $message .= "&#169;" . GLPI_YEAR . " BPS RI";
         // if required, add GLPI version (eg not for login page)
         if ($withVersion) {
             $message .= GLPI_VERSION . " ";
         }
-        $message .= "Copyright (C) 2015-" . GLPI_YEAR . " Teclib' and contributors" .
-            "</a>";
+        $message .= "</br>Made with &hearts; by Direktorat SIS" . "</a>";
         return $message;
     }
 
