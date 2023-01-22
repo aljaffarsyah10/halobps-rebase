@@ -869,7 +869,7 @@ class Auth extends CommonGLPI
                 $this->user->fields['name']       = $login_name;
                 $this->user->fields["last_login"] = $_SESSION["glpi_currenttime"];
             } else {
-                $this->addToError(__('Empty login or password'));
+                $this->addToError(__('Nama pengguna atau kata sandi kosong'));
             }
         }
 
@@ -878,7 +878,7 @@ class Auth extends CommonGLPI
                 empty($login_name) || strstr($login_name, "\0")
                 || empty($login_password) || strstr($login_password, "\0")
             ) {
-                $this->addToError(__('Empty login or password'));
+                $this->addToError(__('Nama pengguna atau kata sandi kosong'));
             } else {
                // Try connect local user if not yet authenticated
                 if (

@@ -39,28 +39,31 @@
       <input type="hidden" name="redirect" value="{{ redirect }}" />
       <input type="hidden" name="_glpi_csrf_token" value="{{ csrf_token() }}" />
 
-      <div class="row justify-content-center">
-         <div class="col-md-5">
-            <div class="card-header mb-4">
-               <h2 class="mx-auto">{{ __('Login to your account') }}</h2>
+      <div class="row justify-content-center align-items-center m-3">
+         <div class="col-md m-4 row justify-content-center align-items-center">
+               <img src="pics/layout/global_layout_tagline.png">
+         </div>
+         <div class="col-md-4">
+            <div class="card-header mb-3">
+               <h2 class="mx-auto">{{ __('Akses Aplikasi') }}</h2>
             </div>
             <div class="mb-3">
-               <label class="form-label">{{ __('Login') }}</label>
-               <input type="text" class="form-control" id="login_name" name="{{ namfield }}" placeholder="" tabindex="1" />
+               <label class="form-label">{{ __('Nama Pengguna') }}</label>
+               <input type="text" class="form-control text-dark" id="login_name" name="{{ namfield }}" placeholder="" tabindex="1" />
             </div>
-            <div class="mb-4">
+            <div class="mb-3">
                <label class="form-label">
-                  {{ __('Password') }}
+                  {{ __('Kata Sandi') }}
 
                   {% if show_lost_password %}
                      <span class="form-label-description">
                         <a href="{{ path('front/lostpassword.php?lostpassword=1') }}">
-                           {{ __('Forgotten password?') }}
+                           {{ __('Lupa Kata Sandi?') }}
                         </a>
                      </span>
                   {% endif %}
                </label>
-               <input type="password" class="form-control" name="{{ pwdfield }}" placeholder="" autocomplete="off" tabindex="2" />
+               <input type="password" class="form-control text-dark" name="{{ pwdfield }}" placeholder="" autocomplete="off" tabindex="2" />
             </div>
 
             {% if constant('GLPI_DEMO_MODE') %}
@@ -70,31 +73,33 @@
                </div>
             {% endif %}
 
-            {% if config('display_login_source') %}
+            {# {% if config('display_login_source') %}
                <div class="mb-3">
                   <label class="form-label">{{ __('Login source') }}</label>
                   {{ auth_dropdown_login|raw }}
                </div>
-            {% endif %}
+            {% endif %} #}
 
             {% if config('login_remember_time') %}
                <div class="mb-2">
                   <label class="form-check">
                      <input type="checkbox" class="form-check-input" name="{{ rmbfield }}" {{ config('login_remember_default') ? 'checked' : '' }} />
-                     <span class="form-check-label">{{ __('Remember me') }}</span>
+                     <span class="form-check-label text-dark">{{ __('Ingatkan saya') }}</span>
                   </label>
                </div>
             {% endif %}
 
             <div class="form-footer">
                <button type="submit" name="submit" class="btn btn-primary w-100" tabindex="3">
-                  {{ __('Sign in') }}
-               </button>
+                  {{ __('Masuk') }}
+               </button>               
+               </br></br><p style="text-align:center"><b><i>atau gunakan</i></b></p>
+               <input value="Single Sign On BPS" formaction="#" class="submit btn btn-primary w-100" tabindex="3" onclick="window.location.href='?SSO=1'{{ app.request.request.get("redirect_login_sso_bps") }}"/>
             </div>
-
+ 
             {% if errors|length > 0 %}
                <hr />
-               <div class="alert alert-danger" role="alert">
+               <div class="alert alert-danger text-dark" role="alert">
                   {{ errors }}
                </div>
             {% endif %}
@@ -133,5 +138,6 @@
    $(function () {
 $('#login_name').focus();
 });
+
 </script>
 {% endblock %}
