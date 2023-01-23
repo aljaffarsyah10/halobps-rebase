@@ -59,10 +59,13 @@ try {
 }
 
 if($error){
-	Html::nullHeader("Login", $CFG_GLPI["root_doc"] . '/index.php');
-	echo '<div class="center b">'.$error.'<br><br>';
-	// Logout whit noAUto to manage auto_login with errors
-	echo '<a href="' . $CFG_GLPI["root_doc"] .'/index.php">' .__('Log in again') . '</a></div>';
-	Html::nullFooter();
+	//Don't delete, for archive purpose (RY)
+	
+	// Html::nullHeader("Login", $CFG_GLPI["root_doc"] . '/index.php');
+	// echo '<div class="center b">'.$error.'<br><br>';
+	// // Logout whit noAUto to manage auto_login with errors
+	// echo '<a href="' . $CFG_GLPI["root_doc"] .'/index.php">' .__('Log in again') . '</a></div>';
+	// Html::nullFooter();
+	echo '<div class="card text-white bg-danger text-sm-center sticky-top row justify-content-md-center"><b>Kesalahan terjadi:</b> <i>'. $error.'</i></div>';
 	exit();
 }
