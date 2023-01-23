@@ -1,0 +1,74 @@
+<div class="container-fluid my-5 py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-11">
+      <div class="card opacity-80 wrapper">
+        <div class="row no-gutters justify-content-between">
+          <div class="col-lg-6 px-n4">
+            <div class="text-wrap p-5 d-flex row justify-content-center align-items-middle">
+              <div class="dbox w-100 d-flex row align-items-middle my-4">
+                <img alt="Logo HaloSIS" src="../pics/logos/logo-HALOSIS-250-white.png"/>
+              </div>
+              <div class="dbox w-100 d-flex row align-items-middle my-3">
+                <h2 class="text-center">HaloSIS adalah layanan satu pintu untuk permintaan maupun keluhan TI</h2>
+              </div>
+              <div class="dbox w-100 row justify-content-center my-3">
+                <a href="{{ index_path() }}?create_ticket=1" class="btn btn-info">
+                  <i class="fas fa-plus"></i>
+                  <span>Buat tiket</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex align-items-stretch">
+            <div class="info-wrap w-100 p-5">
+              <div class="dbox w-100 d-flex align-items-start my-3">
+                <div class="icon align-items-center justify-content-center align-middle mx-3">
+                  <h1>
+                    <span class="fa fa-map-marker"></span>
+                  </h1>
+                </div>
+                <div class="text pl-4">
+                  <h2> Kunjungi kami di: <br /><span style="color:#1a7ab2;">Ruang Pusat Layanan TI, Gedung 1 Lantai 2 BPS-RI </h2>
+                </div>
+              </div>
+              <div class="dbox w-100 d-flex align-items-start my-3">
+                <div class="icon align-items-center justify-content-center align-middle mx-3">
+                  <span class="fa fa-phone"></span>
+                </div>
+                <div class="text pl-4">
+                  <h2> Hubungi <i>call center</i> kami di: <br />
+                    <a href="tel:+62-021-2203-5050;1122"><span style="color:#1a7ab2;">021-2203-5050</span> atau <i>ext. </i><span style="color:#1a7ab2;">1122</span> </a>
+                  </h2>
+                </div>
+              </div>
+              <div class="dbox w-100 d-flex">
+                <div class="icon align-items-center justify-content-center align-middle mx-3">
+                  <span class="fa fa-paper-plane"></span>
+                </div>
+                <div class="text pl-4">
+                  <h2> Laporkan keluhan Anda melalui email kami, ke: <br />
+                    <a href="mailto:halosis@bps.go.id"><span style="color:#1a7ab2;">halosis@bps.go.id</span></a>
+                  </h2>
+                </div>
+              </div>
+              <div class="dbox w-100 d-flex align-items-start my-3">
+                <div class="icon align-items-center justify-content-center align-middle mx-3">
+                  <span class="fa fa-globe"></span>
+                </div>
+                <div class="text pl-4">
+                  <h2> Kunjungi portal kami di: <br />
+                    <a href="https://halosis.bps.go.id"><span style="color:#1a7ab2;">https://halosis.bps.go.id</span></a>
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ include('components/masonry_grid.html.twig', {
+   'grid_items': grid_items,
+}, with_context = false) }}
