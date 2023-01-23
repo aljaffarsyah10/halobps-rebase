@@ -29,6 +29,7 @@ Internal #1: Launch planningrecall
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 12d6ef34 (resolve conflict development vs pusher)
 2024-05-13 04:02:47 [2@LAPTOP-3QJ309BV]
 Internal #1: Launch queuednotification
@@ -201,6 +202,8 @@ Internal #1: Launch reservation
 >>>>>>> 80a728319 (#23 set the layouts and login pages)
 =======
 >>>>>>> ea476a629 (Merge branch '23-tampilan-dipercantik-lagi' into 'pusher')
+=======
+>>>>>>> e6495583e (Pusher)
 2023-01-21 12:09:33 [@yosrals-MacBook-Pro.local]
 Internal #1: Launch olaticket
 2023-01-21 12:11:28 [@yosrals-MacBook-Pro.local]
@@ -234,12 +237,15 @@ Internal #1: Launch mailgateerror
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 116804401 (change footer of login; add little word translation)
 =======
 =======
 >>>>>>> 80a728319 (#23 set the layouts and login pages)
 =======
 >>>>>>> ea476a629 (Merge branch '23-tampilan-dipercantik-lagi' into 'pusher')
+=======
+>>>>>>> e6495583e (Pusher)
 2023-01-21 12:42:49 [2@yosrals-MacBook-Pro.local]
 Internal #1: Launch certificate
 2023-01-21 12:48:34 [2@yosrals-MacBook-Pro.local]
@@ -253,6 +259,7 @@ Internal #1: Launch olaticket
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1d040b893 (modify language preference; change color pallete & footer; add translation)
 2024-05-13 08:25:58 [@LAPTOP-3QJ309BV]
 Internal #1: Launch RecurrentItems
@@ -263,6 +270,8 @@ Internal #1: Launch closeticket
 >>>>>>> 80a728319 (#23 set the layouts and login pages)
 =======
 >>>>>>> ea476a629 (Merge branch '23-tampilan-dipercantik-lagi' into 'pusher')
+=======
+>>>>>>> e6495583e (Pusher)
 2023-01-21 14:39:31 [2@yosrals-MacBook-Pro.local]
 Internal #1: Launch queuednotification
 2023-01-21 14:39:38 [@yosrals-MacBook-Pro.local]
@@ -2026,12 +2035,15 @@ Internal #1: Launch queuednotification
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f17e30dc6 (add some hard-coded words; modify login page; add resources (continued))
 =======
 =======
 >>>>>>> 80a728319 (#23 set the layouts and login pages)
 =======
 >>>>>>> ea476a629 (Merge branch '23-tampilan-dipercantik-lagi' into 'pusher')
+=======
+>>>>>>> e6495583e (Pusher)
 2023-01-22 18:55:21 [2@yosrals-MacBook-Pro.local]
 Internal #1: Launch slaticket
 2023-01-22 18:55:51 [@yosrals-MacBook-Pro.local]
@@ -2587,6 +2599,7 @@ Internal #1: Nothing to launch
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 96fadc420 (modify login redirect)
 2024-05-13 08:32:13 [@LAPTOP-3QJ309BV]
 Internal #1: Launch temp
@@ -2603,6 +2616,8 @@ Internal #1: Launch olaticket
 >>>>>>> 80a728319 (#23 set the layouts and login pages)
 =======
 >>>>>>> ea476a629 (Merge branch '23-tampilan-dipercantik-lagi' into 'pusher')
+=======
+>>>>>>> e6495583e (Pusher)
 2023-01-23 05:23:44 [@yosrals-MacBook-Pro.local]
 Internal #1: Launch queuednotification
 2023-01-23 05:24:09 [@yosrals-MacBook-Pro.local]
@@ -2663,6 +2678,7 @@ Internal #1: Nothing to launch
 Internal #1: Nothing to launch
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fc98797c (add layout background; add quote image)
 =======
 >>>>>>> 80a728319 (#23 set the layouts and login pages)
@@ -2674,3 +2690,9 @@ Internal #1: Launch queuednotification
 >>>>>>> ea476a629 (Merge branch '23-tampilan-dipercantik-lagi' into 'pusher')
 2024-05-13 08:41:40 [@LAPTOP-3QJ309BV]
 Internal #1: Launch slaticket
+=======
+>>>>>>> e6495583e (Pusher)
+2024-05-13 08:46:06 [@LAPTOP-3QJ309BV]
+Internal #1: Launch planningrecall
+2024-05-13 08:46:12 [2@LAPTOP-3QJ309BV]
+Internal #1: Launch olaticket

@@ -269,7 +269,7 @@ class __TwigTemplate_78e92cc7afaacfa23a5636ba4d419325d8005d85029755f679ed615be61
         }
         // line 148
         yield "            <main role=\"main\" id=\"page\" class=\"legacy\">
-";
+            ";
         return; yield '';
     }
 
