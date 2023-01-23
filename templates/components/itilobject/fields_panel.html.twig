@@ -251,13 +251,13 @@
                     {% set download_button %}
                         <a class="btn btn-primary" id = "formLink" href="https://laci.bps.go.id/s/553ErqvWBVUUr6K" target="_blank">
                             <i class="fas fa-download"></i>
-                            {{ __('Download request form') }}
+                             &nbsp;{{ __('Download form permintaan') }}
                         </a>
                     {% endset %}
                     {{ fields.htmlField(
                         'download_button',
                         download_button,
-                        __('Download request form'),
+                        __('Download form permintaan'),
                         field_options
                     ) }}
             {% endif %}
