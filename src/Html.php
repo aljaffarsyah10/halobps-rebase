@@ -1605,12 +1605,6 @@ HTML;
                 'icon'    => KnowbaseItem::getIcon(),
             ];
         }
-        
-        $menu['tentang_kami'] = [
-            'default' => '/front/about_us.php',
-            'title'   => __('Tentang Kami'),
-            'icon'    => 'fas fa-info-circle',
-        ];
 
         $menu['tentang_kami'] = [
             'default' => '/front/about_us.php',
