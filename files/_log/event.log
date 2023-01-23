@@ -162,3 +162,19 @@
 [login] 3: glpi log in from IP ::1
 2023-01-23 02:06:49 [@yosrals-MacBook-Pro.local]
 [login] 3: post-only log in from IP ::1
+2023-01-23 05:23:47 [@yosrals-MacBook-Pro.local]
+[login] 3: glpi log in from IP ::1
+2023-01-23 05:24:19 [@yosrals-MacBook-Pro.local]
+[login] 3: post-only log in from IP ::1
+2023-01-23 05:31:42 [@yosrals-MacBook-Pro.local]
+[login] 3: Failed login for post-only from IP ::1
+2023-01-23 05:31:53 [@yosrals-MacBook-Pro.local]
+[login] 3: post-only log in from IP ::1
+2023-01-23 05:32:13 [@yosrals-MacBook-Pro.local]
+[login] 3: glpi log in from IP ::1
+2023-01-23 05:33:48 [@yosrals-MacBook-Pro.local]
+[login] 3: post-only log in from IP ::1
+2023-01-23 06:04:07 [@yosrals-MacBook-Pro.local]
+[login] 3: glpi log in from IP ::1
+2023-01-23 06:04:26 [@yosrals-MacBook-Pro.local]
+[login] 3: post-only log in from IP ::1
