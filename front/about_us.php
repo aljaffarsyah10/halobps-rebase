@@ -43,13 +43,13 @@ if (isset($_GET["redirect"])) {
 Session::checkFaqAccess();
 
 if (Session::getLoginUserID()) {
-    Html::helpHeader(__('About'), 'about');
+    Html::helpHeader(__('Tentang Kami'), 'tentang_kami');
 } else {
     $_SESSION["glpilanguage"] = $_SESSION['glpilanguage'] ?? $CFG_GLPI['language'];
    // Anonymous FAQ
-    Html::simpleHeader(__('About'), [
+    Html::simpleHeader(__('Tentang Kami'), [
         __('Authentication') => '/',
-        __('About')            => '/front/aboutus.php'
+        __('Tentang Kami')   => '/front/about_us.php'
     ]);
 }
 
