@@ -1386,8 +1386,8 @@ HTML;
             'tools' => [
                 'title' => __('Tools'),
                 'types' => [
-                    'Project', 'Reminder', 'RSSFeed', 'KnowbaseItem',
-                    'ReservationItem', 'Report', 'MigrationCleaner',
+                    /*'Project', 'Reminder', 'RSSFeed',*/ 'KnowbaseItem',
+                    /*'ReservationItem',*/ 'Report', 'MigrationCleaner',
                     'SavedSearch', 'Impact'
                 ],
                 'icon' => 'ti ti-briefcase'
