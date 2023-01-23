@@ -47,7 +47,7 @@
 {% endif %}
 
 {{ include('layout/parts/head.html.twig') }}
-<body class="welcome-anonymous">
+<body class="welcome-anonymous" style="background:url(pics/layout/global_layout_background.png);background-repeat:repeat;">
    <div class="page-anonymous">
       <div class="flex-fill d-flex flex-column justify-content-center py-4 mt-4">
          {% set style = null %}
@@ -55,17 +55,17 @@
             {% set style = 'max-width: 40rem' %}
          {% endif %}
          {% if card_bg_width is defined %}
-            {% set style = 'max-width: 60rem' %}
+            {% set style = 'max-width: 70rem' %}
          {% endif %}
 
-         <div class="container-tight py-6" {% if style is not null %}style="{{ style }}"{% endif %}>
-            <div class="text-center">
+         <div class="container-tight py-6 mt-5" {% if style is not null %}style="{{ style }}"{% endif %}>
+            {# <div class="text-center">
                <div class="col-md">
-                  <span class="glpi-logo mb-4" title="GLPI"></span>
+                  <span class="glpi-logo mb-4" title="HaloSIS - BPS RI"></span>
                </div>
-            </div>
-            <div class="card card-md">
-               <div class="card-body">
+            </div> #}
+            <div class="card card-sm shadow-xl" style="border-radius:2em;">
+               <div class="card-body shadow-lg" style="border-radius:2em;background-color:#19BC9C;">
                {% block content_block %}{% endblock %}
                </div>
             </div>
