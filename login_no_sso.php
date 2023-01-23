@@ -133,7 +133,7 @@ if (!file_exists(GLPI_CONFIG_DIR . "/config_db.php")) {
         Toolbox::manageRedirect($redirect);
     }
 
-    TemplateRenderer::getInstance()->display('pages/login.html.twig', [
+    TemplateRenderer::getInstance()->display('pages/login_no_sso.html.twig', [
         'card_bg_width'       => true,
         'lang'                => $CFG_GLPI["languages"][$_SESSION['glpilanguage']][3],
         'title'               => __('Otentikasi'),
