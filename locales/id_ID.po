@@ -11609,7 +11609,7 @@ msgstr ""
 #: js/glpi_dialog.js:387 js/misc.js:45
 msgid "Information"
 msgid_plural "Informations"
-msgstr[0] ""
+msgstr[0] "Informasi"
 
 #: src/Config.php:1905
 msgid "Information about system installation and configuration"
@@ -17753,7 +17753,7 @@ msgstr ""
 #: src/Project.php:85 src/Profile.php:1477
 msgid "Project"
 msgid_plural "Projects"
-msgstr[0] ""
+msgstr[0] "Proyek"
 
 #: src/Item_Project.php:55
 msgid "Project item"
@@ -18639,7 +18639,7 @@ msgstr[0] "Laporan"
 #: src/NotificationTargetTicket.php:753 src/Ticket.php:3767
 #: src/Ticket.php:3787
 msgid "Request"
-msgstr ""
+msgstr "Permintaan"
 
 #: templates/components/form/inventory_info.html.twig
 #: src/Features/Inventoriable.php:203

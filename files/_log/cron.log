@@ -2005,4 +2005,569 @@ Internal #1: Launch queuednotification
 Internal #1: Launch olaticket
 2023-01-22 17:31:10 [@yosrals-MacBook-Pro.local]
 Internal #1: Launch queuednotification
+<<<<<<< HEAD
 >>>>>>> f17e30dc6 (add some hard-coded words; modify login page; add resources (continued))
+=======
+2023-01-22 18:55:21 [2@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-22 18:55:51 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-22 18:56:17 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-22 19:00:20 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-22 19:08:10 [3@yosrals-MacBook-Pro.local]
+Internal #1: Launch mailgate
+2023-01-22 19:14:09 [3@yosrals-MacBook-Pro.local]
+Internal #1: Launch graph
+2023-01-22 19:17:06 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch reservation
+2023-01-22 19:18:03 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch RecurrentItems
+2023-01-22 19:18:59 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch temp
+2023-01-22 19:20:34 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-22 19:21:01 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-22 19:21:36 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-22 19:21:43 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-22 19:24:24 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch mailgate
+2023-01-22 21:17:39 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-22 21:18:29 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-22 21:18:51 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-22 21:20:56 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-22 21:21:31 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch mailgate
+2023-01-22 21:22:46 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch graph
+2023-01-22 21:23:53 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch reservation
+2023-01-22 21:24:54 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch RecurrentItems
+2023-01-23 01:51:51 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch temp
+2023-01-23 01:51:58 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 01:52:02 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 01:53:38 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-23 01:53:51 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-23 01:54:25 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch mailgate
+2023-01-23 01:54:40 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch graph
+2023-01-23 01:56:00 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch reservation
+2023-01-23 01:57:09 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch RecurrentItems
+2023-01-23 01:57:59 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 01:58:26 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 01:58:42 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-23 01:59:05 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 01:59:10 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-23 01:59:45 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 01:59:54 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 02:00:25 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 02:01:18 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 02:06:04 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 02:06:13 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 02:06:36 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-23 02:06:42 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch mailgate
+2023-01-23 02:18:07 [3@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-23 02:36:35 [3@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 02:46:24 [3@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 02:52:59 [3@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-23 03:02:42 [3@yosrals-MacBook-Pro.local]
+Internal #1: Launch mailgate
+2023-01-23 03:08:25 [3@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-23 03:13:52 [3@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:35:54 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 03:36:22 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch temp
+2023-01-23 03:36:33 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch graph
+2023-01-23 03:36:50 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch reservation
+2023-01-23 03:37:02 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch RecurrentItems
+2023-01-23 03:37:03 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-23 03:37:59 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch mailgate
+2023-01-23 03:38:21 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-23 03:38:59 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:39:15 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:39:24 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:39:30 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:40:27 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 03:41:12 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:41:19 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:41:31 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:41:31 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:41:40 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:41:50 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:42:03 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-23 03:42:13 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:42:15 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:42:17 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:42:41 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:42:42 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:42:42 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:43:10 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:43:21 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-23 03:43:30 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:43:40 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:43:41 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:43:51 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:44:06 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:44:20 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:44:34 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:44:35 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:45:03 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 03:45:04 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:45:05 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:45:07 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:45:19 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:45:49 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:45:50 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:45:53 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:46:03 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:46:28 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:46:40 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:46:54 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:46:59 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:47:07 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch mailgate
+2023-01-23 03:47:15 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-23 03:48:04 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:48:19 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-23 03:48:29 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:48:42 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:48:59 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:49:11 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:49:22 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:50:39 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 03:51:22 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:51:30 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:51:39 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:52:48 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-23 03:52:57 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:53:17 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:54:02 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-23 03:54:23 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:54:32 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:55:07 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 03:55:08 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:55:13 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:55:22 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:55:27 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:55:36 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:55:46 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:56:00 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:56:06 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:56:13 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 03:57:18 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch mailgate
+2023-01-23 03:58:06 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-23 03:58:27 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:59:44 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 03:59:52 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-23 04:00:09 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 04:00:26 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:00:58 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:02:13 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:02:22 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:02:29 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:03:56 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-23 04:04:15 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:04:23 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-23 04:04:47 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:05:06 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 04:05:40 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:06:01 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:06:12 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:06:56 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:07:07 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch mailgate
+2023-01-23 04:07:16 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:07:23 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:07:28 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:07:34 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:07:43 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:07:55 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:08:03 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-23 04:08:08 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:08:15 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:08:36 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:08:50 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:09:39 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:09:45 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-23 04:10:00 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 04:10:16 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:10:56 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:10:57 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:11:13 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:11:27 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:11:35 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:11:36 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:11:41 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:11:51 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:12:56 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:13:03 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-23 04:13:25 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:13:30 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:14:15 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:14:22 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-23 04:14:28 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:14:40 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:14:48 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:14:53 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:15:58 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 04:16:06 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:16:13 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:16:14 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:16:18 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:16:24 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:16:29 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:16:59 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:17:06 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch mailgate
+2023-01-23 04:17:24 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:17:33 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:17:50 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:17:50 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:17:55 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:18:01 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-23 04:18:06 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:18:15 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:18:53 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:19:00 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:19:04 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-23 04:19:14 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:19:21 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:19:21 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:19:47 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:20:08 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 04:20:14 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:20:21 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:20:21 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:20:22 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:20:22 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:20:22 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:20:28 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:20:35 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:20:59 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:21:04 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:21:14 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:21:22 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:21:33 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:21:52 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:22:18 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:22:25 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:23:06 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-23 04:23:11 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:23:28 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:24:35 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:24:44 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-23 04:25:06 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 04:25:35 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:25:40 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:25:41 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:25:44 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:25:50 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:26:38 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:28:04 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch mailgate
+2023-01-23 04:29:41 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:29:46 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-23 04:30:03 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-23 04:30:12 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 04:30:34 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:31:01 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:31:02 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:31:18 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:32:28 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:32:28 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:32:29 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:35:07 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:35:11 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-23 04:35:17 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 04:35:31 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-23 04:38:26 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch graph
+2023-01-23 04:38:35 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch reservation
+2023-01-23 04:38:47 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:39:00 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch temp
+2023-01-23 04:39:07 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch RecurrentItems
+2023-01-23 04:39:14 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch mailgate
+2023-01-23 04:39:26 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:39:39 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:40:10 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch slaticket
+2023-01-23 04:40:17 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch planningrecall
+2023-01-23 04:40:27 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:40:38 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch olaticket
+2023-01-23 04:40:43 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:40:51 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:41:02 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:41:11 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:41:17 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:41:39 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:41:46 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:42:08 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:42:13 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:42:34 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+2023-01-23 04:43:15 [@yosrals-MacBook-Pro.local]
+Internal #1: Launch queuednotification
+2023-01-23 04:43:23 [@yosrals-MacBook-Pro.local]
+Internal #1: Nothing to launch
+>>>>>>> 96fadc420 (modify login redirect)
+2024-05-13 08:32:13 [@LAPTOP-3QJ309BV]
+Internal #1: Launch temp
+2024-05-13 08:32:35 [@LAPTOP-3QJ309BV]
+Internal #1: Launch slaticket
+2024-05-13 08:32:38 [@LAPTOP-3QJ309BV]
+Internal #1: Launch queuednotification
+2024-05-13 08:32:40 [@LAPTOP-3QJ309BV]
+Internal #1: Launch planningrecall
+2024-05-13 08:32:52 [2@LAPTOP-3QJ309BV]
+Internal #1: Launch olaticket

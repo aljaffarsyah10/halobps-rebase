@@ -66,198 +66,84 @@ class __TwigTemplate_3dd253aa866e0440de9dbbe25a80e1c8e2acf8526574dce1723fcfc7c2b
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(Session::getNewCSRFToken(), "html", null, true);
         yield "\" />
 
-      <div class=\"row justify-content-center\">
-         <div class=\"col-md-5\">
-            <div class=\"card-header mb-4\">
-               <h2 class=\"mx-auto\">";
+      <div class=\"row justify-content-center align-items-center my-1\">
+         <img class=\"w-75 img-sm\" src=\"pics/layout/global_layout_tagline.png\">
+         <div class=\"row justify-content-center align-items-center mx-4 my-3\">
+            <input value=\"Login SSO BPS\" formaction=\"#\" class=\"w-50 input-md submit btn btn-primary\" onclick=\"window.location.href='?SSO=1'";
         // line 45
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Login to your account"), "html", null, true);
-        yield "</h2>
-            </div>
-            <div class=\"mb-3\">
-               <label class=\"form-label\" for=\"login_name\">";
-        // line 48
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Login"), "html", null, true);
-        yield "</label>
-               <input type=\"text\" class=\"form-control\" id=\"login_name\" name=\"";
-        // line 49
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["namfield"] ?? null), "html", null, true);
-        yield "\" placeholder=\"\" tabindex=\"1\" />
-            </div>
-            <div class=\"mb-4\">
-               <label class=\"form-label\" for=\"login_password\">
-                  ";
-        // line 53
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Password"), "html", null, true);
-        yield "
-
-                  ";
-        // line 55
-        if (($context["show_lost_password"] ?? null)) {
-            // line 56
-            yield "                     <span class=\"form-label-description\">
-                        <a href=\"";
-            // line 57
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Glpi\Application\View\Extension\RoutingExtension']->path("front/lostpassword.php?lostpassword=1"), "html", null, true);
-            yield "\">
-                           ";
-            // line 58
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Forgotten password?"), "html", null, true);
-            yield "
-                        </a>
-                     </span>
-                  ";
-        }
-        // line 62
-        yield "               </label>
-               <input type=\"password\" class=\"form-control\" id=\"login_password\" name=\"";
-        // line 63
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["pwdfield"] ?? null), "html", null, true);
-        yield "\" placeholder=\"\" autocomplete=\"off\" tabindex=\"2\" />
-            </div>
-
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, ($context["app"] ?? null), "request", [], "any", false, false, false, 45), "request", [], "any", false, false, false, 45), "get", ["redirect_login_sso_bps"], "method", false, false, false, 45), "html", null, true);
+        yield "\"/>
+         </div>
             ";
-        // line 66
-        if (Twig\Extension\CoreExtension::constant("GLPI_DEMO_MODE")) {
-            // line 67
-            yield "               <div class=\"mb-3\">
-                  <label class=\"form-label\" for=\"dropdown_language";
-            // line 68
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["rand"] ?? null), "html", null, true);
-            yield "\">";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Language"), "html", null, true);
-            yield "</label>
-                  ";
-            // line 69
-            yield ($context["languages_dropdown"] ?? null);
-            yield "
-               </div>
-            ";
-        }
-        // line 72
-        yield "
-            ";
-        // line 73
-        if ($this->extensions['Glpi\Application\View\Extension\ConfigExtension']->config("display_login_source")) {
-            // line 74
-            yield "               <div class=\"mb-3\">
-                  <label class=\"form-label\" for=\"dropdown_auth";
-            // line 75
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["rand"] ?? null), "html", null, true);
-            yield "\">";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Login source"), "html", null, true);
-            yield "</label>
-                  ";
-            // line 76
-            yield ($context["auth_dropdown_login"] ?? null);
-            yield "
-               </div>
-            ";
-        }
-        // line 79
-        yield "
-            ";
-        // line 80
-        if ($this->extensions['Glpi\Application\View\Extension\ConfigExtension']->config("login_remember_time")) {
-            // line 81
-            yield "               <div class=\"mb-2\">
-                  <label class=\"form-check\" for=\"login_remember\">
-                     <input type=\"checkbox\" class=\"form-check-input\" id=\"login_remember\" name=\"";
-            // line 83
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["rmbfield"] ?? null), "html", null, true);
-            yield "\" ";
-            yield (($this->extensions['Glpi\Application\View\Extension\ConfigExtension']->config("login_remember_default")) ? ("checked") : (""));
-            yield " />
-                     <span class=\"form-check-label\">";
-            // line 84
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Remember me"), "html", null, true);
-            yield "</span>
-                  </label>
-               </div>
-            ";
-        }
-        // line 88
-        yield "
-            <div class=\"form-footer\">
-               <button type=\"submit\" name=\"submit\" class=\"btn btn-primary w-100\" tabindex=\"3\">
-                  ";
-        // line 91
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Sign in"), "html", null, true);
-        yield "
-               </button>
-            </div>
-
-            ";
-        // line 95
+        // line 47
         if ((Twig\Extension\CoreExtension::length($this->env->getCharset(), ($context["errors"] ?? null)) > 0)) {
-            // line 96
+            // line 48
             yield "               <hr />
-               <div class=\"alert alert-danger\" role=\"alert\">
+               <div class=\"alert alert-danger text-dark\" role=\"alert\">
                   ";
-            // line 98
+            // line 50
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["errors"] ?? null), "html", null, true);
             yield "
                </div>
             ";
         }
-        // line 101
-        yield "         </div>
-
+        // line 53
+        yield "
          ";
-        // line 103
+        // line 54
         if (($context["right_panel"] ?? null)) {
-            // line 104
+            // line 55
             yield "            <div class=\"col-auto px-2 text-center\">
                ";
-            // line 105
+            // line 56
             if ((Twig\Extension\CoreExtension::length($this->env->getCharset(), ($context["text_login"] ?? null)) > 0)) {
-                // line 106
+                // line 57
                 yield "                  <div class=\"rich_text_container\">
                      ";
-                // line 107
+                // line 58
                 yield $this->extensions['Glpi\Application\View\Extension\DataHelpersExtension']->getSafeHtml(($context["text_login"] ?? null));
                 yield "
                   </div>
                ";
             }
-            // line 110
+            // line 61
             yield "
                ";
-            // line 111
+            // line 62
             if ($this->extensions['Glpi\Application\View\Extension\ConfigExtension']->config("use_public_faq")) {
-                // line 112
+                // line 63
                 yield "                  <hr />
 
                   <a class=\"btn btn-outline-secondary btn-icon\" href=\"front/helpdesk.faq.php\">
                      <i class=\"fas fa-question\"></i>&nbsp;
                      ";
-                // line 116
+                // line 67
                 yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("FAQ"), "html", null, true);
                 yield "
                   </a>
                ";
             }
-            // line 119
+            // line 70
             yield "
                ";
-            // line 120
+            // line 71
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Glpi\Application\View\Extension\PluginExtension']->callPluginHook(Twig\Extension\CoreExtension::constant("Glpi\\Plugin\\Hooks::DISPLAY_LOGIN")), "html", null, true);
             yield "
             </div>
          ";
         }
-        // line 123
+        // line 74
         yield "      </div>
    </form>
 ";
         return; yield '';
     }
 
-    // line 127
+    // line 78
     public function block_footer_block($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 128
+        // line 79
         yield "   ";
         yield ($context["copyright_message"] ?? null);
         yield "
@@ -265,7 +151,7 @@ class __TwigTemplate_3dd253aa866e0440de9dbbe25a80e1c8e2acf8526574dce1723fcfc7c2b
         return; yield '';
     }
 
-    // line 131
+    // line 82
     public function block_javascript_block($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -273,6 +159,7 @@ class __TwigTemplate_3dd253aa866e0440de9dbbe25a80e1c8e2acf8526574dce1723fcfc7c2b
    \$(function () {
 \$('#login_name').focus();
 });
+
 </script>
 ";
         return; yield '';
@@ -299,7 +186,7 @@ class __TwigTemplate_3dd253aa866e0440de9dbbe25a80e1c8e2acf8526574dce1723fcfc7c2b
      */
     public function getDebugInfo()
     {
-        return array (  269 => 131,  261 => 128,  257 => 127,  250 => 123,  244 => 120,  241 => 119,  235 => 116,  229 => 112,  227 => 111,  224 => 110,  218 => 107,  215 => 106,  213 => 105,  210 => 104,  208 => 103,  204 => 101,  198 => 98,  194 => 96,  192 => 95,  185 => 91,  180 => 88,  173 => 84,  167 => 83,  163 => 81,  161 => 80,  158 => 79,  152 => 76,  146 => 75,  143 => 74,  141 => 73,  138 => 72,  132 => 69,  126 => 68,  123 => 67,  121 => 66,  115 => 63,  112 => 62,  105 => 58,  101 => 57,  98 => 56,  96 => 55,  91 => 53,  84 => 49,  80 => 48,  74 => 45,  66 => 40,  62 => 39,  58 => 38,  53 => 37,  49 => 36,  38 => 34,);
+        return array (  155 => 82,  147 => 79,  143 => 78,  136 => 74,  130 => 71,  127 => 70,  121 => 67,  115 => 63,  113 => 62,  110 => 61,  104 => 58,  101 => 57,  99 => 56,  96 => 55,  94 => 54,  91 => 53,  85 => 50,  81 => 48,  79 => 47,  74 => 45,  66 => 40,  62 => 39,  58 => 38,  53 => 37,  49 => 36,  38 => 34,);
     }
 
     public function getSourceContext()

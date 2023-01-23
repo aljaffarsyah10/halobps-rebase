@@ -1,14 +1,45 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password);
+/**
+ * ---------------------------------------------------------------------
+ *
+ * GLPI - Gestionnaire Libre de Parc Informatique
+ *
+ * http://glpi-project.org
+ *
+ * @copyright 2015-2022 Teclib' and contributors.
+ * @copyright 2003-2014 by the INDEPNET Development Team.
+ * @licence   https://www.gnu.org/licenses/gpl-3.0.html
+ *
+ * ---------------------------------------------------------------------
+ *
+ * LICENSE
+ *
+ * This file is part of GLPI.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ *
+ * ---------------------------------------------------------------------
+ */
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+// Check PHP version not to have trouble
+// Need to be the very fist step before any include
+if (
+    version_compare(PHP_VERSION, '7.4.0', '<') ||
+    version_compare(PHP_VERSION, '8.2.0', '>=')
+) {
+    die('PHP 7.4.0 - 8.2.0 (exclusive) required');
 }
 
 use Glpi\Application\View\TemplateRenderer;
@@ -102,7 +133,7 @@ if (!file_exists(GLPI_CONFIG_DIR . "/config_db.php")) {
         Toolbox::manageRedirect($redirect);
     }
 
-    TemplateRenderer::getInstance()->display('pages/login.html.twig', [
+    TemplateRenderer::getInstance()->display('pages/login_no_sso.html.twig', [
         'card_bg_width'       => true,
         'lang'                => $CFG_GLPI["languages"][$_SESSION['glpilanguage']][3],
         'title'               => __('Otentikasi'),
@@ -113,11 +144,11 @@ if (!file_exists(GLPI_CONFIG_DIR . "/config_db.php")) {
         'pwdfield'            => ($_SESSION['pwdfield'] = uniqid('fieldb')),
         'rmbfield'            => ($_SESSION['rmbfield'] = uniqid('fieldc')),
         'show_lost_password'  => $CFG_GLPI["notifications_mailing"]
-            && countElementsInTable('glpi_notifications', [
-                'itemtype'  => 'User',
-                'event'     => 'passwordforget',
-                'is_active' => 1
-            ]),
+                              && countElementsInTable('glpi_notifications', [
+                                  'itemtype'  => 'User',
+                                  'event'     => 'passwordforget',
+                                  'is_active' => 1
+                              ]),
         'languages_dropdown'  => Dropdown::showLanguages('language', [
             'display'             => false,
             'display_emptychoice' => true,
@@ -125,8 +156,8 @@ if (!file_exists(GLPI_CONFIG_DIR . "/config_db.php")) {
             'width'               => '100%'
         ]),
         'right_panel'         => strlen($CFG_GLPI['text_login']) > 0
-            || count($PLUGIN_HOOKS[Hooks::DISPLAY_LOGIN] ?? []) > 0
-            || $CFG_GLPI["use_public_faq"],
+                               || count($PLUGIN_HOOKS[Hooks::DISPLAY_LOGIN] ?? []) > 0
+                               || $CFG_GLPI["use_public_faq"],
         'auth_dropdown_login' => Auth::dropdownLogin(false),
         'copyright_message'   => Html::getCopyrightMessage(false),
         'errors'              => $errors

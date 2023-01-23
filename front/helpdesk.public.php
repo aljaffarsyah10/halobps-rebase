@@ -200,15 +200,15 @@ if (isset($_GET['create_ticket'])) {
         $survey_list    = Ticket::showCentralList(0, "survey", false, false);
     }
 
-    $reminder_list = "";
-    if (Session::haveRight("reminder_public", READ)) {
-        $reminder_list = Reminder::showListForCentral(false, false);
-    }
+    // $reminder_list = "";
+    // if (Session::haveRight("reminder_public", READ)) {
+    //     $reminder_list = Reminder::showListForCentral(false, false);
+    // }
 
-    $rss_feed = "";
-    if (Session::haveRight("rssfeed_public", READ)) {
-        $rss_feed = RSSFeed::showListForCentral(false, false);
-    }
+    // $rss_feed = "";
+    // if (Session::haveRight("rssfeed_public", READ)) {
+    //     $rss_feed = RSSFeed::showListForCentral(false, false);
+    // }
 
     $kb_popular    = "";
     $kb_recent     = "";

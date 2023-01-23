@@ -306,10 +306,10 @@ class __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a79
             $context["download_button"] = ('' === $tmp = \Twig\Extension\CoreExtension::captureOutput((function () use (&$context, $macros, $blocks) {
                 // line 269
                 yield "                        <a class=\"btn btn-primary\" id = \"formLink\" href=\"https://laci.bps.go.id/s/553ErqvWBVUUr6K\" target=\"_blank\">
-                            <i class=\"fas fa-download mr-2\"></i>
+                            <i class=\"fas fa-download mr-2\"></i>&nbsp;
                             ";
                 // line 271
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Download request form"), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Download form permintaan"), "html", null, true);
                 yield "
                         </a>
                     ";

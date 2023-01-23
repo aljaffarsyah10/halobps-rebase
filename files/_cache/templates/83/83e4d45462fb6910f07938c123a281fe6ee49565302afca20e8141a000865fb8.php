@@ -63,7 +63,7 @@ class __TwigTemplate_8ea6c7b522113d5fc2fa7636c8f75d21dd73641a5e99f7d93f58fc00aa4
         // line 50
         yield Twig\Extension\CoreExtension::include($this->env, $context, "layout/parts/head.html.twig");
         yield "
-<body class=\"welcome-anonymous\">
+<body class=\"welcome-anonymous\" style=\"background:url(pics/layout/global_layout_background.png);background-repeat:repeat;\">
    <div class=\"page-anonymous\">
       <div class=\"flex-fill d-flex flex-column justify-content-center py-4 mt-4\">
          ";
@@ -83,13 +83,13 @@ class __TwigTemplate_8ea6c7b522113d5fc2fa7636c8f75d21dd73641a5e99f7d93f58fc00aa4
         if (array_key_exists("card_bg_width", $context)) {
             // line 59
             yield "            ";
-            $context["style"] = "max-width: 60rem";
+            $context["style"] = "max-width: 70rem";
             // line 60
             yield "         ";
         }
         // line 61
         yield "
-         <div class=\"container-tight py-6\" ";
+         <div class=\"container-tight py-6 mt-5\" ";
         // line 62
         if ( !(null === ($context["style"] ?? null))) {
             yield "style=\"";
@@ -97,13 +97,10 @@ class __TwigTemplate_8ea6c7b522113d5fc2fa7636c8f75d21dd73641a5e99f7d93f58fc00aa4
             yield "\"";
         }
         yield ">
-            <div class=\"text-center\">
-               <div class=\"col-md\">
-                  <span class=\"glpi-logo mb-4\" title=\"GLPI\"></span>
-               </div>
-            </div>
-            <div class=\"card card-md\">
-               <div class=\"card-body\">
+            ";
+        // line 68
+        yield "            <div class=\"card card-sm shadow-xl\" style=\"border-radius:2em;\">
+               <div class=\"card-body shadow-lg\" style=\"border-radius:2em;background-color:#19BC9C;\">
                ";
         // line 70
         yield from $this->unwrap()->yieldBlock('content_block', $context, $blocks);
@@ -173,7 +170,7 @@ class __TwigTemplate_8ea6c7b522113d5fc2fa7636c8f75d21dd73641a5e99f7d93f58fc00aa4
      */
     public function getDebugInfo()
     {
-        return array (  149 => 81,  142 => 75,  135 => 70,  128 => 82,  126 => 81,  119 => 76,  117 => 75,  111 => 71,  109 => 70,  94 => 62,  91 => 61,  88 => 60,  85 => 59,  82 => 58,  79 => 57,  76 => 56,  73 => 55,  71 => 54,  64 => 50,  61 => 49,  57 => 43,  55 => 42,  52 => 40,  50 => 38,  48 => 36,  46 => 35,  44 => 34,  41 => 33,);
+        return array (  146 => 81,  139 => 75,  132 => 70,  125 => 82,  123 => 81,  116 => 76,  114 => 75,  108 => 71,  106 => 70,  102 => 68,  94 => 62,  91 => 61,  88 => 60,  85 => 59,  82 => 58,  79 => 57,  76 => 56,  73 => 55,  71 => 54,  64 => 50,  61 => 49,  57 => 43,  55 => 42,  52 => 40,  50 => 38,  48 => 36,  46 => 35,  44 => 34,  41 => 33,);
     }
 
     public function getSourceContext()
