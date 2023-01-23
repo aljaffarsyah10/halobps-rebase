@@ -1386,7 +1386,8 @@ HTML;
             'tools' => [
                 'title' => __('Tools'),
                 'types' => [
-                    /*'Project', 'Reminder', 'RSSFeed',*/ 'KnowbaseItem',
+                    /*'Project', 'Reminder', 'RSSFeed',*/
+                    'KnowbaseItem',
                     /*'ReservationItem',*/ 'Report', 'MigrationCleaner',
                     'SavedSearch', 'Impact'
                 ],
@@ -1605,12 +1606,6 @@ HTML;
                 'icon'    => KnowbaseItem::getIcon(),
             ];
         }
-        
-        $menu['tentang_kami'] = [
-            'default' => '/front/about_us.php',
-            'title'   => __('Tentang Kami'),
-            'icon'    => 'fas fa-info-circle',
-        ];
 
         $menu['tentang_kami'] = [
             'default' => '/front/about_us.php',

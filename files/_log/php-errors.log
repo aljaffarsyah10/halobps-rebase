@@ -120,6 +120,7 @@ Compile css/palettes/auror.scss  {"user":"2@yosrals-MacBook-Pro.local"}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [2024-05-13 05:50:32] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("syntax error, unexpected token "<<", expecting "function" or "const"")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\templates\layout\parts\user_header.html.twig" at line 81
   Backtrace :
   vendor\twig\twig\src\Template.php:335              Twig\Template->yield()
@@ -345,6 +346,8 @@ Compile css/standalone/gridstack-grids.scss  {"user":"2@DESKTOP-737D8R5"}
 >>>>>>> ea476a629 (Merge branch '23-tampilan-dipercantik-lagi' into 'pusher')
 =======
 >>>>>>> e6495583e (Pusher)
+=======
+>>>>>>> 532eb969b (Merge branch 'pusher' into 'development')
 [2023-01-21 12:08:20] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/2002): Operation timed out in /Applications/MAMP/htdocs/glpi/src/DBmysql.php at line 250
   Backtrace :
   src/DBmysql.php:250                                mysqli->real_connect()
@@ -471,6 +474,7 @@ Compile css/palettes/lightblue.scss  {"user":"2@yosrals-MacBook-Pro.local"}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 116804401 (change footer of login; add little word translation)
 =======
 =======
@@ -479,6 +483,8 @@ Compile css/palettes/lightblue.scss  {"user":"2@yosrals-MacBook-Pro.local"}
 >>>>>>> ea476a629 (Merge branch '23-tampilan-dipercantik-lagi' into 'pusher')
 =======
 >>>>>>> e6495583e (Pusher)
+=======
+>>>>>>> 532eb969b (Merge branch 'pusher' into 'development')
 [2023-01-21 12:48:33] glpiphplog.WARNING:   *** PHP User Warning (512): Usage of "utf8_unicode_ci" charset/collation detected, should be "utf8mb4_unicode_ci" in /Applications/MAMP/htdocs/glpi/src/DBmysql.php at line 1995
   Backtrace :
   src/DBmysql.php:1995                               trigger_error()
@@ -516,6 +522,7 @@ Compile css/palettes/lightblue.scss  {"user":"2@yosrals-MacBook-Pro.local"}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1d040b893 (modify language preference; change color pallete & footer; add translation)
 =======
 =======
@@ -524,6 +531,8 @@ Compile css/palettes/lightblue.scss  {"user":"2@yosrals-MacBook-Pro.local"}
 >>>>>>> ea476a629 (Merge branch '23-tampilan-dipercantik-lagi' into 'pusher')
 =======
 >>>>>>> e6495583e (Pusher)
+=======
+>>>>>>> 532eb969b (Merge branch 'pusher' into 'development')
 2023-01-21 14:40:58 [@yosrals-MacBook-Pro.local]
 Invalid array settings: idp_entityId_not_found, idp_sso_not_found, idp_cert_or_fingerprint_not_found_and_required
 [2023-01-21 14:40:58] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_escape_string(): Couldn't fetch mysqli in /Applications/MAMP/htdocs/glpi/src/DBmysql.php at line 333
@@ -20262,6 +20271,7 @@ Compile css/palettes/lightblue.scss  {"user":"2@yosrals-MacBook-Pro.local"}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f17e30dc6 (add some hard-coded words; modify login page; add resources (continued))
 =======
 =======
@@ -20270,6 +20280,8 @@ Compile css/palettes/lightblue.scss  {"user":"2@yosrals-MacBook-Pro.local"}
 >>>>>>> ea476a629 (Merge branch '23-tampilan-dipercantik-lagi' into 'pusher')
 =======
 >>>>>>> e6495583e (Pusher)
+=======
+>>>>>>> 532eb969b (Merge branch 'pusher' into 'development')
 [2023-01-22 17:37:40] glpiphplog.DEBUG: Html::compileScss() in /Applications/MAMP/htdocs/glpi/src/Html.php line 6848
 Compile css/palettes/lightblue.scss  {"user":"2@yosrals-MacBook-Pro.local"} 
 [2023-01-22 17:38:11] glpiphplog.CRITICAL:   *** PHP Error (1): Maximum execution time of 30 seconds exceeded in /Applications/MAMP/htdocs/glpi/vendor/scssphp/scssphp/src/SourceMap/Base64VLQ.php at line 60  
@@ -21699,6 +21711,7 @@ Invalid array settings: idp_entityId_not_found, idp_sso_not_found, idp_cert_or_f
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 96fadc420 (modify login redirect)
 =======
 =======
@@ -21707,6 +21720,8 @@ Invalid array settings: idp_entityId_not_found, idp_sso_not_found, idp_cert_or_f
 >>>>>>> ea476a629 (Merge branch '23-tampilan-dipercantik-lagi' into 'pusher')
 =======
 >>>>>>> e6495583e (Pusher)
+=======
+>>>>>>> 532eb969b (Merge branch 'pusher' into 'development')
 [2023-01-23 05:46:04] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Delimiter must not be alphanumeric or backslash in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
   Backtrace :
   ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
@@ -22247,6 +22262,7 @@ Invalid array settings: idp_entityId_not_found, idp_sso_not_found, idp_cert_or_f
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fc98797c (add layout background; add quote image)
 =======
 >>>>>>> 80a728319 (#23 set the layouts and login pages)
@@ -22254,3 +22270,5 @@ Invalid array settings: idp_entityId_not_found, idp_sso_not_found, idp_cert_or_f
 >>>>>>> ea476a629 (Merge branch '23-tampilan-dipercantik-lagi' into 'pusher')
 =======
 >>>>>>> e6495583e (Pusher)
+=======
+>>>>>>> 532eb969b (Merge branch 'pusher' into 'development')
