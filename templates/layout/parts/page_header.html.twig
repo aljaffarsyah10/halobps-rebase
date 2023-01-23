@@ -138,10 +138,11 @@
       </div>
       {% endif %}
 
-      <div class="page-wrapper mb-0">
-         {% if '/helpdesk.public.php' in index_path() %}
-            <div class="page-body container-fluid" style="background:url(pics/layout/global_layout_background.png);background-repeat:repeat;background-attachment:fixed;">
-         {% else %}
-            <div class="page-body container-fluid">
-         {% endif %}
+      <div class="page-wrapper mb-0" style="background:url(../pics/layout/global_layout_background.png);background-repeat:repeat;background-attachment:fixed;">
+         <div class="page-body container-fluid">
+            {% if index_path() matches '/helpdesk\.public\.php$/'%}
+               <div class="d-flex justify-content-center">
+                  <img alt="HaloSIS Quote" src="../pics/layout/global_layout_quote.png"/>
+               </div>
+            {% endif %}
             <main role="main" id="page" class="legacy">

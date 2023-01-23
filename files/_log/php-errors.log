@@ -21659,4 +21659,544 @@ Invalid array settings: idp_entityId_not_found, idp_sso_not_found, idp_cert_or_f
   
 2023-01-23 04:40:51 [@yosrals-MacBook-Pro.local]
 Invalid array settings: idp_entityId_not_found, idp_sso_not_found, idp_cert_or_fingerprint_not_found_and_required
+<<<<<<< HEAD
 >>>>>>> 96fadc420 (modify login redirect)
+=======
+[2023-01-23 05:46:04] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Delimiter must not be alphanumeric or backslash in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:46:47] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Delimiter must not be alphanumeric or backslash in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:47:56] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:47:57] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:48:03] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\SyntaxError): "Unexpected token "name" of value "contains" ("end of statement block" expected)." in template "/Applications/MAMP/htdocs/glpi/templates/layout/parts/page_header.html.twig" at line 147
+  Backtrace :
+  .../twig/twig/src/TokenParser/IfTokenParser.php:40 Twig\TokenStream->expect()
+  vendor/twig/twig/src/Parser.php:170                Twig\TokenParser\IfTokenParser->parse()
+  vendor/twig/twig/src/Parser.php:83                 Twig\Parser->subparse()
+  vendor/twig/twig/src/Environment.php:488           Twig\Parser->parse()
+  vendor/twig/twig/src/Environment.php:516           Twig\Environment->parse()
+  vendor/twig/twig/src/Environment.php:348           Twig\Environment->compileSource()
+  vendor/twig/twig/src/Environment.php:309           Twig\Environment->loadTemplate()
+  src/Application/View/TemplateRenderer.php:179      Twig\Environment->load()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:48:11] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:49:12] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:49:13] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:49:13] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:49:13] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:49:13] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:49:14] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:49:14] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:49:14] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:49:14] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:49:14] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:49:25] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:49:35] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:49:35] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:49:35] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:49:35] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:49:36] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:49:36] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:52:18] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 280
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:280 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:52:30] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 280
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:280 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:52:45] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:52:45] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 280
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:280 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:53:03] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:53:03] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 280
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:280 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:53:11] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Delimiter must not be alphanumeric or backslash in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:53:11] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 280
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:280 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:53:17] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): No ending delimiter '/' found in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:53:17] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 280
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:280 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:54:55] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Delimiter must not be alphanumeric or backslash in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:54:55] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 280
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:280 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:54:55] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Delimiter must not be alphanumeric or backslash in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:54:55] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 280
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:280 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:54:56] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Delimiter must not be alphanumeric or backslash in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:54:56] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 280
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:280 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:54:56] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Delimiter must not be alphanumeric or backslash in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:54:56] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 280
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:280 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:54:56] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Delimiter must not be alphanumeric or backslash in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:54:56] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 280
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:280 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:54:56] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Delimiter must not be alphanumeric or backslash in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 273
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:273 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:54:56] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 280
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:280 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 05:56:04] glpiphplog.WARNING:   *** PHP Warning (2): preg_match(): Unknown modifier '$' in /Applications/MAMP/htdocs/glpi/files/_cache/templates/f9/f9e918777fa9ec6d427932355a0620193e3178da861133468dcc20f5a38ebba5.php at line 280
+  Backtrace :
+  ...a0620193e3178da861133468dcc20f5a38ebba5.php:280 preg_match()
+  vendor/twig/twig/src/Template.php:394              __TwigTemplate_4984e685adb5ed268f08bd2d64f47083777f1b95b468a1c89edc1407a53951e8->doDisplay()
+  vendor/twig/twig/src/Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor/twig/twig/src/TemplateWrapper.php:47        Twig\Template->display()
+  src/Application/View/TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src/Html.php:2069                                  Glpi\Application\View\TemplateRenderer->display()
+  front/helpdesk.public.php:186                      Html::helpHeader()
+  
+[2023-01-23 06:01:41] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-23 06:01:41] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-23 06:02:04] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-23 06:02:04] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-23 06:02:07] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-23 06:02:07] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-23 06:02:08] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-23 06:02:08] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-23 06:02:08] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-23 06:02:08] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-23 06:02:22] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-23 06:02:22] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-23 06:02:27] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-23 06:02:27] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-23 06:02:39] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-23 06:02:39] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+[2023-01-23 06:02:55] glpiphplog.WARNING:   *** PHP Warning (2): fopen(/Applications/MAMP/htdocs/glpi/locales/en_US.po): failed to open stream: No such file or directory in /Applications/MAMP/htdocs/glpi/front/locale.php at line 94
+  Backtrace :
+  front/locale.php:94                                fopen()
+  
+[2023-01-23 06:02:55] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "/Applications/MAMP/htdocs/glpi/locales/en_US.po". in /Applications/MAMP/htdocs/glpi/front/locale.php at line 97
+  Backtrace :
+  front/locale.php:97                                trigger_error()
+  
+2023-01-23 06:03:49 [@yosrals-MacBook-Pro.local]
+Invalid array settings: idp_entityId_not_found, idp_sso_not_found, idp_cert_or_fingerprint_not_found_and_required
+>>>>>>> 2fc98797c (add layout background; add quote image)
