@@ -67,8 +67,8 @@ class __TwigTemplate_3dd253aa866e0440de9dbbe25a80e1c8e2acf8526574dce1723fcfc7c2b
         yield "\" />
 
       <div class=\"row justify-content-center align-items-center my-1\">
-         <img class=\"w-75 img-sm\" src=\"pics/layout/global_layout_tagline.png\">
-         <div class=\"row justify-content-center align-items-center mx-4 my-3\">
+         <img class=\"w-75 d-flex\" src=\"pics/layout/global_layout_tagline.png\">
+         <div class=\"d-flex justify-content-center mx-4 my-3\">
             <input value=\"Login SSO BPS\" formaction=\"#\" class=\"w-50 input-md submit btn btn-primary\" onclick=\"window.location.href='?SSO=1'";
         // line 45
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, ($context["app"] ?? null), "request", [], "any", false, false, false, 45), "request", [], "any", false, false, false, 45), "get", ["redirect_login_sso_bps"], "method", false, false, false, 45), "html", null, true);
