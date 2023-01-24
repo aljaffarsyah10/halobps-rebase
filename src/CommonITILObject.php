@@ -6518,17 +6518,17 @@ abstract class CommonITILObject extends CommonDBTM
             'item'          => new Document_Item(),
             'hide_in_menu'  => !$canadd_document
         ];
-        if ($validation !== null) {
-            $itemtypes['validation'] = [
-                'type'          => 'ITILValidation',
-                'class'         => $validation::getType(),
-                'icon'          => 'ti ti-thumb-up',
-                'label'         => _x('button', 'Ask for validation'),
-                'template'      => 'components/itilobject/timeline/form_validation.html.twig',
-                'item'          => $validation,
-                'hide_in_menu'  => !$canadd_validation
-            ];
-        }
+        // if ($validation !== null) {
+        //     $itemtypes['validation'] = [
+        //         'type'          => 'ITILValidation',
+        //         'class'         => $validation::getType(),
+        //         'icon'          => 'ti ti-thumb-up',
+        //         'label'         => _x('button', 'Ask for validation'),
+        //         'template'      => 'components/itilobject/timeline/form_validation.html.twig',
+        //         'item'          => $validation,
+        //         'hide_in_menu'  => !$canadd_validation
+        //     ];
+        // }
 
         if (isset($PLUGIN_HOOKS[Hooks::TIMELINE_ANSWER_ACTIONS])) {
             /**
