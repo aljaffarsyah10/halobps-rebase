@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2022-12-04 13:58:58 [@yosrals-MacBook-Pro.local]
 Internal #1: Launch olaticket
 <<<<<<< HEAD
@@ -226,9 +227,13 @@ Internal #1: Launch graph
 2023-01-21 12:17:26 [@yosrals-MacBook-Pro.local]
 Internal #1: Launch reservation
 2023-01-21 12:18:01 [@yosrals-MacBook-Pro.local]
+=======
+2023-01-24 03:05:14 [18@DESKTOP-737D8R5]
+>>>>>>> e5a8d1029 (Penyesuaian Percakapan)
 Internal #1: Launch closeticket
-2023-01-21 12:18:20 [@yosrals-MacBook-Pro.local]
+2023-01-24 03:10:26 [18@DESKTOP-737D8R5]
 Internal #1: Launch alertnotclosed
+<<<<<<< HEAD
 2023-01-21 12:21:11 [@yosrals-MacBook-Pro.local]
 Internal #1: Launch createinquest
 2023-01-21 12:30:58 [@yosrals-MacBook-Pro.local]
@@ -2714,3 +2719,5 @@ Internal #1: Launch planningrecall
 Internal #1: Launch olaticket
 =======
 >>>>>>> 532eb969b (Merge branch 'pusher' into 'development')
+=======
+>>>>>>> e5a8d1029 (Penyesuaian Percakapan)

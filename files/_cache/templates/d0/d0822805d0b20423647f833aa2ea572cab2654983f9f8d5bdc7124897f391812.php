@@ -259,14 +259,6 @@ class __TwigTemplate_78e92cc7afaacfa23a5636ba4d419325d8005d85029755f679ed615be61
       <div class=\"page-wrapper mb-0\" style=\"background:url(../pics/layout/global_layout_background.png);background-repeat:repeat;background-attachment:fixed;\">
          <div class=\"page-body container-fluid\">
             ";
-        // line 143
-        if (CoreExtension::matches("/helpdesk.public.php\$/", $this->extensions['Glpi\Application\View\Extension\RoutingExtension']->indexPath())) {
-            // line 144
-            yield "               <div class=\"d-flex justify-content-center\">
-                  <img alt=\"HaloSIS Quote\" src=\"../pics/layout/global_layout_quote.png\"/>
-               </div>
-            ";
-        }
         // line 148
         yield "            <main role=\"main\" id=\"page\" class=\"legacy\">
             ";
@@ -294,7 +286,7 @@ class __TwigTemplate_78e92cc7afaacfa23a5636ba4d419325d8005d85029755f679ed615be61
      */
     public function getDebugInfo()
     {
-        return array (  271 => 148,  265 => 144,  263 => 143,  258 => 140,  250 => 135,  245 => 133,  241 => 131,  239 => 130,  231 => 125,  227 => 123,  220 => 119,  215 => 117,  208 => 113,  197 => 107,  191 => 103,  184 => 99,  177 => 96,  175 => 95,  170 => 93,  167 => 92,  162 => 89,  154 => 84,  150 => 83,  143 => 79,  138 => 77,  134 => 75,  132 => 74,  129 => 73,  123 => 70,  120 => 69,  118 => 68,  116 => 67,  113 => 66,  107 => 63,  104 => 62,  102 => 61,  92 => 56,  84 => 50,  82 => 49,  75 => 45,  70 => 44,  64 => 41,  61 => 40,  59 => 39,  51 => 38,  48 => 37,  46 => 36,  43 => 35,  41 => 34,  38 => 33,);
+        return array (  263 => 148,  258 => 140,  250 => 135,  245 => 133,  241 => 131,  239 => 130,  231 => 125,  227 => 123,  220 => 119,  215 => 117,  208 => 113,  197 => 107,  191 => 103,  184 => 99,  177 => 96,  175 => 95,  170 => 93,  167 => 92,  162 => 89,  154 => 84,  150 => 83,  143 => 79,  138 => 77,  134 => 75,  132 => 74,  129 => 73,  123 => 70,  120 => 69,  118 => 68,  116 => 67,  113 => 66,  107 => 63,  104 => 62,  102 => 61,  92 => 56,  84 => 50,  82 => 49,  75 => 45,  70 => 44,  64 => 41,  61 => 40,  59 => 39,  51 => 38,  48 => 37,  46 => 36,  43 => 35,  41 => 34,  38 => 33,);
     }
 
     public function getSourceContext()

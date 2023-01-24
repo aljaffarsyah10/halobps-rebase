@@ -1356,12 +1356,12 @@ msgstr ""
 #, php-format
 msgid "%s day"
 msgid_plural "%s days"
-msgstr[0] ""
+msgstr[0] "%s hari"
 
 #: src/Html.php:7075 js/common.js:1176
 #, javascript-format, php-format
 msgid "%s days ago"
-msgstr ""
+msgstr "%s hari yang lalu"
 
 #. TRANS: %s is the user login
 #: front/databaseinstance.form.php:77
@@ -1974,7 +1974,7 @@ msgstr ""
 #: src/Html.php:7078 js/common.js:1178
 #, javascript-format, php-format
 msgid "%s weeks ago"
-msgstr ""
+msgstr "%s minggu yang lalu"
 
 #. TRANS: %s is a number of years
 #: src/Dropdown.php:1837
@@ -2816,7 +2816,7 @@ msgstr "Tambah jadwal"
 #: src/CommonITILObject.php:6865
 msgctxt "button"
 msgid "Add a solution"
-msgstr ""
+msgstr "Tambah Solusi"
 
 #: src/Contact_Supplier.php:133 src/Contract_Supplier.php:276
 msgid "Add a supplier"
@@ -3677,7 +3677,7 @@ msgstr ""
 #: src/CommonITILObject.php:6845 src/CommonITILObject.php:6846
 msgctxt "button"
 msgid "Answer"
-msgstr ""
+msgstr "Jawab"
 
 #: src/Stat.php:588 src/Stat/Data/Sglobal/StatDataSatisfaction.php:59
 #: src/Stat/Data/Graph/StatDataSatisfactionSurvey.php:56
