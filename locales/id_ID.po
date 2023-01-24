@@ -1495,7 +1495,7 @@ msgstr[0] ""
 #: src/Html.php:7068 js/common.js:1174
 #, javascript-format, php-format
 msgid "%s hours ago"
-msgstr ""
+msgstr "%s jam lalu"
 
 #. TRANS: %s is the user login
 #: front/cartridge.form.php:86
@@ -1568,7 +1568,7 @@ msgstr[0] ""
 #: src/Html.php:7065 js/common.js:1172
 #, javascript-format, php-format
 msgid "%s minutes ago"
-msgstr ""
+msgstr "%s menit lalu"
 
 #. TRANS: %s is a number of months
 #: src/Dropdown.php:1841
@@ -1981,7 +1981,7 @@ msgstr "%s minggu yang lalu"
 #, php-format
 msgid "%s year"
 msgid_plural "%s years"
-msgstr[0] ""
+msgstr[0] "%s tahun"
 
 #: js/common.js:1182
 #, javascript-format
@@ -6731,17 +6731,17 @@ msgstr ""
 
 #: src/Ticket.php:766 src/Ticket.php:816
 msgid "Created tickets"
-msgstr ""
+msgstr "Tiket yang dibuat"
 
 #: templates/components/itilobject/timeline/timeline_item_header_badges.html.twig
 #, php-format
 msgid "Created: %1$s"
-msgstr ""
+msgstr "Dibuat: %1$s"
 
 #: templates/components/itilobject/timeline/timeline_item_header_badges.html.twig
 #, php-format
 msgid "Created: %1$s by %2$s"
-msgstr ""
+msgstr "Dibuat: %1$s oleh %2$s"
 
 #: src/Console/Migration/AppliancesPluginToCoreCommand.php:429
 msgid "Creating Appliance Environment..."
@@ -10773,7 +10773,7 @@ msgstr "Formulir Laporan helpdesk"
 
 #: src/User.php:6546 src/User.php:6573
 msgid "Helpdesk user"
-msgstr ""
+msgstr "Operator"
 
 #: src/ITILTemplateHiddenField.php:47
 msgid "Hidden field"
@@ -12805,7 +12805,7 @@ msgstr "Update terakhir pada %s"
 #: templates/components/itilobject/timeline/timeline_item_header_badges.html.twig
 #, php-format
 msgid "Last update: %1$s by %2$s"
-msgstr ""
+msgstr "Update terakhir: %1$s oleh %2$s"
 
 #: src/Marketplace/View.php:399
 msgid "Last updated"
@@ -25138,7 +25138,7 @@ msgstr ""
 
 #: js/common.js:1171
 msgid "a minute ago"
-msgstr ""
+msgstr "semenit lalu"
 
 #: js/common.js:1179
 msgid "a month ago"
@@ -25150,7 +25150,7 @@ msgstr ""
 
 #: js/common.js:1181
 msgid "a year ago"
-msgstr ""
+msgstr "setahun lalu"
 
 #: src/Search.php:8526 src/Search.php:8590
 msgid "after"
@@ -25158,7 +25158,7 @@ msgstr "setelah"
 
 #: js/common.js:1173
 msgid "an hour ago"
-msgstr ""
+msgstr "sejam lalu"
 
 #: src/Rule.php:841 src/Rule.php:1016 src/Rule.php:2838
 #: src/Marketplace/View.php:172
@@ -25373,35 +25373,35 @@ msgstr ""
 
 #: js/common.js:1169
 msgid "just now"
-msgstr ""
+msgstr "baru saja"
 
 #: src/Html.php:3361
 msgid "last Friday"
-msgstr ""
+msgstr "Jumat lalu"
 
 #: src/Html.php:3357
 msgid "last Monday"
-msgstr ""
+msgstr "Senin lalu"
 
 #: src/Html.php:3362
 msgid "last Saturday"
-msgstr ""
+msgstr "Sabtu lalu"
 
 #: src/Html.php:3356
 msgid "last Sunday"
-msgstr ""
+msgstr "Minggu lalu"
 
 #: src/Html.php:3360
 msgid "last Thursday"
-msgstr ""
+msgstr "Kamis lalu"
 
 #: src/Html.php:3358
 msgid "last Tuesday"
-msgstr ""
+msgstr "Selasa lalu"
 
 #: src/Html.php:3359
 msgid "last Wednesday"
-msgstr ""
+msgstr "Rabu lalu"
 
 #: templates/pages/setup/general/general_setup.html.twig
 msgid "last criterion"

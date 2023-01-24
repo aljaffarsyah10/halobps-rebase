@@ -22272,3 +22272,13 @@ Invalid array settings: idp_entityId_not_found, idp_sso_not_found, idp_cert_or_f
 >>>>>>> e6495583e (Pusher)
 =======
 >>>>>>> 532eb969b (Merge branch 'pusher' into 'development')
+[2024-05-13 10:55:38] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\src\Ticket.php at line 258
+  Backtrace :
+  front\helpdesk.public.php:71                       glpi_autoload()
+  front\helpdesk.public.php:181                      hasFilledSurvey()
+  
+[2024-05-13 10:55:54] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\src\Ticket.php at line 258
+  Backtrace :
+  front\helpdesk.public.php:71                       glpi_autoload()
+  front\helpdesk.public.php:181                      hasFilledSurvey()
+  

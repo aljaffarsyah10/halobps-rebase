@@ -55,7 +55,7 @@
       {% set date_mod = entry_i['date_mod'] %}
       {% set entry_rand = random() %}
       {% set is_current_user = users_id == session('glpiID') %}
-      {% set anonym_user = (get_current_interface() == 'helpdesk' and not is_current_user and entity_config('anonymize_support_agents', session('glpiactive_entity')) != constant('Entity::ANONYMIZE_DISABLED')) %}
+      {% set anonym_user = true %}
 
       {% set can_edit_i  = entry_i['can_edit'] %}
 
@@ -140,7 +140,7 @@
                      {{ include('components/user/picture.html.twig', {
                         'users_id': users_id,
                         'user_object': entry_user,
-                        'enable_anonymization': anonym_user
+                        'enable_anonymization': users_id != session('glpiID'),
                      }, with_context = false) }}
                   </span>
                   {% if not anonym_user and entry_user.canView() %}
