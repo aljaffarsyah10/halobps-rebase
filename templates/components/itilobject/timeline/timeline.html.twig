@@ -51,7 +51,7 @@
       {% set date_mod = entry_i['date_mod'] %}
       {% set entry_rand = random() %}
       {% set is_current_user = users_id == session('glpiID') %}
-      {% set anonym_user = (get_current_interface() == 'helpdesk' and not is_current_user and entity_config('anonymize_support_agents', session('glpiactive_entity')) != constant('Entity::ANONYMIZE_DISABLED')) %}
+      {% set anonym_user = true %}
 
       {# Fix solution type #}
       {% if entry['type'] is same as 'Solution' %}
@@ -134,18 +134,9 @@
                   <span id="timeline-avatar{{ avatar_rand }}">
                      {{ include('components/user/picture.html.twig', {
                         'users_id': users_id,
-                        'enable_anonymization': anonym_user
+                        'enable_anonymization': users_id != session('glpiID'),
                      }, with_context = false) }}
                   </span>
-                  {% if not anonym_user %}
-                     {% do call('Html::showToolTip', [
-                        include('components/user/info_card.html.twig', {
-                           'user': user_fields,
-                           'enable_anonymization': false,
-                        }, with_context = false), {
-                           'applyto': 'timeline-avatar' ~ avatar_rand
-                        }]) %}
-                  {% endif %}
                {% else %}
                   <span id="timeline-avatar{{ avatar_rand }}"><span class="avatar avatar-md rounded"></span></span>
                {% endif %}
