@@ -56,6 +56,14 @@
       {% set entry_rand = random() %}
       {% set is_current_user = users_id == session('glpiID') %}
       {% set anonym_user = true %}
+<<<<<<< HEAD
+=======
+
+      {# Fix solution type #}
+      {% if entry['type'] is same as 'Solution' %}
+         {% set entry = entry|merge({'type': 'ITILSolution'}) %}
+      {% endif %}
+>>>>>>> 3d7f6aefc (Fix merge conflict)
 
       {% set can_edit_i  = entry_i['can_edit'] %}
 
