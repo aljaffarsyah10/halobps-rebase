@@ -21940,3 +21940,21 @@ Invalid array settings: idp_entityId_not_found, idp_sso_not_found, idp_cert_or_f
   
 2023-01-23 06:03:49 [@yosrals-MacBook-Pro.local]
 Invalid array settings: idp_entityId_not_found, idp_sso_not_found, idp_cert_or_fingerprint_not_found_and_required
+[2023-01-26 11:15:58] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/1045): Access denied for user 'halodev'@'localhost' (using password: YES) in C:\xampp\htdocs\glpi-actors\src\DBmysql.php at line 250
+  Backtrace :
+  src\DBmysql.php:250                                mysqli->real_connect()
+  src\DBmysql.php:209                                DBmysql->connect()
+  src\DBConnection.php:412                           DBmysql->__construct()
+  src\DBConnection.php:501                           DBConnection::switchToMaster()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  index.php:89                                       include()
+  
+[2023-01-26 11:16:13] glpiphplog.WARNING:   *** PHP Warning (2): fopen(C:\xampp\htdocs\glpi-actors/locales/en_US.po): failed to open stream: No such file or directory in C:\xampp\htdocs\glpi-actors\front\locale.php at line 94
+  Backtrace :
+  front\locale.php:94                                fopen()
+  
+[2023-01-26 11:16:13] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "C:\xampp\htdocs\glpi-actors/locales/en_US.po". in C:\xampp\htdocs\glpi-actors\front\locale.php at line 97
+  Backtrace :
+  front\locale.php:97                                trigger_error()
+  
