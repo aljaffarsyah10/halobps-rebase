@@ -22264,6 +22264,7 @@ Invalid array settings: idp_entityId_not_found, idp_sso_not_found, idp_cert_or_f
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fc98797c (add layout background; add quote image)
 =======
 >>>>>>> 80a728319 (#23 set the layouts and login pages)
@@ -22283,6 +22284,8 @@ Invalid array settings: idp_entityId_not_found, idp_sso_not_found, idp_cert_or_f
   front\helpdesk.public.php:71                       glpi_autoload()
   front\helpdesk.public.php:181                      hasFilledSurvey()
 =======
+=======
+>>>>>>> bd356ae0a (Close #34 and #33)
 [2023-01-26 11:15:58] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/1045): Access denied for user 'halodev'@'localhost' (using password: YES) in C:\xampp\htdocs\glpi-actors\src\DBmysql.php at line 250
   Backtrace :
   src\DBmysql.php:250                                mysqli->real_connect()
@@ -22300,7 +22303,10 @@ Invalid array settings: idp_entityId_not_found, idp_sso_not_found, idp_cert_or_f
 [2023-01-26 11:16:13] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "C:\xampp\htdocs\glpi-actors/locales/en_US.po". in C:\xampp\htdocs\glpi-actors\front\locale.php at line 97
   Backtrace :
   front\locale.php:97                                trigger_error()
+<<<<<<< HEAD
 >>>>>>> b40aa85e8 (Meghapus Actors)
+=======
+>>>>>>> bd356ae0a (Close #34 and #33)
   
 [2023-01-27 12:07:54] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/1049): Unknown database 'glpi_dev' in D:\laragon\www\glpi\src\DBmysql.php at line 250
   Backtrace :

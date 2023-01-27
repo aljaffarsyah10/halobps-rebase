@@ -2701,6 +2701,7 @@ Internal #1: Nothing to launch
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fc98797c (add layout background; add quote image)
 =======
 >>>>>>> 80a728319 (#23 set the layouts and login pages)
@@ -2729,6 +2730,8 @@ Internal #1: Launch temp
 2024-05-13 11:23:36 [2@LAPTOP-3QJ309BV]
 Internal #1: Launch queuednotification
 =======
+=======
+>>>>>>> bd356ae0a (Close #34 and #33)
 2023-01-26 11:16:13 [@DESKTOP-737D8R5]
 Internal #1: Launch planningrecall
 2023-01-26 11:16:28 [@DESKTOP-737D8R5]
@@ -2746,8 +2749,11 @@ Internal #1: Launch slaticket
 2023-01-27 04:07:08 [3@DESKTOP-737D8R5]
 Internal #1: Launch reservation
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b40aa85e8 (Meghapus Actors)
 =======
+=======
+>>>>>>> bd356ae0a (Close #34 and #33)
 2023-01-27 12:09:01 [@YOSRAL-34005894]
 Internal #1: Launch mailgate
 2023-01-27 12:09:06 [@YOSRAL-34005894]
@@ -2756,4 +2762,7 @@ Internal #1: Launch createinquest
 Internal #1: Launch slaticket
 2023-01-27 12:09:18 [@YOSRAL-34005894]
 Internal #1: Launch planningrecall
+<<<<<<< HEAD
 >>>>>>> af8d40e5a (Close #34: try gitignore; hide Actors field in serlf-service)
+=======
+>>>>>>> bd356ae0a (Close #34 and #33)
