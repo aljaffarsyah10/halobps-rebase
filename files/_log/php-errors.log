@@ -21940,3 +21940,163 @@ Invalid array settings: idp_entityId_not_found, idp_sso_not_found, idp_cert_or_f
   
 2023-01-23 06:03:49 [@yosrals-MacBook-Pro.local]
 Invalid array settings: idp_entityId_not_found, idp_sso_not_found, idp_cert_or_fingerprint_not_found_and_required
+[2023-01-26 11:15:58] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/1045): Access denied for user 'halodev'@'localhost' (using password: YES) in C:\xampp\htdocs\glpi-actors\src\DBmysql.php at line 250
+  Backtrace :
+  src\DBmysql.php:250                                mysqli->real_connect()
+  src\DBmysql.php:209                                DBmysql->connect()
+  src\DBConnection.php:412                           DBmysql->__construct()
+  src\DBConnection.php:501                           DBConnection::switchToMaster()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  index.php:89                                       include()
+  
+[2023-01-26 11:16:13] glpiphplog.WARNING:   *** PHP Warning (2): fopen(C:\xampp\htdocs\glpi-actors/locales/en_US.po): failed to open stream: No such file or directory in C:\xampp\htdocs\glpi-actors\front\locale.php at line 94
+  Backtrace :
+  front\locale.php:94                                fopen()
+  
+[2023-01-26 11:16:13] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "C:\xampp\htdocs\glpi-actors/locales/en_US.po". in C:\xampp\htdocs\glpi-actors\front\locale.php at line 97
+  Backtrace :
+  front\locale.php:97                                trigger_error()
+  
+[2023-01-27 12:07:54] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/1049): Unknown database 'glpi_dev' in D:\laragon\www\glpi\src\DBmysql.php at line 250
+  Backtrace :
+  src\DBmysql.php:250                                mysqli->real_connect()
+  src\DBmysql.php:209                                DBmysql->connect()
+  src\DBConnection.php:412                           DBmysql->__construct()
+  src\DBConnection.php:501                           DBConnection::switchToMaster()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  front\central.php:36                               include()
+  
+[2023-01-27 12:07:54] glpiphplog.WARNING:   *** PHP Warning (2): Trying to access array offset on value of type null in D:\laragon\www\glpi\src\Html.php at line 793
+  Backtrace :
+  src\Html.php:1943                                  Html::displayDebugInfos()
+  src\Html.php:2163                                  Html::footer()
+  src\DBConnection.php:602                           Html::nullFooter()
+  src\DBConnection.php:536                           DBConnection::displayMySQLError()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  front\central.php:36                               include()
+  
+[2023-01-27 12:07:55] glpiphplog.CRITICAL:   *** Uncaught Exception TypeError: array_sum(): Argument #1 ($array) must be of type array, null given in D:\laragon\www\glpi\src\Html.php at line 793
+  Backtrace :
+  src\Html.php:793                                   array_sum()
+  src\Html.php:1943                                  Html::displayDebugInfos()
+  src\Html.php:2163                                  Html::footer()
+  src\DBConnection.php:602                           Html::nullFooter()
+  src\DBConnection.php:536                           DBConnection::displayMySQLError()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  front\central.php:36                               include()
+  
+[2023-01-27 12:07:55] glpiphplog.DEBUG: Html::compileScss() in D:\laragon\www\glpi\src\Html.php line 6848
+Compile css/palettes/lightblue.scss  {"user":"2@YOSRAL-34005894"} 
+[2023-01-27 12:07:59] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/1049): Unknown database 'glpi_dev' in D:\laragon\www\glpi\src\DBmysql.php at line 250
+  Backtrace :
+  src\DBmysql.php:250                                mysqli->real_connect()
+  src\DBmysql.php:209                                DBmysql->connect()
+  src\DBConnection.php:412                           DBmysql->__construct()
+  src\DBConnection.php:501                           DBConnection::switchToMaster()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  front\locale.php:41                                include()
+  
+[2023-01-27 12:07:59] glpiphplog.WARNING:   *** PHP Warning (2): Trying to access array offset on value of type null in D:\laragon\www\glpi\src\Html.php at line 793
+  Backtrace :
+  src\Html.php:1943                                  Html::displayDebugInfos()
+  src\Html.php:2163                                  Html::footer()
+  src\DBConnection.php:602                           Html::nullFooter()
+  src\DBConnection.php:536                           DBConnection::displayMySQLError()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  front\locale.php:41                                include()
+  
+[2023-01-27 12:07:59] glpiphplog.CRITICAL:   *** Uncaught Exception TypeError: array_sum(): Argument #1 ($array) must be of type array, null given in D:\laragon\www\glpi\src\Html.php at line 793
+  Backtrace :
+  src\Html.php:793                                   array_sum()
+  src\Html.php:1943                                  Html::displayDebugInfos()
+  src\Html.php:2163                                  Html::footer()
+  src\DBConnection.php:602                           Html::nullFooter()
+  src\DBConnection.php:536                           DBConnection::displayMySQLError()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  front\locale.php:41                                include()
+  
+[2023-01-27 12:08:02] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/1049): Unknown database 'glpi_dev' in D:\laragon\www\glpi\src\DBmysql.php at line 250
+  Backtrace :
+  src\DBmysql.php:250                                mysqli->real_connect()
+  src\DBmysql.php:209                                DBmysql->connect()
+  src\DBConnection.php:412                           DBmysql->__construct()
+  src\DBConnection.php:501                           DBConnection::switchToMaster()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  front\central.php:36                               include()
+  
+[2023-01-27 12:08:02] glpiphplog.WARNING:   *** PHP Warning (2): Trying to access array offset on value of type null in D:\laragon\www\glpi\src\Html.php at line 793
+  Backtrace :
+  src\Html.php:1943                                  Html::displayDebugInfos()
+  src\Html.php:2163                                  Html::footer()
+  src\DBConnection.php:602                           Html::nullFooter()
+  src\DBConnection.php:536                           DBConnection::displayMySQLError()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  front\central.php:36                               include()
+  
+[2023-01-27 12:08:02] glpiphplog.CRITICAL:   *** Uncaught Exception TypeError: array_sum(): Argument #1 ($array) must be of type array, null given in D:\laragon\www\glpi\src\Html.php at line 793
+  Backtrace :
+  src\Html.php:793                                   array_sum()
+  src\Html.php:1943                                  Html::displayDebugInfos()
+  src\Html.php:2163                                  Html::footer()
+  src\DBConnection.php:602                           Html::nullFooter()
+  src\DBConnection.php:536                           DBConnection::displayMySQLError()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  front\central.php:36                               include()
+  
+[2023-01-27 12:08:03] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/1049): Unknown database 'glpi_dev' in D:\laragon\www\glpi\src\DBmysql.php at line 250
+  Backtrace :
+  src\DBmysql.php:250                                mysqli->real_connect()
+  src\DBmysql.php:209                                DBmysql->connect()
+  src\DBConnection.php:412                           DBmysql->__construct()
+  src\DBConnection.php:501                           DBConnection::switchToMaster()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  front\locale.php:41                                include()
+  
+[2023-01-27 12:08:03] glpiphplog.WARNING:   *** PHP Warning (2): Trying to access array offset on value of type null in D:\laragon\www\glpi\src\Html.php at line 793
+  Backtrace :
+  src\Html.php:1943                                  Html::displayDebugInfos()
+  src\Html.php:2163                                  Html::footer()
+  src\DBConnection.php:602                           Html::nullFooter()
+  src\DBConnection.php:536                           DBConnection::displayMySQLError()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  front\locale.php:41                                include()
+  
+[2023-01-27 12:08:03] glpiphplog.CRITICAL:   *** Uncaught Exception TypeError: array_sum(): Argument #1 ($array) must be of type array, null given in D:\laragon\www\glpi\src\Html.php at line 793
+  Backtrace :
+  src\Html.php:793                                   array_sum()
+  src\Html.php:1943                                  Html::displayDebugInfos()
+  src\Html.php:2163                                  Html::footer()
+  src\DBConnection.php:602                           Html::nullFooter()
+  src\DBConnection.php:536                           DBConnection::displayMySQLError()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  front\locale.php:41                                include()
+  
+[2023-01-27 12:08:33] glpiphplog.DEBUG: Html::compileScss() in D:\laragon\www\glpi\src\Html.php line 6848
+Compile css/standalone/dashboard.scss  {"user":"2@YOSRAL-34005894"} 
+[2023-01-27 12:08:33] glpiphplog.DEBUG: Html::compileScss() in D:\laragon\www\glpi\src\Html.php line 6848
+Compile css/standalone/chartist.scss  {"user":"2@YOSRAL-34005894"} 
+[2023-01-27 12:08:33] glpiphplog.DEBUG: Html::compileScss() in D:\laragon\www\glpi\src\Html.php line 6848
+Compile css/standalone/gridstack-grids.scss  {"user":"2@YOSRAL-34005894"} 
+[2023-01-27 12:08:35] glpiphplog.DEBUG: Html::compileScss() in D:\laragon\www\glpi\src\Html.php line 6848
+Compile css/palettes/lightblue.scss  {"user":"2@YOSRAL-34005894"} 
+[2023-01-27 12:09:01] glpiphplog.WARNING:   *** PHP Warning (2): fopen(D:\laragon\www\glpi/locales/en_US.po): Failed to open stream: No such file or directory in D:\laragon\www\glpi\front\locale.php at line 94
+  Backtrace :
+  front\locale.php:94                                fopen()
+  
+[2023-01-27 12:09:01] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "D:\laragon\www\glpi/locales/en_US.po". in D:\laragon\www\glpi\front\locale.php at line 97
+  Backtrace :
+  front\locale.php:97                                trigger_error()
+  
