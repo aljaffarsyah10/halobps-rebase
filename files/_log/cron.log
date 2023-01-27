@@ -2700,6 +2700,7 @@ Internal #1: Nothing to launch
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fc98797c (add layout background; add quote image)
 =======
 >>>>>>> 80a728319 (#23 set the layouts and login pages)
@@ -2727,3 +2728,21 @@ Internal #1: Launch RecurrentItems
 Internal #1: Launch temp
 2024-05-13 11:23:36 [2@LAPTOP-3QJ309BV]
 Internal #1: Launch queuednotification
+=======
+2023-01-26 11:16:13 [@DESKTOP-737D8R5]
+Internal #1: Launch planningrecall
+2023-01-26 11:16:28 [@DESKTOP-737D8R5]
+Internal #1: Launch olaticket
+2023-01-27 03:39:21 [@DESKTOP-737D8R5]
+Internal #1: Launch queuednotification
+2023-01-27 03:39:28 [@DESKTOP-737D8R5]
+Internal #1: Launch mailgate
+2023-01-27 03:45:30 [3@DESKTOP-737D8R5]
+Internal #1: Launch RecurrentItems
+2023-01-27 03:51:44 [3@DESKTOP-737D8R5]
+Internal #1: Launch createinquest
+2023-01-27 04:01:22 [3@DESKTOP-737D8R5]
+Internal #1: Launch slaticket
+2023-01-27 04:07:08 [3@DESKTOP-737D8R5]
+Internal #1: Launch reservation
+>>>>>>> b40aa85e8 (Meghapus Actors)
