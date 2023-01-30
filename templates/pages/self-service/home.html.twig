@@ -52,8 +52,8 @@
 
 <div class="d-flex justify-content-center">
    <div class="col">
-      <div class="d-flex justify-content-start w-75">
-         <img alt="BPS Banner" src="../pics/layout/global_layout_bps_banner.png"/>
+      <div class="d-flex justify-content-start">
+         <img class="w-25" alt="BPS Banner" src="../pics/logos/logo-GLPI-250-black_bps.png"/>
       </div>
    </div>
    <div class="col-5">
@@ -63,7 +63,7 @@
    </div>
    <div class="col">
       <div class="d-flex justify-content-end">
-         <h1 style="font-family:mistral;font-size:3vw">#WeCare</h1>
+         <h1 style="font-family:mistral;font-size:2.4vw">#WeCare</h1>
       </div>
    </div>
  </div>
@@ -79,23 +79,19 @@
    ticket_summary
 ] %}
 {% set survey_list_empty%}
-<div class="table-responsive card-table">
-   <table class="table table-borderless table-striped table-hover card-table">
-     <thead>
-       <tr>
-         <th colspan="4">
-           <a href="#">Survei kepuasan <span class="primary-bg primary-fg count">0</span>
-           </a>
-         </th>
-       </tr>
-     </thead>
-     <tbody>
-      <tr>
-         <td colspan="4">Luar biasa! Saat ini Anda sudah mengisi semua survei kepuasan!</td>
-      </tr>
-     </tbody>
-   </table>
- </div>
+   <div class="card-body">
+      <div class="card-title d-flex justify-content-between">
+         <a href="#"><span><i class="ti ti-star"></i> Survei Kepuasan</span></a>
+         <span class="primary-bg primary-fg count my-n2 p-2 row align-items-center">0</span>
+      </div>
+   </div>
+   <ul class="list-group list-group-flush">
+      <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="#">
+         Luar biasa! Saat ini Anda sudah mengisi semua survei kepuasan!</a>
+      {% for i in 0..5 %}
+         <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="#">&nbsp;</a>
+      {% endfor %}
+   </ul>
 {% endset %}
 
 {% for optional_grid_item_key in optional_grid_item_keys %}
