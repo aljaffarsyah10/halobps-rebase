@@ -3893,7 +3893,7 @@ msgstr[0] ""
 #: src/Config.php:1440 src/Config.php:2623 src/Entity.php:439
 #: src/Entity.php:1154
 msgid "Assistance"
-msgstr "Bantuan"
+msgstr "Kelola Tiket"
 
 #: src/Profile.php:851 src/Profile.php:1433 src/Profile.php:2859
 #: src/Console/Migration/DatabasesPluginToCoreCommand.php:161
@@ -8196,6 +8196,44 @@ msgstr ""
 msgid "Download"
 msgstr "Unduh"
 
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Self-Service"
+msgstr "Pengguna"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Observer "
+msgstr "Manajer"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Technician "
+msgstr "Tim Teknisi"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Admin"
+msgstr "Operator"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Welcome,"
+msgstr "Selamat datang,"
+
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Description Incident"
+msgstr "Deskripsi"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Description Request"
+msgstr "Deskripsi"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Download form request"
+msgstr "Unduh formulir permintaan"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Choose files"
+msgstr "Pilih formulir"
+
+
 #. TRANS: parameter is the name of the asset
 #: templates/components/form/inventory_info.html.twig
 #: src/Features/Inventoriable.php:133
@@ -9822,6 +9860,7 @@ msgstr ""
 #, php-format
 msgid "For security reasons, please remove file: %s"
 msgstr ""
+
 
 #: src/Infocom.php:1126
 msgid ""
@@ -18691,7 +18730,7 @@ msgstr ""
 
 #: src/TicketSatisfaction.php:129
 msgid "Satisfaction with the resolution of the ticket"
-msgstr ""
+msgstr "Kepuasan terhadap resolusi permasalahan ini"
 
 #: src/Toolbox.php:2180 src/Features/PlanningEvent.php:800 src/Config.php:1033
 msgid "Saturday"
@@ -20094,7 +20133,7 @@ msgstr "Dukungan jam"
 #: src/User.php:2434 src/User.php:2853 src/User.php:6299
 #: src/ContentTemplates/Parameters/UserParameters.php:82
 msgid "Surname"
-msgstr "Nama asli"
+msgstr "Nama Lengkap"
 
 #: src/Config.php:1186
 msgid "Surname, First name"
