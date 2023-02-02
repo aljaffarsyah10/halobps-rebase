@@ -48,10 +48,10 @@ class __TwigTemplate_82cae947ba4e085ffe6e7ecec105cefc9edd7691404ba9a6be661d9a181
    ";
         // line 46
         yield "   <div class=\"footer d-flex flex-column\">
-      <span class=\"text-center\">&#169; ";
+      <a href=\"https://glpi-project.org\" title=\"Built using GLPI\" class=\"text-center\">&#169; ";
         // line 47
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, ($context["game"] ?? null), "gameDate", [], "any", false, false, false, 47), "Y"), "html", null, true);
-        yield " BPS RI, Made with &hearts; by Direktorat SIS</span>
+        yield " BPS RI, Made with &hearts; by Direktorat SIS</a>
    </div>
 
 

@@ -1383,11 +1383,15 @@ HTML;
                 ],
                 'icon'  => 'ti ti-wallet'
             ],
+              'knowledge' => [
+                'title'   => __('Knowledge base'),
+                'default' => '/front/knowbaseitem.php',
+                'icon'    => 'ti ti-lifebuoy',
+            ],
             'tools' => [
                 'title' => __('Tools'),
                 'types' => [
-                    /*'Project', 'Reminder', 'RSSFeed',*/
-                    'KnowbaseItem',
+                    // /*'Project', 'Reminder', 'RSSFeed',*/ 'KnowbaseItem',
                     /*'ReservationItem',*/ 'Report', 'MigrationCleaner',
                     'SavedSearch', 'Impact'
                 ],

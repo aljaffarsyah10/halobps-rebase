@@ -309,7 +309,7 @@ class __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a79
                             <i class=\"fas fa-download mr-2\"></i>&nbsp;
                             ";
                 // line 271
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Download form permintaan"), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Download form request"), "html", null, true);
                 yield "
                         </a>
                     ";

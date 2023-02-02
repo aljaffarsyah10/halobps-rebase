@@ -4021,7 +4021,7 @@ msgstr[0] ""
 #: src/Config.php:2589 src/Profile.php:155 src/Profile.php:161
 #: src/Profile.php:1181 src/Profile.php:3165
 msgid "Assistance"
-msgstr "Bantuan"
+msgstr "Kelola Tiket"
 
 #: src/Console/Migration/DatabasesPluginToCoreCommand.php:162
 #: src/Console/Migration/AppliancesPluginToCoreCommand.php:303
@@ -8445,6 +8445,44 @@ msgstr ""
 #: src/Impact.php:1122
 msgid "Download"
 msgstr "Unduh"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Self-Service"
+msgstr "Pengguna"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Observer "
+msgstr "Manajer"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Technician "
+msgstr "Tim Teknisi"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Admin"
+msgstr "Operator"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Welcome,"
+msgstr "Selamat datang,"
+
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Description Incident"
+msgstr "Deskripsi"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Description Request"
+msgstr "Deskripsi"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Download form request"
+msgstr "Unduh formulir permintaan"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Choose files"
+msgstr "Pilih formulir"
+
 
 #. TRANS: parameter is the name of the asset
 #: templates/components/form/inventory_info.html.twig
@@ -19405,7 +19443,7 @@ msgstr ""
 
 #: src/TicketSatisfaction.php:129
 msgid "Satisfaction with the resolution of the ticket"
-msgstr ""
+msgstr "Kepuasan terhadap resolusi permasalahan ini"
 
 #: src/Toolbox.php:2260 src/Config.php:925 src/Features/PlanningEvent.php:806
 msgid "Saturday"
@@ -20850,7 +20888,7 @@ msgstr ""
 #: src/User.php:3066 src/User.php:6612 src/Auth.php:1731
 #: src/ContentTemplates/Parameters/UserParameters.php:82
 msgid "Surname"
-msgstr "Nama asli"
+msgstr "Nama Lengkap"
 
 #: src/Config.php:1082
 msgid "Surname, First name"
