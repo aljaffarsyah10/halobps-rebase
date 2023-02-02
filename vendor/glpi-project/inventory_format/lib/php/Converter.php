@@ -632,6 +632,28 @@ class Converter
             }
         }
 
+        if (isset($data['content']['operatingsystem']['boot_time'])) {
+            //convert to 'Y-m-d H:i:s' if format = 'Y-d-m H:i:s'
+            $boot_time  = $data['content']['operatingsystem']['boot_time'];
+            $boot_datetime =  \DateTime::createFromFormat('Y-d-m H:i:s', $boot_time);
+            //check if create from 'Y-d-m H:i:s' format is OK (ie: 2022-21-09 05:21:23)
+            //but he can return a new DateTime instead of false for '2022-10-04 05:21:23'
+            //so check return value from strtotime because he only knows / handle 'English textual datetime'
+            //https://www.php.net/manual/en/function.strtotime.php
+            //if strtotime return false it's already Y-m-d H:i:s format
+            if ($boot_datetime !== false && strtotime($boot_time) === false) {
+                $boot_time = $boot_datetime->format('Y-m-d H:i:s');
+                $data['content']['operatingsystem']['boot_time'] = $boot_time;
+            }
+
+            $convertedDate = $this->convertDate($data['content']['operatingsystem']['boot_time'], 'Y-m-d H:i:s');
+            if ($convertedDate !== null) {
+                $data['content']['operatingsystem']['boot_time'] = $convertedDate;
+            } else {
+                unset($data['content']['operatingsystem']['boot_time']);
+            }
+        }
+
         if (isset($data['content']['antivirus'])) {
             foreach ($data['content']['antivirus'] as &$av) {
                 //expiration date format
@@ -1125,7 +1147,12 @@ class Converter
             case 'boolean':
                 return (bool)$value;
             case 'integer':
-                return (int)$value;
+                $casted = (int)$value;
+                if ($value == $casted && is_numeric($value)) {
+                    return $casted;
+                } else {
+                    return null;
+                }
             default:
                 throw new \UnexpectedValueException('Type ' . $type . ' not known.');
         }
@@ -1318,6 +1345,9 @@ class Converter
                     if (isset($device_info['id'])) {
                         $device_info['id'] = (int)$device_info['id'];
                     }
+                    if (isset($device_info['comments'])) {
+                        $device_info['description'] = $device_info['comments'];
+                    }
 
                     //Fix network inventory type
                     if (isset($device_info['type'])) {
@@ -1362,6 +1392,7 @@ class Converter
                                 case 'Computer':
                                 case 'Phone':
                                 case 'Printer':
+                                case 'Unmanaged':
                                     $itemtype = $device_info['type'];
                                     break;
                                 case 'Networking':
@@ -1414,11 +1445,19 @@ class Converter
                             $netport['connections'] = array_is_list($netport['connections']['connection']) ?
                                 $netport['connections']['connection'] :
                                 [$netport['connections']['connection']];
+
+                            //replace bad typed values...
+                            foreach ($netport['connections'] as &$connection) {
+                                if (isset($connection['ifnumber'])) {
+                                    $connection['ifnumber'] = $this->getCastedValue($connection['ifnumber'], 'integer');
+                                }
+                            }
                         }
                         if (isset($netport['aggregate'])) {
-                            $netport['aggregate'] = array_is_list($netport['aggregate']['port']) ?
-                                $netport['aggregate']['port'] :
-                                [$netport['aggregate']['port']];
+                            $netport['aggregate'] = is_array($netport['aggregate']['port'])
+                                && array_is_list($netport['aggregate']['port'])
+                                ? $netport['aggregate']['port']
+                                : [$netport['aggregate']['port']];
                             $netport['aggregate'] = array_map('intval', $netport['aggregate']);
                         }
 
@@ -1515,7 +1554,7 @@ class Converter
 
         $device = &$data['content']['device'];
         if (!isset($device['info'])) {
-            $device['info'] = ['type' => 'Computer'];
+            $device['info'] = ['type' => 'Unmanaged'];
         }
         $device_info = &$data['content']['device']['info'];
 
@@ -1538,7 +1577,6 @@ class Converter
             if (!isset($device['ips'])) {
                 $device['ips']['ip'] = [$device['ip']];
             }
-            unset($device['ip']);
         }
 
         foreach ($device as $key => $device_data) {
@@ -1556,6 +1594,10 @@ class Converter
                 case 'usersession':
                     unset($device[$key]);
                     //not used
+                    break;
+                case 'ip':
+                    $device_info['ip'] = $device[$key];
+                    unset($device[$key]);
                     break;
                 case 'ips':
                     $device_info['ips'] = $device[$key];

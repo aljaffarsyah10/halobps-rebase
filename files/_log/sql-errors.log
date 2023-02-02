@@ -1,0 +1,13 @@
+[2023-02-02 07:27:05] glpisqllog.ERROR: DBmysql::query() in D:\laragon\www\glpi\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: ALTER TABLE `glpi_plugin_mydashboard_userwidgets` DROP CONSTRAINT `glpi_plugin_mydashboard_userwidgets_ibfk_1`
+  Error: Constraint 'glpi_plugin_mydashboard_userwidgets_ibfk_1' does not exist.
+  Backtrace :
+  src\DBmysql.php:1002                               
+  plugins\mydashboard\hook.php:240                   DBmysql->runFile()
+  src\Plugin.php:787                                 plugin_mydashboard_install()
+  :                                                  Plugin->install()
+  src\Marketplace\Controller.php:545                 call_user_func()
+  src\Marketplace\Controller.php:435                 Glpi\Marketplace\Controller->setPluginState()
+  ajax\marketplace.php:82                            Glpi\Marketplace\Controller->installPlugin()
+  {"user":"2@DESKTOP-T5H1325"} 

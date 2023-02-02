@@ -59,8 +59,8 @@ try {
 }
 
 if($error){
-	//Don't delete, for archive purpose (RY)
-	
+	// Set error banner (Rihan Y. | 02-02-2023)
+
 	// Html::nullHeader("Login", $CFG_GLPI["root_doc"] . '/index.php');
 	// echo '<div class="center b">'.$error.'<br><br>';
 	// // Logout whit noAUto to manage auto_login with errors
