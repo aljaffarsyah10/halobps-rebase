@@ -265,7 +265,7 @@
       </div>
    </div>
 
-   {# {% set actors_show = headers_states['actors'] is not defined or headers_states['actors'] == "true" ? true : false %}
+   {% set actors_show = headers_states['actors'] is not defined or headers_states['actors'] == "true" ? true : false %}
    <div class="accordion-item">
       <h2 class="accordion-header" id="heading-actor" title="{{ __('Actors') }}" data-bs-toggle="tooltip">
          <button class="accordion-button {{ actors_show ? "" : "collapsed" }}" type="button" data-bs-toggle="collapse" data-bs-target="#actors" aria-expanded="true" aria-controls="actors">
@@ -283,7 +283,7 @@
             {{ include('components/itilobject/actors/main.html.twig') }}
          </div>
       </div>
-   </div> #}
+   </div>
 
    {# {% if item_ticket is defined and item_ticket is not null %}
       {% set items_show = headers_states['items'] is not defined or headers_states['items'] == "true" ? true : false %}
