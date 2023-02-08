@@ -63,7 +63,7 @@
         "symfony/polyfill-php80": "^1.26",
         "symfony/polyfill-php81": "^1.26",
         "symfony/polyfill-php82": "^1.26",
-        "tecnickcom/tcpdf": "^6.5",
+        "tecnickcom/tcpdf": "^6.6",
         "true/punycode": "^2.1",
         "twig/string-extra": "^3.3",
         "twig/twig": "^3.3",
@@ -71,13 +71,15 @@
     },
     "require-dev": {
         "ext-xml": "*",
-        "atoum/atoum": "^4.0",
-        "friendsoftwig/twigcs": "^6.0",
-        "glpi-project/tools": "^0.5",
+        "atoum/atoum": "^4.1",
+        "friendsoftwig/twigcs": "^6.1",
+        "glpi-project/tools": "^0.6",
         "maglnet/composer-require-checker": "^3.5",
         "mikey179/vfsstream": "^1.6",
         "php-parallel-lint/php-parallel-lint": "^1.3",
-        "phpstan/phpstan": "^1.8",
+        "phpstan/extension-installer": "^1.2",
+        "phpstan/phpstan": "^1.9",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
         "squizlabs/php_codesniffer": "^3.7"
     },
     "replace": {
@@ -98,7 +100,10 @@
         "platform": {
             "php": "7.4.0"
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
     },
     "autoload": {
         "psr-4": {
@@ -125,13 +130,13 @@
             "@php -r \"file_put_contents('.composer.hash', sha1_file('composer.lock'));\"",
             "@php -f vendor/bin/build_hw_jsons",
             "patch -f -p1 -d vendor/laminas/laminas-mail/ < tools/patches/laminas-mail-invalid-header-ignore.patch || true",
-            "patch -f -p1 -d vendor/atoum/atoum/ < tools/patches/atoum-php-8.2.patch || true"
+            "patch -f -p1 -d vendor/laminas/laminas-mail/ < tools/patches/laminas-mail-address-no-length-check.patch || true"
         ],
         "post-update-cmd": [
             "@php -r \"file_put_contents('.composer.hash', sha1_file('composer.lock'));\"",
             "@php -f vendor/bin/build_hw_jsons",
             "patch -f -p1 -d vendor/laminas/laminas-mail/ < tools/patches/laminas-mail-invalid-header-ignore.patch || true",
-            "patch -f -p1 -d vendor/atoum/atoum/ < tools/patches/atoum-php-8.2.patch || true"
+            "patch -f -p1 -d vendor/laminas/laminas-mail/ < tools/patches/laminas-mail-address-no-length-check.patch || true"
         ],
         "build": [
             "bin/console dependencies install && bin/console locales:compile"
