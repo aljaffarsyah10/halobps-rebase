@@ -39,9 +39,23 @@
       <input type="hidden" name="redirect" value="{{ redirect }}" />
       <input type="hidden" name="_glpi_csrf_token" value="{{ csrf_token() }}" />
 
-      <div class="row justify-content-center align-items-center my-1">
-         <img class="w-75 d-flex" src="pics/layout/global_layout_tagline.png">
-         <div class="d-flex justify-content-center mx-4 my-3">
+      <div class="row justify-content-center align-items-middle my-4">
+         <div class="col-md">
+            <div class="d-flex justify-content-center my-4">
+               <img class="w-50" alt="BPS Banner" src="pics/logos/logo-GLPI-250-black_bps.png"/>
+            </div>
+         </div>
+         <div class="col-md-5">
+            <div class="d-flex justify-content-center my-5">
+               <img alt="HaloSIS Quote" src="pics/layout/global_layout_quote.png"/>
+            </div>
+         </div>
+         <div class="col-md">
+            <div class="d-flex justify-content-center my-4">
+               <h1 style="font-family:mistral;font-size:2.5vw">#WeCare</h1>
+            </div>
+         </div>
+         <div class="d-flex justify-content-center mx-4 my-4">
             <input value="Login SSO BPS" formaction="#" class="w-50 input-md submit btn btn-primary" onclick="window.location.href='?SSO=1'{{ app.request.request.get("redirect_login_sso_bps") }}"/>
          </div>
             {% if errors|length > 0 %}

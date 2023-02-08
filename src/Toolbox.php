@@ -1638,7 +1638,13 @@ class Toolbox
                 // redirect to full url -> check if it's based on glpi url
                 if (preg_match('@(([^:/].+:)?//[^/]+)(/.+)?@', $decoded_where, $matches)) {
                     if ($matches[1] !== $CFG_GLPI['url_base']) {
-                        Session::addMessageAfterRedirect('Redirection failed');
+                        if($matches[1] !== $CFG_GLPI['url_base']){
+                            if($matches[1] == 'https://sso.bps.go.id'){
+                                Session::addMessageAfterRedirect('Berhasil Login via SSO');
+                            } else{
+                                Session::addMessageAfterRedirect('Redirection failed');
+                            }
+                        }
                         if (Session::getCurrentInterface() === "helpdesk") {
                             Html::redirect($CFG_GLPI["root_doc"] . "/front/helpdesk.public.php");
                         } else {
