@@ -31099,10 +31099,18 @@ body.iframed, body.in_modal {
   background-color: transparent;
   overflow-x: hidden;
 }
-.page .glpi-logo {
+/* .page .glpi-logo {
   background: url("../pics/logos/logo-GLPI-100-white.png") no-repeat;
   height: 55px;
   width: 100px;
+} */
+/*(Rihan Y. | 08-02-2023) Palettes for default (lightblue) HaloSIS*/
+.page .glpi-logo {
+  background: url(../pics/logos/logo-HALOSIS-100-white.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 75px;
+  width: 200px;
 }
 .page .page-body {
   margin-bottom: 0;
@@ -32797,7 +32805,11 @@ body .flatpickr-time input:hover, body .flatpickr-time .flatpickr-am-pm:hover, b
   color: #f4f6fa;
 }
 .sidebar, .topbar {
+<<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
   background-color: #2f3f64;
+=======
+  background-color: #17aa8d;
+>>>>>>> 3b382622c (debug add change to compiled css, related to #33):css_compiled/css_palettes_lightblue.min.css
   color: #f4f6fa;
   z-index: 1031;
 }
@@ -32885,11 +32897,19 @@ body .flatpickr-time input:hover, body .flatpickr-time .flatpickr-am-pm:hover, b
     margin: 0 calc(-1 * var(--tblr-gutter-x, 1.5rem)) 0.5rem;
     width: calc(100% + var(--tblr-gutter-x, 1.5rem) * 2);
   }
-  body.navbar-collapsed .navbar-brand .glpi-logo {
+  /* body.navbar-collapsed .navbar-brand .glpi-logo {
     background: url("../pics/logos/logo-G-100-white.png") no-repeat;
     background-size: contain;
     width: 40px;
     height: 40px;
+  } */
+  /*(Rihan Y. | 08-02-2023) Palettes for default (lightblue) HaloSIS*/
+  body.navbar-collapsed .navbar-brand .glpi-logo {
+    background: url("../pics/logos/logo-HALOSIS-standalone.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 60px;
+    height: 60px;
   }
   body.navbar-collapsed .sidebar {
     z-index: 1050;
