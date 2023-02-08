@@ -92,8 +92,10 @@ body.in_modal {
 .page {
     .glpi-logo {
         background: url($logo) no-repeat;
-        height: 55px;
-        width: 100px;
+        background-size: contain;
+        background-position: center;
+        height: 75px;
+        width: 200px;
     }
 
     .page-body {

@@ -3,7 +3,7 @@
         'name' => 'glpi/glpi',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'cf1f90e13d497284ba77812fb2fc73f13f48e5a2',
+        'reference' => 'c8d6ec3052071521d67e6296f7bc614e7a24a0b1',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -109,7 +109,7 @@
         'glpi/glpi' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'cf1f90e13d497284ba77812fb2fc73f13f48e5a2',
+            'reference' => 'c8d6ec3052071521d67e6296f7bc614e7a24a0b1',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
