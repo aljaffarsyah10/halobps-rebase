@@ -2936,6 +2936,7 @@ Internal #1: Launch olaticket
 2023-02-08 11:25:50 [@YOSRAL-34005894]
 Internal #1: Launch queuednotification
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8cc5be255 (changes related to #33 (1))
 2024-05-14 03:45:16 [2@LAPTOP-3QJ309BV]
 Internal #1: Launch olaticket
@@ -2959,3 +2960,5 @@ Internal #1: Launch slaticket
 Internal #1: Launch temp
 2024-05-14 05:37:04 [@LAPTOP-3QJ309BV]
 Internal #1: Launch contract
+=======
+>>>>>>> 6fd3258f8 (Merge branch 'reinit-all' into 'pusher')
