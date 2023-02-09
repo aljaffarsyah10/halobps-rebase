@@ -5751,7 +5751,7 @@ msgstr ""
 
 #: templates/layout/parts/page_header.html.twig
 msgid "Collapse menu"
-msgstr ""
+msgstr "Sembunyikan menu"
 
 #: templates/install/step6.html.twig
 msgid "Collect data"
