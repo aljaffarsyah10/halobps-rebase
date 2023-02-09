@@ -715,6 +715,11 @@ class generator
                 $returnTypeCode = ': ' . $returnTypeName;
                 break;
 
+            case in_array($this->getReflectionTypeName($returnType), ['mixed', 'null']):
+                // 'mixed' and 'null' cannot be marked as nullable
+                $returnTypeCode = ': ' . $returnTypeName;
+                break;
+
             case $returnTypeName === 'static':
             case $returnType->isBuiltin():
                 $returnTypeCode = ': ' . ($isNullable ? '?' : '') . $returnTypeName;

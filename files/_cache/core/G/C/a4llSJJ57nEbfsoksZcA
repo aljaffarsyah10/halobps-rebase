@@ -32806,10 +32806,14 @@ body .flatpickr-time input:hover, body .flatpickr-time .flatpickr-am-pm:hover, b
 }
 .sidebar, .topbar {
 <<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
+<<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
   background-color: #2f3f64;
 =======
   background-color: #17aa8d;
 >>>>>>> 3b382622c (debug add change to compiled css, related to #33):css_compiled/css_palettes_lightblue.min.css
+=======
+  background-color: #17aa8d;
+>>>>>>> 0a71bb790 (Merge Reinit-all @yosral to Pusher (per 090223)):css_compiled/css_palettes_lightblue.min.css
   color: #f4f6fa;
   z-index: 1031;
 }

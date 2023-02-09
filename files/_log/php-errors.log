@@ -28913,4 +28913,7 @@ Compile css/palettes/lightblue.scss  {"user":"2@YOSRAL-34005894"}
   Backtrace :
   front\locale.php:97                                trigger_error()
   
+<<<<<<< HEAD
 >>>>>>> 8cc5be255 (changes related to #33 (1))
+=======
+>>>>>>> 0a71bb790 (Merge Reinit-all @yosral to Pusher (per 090223))
