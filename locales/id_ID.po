@@ -5960,7 +5960,7 @@ msgstr ""
 
 #: templates/layout/parts/page_header.html.twig
 msgid "Collapse menu"
-msgstr ""
+msgstr "Sembunyikan menu"
 
 #: templates/install/step6.html.twig
 #: templates/pages/admin/inventory/agent.html.twig src/Agent.php:223
