@@ -37,14 +37,14 @@
    <button class="dropdown-item dropdown-toggle" type="button" data-bs-toggle="dropdown"
            aria-haspopup="true" aria-expanded="false">
       <i class="ti ti-user-check"></i>
-      {{ (session('glpiactiveprofile')['name'] ?? '')|verbatim_value }}
+      {{ __(session('glpiactiveprofile')['name'] ?? '')|verbatim_value }}
    </button>
    <div class="dropdown-menu" data-bs-popper="none">
       <span class="dropdown-header">{{ __('Profiles') }}</span>
       {% for profile_id, profile in session('glpiprofiles') %}
       <a class="dropdown-item {{ profile_id == (session('glpiactiveprofile')['id'] ?? 0) ? 'active' : '' }}"
          href="{{ index_path() }}?newprofile={{ profile_id }}">
-         <i class="ti ti-user-check"></i>{{ profile['name']|verbatim_value }}
+         <i class="ti ti-user-check"></i>{{ __(profile['name'])|verbatim_value }}
       </a>
       {% endfor %}
    </div>
@@ -61,10 +61,10 @@
    {% set current_entity_short = '... > ' ~ current_entity_short %}
 {% endif %}
 {% if not is_multi_entities_mode() %}
-   <span class="dropdown-item dropdown-item-text" title="{{ current_entity }}">
+  <!-- <span class="dropdown-item dropdown-item-text" title="{{ current_entity }}">
       <i class="fa-fw ti ti-stack"></i>
       {{ current_entity_short|u.truncate(35, '...') }}
-   </span>
+   </span> --!>
 {% else %}
    <div class="dropdown dropstart">
       <a href="#" class="dropdown-item dropdown-toggle entity-dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" title="{{ current_entity }}">

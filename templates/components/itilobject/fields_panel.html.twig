@@ -251,13 +251,13 @@
                     {% set download_button %}
                         <a class="btn btn-primary" id = "formLink" href="https://laci.bps.go.id/s/553ErqvWBVUUr6K" target="_blank">
                             <i class="fas fa-download"></i>
-                             &nbsp;{{ __('Download form permintaan') }}
+                             &nbsp;{{ __('Download form request') }}
                         </a>
                     {% endset %}
                     {{ fields.htmlField(
                         'download_button',
                         download_button,
-                        __('Download form permintaan'),
+                        __('Download form request'),
                         field_options
                     ) }}
             {% endif %}
@@ -265,6 +265,7 @@
       </div>
    </div>
 
+{% if session('glpiactiveprofile')['id'] != 1 %}
    {% set actors_show = headers_states['actors'] is not defined or headers_states['actors'] == "true" ? true : false %}
    <div class="accordion-item">
       <h2 class="accordion-header" id="heading-actor" title="{{ __('Actors') }}" data-bs-toggle="tooltip">
@@ -284,6 +285,7 @@
          </div>
       </div>
    </div>
+{% endif %}
 
    {# {% if item_ticket is defined and item_ticket is not null %}
       {% set items_show = headers_states['items'] is not defined or headers_states['items'] == "true" ? true : false %}
