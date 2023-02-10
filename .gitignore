@@ -32,11 +32,8 @@ config/based_config.php
 config/config.php
 config/define.php
 nbproject
-.composer.hash
 css/compiled/
 /css/lib/
-/node_modules/
-.package.hash
 public/build/
 public/lib/
 tests/web/error.log
