@@ -1,4 +1,6 @@
 .DS_store
+.composer.hash
+composer.lock
 config/cache.php
 config/config_db*
 config/glpi.key
@@ -35,8 +37,8 @@ nbproject
 .composer.hash
 css/compiled/
 /css/lib/
-/node_modules/
 .package.hash
+package-lock.json
 public/build/
 public/lib/
 tests/web/error.log
