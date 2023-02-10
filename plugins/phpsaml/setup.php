@@ -242,8 +242,7 @@ function plugin_display_login(){
 	$redirect = (isset($_GET['redirect']) ? '&redirect='.urlencode($_GET['redirect']) : null);
 	$_GET['redirect_login_sso_bps'] = $redirect;
 	?>
-
-	<!-- Don't delete (RY), for archive purpose -->
-	<!-- <input class="submit btn btn-primary w-100" value="Login SSO" onclick="window.location.href='?SSO=1<?php echo $redirect; ?>'" /> -->
+	<!-- Set SSO login button (Rihan Y. | 02-02-2023) -->
+	<!-- <input class="submit btn btn-primary w-100" value="Sign In with SSO" onclick="window.location.href='?SSO=1<?php //echo $redirect; ?>'" /> -->
 	<?php
 }

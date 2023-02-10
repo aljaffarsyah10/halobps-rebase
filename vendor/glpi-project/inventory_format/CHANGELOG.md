@@ -3,6 +3,36 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.26] - 2023-01-25
+
+Keep network equipments IP node out of IPS
+Fix LLDP connections ifnumber cast
+
+## [1.1.25] - 2022-11-29
+
+Fix integers conversion from XML
+
+## [1.1.24] - 2022-11-24
+
+Fix sysdescr handling
+
+## [1.1.23] - 2022-11-21
+
+Handle unmanaged assets
+
+## [1.1.22] - 2022-11-16
+
+Fix network port aggregation as string
+
+## [1.1.21] - 2022-10-21
+
+Fix last boot date format
+
+## [1.1.20] - 2022-09-23
+
+Drop storage interface pattern
+Remove unneeded files from release
+
 ## [1.1.19] - 2022-07-13
 
 Add new examples

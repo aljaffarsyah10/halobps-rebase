@@ -1106,7 +1106,7 @@
     {
         "decimal": "184",
         "name": "propBWAp2Mp",
-        "description": "PropBroadbandWirelessAccesspt2Multipt\n(use of this type for IEEE 802.16\nWMAN, interfaces as per IEEE 802.16\nis deprecated and iftype 237 should\nbe used instead)",
+        "description": "PropBroadbandWirelessAccesspt2Multipt\r\n(use of this type for IEEE 802.16\r\nWMAN, interfaces as per IEEE 802.16\r\nis deprecated and iftype 237 should\r\nbe used instead)",
         "references": "[Zvika_Zilberman]"
     },
     {
@@ -1118,7 +1118,7 @@
     {
         "decimal": "186",
         "name": "digitalWrapperOverheadChannel",
-        "description": "Digital Wrapper\nOverhead",
+        "description": "Digital Wrapper\r\nOverhead",
         "references": "[ODSI_Coalition_K_Arv]"
     },
     {
@@ -1340,7 +1340,7 @@
     {
         "decimal": "223",
         "name": "actelisMetaLOOP",
-        "description": "Acteleis proprietary MetaLOOP\nHigh Speed Link",
+        "description": "Acteleis proprietary MetaLOOP\r\nHigh Speed Link",
         "references": "[Edward_Beili]"
     },
     {
@@ -1370,19 +1370,19 @@
     {
         "decimal": "228",
         "name": "cblVectaStar",
-        "description": "Cambridge Broadband Networks Limited\nVectaStar",
+        "description": "Cambridge Broadband Networks Limited\r\nVectaStar",
         "references": "[John_Naylon]"
     },
     {
         "decimal": "229",
         "name": "docsCableMCmtsDownstream",
-        "description": "CATV Modular CMTS Downstream\nInterface",
-        "references": "[Eduardo_Cardona][\"Data-Over-Cable Service Interface Specifications:\nM-CMTS Operations Support System Interface Specification,\nCM-SP-M-OSSI-I01-050805\", DOCSIS, August 2005.][http:\/\/www.cablemodem.com\/specifications][https:\/\/www.cablelabs.com\/specifications\/archives\/docsis.html]"
+        "description": "CATV Modular CMTS Downstream\r\nInterface",
+        "references": "[Eduardo_Cardona][\"Data-Over-Cable Service Interface Specifications:\r\nM-CMTS Operations Support System Interface Specification,\r\nCM-SP-M-OSSI-I01-050805\", DOCSIS, August 2005.][http:\/\/www.cablemodem.com\/specifications][https:\/\/www.cablelabs.com\/specifications\/archives\/docsis.html]"
     },
     {
         "decimal": "230",
         "name": "adsl2",
-        "description": "Asymmetric Digital Subscriber Loop\nVersion 2 (DEPRECATED - REPLACED\nBY 238)",
+        "description": "Asymmetric Digital Subscriber Loop\r\nVersion 2 (DEPRECATED - REPLACED\r\nBY 238)",
         "references": "[RFC4706]"
     },
     {
@@ -1430,7 +1430,7 @@
     {
         "decimal": "238",
         "name": "adsl2plus",
-        "description": "Asymmetric Digital Subscriber Loop\nVersion 2 -- Version 2 Plus and all\nvariants",
+        "description": "Asymmetric Digital Subscriber Loop\r\nVersion 2 -- Version 2 Plus and all\r\nvariants",
         "references": "[RFC4706]"
     },
     {
@@ -1484,13 +1484,13 @@
     {
         "decimal": "247",
         "name": "ILAN",
-        "description": "Internal LAN on a bridge per IEEE\n802.1ap",
+        "description": "Internal LAN on a bridge per IEEE\r\n802.1ap",
         "references": "[Glenn_Parsons][http:\/\/www.ieee802.org\/1\/files\/private\/ap-drafts\/d3\/802-1ap-D3-4.pdf]"
     },
     {
         "decimal": "248",
         "name": "PIP",
-        "description": "Provider Instance Port on a bridge\nper IEEE 802.1ah PBB",
+        "description": "Provider Instance Port on a bridge\r\nper IEEE 802.1ah PBB",
         "references": "[Glenn_Parsons][http:\/\/www.ieee802.org\/1\/files\/private\/ah-drafts\/d4\/802-1ah-d4-2.pdf]"
     },
     {
@@ -1502,13 +1502,13 @@
     {
         "decimal": "250",
         "name": "gpon",
-        "description": "Gigabit-capable passive optical networks\n(G-PON)  as per ITU-T G.948",
+        "description": "Gigabit-capable passive optical networks\r\n(G-PON)  as per ITU-T G.948",
         "references": "[Hyeri_Koh]"
     },
     {
         "decimal": "251",
         "name": "vdsl2",
-        "description": "Very high speed digital subscriber\nline Version 2 (as per ITU-T Recommendation\nG.993.2)",
+        "description": "Very high speed digital subscriber\r\nline Version 2 (as per ITU-T Recommendation\r\nG.993.2)",
         "references": "[Markus_Freudenberger][RFC5650]"
     },
     {
@@ -1538,7 +1538,7 @@
     {
         "decimal": "256",
         "name": "docsCableUpstreamRfPort",
-        "description": "DOCSIS CATV Upstream RF\nPort",
+        "description": "DOCSIS CATV Upstream RF\r\nPort",
         "references": "[Michael_Patrick][https:\/\/www.cablelabs.com\/specifications\/CM-SP-EQAM-PMI-I01-081209.pdf]"
     },
     {
@@ -1574,7 +1574,7 @@
     {
         "decimal": "262",
         "name": "ifVfiType",
-        "description": "VPLS Forwarding Instance Interface\nType",
+        "description": "VPLS Forwarding Instance Interface\r\nType",
         "references": "[Manas_Pati]"
     },
     {
@@ -1610,13 +1610,13 @@
     {
         "decimal": "268",
         "name": "aluEponPhysicalUni",
-        "description": "EPON physical User to Network\ninterface",
+        "description": "EPON physical User to Network\r\ninterface",
         "references": "[Karel_Meijfroidt]"
     },
     {
         "decimal": "269",
         "name": "aluEponLogicalLink",
-        "description": "The emulation of a point-to-point\nlink over the EPON layer",
+        "description": "The emulation of a point-to-point\r\nlink over the EPON layer",
         "references": "[Karel_Meijfroidt]"
     },
     {
@@ -1628,7 +1628,7 @@
     {
         "decimal": "271",
         "name": "aluGponPhysicalUni",
-        "description": "GPON physical User to Network\ninterface",
+        "description": "GPON physical User to Network\r\ninterface",
         "references": "[Karel_Meijfroidt][https:\/\/www.itu.int\/rec\/T-REC-G.984.2\/en]"
     },
     {
@@ -1640,25 +1640,25 @@
     {
         "decimal": "273",
         "name": "Reserved",
-        "description": "The corresponding transmission value\nis allocated according to the following\nreference.",
+        "description": "The corresponding transmission value\r\nis allocated according to the following\r\nreference.",
         "references": "[RFC6825]"
     },
     {
         "decimal": "274",
         "name": "Reserved",
-        "description": "The corresponding transmission value\nis allocated according to the following reference.",
+        "description": "The corresponding transmission value\r\nis allocated according to the following reference.",
         "references": "[RFC7257]"
     },
     {
         "decimal": "275",
         "name": "Reserved",
-        "description": "The corresponding transmission value\nis allocated according to the following reference.",
+        "description": "The corresponding transmission value\r\nis allocated according to the following reference.",
         "references": "[RFC7257]"
     },
     {
         "decimal": "276",
         "name": "Reserved",
-        "description": "The corresponding transmission value\nis allocated according to the following reference.",
+        "description": "The corresponding transmission value\r\nis allocated according to the following reference.",
         "references": "[RFC7257]"
     },
     {
