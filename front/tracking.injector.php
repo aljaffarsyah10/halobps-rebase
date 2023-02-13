@@ -108,11 +108,12 @@ if (isset($_POST['add'])) {
             Html::displayBackLink();
             echo "</div>";
         } else {
-            echo "<div class='center b spaced'>";
-            echo "<img src='" . $CFG_GLPI["root_doc"] . "/pics/ok.png' alt='" . __s('OK') . "'>";
+            // echo "<div class='center b spaced'>";
+            // echo "<img src='" . $CFG_GLPI["root_doc"] . "/pics/ok.png' alt='" . __s('OK') . "'>";
             Session::addMessageAfterRedirect(__('Thank you for using our automatic helpdesk system.'));
-            Html::displayMessageAfterRedirect();
-            echo "</div>";
+            // Html::displayMessageAfterRedirect(); 
+            Html::redirect($CFG_GLPI["root_doc"] . "/front/ticket.php");
+            // echo "</div>";
         }
     } else {
         if (isset($_POST["_type"]) && ($_POST["_type"] == "Helpdesk")) {
