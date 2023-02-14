@@ -1440,6 +1440,9 @@ class KnowbaseItem extends CommonDBVisible implements ExtraVisibilityCriteria
      **/
     public function showManageForm($options)
     {
+        // (Rihan Y. | 14-02-2023) Button to add Knowledge Base items
+        global $CFG_GLPI;
+
         if (
             !Session::haveRightsOr(
                 self::$rightname,
@@ -1468,7 +1471,10 @@ class KnowbaseItem extends CommonDBVisible implements ExtraVisibilityCriteria
         }
         Dropdown::showFromArray('unpublished', $values, ['value' => $params['unpublished']]);
         echo "</td><td class='left'>";
-        echo "<input type='submit' value=\"" . _sx('button', 'Post') . "\" class='btn btn-primary'></td>";
+        // (Rihan Y. | 14-02-2023) Button to add Knowledge Base items
+        // echo "<input type='submit' value=\"" . _sx('button', 'Post') . "\" class='btn btn-primary'></td>";
+        echo "<input type='submit' value=\"" . _sx('button', 'Cari') . "\" class='btn btn-primary'>";
+        echo "<a class='btn btn-primary mx-2' href=". $CFG_GLPI['root_doc'] . "/front/knowbaseitem.form.php" .">" . _sx('button', 'Buat Baru') . "</a></td>";
         echo "</tr></table>";
         Html::closeForm();
         echo "</div>";

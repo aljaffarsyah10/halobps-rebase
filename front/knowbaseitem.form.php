@@ -189,7 +189,9 @@ if (isset($_POST["add"])) {
             }
         }
         $menus = [
-            'central'  => ["tools", "knowbaseitem"],
+            // (Rihan Y. | 14-02-2023) Button to add Knowledge Base items
+            // 'central'  => ["tools", "knowbaseitem"],
+            'central'  => ["knowledge", "knowbaseitem"],
             'helpdesk' => [],
         ];
         KnowbaseItem::displayFullPageForItem($_GET['id'], $menus, $options);
