@@ -12078,7 +12078,7 @@ msgstr "Pengetahuan dasar Administrasi"
 #: src/KnowbaseItemCategory.php:48 src/Profile.php:1944
 msgid "Knowledge base category"
 msgid_plural "Knowledge base categories"
-msgstr[0] "Pengetahuan dasar Kategori"
+msgstr[0] "Kategori Basisdata Pengetahuan"
 
 #: src/Item_Ticket.php:452
 msgid "Knowledge base entries"
@@ -17289,7 +17289,7 @@ msgstr ""
 
 #: src/KnowbaseItem.php:858
 msgid "Put this item in the FAQ"
-msgstr ""
+msgstr "Sematkan item ini sebagai FAQ"
 
 #: src/Change.php:584
 msgid "Qualification"
