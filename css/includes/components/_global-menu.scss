@@ -86,7 +86,9 @@
     #navbar-menu {
         .nav-item {
             .nav-link {
-                color: rgba($color: $mainmenu-fg, $alpha: 80%);
+                /*(Rihan Y. | 17-02-2023) changing text color in sidebar when idle*/
+                // color: rgba($color: $mainmenu-fg, $alpha: 80%);
+                color: rgba($color: $white);
                 border-left: 3px solid transparent;
                 border-radius: unset;
 

@@ -324,7 +324,7 @@ msgstr "%1$s - port %2$s"
 #: src/RuleDictionnaryPrinterCollection.php:122
 #, php-format
 msgid "%1$s - replay rules on existing database: %2$s/%3$s (%4$s Mio)"
-msgstr ""
+msgstr "%1$s - ulangi rules pada database existing: %2$s/%3$s (%4$s Mb)"
 
 #: src/CommonDBVisible.php:322 src/CommonDBVisible.php:393 src/Search.php:2096
 #: src/Search.php:2226 src/NotificationTargetContract.php:184
@@ -1126,13 +1126,13 @@ msgstr "%s Kanban"
 #: src/MailCollector.php:2354
 #, php-format
 msgid "%s Mio"
-msgstr "%s MB"
+msgstr "%s Mb"
 
 #. TRANS: %s is a size
 #: src/Document.php:541
 #, php-format
 msgid "%s Mio max"
-msgstr "Maksimal %s MB"
+msgstr "Maksimal %s Mb"
 
 #: front/knowbaseitem_comment.form.php:67
 #, php-format
@@ -2244,7 +2244,7 @@ msgstr ""
 
 #: src/CronTask.php:990
 msgid "A minimum of 64 Mio is commonly required for GLPI."
-msgstr ""
+msgstr "Minimal dibutuhkan 64 Mb untuk GLPI"
 
 #: src/Marketplace/View.php:768
 #, php-format
@@ -10513,7 +10513,7 @@ msgstr ""
 
 #: src/Toolbox.php:977
 msgid "Gio"
-msgstr ""
+msgstr "Gb"
 
 #: src/Consumable.php:214 src/Consumable.php:606
 msgctxt "button"
@@ -12507,7 +12507,7 @@ msgstr "Kunci"
 
 #: src/Toolbox.php:977
 msgid "Kio"
-msgstr ""
+msgstr "Kb"
 
 #: front/knowbaseitem.form.php:175 src/KnowbaseItem.php:60
 #: src/CommonDropdown.php:975 src/ITILCategory.php:72 src/ITILCategory.php:292
@@ -14134,7 +14134,7 @@ msgstr[0] "Menit"
 #: src/DeviceHardDrive.php:58 src/DeviceHardDrive.php:69 src/Database.php:111
 #: src/Database.php:307 src/Database.php:459
 msgid "Mio"
-msgstr ""
+msgstr "Mb"
 
 #: src/UploadHandler.php:383
 msgid "Missing a temporary folder"
@@ -25541,7 +25541,7 @@ msgstr ""
 #. TRANS: list of unit (o for octet)
 #: src/Toolbox.php:977
 msgid "o"
-msgstr ""
+msgstr "bit"
 
 #: src/Migration.php:701 src/Migration.php:703
 msgid "ok"

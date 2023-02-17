@@ -269,7 +269,7 @@ class __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a79
         // line 234
         yield CoreExtension::callMacro($macros["fields"], "macro_textField", ["name", (($__internal_compile_9 =         // line 236
 ($context["params"] ?? null)) && is_array($__internal_compile_9) || $__internal_compile_9 instanceof ArrayAccess ? ($__internal_compile_9["name"] ?? null) : null), __("Title"), Twig\Extension\CoreExtension::merge(        // line 238
-($context["right_field_options"] ?? null), ["required" => true])], 234, $context, $this->getSourceContext());
+($context["right_field_options"] ?? null), ["required" => false])], 234, $context, $this->getSourceContext());
         // line 241
         yield "
             
