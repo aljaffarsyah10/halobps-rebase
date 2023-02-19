@@ -34,9 +34,6 @@ config/based_config.php
 config/config.php
 config/define.php
 nbproject
-.composer.hash
-css/compiled/
-/css/lib/
 .package.hash
 package-lock.json
 public/build/
