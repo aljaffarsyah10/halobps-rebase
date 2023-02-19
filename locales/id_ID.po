@@ -24159,7 +24159,7 @@ msgstr ""
 
 #: src/Ticket.php:4706 src/Ticket.php:4897
 msgid "Your tickets in progress"
-msgstr "Tiket Anda dalam proses"
+msgstr "Tiket Anda yang sedang diproses"
 
 #: src/Ticket.php:4625 src/Ticket.php:4830
 msgid "Your tickets to close"

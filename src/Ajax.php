@@ -334,6 +334,10 @@ JAVASCRIPT;
             }
 
             foreach ($tabs as $val) {
+                // (Rihan Y. | 18-02-2023) Hide/Commented "RSS Feed" and "All" tab for Super Admin/Admin/Technician
+                if(strip_tags($val['title']) == 'RSS feed' || strip_tags($val['title']) == 'Semua'){
+                    continue;
+                }
                 $target = str_replace('\\', '_', $val['id']);
                 $html_tabs .= "<li class='nav-item $navitemml'>
                <a class='nav-link justify-content-between $navlinkp $display_class' data-bs-toggle='tab' title='" . strip_tags($val['title']) . "' ";
