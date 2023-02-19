@@ -648,7 +648,8 @@ class CommonGLPI implements CommonGLPIInterface
 
                 if (count($ong)) {
                     foreach ($ong as $key => $val) {
-                        if ($key != 'empty') {
+                        // (Rihan Y. | 19-02-2023) Hide/Commented "RSS Feed" Tabs in Central/Super Admin/Admin/Technician
+                        if ($key != 'empty' && $val != 'RSS feed') {
                             echo "<div class='alltab'>$val</div>";
                             self::displayStandardTab($item, $key, $withtemplate, $options);
                         }

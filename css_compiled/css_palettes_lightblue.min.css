@@ -8454,7 +8454,9 @@ textarea.form-control-lg {
   box-shadow: 0 0 0 0.25rem rgba(200, 234, 253, 0.25);
 }
 .form-check-input:checked {
-  background-color: #c8eafd;
+  /*(Rihan Y. | 17-02-2023) changing background for text selection*/
+  background-color: #045781;
+  /* background-color: #c8eafd; */
   border-color: rgba(98, 105, 118, 0.24);
 }
 .form-check-input:checked[type="checkbox"] {
@@ -9161,7 +9163,9 @@ textarea.form-control-lg {
   background-color: rgba(98, 105, 118, 0.04);
 }
 .dropdown-item.active, .dropdown-item:active {
-  color: #c8eafd;
+  /*(Rihan Y. | 17-02-2023) changing background for checked checkbox*/
+  color: #045781;
+  /* color: #c8eafd; */
   text-decoration: none;
   background-color: rgba(32, 107, 196, 0.04);
 }
@@ -22215,7 +22219,9 @@ Selection
  */
 ::selection {
   color: #ffffff;
-  background-color: #eff9fe;
+  /*(Rihan Y. | 17-02-2023) changing background for text selection*/
+  background-color: #12957b;
+  /* background-color: #eff9fe; */
 }
 /**
 Links
@@ -24608,8 +24614,10 @@ body .flatpickr-time input:hover, body .flatpickr-time .flatpickr-am-pm:hover, b
 .navbar .navbar-toggler {
   color: #f4f6fa;
 }
+/*(Rihan Y. | 08-02-2023) Palettes for default (lightblue) HaloSIS*/
 .sidebar, .topbar {
-  background-color: #17aa8d;
+  background-color: #12957b;
+  /* background-color: #17aa8d; */
   color: #f4f6fa;
   z-index: 1030;
 }

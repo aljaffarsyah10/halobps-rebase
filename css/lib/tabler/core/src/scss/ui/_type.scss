@@ -137,7 +137,9 @@ Selection
  */
 ::selection {
   color: $white;
-  background-color: lighten($primary, 8%);
+  /*(Rihan Y. | 17-02-2023) change text selection background*/
+  // background-color: lighten($primary, 8%);
+  background-color: lighten($mainmenu_bg, 8%);
 }
 
 /**
