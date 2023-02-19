@@ -273,36 +273,38 @@ class Central extends CommonGLPI
         $card_params = [
             'who' => Session::getLoginUserID()
         ];
-        $idor = Session::getNewIDORToken(Planning::class, $card_params);
-        $twig_params['cards'][] = [
-            'itemtype'  => Planning::class,
-            'widget'    => 'central_list',
-            'params'    => $card_params + [
-                '_idor_token'  => $idor
-            ]
-        ];
+        // (Rihan Y. | 17-02-2023) Hide/Commented "Planning" Tabs in Central/Super Admin/Admin/Technician
+        // $idor = Session::getNewIDORToken(Planning::class, $card_params);
+        // $twig_params['cards'][] = [
+        //     'itemtype'  => Planning::class,
+        //     'widget'    => 'central_list',
+        //     'params'    => $card_params + [
+        //         '_idor_token'  => $idor
+        //     ]
+        // ];
 
-        $idor = Session::getNewIDORToken(Reminder::class);
-        $twig_params['cards'][] = [
-            'itemtype'  => Reminder::class,
-            'widget'    => 'central_list',
-            'params'    => [
-                '_idor_token'  => $idor
-            ]
-        ];
-        $idor = Session::getNewIDORToken(Reminder::class, [
-            'personal'  => 'false'
-        ]);
-        if (Session::haveRight("reminder_public", READ)) {
-            $twig_params['cards'][] = [
-                'itemtype'  => Reminder::class,
-                'widget'    => 'central_list',
-                'params'    => [
-                    'personal'     => 'false',
-                    '_idor_token'  => $idor
-                ]
-            ];
-        }
+        // (Rihan Y. | 17-02-2023) Hide/Commented "Reminder" Tabs in Central/Super Admin/Admin/Technician
+        // $idor = Session::getNewIDORToken(Reminder::class);
+        // $twig_params['cards'][] = [
+        //     'itemtype'  => Reminder::class,
+        //     'widget'    => 'central_list',
+        //     'params'    => [
+        //         '_idor_token'  => $idor
+        //     ]
+        // ];
+        // $idor = Session::getNewIDORToken(Reminder::class, [
+        //     'personal'  => 'false'
+        // ]);
+        // if (Session::haveRight("reminder_public", READ)) {
+        //     $twig_params['cards'][] = [
+        //         'itemtype'  => Reminder::class,
+        //         'widget'    => 'central_list',
+        //         'params'    => [
+        //             'personal'     => 'false',
+        //             '_idor_token'  => $idor
+        //         ]
+        //     ];
+        // }
 
         TemplateRenderer::getInstance()->display('central/widget_tab.html.twig', $twig_params);
     }
@@ -315,7 +317,6 @@ class Central extends CommonGLPI
      **/
     public static function showRSSView()
     {
-
         $idor = Session::getNewIDORToken(RSSFeed::class, [
             'personal'  => 'true'
         ]);
@@ -344,7 +345,8 @@ class Central extends CommonGLPI
                 ]
             ];
         }
-        TemplateRenderer::getInstance()->display('central/widget_tab.html.twig', $twig_params);
+        // (Rihan Y. | 17-02-2023) Hide/Commented "Planning" Tabs in Central/Super Admin
+        // TemplateRenderer::getInstance()->display('central/widget_tab.html.twig', $twig_params);
     }
 
 

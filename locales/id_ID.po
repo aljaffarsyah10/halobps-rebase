@@ -310,7 +310,7 @@ msgstr "%1$s - port %2$s"
 #: src/RuleDictionnarySoftwareCollection.php:163
 #, php-format
 msgid "%1$s - replay rules on existing database: %2$s/%3$s (%4$s Mio)"
-msgstr ""
+msgstr "%1$s - ulangi rules pada database existing: %2$s/%3$s (%4$s Mb)"
 
 #: src/Group.php:901 src/Notepad.php:369
 #: src/NotificationTargetContract.php:180 src/CommonDBVisible.php:251
@@ -1095,13 +1095,13 @@ msgstr "%s Kanban"
 #: src/MailCollector.php:2227
 #, php-format
 msgid "%s Mio"
-msgstr "%s MB"
+msgstr "%s Mb"
 
 #. TRANS: %s is a size
 #: src/Document.php:523
 #, php-format
 msgid "%s Mio max"
-msgstr "Maksimal %s MB"
+msgstr "Maksimal %s Mb"
 
 #: front/knowbaseitem_comment.form.php:67
 #, php-format
@@ -2166,7 +2166,7 @@ msgstr ""
 
 #: src/CronTask.php:981
 msgid "A minimum of 64 Mio is commonly required for GLPI."
-msgstr ""
+msgstr "Minimal dibutuhkan 64 Mb untuk GLPI"
 
 #: src/Marketplace/View.php:761
 #, php-format
@@ -10152,7 +10152,7 @@ msgstr ""
 
 #: src/Toolbox.php:915
 msgid "Gio"
-msgstr ""
+msgstr "Gb"
 
 #: src/Consumable.php:222 src/Consumable.php:605
 msgctxt "button"
@@ -12062,7 +12062,7 @@ msgstr "Kunci"
 
 #: src/Toolbox.php:915
 msgid "Kio"
-msgstr ""
+msgstr "Kb"
 
 #: front/knowbaseitem.form.php:172 src/Knowbase.php:47
 #: src/KnowbaseItem_Item.php:86 src/CommonGLPI.php:1464 src/Profile.php:1257
@@ -13658,7 +13658,7 @@ msgstr[0] "Menit"
 #: src/ComputerVirtualMachine.php:356 src/NetworkEquipment.php:430
 #: src/Item_DeviceHardDrive.php:52
 msgid "Mio"
-msgstr ""
+msgstr "Mb"
 
 #: src/GLPIUploadHandler.php:62
 msgid "Missing a temporary folder"
@@ -24159,7 +24159,7 @@ msgstr ""
 
 #: src/Ticket.php:4706 src/Ticket.php:4897
 msgid "Your tickets in progress"
-msgstr "Tiket Anda dalam proses"
+msgstr "Tiket Anda yang sedang diproses"
 
 #: src/Ticket.php:4625 src/Ticket.php:4830
 msgid "Your tickets to close"
@@ -24543,7 +24543,7 @@ msgstr ""
 #. TRANS: list of unit (o for octet)
 #: src/Toolbox.php:915
 msgid "o"
-msgstr ""
+msgstr "bit"
 
 #: src/Migration.php:693 src/Migration.php:695
 msgid "ok"
