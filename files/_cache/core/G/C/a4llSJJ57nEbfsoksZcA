@@ -16570,6 +16570,7 @@ textarea.form-control-lg {
 <<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
 <<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
 <<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
+<<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
   background-color: #fec95c;
 =======
   /*(Rihan Y. | 17-02-2023) changing background for text selection*/
@@ -16586,6 +16587,11 @@ textarea.form-control-lg {
   background-color: #045781;
   /* background-color: #c8eafd; */
 >>>>>>> 059a8459b (Merge branch 'yosral' into 'pusher'):css_compiled/css_palettes_lightblue.min.css
+=======
+  /*(Rihan Y. | 17-02-2023) changing background for text selection*/
+  background-color: #045781;
+  /* background-color: #c8eafd; */
+>>>>>>> 5dfcaf325 (Closes #49, #50, #51, #53, #54):css_compiled/css_palettes_lightblue.min.css
   border-color: rgba(98, 105, 118, 0.24);
 }
 .form-check-input:checked[type="checkbox"] {
@@ -17295,6 +17301,7 @@ textarea.form-control-lg {
 <<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
 <<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
 <<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
+<<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
   color: #fec95c;
 =======
   /*(Rihan Y. | 17-02-2023) changing background for checked checkbox*/
@@ -17311,6 +17318,11 @@ textarea.form-control-lg {
   color: #045781;
   /* color: #c8eafd; */
 >>>>>>> 059a8459b (Merge branch 'yosral' into 'pusher'):css_compiled/css_palettes_lightblue.min.css
+=======
+  /*(Rihan Y. | 17-02-2023) changing background for checked checkbox*/
+  color: #045781;
+  /* color: #c8eafd; */
+>>>>>>> 5dfcaf325 (Closes #49, #50, #51, #53, #54):css_compiled/css_palettes_lightblue.min.css
   text-decoration: none;
   background-color: rgba(32, 107, 196, 0.04);
 }
@@ -30367,6 +30379,7 @@ Selection
 <<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
 <<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
 <<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
+<<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
   background-color: #fed685;
 =======
   /*(Rihan Y. | 17-02-2023) changing background for text selection*/
@@ -30383,6 +30396,11 @@ Selection
   background-color: #12957b;
   /* background-color: #eff9fe; */
 >>>>>>> 059a8459b (Merge branch 'yosral' into 'pusher'):css_compiled/css_palettes_lightblue.min.css
+=======
+  /*(Rihan Y. | 17-02-2023) changing background for text selection*/
+  background-color: #12957b;
+  /* background-color: #eff9fe; */
+>>>>>>> 5dfcaf325 (Closes #49, #50, #51, #53, #54):css_compiled/css_palettes_lightblue.min.css
 }
 /**
 Links
@@ -32866,6 +32884,7 @@ body .flatpickr-time input:hover, body .flatpickr-time .flatpickr-am-pm:hover, b
 <<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
 <<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
 <<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
+<<<<<<< HEAD:files/_cache/core/G/C/a4llSJJ57nEbfsoksZcA
   background-color: #2f3f64;
 =======
   background-color: #17aa8d;
@@ -32888,6 +32907,10 @@ body .flatpickr-time input:hover, body .flatpickr-time .flatpickr-am-pm:hover, b
   background-color: #12957b;
   /* background-color: #17aa8d; */
 >>>>>>> 059a8459b (Merge branch 'yosral' into 'pusher'):css_compiled/css_palettes_lightblue.min.css
+=======
+  background-color: #12957b;
+  /* background-color: #17aa8d; */
+>>>>>>> 5dfcaf325 (Closes #49, #50, #51, #53, #54):css_compiled/css_palettes_lightblue.min.css
   color: #f4f6fa;
   z-index: 1031;
 }
