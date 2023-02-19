@@ -109,7 +109,7 @@ class __TwigTemplate_5d748a7a03d91eb889e5590edfd40819eef8fab71fd99c45b4c76d14e06
         // line 63
         if ( !Session::isMultiEntitiesMode()) {
             // line 64
-            yield "  <!-- <span class=\"dropdown-item dropdown-item-text\" title=\"";
+            yield "   <span class=\"dropdown-item dropdown-item-text\" title=\"";
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["current_entity"] ?? null), "html", null, true);
             yield "\">
       <i class=\"fa-fw ti ti-stack\"></i>
@@ -117,7 +117,7 @@ class __TwigTemplate_5d748a7a03d91eb889e5590edfd40819eef8fab71fd99c45b4c76d14e06
             // line 66
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $this->extensions['Twig\Extra\String\StringExtension']->createUnicodeString(($context["current_entity_short"] ?? null)), "truncate", [35, "..."], "method", false, false, false, 66), "html", null, true);
             yield "
-   </span> --!>
+   </span>
 ";
         } else {
             // line 69
