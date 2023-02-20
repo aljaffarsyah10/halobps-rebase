@@ -4,7 +4,7 @@ deployment:
     - export DEPLOYPATH=$HOME/public_html
     - export DEPLOYPATH=$HOME/repositories/glpi
     - /bin/rsync -rlP --delete --exclude '/.git' --exclude '/README.md' --exclude '/.gitignore' --exclude '/.gitlab-ci.yml' . $DEPLOYPATH --verbose
-    - /bin/find $DEPLOYPATH/ -type d -exec /usr/bin/chmod 750 '{}' \;
-    - /bin/find $DEPLOYPATH/ -type f -exec /usr/bin/chmod 640 '{}' \;
+    - /bin/find $DEPLOYPATH -type d -exec /usr/bin/chmod 755 '{}' \;
+    - /bin/find $DEPLOYPATH -type f -exec /usr/bin/chmod 644 '{}' \;
 
  
