@@ -82,7 +82,7 @@
                             </div>
                         {% endset %}
 
-                        {{ fields.dropdownYesNo(
+                        {# {{ fields.dropdownYesNo(
                             'nodelegate',
                             params['nodelegate'],
                             __('This ticket concerns me'),
@@ -90,7 +90,7 @@
                                 'add_field_html': actor_add_form
                             })
                         ) }}
-                    </div>
+                    </div> #}
                     <div class="col-sm-6 {{ config('use_check_pref') and params['nodelegate'] ? "" : "d-none" }}" id="user-info{{ rand }}-block">
                         {% set personal_information %}
                         <div class="d-inline-flex">
