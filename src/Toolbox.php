@@ -1639,7 +1639,7 @@ class Toolbox
                 if (preg_match('@(([^:/].+:)?//[^/]+)(/.+)?@', $decoded_where, $matches)) {
                     if ($matches[1] !== $CFG_GLPI['url_base']) {
                         if($matches[1] !== $CFG_GLPI['url_base']){
-                            if($matches[1] == 'https://sso.bps.go.id'){
+                            if($matches[1] == 'http://halosis.web.bps.go.id'){
                                 Session::addMessageAfterRedirect('Berhasil Login via SSO');
                             } else{
                                 Session::addMessageAfterRedirect('Redirection failed');
