@@ -51,15 +51,21 @@
 {% endif %}
 {# (Rihan Y. | 08-02-2023) Add banner to self-service user#}
 {# <div class="d-flex justify-content-center" style="background:url(../pics/layout/global_layout_background.png);background-repeat:repeat;background-attachment:fixed;"> #}
-<div class="card-body bg-dark d-flex">
+<div class="card-body bg-dark d-flex justify-content-center mb-3">
    <div class="col p-3">
-      <img class="d-flex flex-wrap align-items-center" alt="BPS Banner" src="../pics/logos/logo-GLPI-250-black_bps.png"/>
+      <div class="d-flex justify-content-start">
+         <img class="w-25" alt="BPS Banner" src="../pics/logos/logo-GLPI-250-black_bps.png"/>
+      </div>
    </div>
    <div class="col-5">
-      <img class="d-flex flex-wrap align-items-center" alt="HaloSIS Quote" src="../pics/layout/global_layout_quote.png"/>
+      <div class="d-flex justify-content-center mb-2">
+         <img class="w-50" alt="HaloSIS Quote" src="../pics/layout/global_layout_quote.png"/>
+      </div>
    </div>
    <div class="col p-3">
-      <h1 class="d-flex flex-wrap align-items-center" style="font-family:mistral;font-size:2.2vw">#WeCare</h1>
+      <div class="d-flex justify-content-end">
+         <h1 class="pr-1" style="font-family:mistral;font-size:2.4vw">#WeCare</h1>
+      </div>
    </div>
 </div>
 
@@ -82,7 +88,7 @@
    </div>
    <ul class="list-group list-group-flush">
       <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="#">
-         Saat ini tidak ada survei kepuasan yang harus Anda isi.</a>
+         Luar biasa! Saat ini Anda sudah mengisi semua survei kepuasan!</a>
       {% for i in 0..5 %}
          <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="#">&nbsp;</a>
       {% endfor %}
