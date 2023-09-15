@@ -88,7 +88,6 @@ class Dropdown
      **/
     public static function show($itemtype, $options = [])
     {
-        /** @var array $CFG_GLPI */
         global $CFG_GLPI;
 
         if (!($item = getItemForItemtype($itemtype))) {
