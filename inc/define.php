@@ -54,7 +54,7 @@ if (!defined('GLPI_MARKETPLACE_PRERELEASES')) {
 
 define('GLPI_MIN_PHP', '7.4.0'); // Must also be changed in top of index.php
 define('GLPI_MAX_PHP', '8.3.0'); // (Exclusive) Must also be changed in top of index.php
-define('GLPI_YEAR', date("Y")); // (2022 (v10.0.3)) For HaloSIS looks only
+define('GLPI_YEAR', date("Y")); // (2022 (v10.0.3)) For HaloBPS looks only
 
 //Define a global recipient address for email notifications
 //define('GLPI_FORCE_MAIL', 'me@localhost');

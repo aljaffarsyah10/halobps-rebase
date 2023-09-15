@@ -95,6 +95,13 @@ class Dropdown
         }
 
         $table = $item->getTable();
+             if(isset($options['tambahan'])){
+        if($options['tambahan']=='incident')
+            $tambahan='incident';
+
+    }
+    else
+         $tambahan='';
 
         $params['name']                 = $item->getForeignKeyField();
         $params['value']                = (($itemtype == 'Entity') ? $_SESSION['glpiactive_entity'] : '');
@@ -214,6 +221,7 @@ class Dropdown
         $p = [
             'width'                => $params['width'],
             'itemtype'             => $itemtype,
+            'tambahan'             => $tambahan,
             'display_emptychoice'  => $params['display_emptychoice'],
             'placeholder'          => $params['placeholder'],
             'displaywith'          => $params['displaywith'],
@@ -2885,6 +2893,7 @@ class Dropdown
                                     if ($item->getFromDB($work_parentID)) {
                                         // Do not do for first item for next page load
                                         if (!$firstitem) {
+                                          
                                             $title = $item->fields['completename'];
 
                                             $title = CommonTreeDropdown::sanitizeSeparatorInCompletename($title);
@@ -2909,11 +2918,16 @@ class Dropdown
                                                 $_SESSION['glpilanguage'],
                                                 $item->fields['name']
                                             );
+                                            $defaultdisable=true;
+                                            if($post['tambahan']=='incident'){
+                                                $defaultdisable=false;
+                                                $post['permit_select_parent']=true;
+                        }
 
                                             $temp = ['id'       => $work_parentID,
                                                 'text'     => $output2,
                                                 'level'    => (int)$work_level,
-                                                'disabled' => true
+                                                'disabled' => $defaultdisable
                                             ];
                                             if ($post['permit_select_parent']) {
                                                 $temp['title'] = $title;
@@ -2969,12 +2983,16 @@ class Dropdown
                             }
                             $title = sprintf(__('%1$s - %2$s'), $title, $addcomment);
                         }
+                       
+                        if($data['level']>1 & $post['tambahan']=='incident'){
+                        continue;}
                         $datastoadd[] = [
                             'id' => $ID,
                             'text' => $outputval,
                             'level' => (int)$level,
                             'title' => $title,
-                            'selection_text' => $selection_text
+                            'selection_text' => $selection_text,
+                            
                         ];
                         $count++;
                     }

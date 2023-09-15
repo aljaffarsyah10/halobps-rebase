@@ -40,9 +40,10 @@
       <input type="hidden" name="_glpi_csrf_token" value="{{ csrf_token() }}" />
 
       <div class="row justify-content-center align-items-middle my-3">
-         <img alt="HaloSIS Quote" class="w-75 d-flex" src="pics/layout/global_layout_tagline.png">
+         <img alt="HaloBPS Quote" class="w-75 d-flex" src="pics/layout/global_layout_tagline.png">
          <div class="d-flex justify-content-center mx-3 my-3">
-            <input value="Login SSO BPS" formaction="#" class="w-50 input-md submit btn btn-primary" onclick="window.location.href='?SSO=1'{{ app.request.request.get("redirect_login_sso_bps") }}"/>
+            {#<input value="Login SSO BPS" formaction="#" class="w-50 input-md submit btn btn-primary" onclick="window.location.href='?SSO=1'{{ app.request.request.get("redirect_login_sso_bps") }}"/>#}
+            <a class="w-50 input-md submit btn btn-primary" target="_blank" onclick="return window.location.href='?SSO=1'{{ app.request.request.get("redirect_login_sso_bps") }}">Login SSO BPS</a>
          </div>
             {% if errors|length > 0 %}
                <hr />
