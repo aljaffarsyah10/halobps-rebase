@@ -2,7 +2,12 @@
 .composer.hash
 composer.lock
 config/cache.php
+config/based_config.php
+config/config.php
+config/define.php
 config/config_db*
+config/config_db.php
+/config/config_db.php
 config/glpi.key
 config/glpicrypt.key
 config/local_define.php
@@ -30,9 +35,6 @@ tests/coverage-*/
 tests/files/
 tests/.env
 tests/glpicrypt.key
-config/based_config.php
-config/config.php
-config/define.php
 nbproject
 .package.hash
 package-lock.json
