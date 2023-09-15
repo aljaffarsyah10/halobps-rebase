@@ -1,7 +1,7 @@
-<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg/1280px-Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg.png' alt='HaloSIS-BPS' width='200' height='150' class='center'> 
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg/1280px-Lambang_Badan_Pusat_Statistik_%28BPS%29_Indonesia.svg.png' alt='HaloBPS-BPS' width='200' height='150' class='center'> 
 
 ## Proyek Pengembangan HALOBPS Berbasis Open Source Software GLPI (PHP)
-* Pengembangan ulang HALOSIS dan modul lainnya yang diperlukan (mapping aset, roadmap pengadaan TI, ticketing, report, dll.)
+* Pengembangan ulang HALOBPS dan modul lainnya yang diperlukan (mapping aset, roadmap pengadaan TI, ticketing, report, dll.)
 * Dimodifikasi untuk keperluan BPS (halo.bps.go.id) sebagai pengganti web apps ESTIM BPS
 * Dikelola dan dikembangkan bersama mahasiswa Polstat STIS
 * Inisiasi pertama (23 Oktober 2022) private [gitlab.com]
