@@ -96,17 +96,19 @@ class Dropdown
         }
 
         $table = $item->getTable();
-        if (isset($options['tambahan'])) {
-            if ($options['tambahan'] == 'parent')
-                $tambahan = 'parent';
-            else if ($options['tambahan'] == 'child')
-                $tambahan = 'child';
-        } else
-            $tambahan = '';
-        if (isset($options['unitkerjakategori'])) {
-            $unitkerjakategori = $options['unitkerjakategori'];
-        } else
-            $unitkerjakategori = '';
+        if(isset($options['tambahan'])){
+        if($options['tambahan']=='parent')
+            $tambahan='parent';
+        else if($options['tambahan']=='child')
+            $tambahan='child';}
+        else
+            $tambahan='';
+        if(isset($options['unitkerjakategori'])){
+             $unitkerjakategori=$options['unitkerjakategori'];
+
+        }
+         else
+            $unitkerjakategori='';
 
 
 
@@ -2907,7 +2909,7 @@ JAVASCRIPT;
                 //entity name must be displayed again
                 --$start;
                 ++$limit;
-            }
+            }            
 
             $criteria = [
                 'SELECT'   => array_merge(["$table.*"], $addselect),
@@ -2954,6 +2956,7 @@ JAVASCRIPT;
                 foreach ($iterator as $data) {
                     $ID    = $data['id'];
                     $level = $data['level'];
+<<<<<<< HEAD
                     if ($post['tambahan'] == 'parent') {
                         if ($data['level'] > 1)
                             continue;
@@ -2963,6 +2966,19 @@ JAVASCRIPT;
                             continue;
                     }
 
+=======
+                      if($post['tambahan']=='parent'){
+                        if($data['level']>1)
+                        continue;
+
+        }
+                if($post['tambahan']=='child'){
+                        if($data['level']==1)
+                        continue;
+
+        }
+                   
+>>>>>>> 08cbb2a66 (Merge branch '65-penambahan-kategori-1-ketika-buat-tiket-di-gangguan-maupun-insiden' into 'pusher')
 
 
 
@@ -3021,10 +3037,16 @@ JAVASCRIPT;
                                     // Get parent
                                     if ($item->getFromDB($work_parentID)) {
                                         // Do not do for first item for next page load
+<<<<<<< HEAD
 
                                         if (!$firstitem & $post['tambahan'] != 'child') {
                                             $title = $item->fields['completename'];
+=======
+>>>>>>> 08cbb2a66 (Merge branch '65-penambahan-kategori-1-ketika-buat-tiket-di-gangguan-maupun-insiden' into 'pusher')
 
+                                        if (!$firstitem & $post['tambahan'] != 'child') {
+                                            $title = $item->fields['completename'];
+                                            
                                             $title = CommonTreeDropdown::sanitizeSeparatorInCompletename($title);
 
                                             $selection_text = $title;
@@ -3109,6 +3131,7 @@ JAVASCRIPT;
                             $title = sprintf(__('%1$s - %2$s'), $title, $addcomment);
                         }
 
+<<<<<<< HEAD
                         if ($post['tambahan'] == 'parent') {
                             if ($data['level'] > 1)
 
@@ -3128,6 +3151,29 @@ JAVASCRIPT;
 
                             $level =   (int)$level - 1;
                         }
+=======
+                                              if($post['tambahan']=='parent'){
+                        if($data['level']>1)
+
+                        continue;
+
+        }
+
+              
+
+                if($post['tambahan']=='child'){
+
+                $ancst=getAncestorsOf($table,$ID);
+
+                if($data['level']==1)
+                        continue;
+                else if (array_key_exists($post['unitkerjakategori'], $ancst)==false)
+                        continue;
+
+                $level=   (int)$level-1;
+
+        }
+>>>>>>> 08cbb2a66 (Merge branch '65-penambahan-kategori-1-ketika-buat-tiket-di-gangguan-maupun-insiden' into 'pusher')
 
                         $datastoadd[] = [
                             'id' => $ID,
