@@ -22997,9 +22997,9 @@ body.iframed {
   height: 55px;
   width: 100px;
 } */
-/*(Rihan Y. | 08-02-2023) Palettes for default (lightblue) HaloSIS*/
+/*(Rihan Y. | 08-02-2023) Palettes for default (lightblue) HaloBPS*/
 .page .glpi-logo {
-  background: url(../pics/logos/logo-HALOSIS-100-white.png) no-repeat;
+  background: url(../pics/logos/logo-HALOBPS-100-white.png) no-repeat;
   background-size: contain;
   background-position: center;
   height: 75px;
@@ -24614,7 +24614,7 @@ body .flatpickr-time input:hover, body .flatpickr-time .flatpickr-am-pm:hover, b
 .navbar .navbar-toggler {
   color: #f4f6fa;
 }
-/*(Rihan Y. | 08-02-2023) Palettes for default (lightblue) HaloSIS*/
+/*(Rihan Y. | 08-02-2023) Palettes for default (lightblue) HaloBPS*/
 .sidebar, .topbar {
   background-color: #12957b;
   /* background-color: #17aa8d; */
@@ -24711,9 +24711,9 @@ body .flatpickr-time input:hover, body .flatpickr-time .flatpickr-am-pm:hover, b
     width: 40px;
     height: 40px;
   } */
-  /*(Rihan Y. | 08-02-2023) Palettes for default (lightblue) HaloSIS*/
+  /*(Rihan Y. | 08-02-2023) Palettes for default (lightblue) HaloBPS*/
   body.navbar-collapsed .navbar-brand .glpi-logo {
-    background: url("../pics/logos/logo-HALOSIS-standalone.png") no-repeat;
+    background: url("../pics/logos/logo-HALOBPS-standalone.png") no-repeat;
     background-size: contain;
     background-position: center;
     width: 60px;
