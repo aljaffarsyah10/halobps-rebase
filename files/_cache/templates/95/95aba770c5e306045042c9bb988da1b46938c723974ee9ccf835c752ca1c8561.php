@@ -63,7 +63,7 @@ class __TwigTemplate_82cae947ba4e085ffe6e7ecec105cefc9edd7691404ba9a6be661d9a181
          <a href=\"";
             // line 53
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Glpi\Application\View\Extension\RoutingExtension']->path("front/config.form.php?forcetab=Config\$5"), "html", null, true);
-            yield "\">HaloSIS Maintenance Mode</a>
+            yield "\">HaloBPS Maintenance Mode</a>
       </div>
    ";
         }

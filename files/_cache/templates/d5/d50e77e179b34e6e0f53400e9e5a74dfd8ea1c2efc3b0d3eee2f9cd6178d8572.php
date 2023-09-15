@@ -350,7 +350,7 @@ class __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a79
                     \"Layanan E-Learning BPS\": 18,
                     \"Layanan Kaizala\": 19,
                     \"Layanan OMS (Ruang Kerja dan Knowledge Management System)\": 20,
-                    \"Layanan Duplikasi HaloSIS (HIDEN)\": 21
+                    \"Layanan Duplikasi HaloBPS (HIDEN)\": 21
                 }
 
                 const number = numbers[category]

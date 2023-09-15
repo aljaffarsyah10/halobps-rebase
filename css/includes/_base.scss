@@ -90,7 +90,7 @@ body.in_modal {
 }
 
 .page {
-    /*(Rihan Y. | 08-02-2023) Palettes for default (lightblue) HaloSIS*/
+    /*(Rihan Y. | 08-02-2023) Palettes for default (lightblue) HaloBPS*/
     .glpi-logo {
         background: url($logo) no-repeat;
         background-size: contain;
@@ -228,7 +228,7 @@ body.in_modal {
 }
 
 .page-anonymous {
-    /*(Rihan Y. | 08-02-2023) Palettes for default (lightblue) HaloSIS*/
+    /*(Rihan Y. | 08-02-2023) Palettes for default (lightblue) HaloBPS*/
     .glpi-logo {
         --logo: url(#{$logo-dark-login});
 

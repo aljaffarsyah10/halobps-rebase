@@ -52,7 +52,7 @@ class __TwigTemplate_1146436d5503c7924ec742daf7614946799263e58ffcb86ac46ef735db1
    <title>";
         // line 38
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["title"] ?? null), "html", null, true);
-        yield " - HaloSIS</title>
+        yield " - HaloBPS</title>
 
    <meta charset=\"utf-8\" />
 
