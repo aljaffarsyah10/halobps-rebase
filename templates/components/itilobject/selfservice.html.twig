@@ -152,7 +152,19 @@
                   {% set condition = condition|merge({'is_request': 1}) %}
                {% endif %}
 
-                {% if params['type'] == constant('Ticket::INCIDENT_TYPE') %}
+                    {{ fields.dropdownField(
+                        'ITILCategory',
+                        'itilcategories_idx',
+                        params['itilcategories_idx'],
+                        _n('Unit Kerja', 'Categories', 1),
+                        cat_params|merge({
+                            'condition': condition,
+                            'required': true,
+                            'tambahan': 'parent'
+
+                        }),
+                        
+                    ) }}
 
                     {{ fields.dropdownField(
                         'ITILCategory',
@@ -162,27 +174,12 @@
                         cat_params|merge({
                             'condition': condition,
                             'required': true,
-                            'tambahan': 'incident'
+                            'tambahan': 'child',
+                            'unitkerjakategori':  params['itilcategories_idx']
                         }),
+                        
                     ) }}
-
-
-                {% endif %}
-
-
-
-                {% if params['type'] == constant('Ticket::DEMAND_TYPE') %}
-                    {{ fields.dropdownField(
-                        'ITILCategory',
-                        'itilcategories_id',
-                        params['itilcategories_id'],
-                        _n('Category', 'Categories', 1),
-                        cat_params|merge({
-                            'condition': condition,
-                            'required': true
-                        }),
-                    ) }}
-
+                   
                     {{ fields.field(
                         'urgency',
                         item.dropdownUrgency({
@@ -194,7 +191,6 @@
                         __('Urgency'),
                         right_field_options
                     ) }}
-               {% endif %}
 
                 {# By Najwa Azrai #}
                {# {% if session('glpiactiveprofile')['helpdesk_hardware'] and session('glpiactiveprofile')['helpdesk_item_type']|length %}
