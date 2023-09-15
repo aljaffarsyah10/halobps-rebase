@@ -28920,3 +28920,8 @@ Compile css/palettes/lightblue.scss  {"user":"2@YOSRAL-34005894"}
 >>>>>>> 0a71bb790 (Merge Reinit-all @yosral to Pusher (per 090223))
 =======
 >>>>>>> 6fd3258f8 (Merge branch 'reinit-all' into 'pusher')
+[2024-05-14 06:32:48] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<", expecting end of file in D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\config\config_db.php at line 2
+  Backtrace :
+  inc\includes.php:58                                include_once()
+  front\helpdesk.public.php:41                       include()
+  

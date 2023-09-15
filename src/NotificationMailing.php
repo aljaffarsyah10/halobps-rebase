@@ -64,7 +64,7 @@ class NotificationMailing implements NotificationInterface
      **/
     public static function isUserAddressValid($address, $options = ['checkdns' => false])
     {
-       //drop sanitize...
+        //drop sanitize...
         $address = Toolbox::stripslashes_deep($address);
         $isValid = GLPIMailer::ValidateAddress($address);
 
@@ -101,21 +101,21 @@ class NotificationMailing implements NotificationInterface
         $mmail = new GLPIMailer();
 
         $mmail->AddCustomHeader("Auto-Submitted: auto-generated");
-       // For exchange
+        // For exchange
         $mmail->AddCustomHeader("X-Auto-Response-Suppress: OOF, DR, NDR, RN, NRN");
         $mmail->SetFrom($sender['email'], Sanitizer::decodeHtmlSpecialChars($sender['name'] ?? ''), false);
 
         $text = __('This is a test email.') . "\n-- \n" . Sanitizer::decodeHtmlSpecialChars($CFG_GLPI["mailing_signature"]);
         $recipient = $CFG_GLPI['admin_email'];
         if (defined('GLPI_FORCE_MAIL')) {
-           //force recipient to configured email address
+            //force recipient to configured email address
             $recipient = GLPI_FORCE_MAIL;
-           //add original email addess to message body
+            //add original email addess to message body
             $text .= "\n" . sprintf(__('Original email address was %1$s'), $CFG_GLPI['admin_email']);
         }
 
-        $mmail->AddAddress($recipient, Sanitizer::decodeHtmlSpecialChars($CFG_GLPI["admin_email_name"]));
-        $mmail->Subject = "[GLPI] " . __('Mail test');
+        $mmail->AddAddress($recipient, $CFG_GLPI["admin_email_name"]);
+        $mmail->Subject = "[HALOBPS] " . __('Mail test');
         $mmail->Body    = $text;
 
         if (!$mmail->Send()) {
@@ -183,7 +183,7 @@ class NotificationMailing implements NotificationInterface
             Session::addMessageAfterRedirect(__('Error inserting email to queue'), true, ERROR);
             return false;
         } else {
-           //TRANS to be written in logs %1$s is the to email / %2$s is the subject of the mail
+            //TRANS to be written in logs %1$s is the to email / %2$s is the subject of the mail
             Toolbox::logInFile(
                 "mail",
                 sprintf(
