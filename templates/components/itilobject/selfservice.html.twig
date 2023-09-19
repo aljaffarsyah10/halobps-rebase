@@ -134,9 +134,14 @@
                   _n('Type', 'Types', 1),
                   right_field_options
                ) }}
+                 {# biar ga reload
+                set cat_params = right_field_options|merge({
+                  'on_change': 'this.form.submit()',
+               })
+                #}
 
                {% set cat_params = right_field_options|merge({
-                  'on_change': 'this.form.submit()',
+                 
                }) %}
                {% set condition = {
                   'is_helpdeskvisible': 1
@@ -147,19 +152,7 @@
                   {% set condition = condition|merge({'is_request': 1}) %}
                {% endif %}
 
-                    {{ fields.dropdownField(
-                        'ITILCategory',
-                        'itilcategories_idx',
-                        params['itilcategories_idx'],
-                        _n('Unit Kerja', 'Categories', 1),
-                        cat_params|merge({
-                            'condition': condition,
-                            'required': true,
-                            'tambahan': 'parent'
-
-                        }),
-                        
-                    ) }}
+                {% if params['type'] == constant('Ticket::INCIDENT_TYPE') %}
 
                     {{ fields.dropdownField(
                         'ITILCategory',
@@ -169,12 +162,27 @@
                         cat_params|merge({
                             'condition': condition,
                             'required': true,
-                            'tambahan': 'child',
-                            'unitkerjakategori':  params['itilcategories_idx']
+                            'tambahan': 'incident'
                         }),
-                        
                     ) }}
-                   
+
+
+                {% endif %}
+
+
+
+                {% if params['type'] == constant('Ticket::DEMAND_TYPE') %}
+                    {{ fields.dropdownField(
+                        'ITILCategory',
+                        'itilcategories_id',
+                        params['itilcategories_id'],
+                        _n('Category', 'Categories', 1),
+                        cat_params|merge({
+                            'condition': condition,
+                            'required': true
+                        }),
+                    ) }}
+
                     {{ fields.field(
                         'urgency',
                         item.dropdownUrgency({
@@ -186,6 +194,7 @@
                         __('Urgency'),
                         right_field_options
                     ) }}
+               {% endif %}
 
                 {# By Najwa Azrai #}
                {# {% if session('glpiactiveprofile')['helpdesk_hardware'] and session('glpiactiveprofile')['helpdesk_item_type']|length %}
