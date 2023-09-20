@@ -88,7 +88,7 @@ class Dropdown
      **/
     public static function show($itemtype, $options = [])
     {
-        global $CFG_GLPI;       
+        global $CFG_GLPI;
 
         if ($itemtype && !($item = getItemForItemtype($itemtype))) {
             return false;
@@ -2789,7 +2789,7 @@ class Dropdown
                //entity name must be displayed again
                 --$start;
                 ++$limit;
-            }            
+            }
 
             $criteria = [
                 'SELECT' => array_merge(["$table.*"], $addselect),
@@ -2836,19 +2836,6 @@ class Dropdown
                 foreach ($iterator as $data) {
                     $ID    = $data['id'];
                     $level = $data['level'];
-                      if($post['tambahan']=='parent'){
-                        if($data['level']>1)
-                        continue;
-
-        }
-                if($post['tambahan']=='child'){
-                        if($data['level']==1)
-                        continue;
-
-        }
-                   
-
-
 
                     if (isset($data['transname']) && !empty($data['transname'])) {
                         $outputval = $data['transname'];
