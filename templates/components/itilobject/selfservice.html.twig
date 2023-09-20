@@ -179,11 +179,8 @@
                         _n('Category', 'Categories', 1),
                         cat_params|merge({
                             'condition': condition,
-                            'required': true,
-                            'tambahan': 'child',
-                            'unitkerjakategori':  params['itilcategories_idx']
+                            'required': true
                         }),
-                        
                     ) }}
 
                     {{ fields.field(
@@ -197,6 +194,7 @@
                         __('Urgency'),
                         right_field_options
                     ) }}
+               {% endif %}
 
                 {# By Najwa Azrai #}
                {# {% if session('glpiactiveprofile')['helpdesk_hardware'] and session('glpiactiveprofile')['helpdesk_item_type']|length %}
@@ -333,7 +331,7 @@
                     "Layanan E-Learning BPS": 18,
                     "Layanan Kaizala": 19,
                     "Layanan OMS (Ruang Kerja dan Knowledge Management System)": 20,
-                    "Layanan Duplikasi HaloBPS (HIDEN)": 21
+                    "Layanan Duplikasi HaloSIS (HIDEN)": 21
                 }
 
                 const number = numbers[category]

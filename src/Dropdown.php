@@ -2944,17 +2944,6 @@ JAVASCRIPT;
                 foreach ($iterator as $data) {
                     $ID    = $data['id'];
                     $level = $data['level'];
-                    if ($post['tambahan'] == 'parent') {
-                        if ($data['level'] > 1)
-                            continue;
-                    }
-                    if ($post['tambahan'] == 'child') {
-                        if ($data['level'] == 1)
-                            continue;
-                    }
-
-
-
 
                     if (isset($data['transname']) && !empty($data['transname'])) {
                         $outputval = $data['transname'];
