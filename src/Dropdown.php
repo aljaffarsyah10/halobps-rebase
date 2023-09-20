@@ -96,18 +96,10 @@ class Dropdown
 
         $table = $item->getTable();
         if (isset($options['tambahan'])) {
-            if ($options['tambahan'] == 'parent')
-                $tambahan = 'parent';
-            else if ($options['tambahan'] == 'child')
-                $tambahan = 'child';
+            if ($options['tambahan'] == 'incident')
+                $tambahan = 'incident';
         } else
             $tambahan = '';
-        if (isset($options['unitkerjakategori'])) {
-            $unitkerjakategori = $options['unitkerjakategori'];
-        } else
-            $unitkerjakategori = '';
-
-
 
         $params['name']                 = $item->getForeignKeyField();
         $params['value']                = (($itemtype == 'Entity') ? $_SESSION['glpiactive_entity'] : '');
@@ -237,7 +229,6 @@ class Dropdown
             'width'                => $params['width'],
             'itemtype'             => $itemtype,
             'tambahan'             => $tambahan,
-            'unitkerjakategori'    => $unitkerjakategori,
             'display_emptychoice'  => $params['display_emptychoice'],
             'placeholder'          => $params['placeholder'],
             'displaywith'          => $params['displaywith'],
@@ -3020,8 +3011,8 @@ JAVASCRIPT;
                                     // Get parent
                                     if ($item->getFromDB($work_parentID)) {
                                         // Do not do for first item for next page load
+                                        if (!$firstitem) {
 
-                                        if (!$firstitem & $post['tambahan'] != 'child') {
                                             $title = $item->fields['completename'];
 
                                             $title = CommonTreeDropdown::sanitizeSeparatorInCompletename($title);
@@ -3113,26 +3104,9 @@ JAVASCRIPT;
                             $title = sprintf(__('%1$s - %2$s'), $title, $addcomment);
                         }
 
-                        if ($post['tambahan'] == 'parent') {
-                            if ($data['level'] > 1)
-
-                                continue;
+                        if ($data['level'] > 1 & $post['tambahan'] == 'incident') {
+                            continue;
                         }
-
-
-
-                        if ($post['tambahan'] == 'child') {
-
-                            $ancst = getAncestorsOf($table, $ID);
-
-                            if ($data['level'] == 1)
-                                continue;
-                            else if (array_key_exists($post['unitkerjakategori'], $ancst) == false)
-                                continue;
-
-                            $level =   (int)$level - 1;
-                        }
-
                         $datastoadd[] = [
                             'id' => $ID,
                             'text' => $outputval,

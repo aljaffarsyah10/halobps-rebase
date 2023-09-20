@@ -152,20 +152,26 @@
                   {% set condition = condition|merge({'is_request': 1}) %}
                {% endif %}
 
+                {% if params['type'] == constant('Ticket::INCIDENT_TYPE') %}
+
                     {{ fields.dropdownField(
                         'ITILCategory',
-                        'itilcategories_idx',
-                        params['itilcategories_idx'],
-                        _n('Unit Kerja', 'Categories', 1),
+                        'itilcategories_id',
+                        params['itilcategories_id'],
+                        _n('Category', 'Categories', 1),
                         cat_params|merge({
                             'condition': condition,
                             'required': true,
-                            'tambahan': 'parent'
-
+                            'tambahan': 'incident'
                         }),
-                        
                     ) }}
 
+
+                {% endif %}
+
+
+
+                {% if params['type'] == constant('Ticket::DEMAND_TYPE') %}
                     {{ fields.dropdownField(
                         'ITILCategory',
                         'itilcategories_id',
@@ -179,7 +185,7 @@
                         }),
                         
                     ) }}
-                   
+
                     {{ fields.field(
                         'urgency',
                         item.dropdownUrgency({
