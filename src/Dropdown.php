@@ -88,7 +88,7 @@ class Dropdown
      **/
     public static function show($itemtype, $options = [])
     {
-        global $CFG_GLPI;       
+        global $CFG_GLPI;
 
         if ($itemtype && !($item = getItemForItemtype($itemtype))) {
             return false;
@@ -2789,7 +2789,7 @@ class Dropdown
                //entity name must be displayed again
                 --$start;
                 ++$limit;
-            }            
+            }
 
             $criteria = [
                 'SELECT' => array_merge(["$table.*"], $addselect),
@@ -2836,19 +2836,6 @@ class Dropdown
                 foreach ($iterator as $data) {
                     $ID    = $data['id'];
                     $level = $data['level'];
-                      if($post['tambahan']=='parent'){
-                        if($data['level']>1)
-                        continue;
-
-        }
-                if($post['tambahan']=='child'){
-                        if($data['level']==1)
-                        continue;
-
-        }
-                   
-
-
 
                     if (isset($data['transname']) && !empty($data['transname'])) {
                         $outputval = $data['transname'];
@@ -2937,6 +2924,10 @@ class Dropdown
                                                 $post['permit_select_parent']=true;
                         }
 
+                        if($work_level != 1 & $post['tambahan']=='incident'){
+
+                        
+                        }else{
                                             $temp = ['id'       => $work_parentID,
                                                 'text'     => $output2,
                                                 'level'    => (int)$work_level,
@@ -2947,7 +2938,7 @@ class Dropdown
                                                 $temp['selection_text'] = $selection_text;
                                                 unset($temp['disabled']);
                                             }
-                                            array_unshift($parent_datas, $temp);
+                                            array_unshift($parent_datas, $temp);}
                                         }
                                         $last_level_displayed[$work_level] = $item->fields['id'];
                                         $work_level--;
@@ -2998,7 +2989,8 @@ class Dropdown
                         }
                        
                         if($data['level']>1 & $post['tambahan']=='incident'){
-                        continue;}
+                        }
+                        else{
                         $datastoadd[] = [
                             'id' => $ID,
                             'text' => $outputval,
@@ -3006,7 +2998,7 @@ class Dropdown
                             'title' => $title,
                             'selection_text' => $selection_text,
                             
-                        ];
+                        ];}
                         $count++;
                     }
                     $firstitem = false;
