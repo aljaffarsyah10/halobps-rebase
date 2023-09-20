@@ -3032,18 +3032,21 @@ JAVASCRIPT;
                                                 $post['permit_select_parent'] = true;
                                             }
 
-                                            $temp = [
-                                                'id'       => $work_parentID,
-                                                'text'     => $output2,
-                                                'level'    => (int)$work_level,
-                                                'disabled' => $defaultdisable
-                                            ];
-                                            if ($post['permit_select_parent']) {
-                                                $temp['title'] = $title;
-                                                $temp['selection_text'] = $selection_text;
-                                                unset($temp['disabled']);
+                                            if ($work_level != 1 & $post['tambahan'] == 'incident') {
+                                            } else {
+                                                $temp = [
+                                                    'id'       => $work_parentID,
+                                                    'text'     => $output2,
+                                                    'level'    => (int)$work_level,
+                                                    'disabled' => $defaultdisable
+                                                ];
+                                                if ($post['permit_select_parent']) {
+                                                    $temp['title'] = $title;
+                                                    $temp['selection_text'] = $selection_text;
+                                                    unset($temp['disabled']);
+                                                }
+                                                array_unshift($parent_datas, $temp);
                                             }
-                                            array_unshift($parent_datas, $temp);
                                         }
                                         $last_level_displayed[$work_level] = $item->fields['id'];
                                         $work_level--;
@@ -3094,16 +3097,16 @@ JAVASCRIPT;
                         }
 
                         if ($data['level'] > 1 & $post['tambahan'] == 'incident') {
-                            continue;
-                        }
-                        $datastoadd[] = [
-                            'id' => $ID,
-                            'text' => $outputval,
-                            'level' => (int)$level,
-                            'title' => $title,
-                            'selection_text' => $selection_text,
+                        } else {
+                            $datastoadd[] = [
+                                'id' => $ID,
+                                'text' => $outputval,
+                                'level' => (int)$level,
+                                'title' => $title,
+                                'selection_text' => $selection_text,
 
-                        ];
+                            ];
+                        }
                         $count++;
                     }
                     $firstitem = false;

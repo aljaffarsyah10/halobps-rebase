@@ -219,111 +219,128 @@ class __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a79
         }
         // line 154
         yield "
-                    ";
+                ";
         // line 155
-        yield CoreExtension::callMacro($macros["fields"], "macro_dropdownField", ["ITILCategory", "itilcategories_idx", (($__internal_compile_4 =         // line 158
-($context["params"] ?? null)) && is_array($__internal_compile_4) || $__internal_compile_4 instanceof ArrayAccess ? ($__internal_compile_4["itilcategories_idx"] ?? null) : null), _n("Unit Kerja", "Categories", 1), Twig\Extension\CoreExtension::merge(        // line 160
-($context["cat_params"] ?? null), ["condition" =>         // line 161
-($context["condition"] ?? null), "required" => true, "tambahan" => "parent"])], 155, $context, $this->getSourceContext());
-        // line 167
-        yield "
+        if (((($__internal_compile_4 = ($context["params"] ?? null)) && is_array($__internal_compile_4) || $__internal_compile_4 instanceof ArrayAccess ? ($__internal_compile_4["type"] ?? null) : null) == Twig\Extension\CoreExtension::constant("Ticket::INCIDENT_TYPE"))) {
+            // line 156
+            yield "
+                    ";
+            // line 157
+            yield CoreExtension::callMacro($macros["fields"], "macro_dropdownField", ["ITILCategory", "itilcategories_id", (($__internal_compile_5 =             // line 160
+($context["params"] ?? null)) && is_array($__internal_compile_5) || $__internal_compile_5 instanceof ArrayAccess ? ($__internal_compile_5["itilcategories_id"] ?? null) : null), _n("Category", "Categories", 1), Twig\Extension\CoreExtension::merge(            // line 162
+($context["cat_params"] ?? null), ["condition" =>             // line 163
+($context["condition"] ?? null), "required" => true, "tambahan" => "incident"])], 157, $context, $this->getSourceContext());
+            // line 167
+            yield "
 
-                    ";
-        // line 169
-        yield CoreExtension::callMacro($macros["fields"], "macro_dropdownField", ["ITILCategory", "itilcategories_id", (($__internal_compile_5 =         // line 172
-($context["params"] ?? null)) && is_array($__internal_compile_5) || $__internal_compile_5 instanceof ArrayAccess ? ($__internal_compile_5["itilcategories_id"] ?? null) : null), _n("Category", "Categories", 1), Twig\Extension\CoreExtension::merge(        // line 174
-($context["cat_params"] ?? null), ["condition" =>         // line 175
-($context["condition"] ?? null), "required" => true, "tambahan" => "child", "unitkerjakategori" => (($__internal_compile_6 =         // line 178
-($context["params"] ?? null)) && is_array($__internal_compile_6) || $__internal_compile_6 instanceof ArrayAccess ? ($__internal_compile_6["itilcategories_idx"] ?? null) : null)])], 169, $context, $this->getSourceContext());
-        // line 181
-        yield "
-                   
-                    ";
-        // line 183
-        yield CoreExtension::callMacro($macros["fields"], "macro_field", ["urgency", CoreExtension::getAttribute($this->env, $this->source,         // line 185
-($context["item"] ?? null), "dropdownUrgency", [["value" => (($__internal_compile_7 =         // line 186
-($context["params"] ?? null)) && is_array($__internal_compile_7) || $__internal_compile_7 instanceof ArrayAccess ? ($__internal_compile_7["urgency"] ?? null) : null), "width" => "100%", "display" => false, "required" => CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source,         // line 189
-($context["right_field_options"] ?? null), "fields_template", [], "any", false, false, false, 189), "isMandatoryField", ["urgency"], "method", false, false, false, 189)]], "method", false, false, false, 185), __("Urgency"),         // line 192
-($context["right_field_options"] ?? null)], 183, $context, $this->getSourceContext());
-        // line 193
-        yield "
 
                 ";
-        // line 196
+        }
+        // line 171
+        yield "
+
+
+                ";
+        // line 174
+        if (((($__internal_compile_6 = ($context["params"] ?? null)) && is_array($__internal_compile_6) || $__internal_compile_6 instanceof ArrayAccess ? ($__internal_compile_6["type"] ?? null) : null) == Twig\Extension\CoreExtension::constant("Ticket::DEMAND_TYPE"))) {
+            // line 175
+            yield "                    ";
+            yield CoreExtension::callMacro($macros["fields"], "macro_dropdownField", ["ITILCategory", "itilcategories_id", (($__internal_compile_7 =             // line 178
+($context["params"] ?? null)) && is_array($__internal_compile_7) || $__internal_compile_7 instanceof ArrayAccess ? ($__internal_compile_7["itilcategories_id"] ?? null) : null), _n("Category", "Categories", 1), Twig\Extension\CoreExtension::merge(            // line 180
+($context["cat_params"] ?? null), ["condition" =>             // line 181
+($context["condition"] ?? null), "required" => true])], 175, $context, $this->getSourceContext());
+            // line 184
+            yield "
+
+                    ";
+            // line 186
+            yield CoreExtension::callMacro($macros["fields"], "macro_field", ["urgency", CoreExtension::getAttribute($this->env, $this->source,             // line 188
+($context["item"] ?? null), "dropdownUrgency", [["value" => (($__internal_compile_8 =             // line 189
+($context["params"] ?? null)) && is_array($__internal_compile_8) || $__internal_compile_8 instanceof ArrayAccess ? ($__internal_compile_8["urgency"] ?? null) : null), "width" => "100%", "display" => false, "required" => CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source,             // line 192
+($context["right_field_options"] ?? null), "fields_template", [], "any", false, false, false, 192), "isMandatoryField", ["urgency"], "method", false, false, false, 192)]], "method", false, false, false, 188), __("Urgency"),             // line 195
+($context["right_field_options"] ?? null)], 186, $context, $this->getSourceContext());
+            // line 196
+            yield "
+               ";
+        }
+        // line 198
+        yield "
+                ";
+        // line 200
         yield "               ";
-        // line 219
+        // line 223
         yield "
                ";
-        // line 244
+        // line 248
         yield "
                ";
-        // line 245
-        yield CoreExtension::callMacro($macros["fields"], "macro_dropdownField", ["Location", "locations_id", (($__internal_compile_8 =         // line 248
-($context["params"] ?? null)) && is_array($__internal_compile_8) || $__internal_compile_8 instanceof ArrayAccess ? ($__internal_compile_8["locations_id"] ?? null) : null), $this->extensions['Glpi\Application\View\Extension\ItemtypeExtension']->getItemtypeName("Location"), Twig\Extension\CoreExtension::merge(        // line 250
-($context["right_field_options"] ?? null), ["hide_if_no_elements" => true])], 245, $context, $this->getSourceContext());
-        // line 253
+        // line 249
+        yield CoreExtension::callMacro($macros["fields"], "macro_dropdownField", ["Location", "locations_id", (($__internal_compile_9 =         // line 252
+($context["params"] ?? null)) && is_array($__internal_compile_9) || $__internal_compile_9 instanceof ArrayAccess ? ($__internal_compile_9["locations_id"] ?? null) : null), $this->extensions['Glpi\Application\View\Extension\ItemtypeExtension']->getItemtypeName("Location"), Twig\Extension\CoreExtension::merge(        // line 254
+($context["right_field_options"] ?? null), ["hide_if_no_elements" => true])], 249, $context, $this->getSourceContext());
+        // line 257
         yield "
 
                ";
-        // line 255
-        yield CoreExtension::callMacro($macros["fields"], "macro_textField", ["name", (($__internal_compile_9 =         // line 257
-($context["params"] ?? null)) && is_array($__internal_compile_9) || $__internal_compile_9 instanceof ArrayAccess ? ($__internal_compile_9["name"] ?? null) : null), __("Title"), Twig\Extension\CoreExtension::merge(        // line 259
-($context["right_field_options"] ?? null), ["required" => false])], 255, $context, $this->getSourceContext());
-        // line 262
+        // line 259
+        yield CoreExtension::callMacro($macros["fields"], "macro_textField", ["name", (($__internal_compile_10 =         // line 261
+($context["params"] ?? null)) && is_array($__internal_compile_10) || $__internal_compile_10 instanceof ArrayAccess ? ($__internal_compile_10["name"] ?? null) : null), __("Title"), Twig\Extension\CoreExtension::merge(        // line 263
+($context["right_field_options"] ?? null), ["required" => false])], 259, $context, $this->getSourceContext());
+        // line 266
         yield "
             
 
             ";
-        // line 266
+        // line 270
         yield "            ";
-        if (((($__internal_compile_10 = ($context["params"] ?? null)) && is_array($__internal_compile_10) || $__internal_compile_10 instanceof ArrayAccess ? ($__internal_compile_10["type"] ?? null) : null) == Twig\Extension\CoreExtension::constant("Ticket::DEMAND_TYPE"))) {
-            // line 267
+        if (((($__internal_compile_11 = ($context["params"] ?? null)) && is_array($__internal_compile_11) || $__internal_compile_11 instanceof ArrayAccess ? ($__internal_compile_11["type"] ?? null) : null) == Twig\Extension\CoreExtension::constant("Ticket::DEMAND_TYPE"))) {
+            // line 271
             yield "               ";
-            yield CoreExtension::callMacro($macros["fields"], "macro_textareaField", ["content", (($__internal_compile_11 =             // line 269
-($context["params"] ?? null)) && is_array($__internal_compile_11) || $__internal_compile_11 instanceof ArrayAccess ? ($__internal_compile_11["content"] ?? null) : null), __("Description Request"), Twig\Extension\CoreExtension::merge(            // line 271
-($context["right_field_options"] ?? null), ["enable_richtext" => true, "enable_fileupload" => true])], 267, $context, $this->getSourceContext());
-            // line 275
+            yield CoreExtension::callMacro($macros["fields"], "macro_textareaField", ["content", (($__internal_compile_12 =             // line 273
+($context["params"] ?? null)) && is_array($__internal_compile_12) || $__internal_compile_12 instanceof ArrayAccess ? ($__internal_compile_12["content"] ?? null) : null), __("Description Request"), Twig\Extension\CoreExtension::merge(            // line 275
+($context["right_field_options"] ?? null), ["enable_richtext" => true, "enable_fileupload" => true])], 271, $context, $this->getSourceContext());
+            // line 279
             yield " 
             ";
         } else {
-            // line 277
+            // line 281
             yield "               ";
-            yield CoreExtension::callMacro($macros["fields"], "macro_textareaField", ["content", (($__internal_compile_12 =             // line 279
-($context["params"] ?? null)) && is_array($__internal_compile_12) || $__internal_compile_12 instanceof ArrayAccess ? ($__internal_compile_12["content"] ?? null) : null), __("Description Incident"), Twig\Extension\CoreExtension::merge(            // line 281
-($context["right_field_options"] ?? null), ["enable_richtext" => true, "enable_fileupload" => true])], 277, $context, $this->getSourceContext());
-            // line 285
+            yield CoreExtension::callMacro($macros["fields"], "macro_textareaField", ["content", (($__internal_compile_13 =             // line 283
+($context["params"] ?? null)) && is_array($__internal_compile_13) || $__internal_compile_13 instanceof ArrayAccess ? ($__internal_compile_13["content"] ?? null) : null), __("Description Incident"), Twig\Extension\CoreExtension::merge(            // line 285
+($context["right_field_options"] ?? null), ["enable_richtext" => true, "enable_fileupload" => true])], 281, $context, $this->getSourceContext());
+            // line 289
             yield "
             ";
         }
-        // line 287
+        // line 291
         yield "
             ";
-        // line 288
-        if (((($__internal_compile_13 = ($context["params"] ?? null)) && is_array($__internal_compile_13) || $__internal_compile_13 instanceof ArrayAccess ? ($__internal_compile_13["type"] ?? null) : null) == Twig\Extension\CoreExtension::constant("Ticket::DEMAND_TYPE"))) {
-            // line 289
+        // line 292
+        if (((($__internal_compile_14 = ($context["params"] ?? null)) && is_array($__internal_compile_14) || $__internal_compile_14 instanceof ArrayAccess ? ($__internal_compile_14["type"] ?? null) : null) == Twig\Extension\CoreExtension::constant("Ticket::DEMAND_TYPE"))) {
+            // line 293
             yield "                    ";
             $context["download_button"] = ('' === $tmp = \Twig\Extension\CoreExtension::captureOutput((function () use (&$context, $macros, $blocks) {
-                // line 290
+                // line 294
                 yield "                        <a class=\"btn btn-primary\" id = \"formLink\" href=\"https://laci.bps.go.id/s/553ErqvWBVUUr6K\" target=\"_blank\">
                             <i class=\"fas fa-download mr-2\"></i>&nbsp;
                             ";
-                // line 292
+                // line 296
                 yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Download form request"), "html", null, true);
                 yield "
                         </a>
                     ";
                 return; yield '';
             })())) ? '' : new Markup($tmp, $this->env->getCharset());
-            // line 295
+            // line 299
             yield "                    ";
-            yield CoreExtension::callMacro($macros["fields"], "macro_field", ["download",             // line 297
-($context["download_button"] ?? null), "",             // line 299
-($context["right_field_options"] ?? null)], 295, $context, $this->getSourceContext());
-            // line 300
+            yield CoreExtension::callMacro($macros["fields"], "macro_field", ["download",             // line 301
+($context["download_button"] ?? null), "",             // line 303
+($context["right_field_options"] ?? null)], 299, $context, $this->getSourceContext());
+            // line 304
             yield "
               ";
         }
-        // line 302
+        // line 306
         yield "            
             <script>
                 let formLink = document.getElementById(\"formLink\");
@@ -369,19 +386,19 @@ class __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a79
         </div>
 
       ";
-        // line 346
+        // line 350
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Glpi\Application\View\Extension\PluginExtension']->callPluginHook(Twig\Extension\CoreExtension::constant("Glpi\\Plugin\\Hooks::POST_ITEM_FORM"), ["item" => ($context["item"] ?? null), "options" => ($context["params"] ?? null)]), "html", null, true);
         yield "
 
         <div class=\"card-footer text-center\">
             <input type=\"hidden\" name=\"entities_id\" value=\"";
-        // line 349
+        // line 353
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["entities_id"] ?? null), "html", null, true);
         yield "\" />
             <button type=\"submit\" class=\"btn btn-primary\" name=\"add\">
                 <i class=\"fas fa-plus\"></i>
                 <span>";
-        // line 352
+        // line 356
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Submit message"), "html", null, true);
         yield "</span>
             </button>
@@ -389,7 +406,7 @@ class __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a79
     </div>
 
    ";
-        // line 357
+        // line 361
         yield Twig\Extension\CoreExtension::include($this->env, $context, "components/itilobject/mainform_close.html.twig");
         yield "
 </div>
@@ -397,46 +414,46 @@ class __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a79
 <script type=\"text/javascript\">
 \$(function () {
     \$('#btn-collapse-items";
-        // line 362
+        // line 366
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["rand"] ?? null), "html", null, true);
         yield "').on('click', function() {
         \$(this).hide();
     });
 
     \$('#dropdown_nodelegate";
-        // line 366
+        // line 370
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["rand"] ?? null), "html", null, true);
         yield "').on('change', function() {
         var is_for_me = (\$(this).val() == '1');
         \$('#user-info";
-        // line 368
+        // line 372
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["rand"] ?? null), "html", null, true);
         yield "-block').toggleClass('d-none', !is_for_me);
         \$('#delegate_other";
-        // line 369
+        // line 373
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["rand"] ?? null), "html", null, true);
         yield " .card-body')
             .html(\"\")
             .load('";
-        // line 371
+        // line 375
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Glpi\Application\View\Extension\RoutingExtension']->path("ajax/dropdownDelegationUsers.php"), "html", null, true);
         yield "', {
                 'right': \"delegate\",
                 'nodelegate': (is_for_me ? 1 : 0),
                 '_users_id_requester': ";
-        // line 374
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((($__internal_compile_14 = ($context["params"] ?? null)) && is_array($__internal_compile_14) || $__internal_compile_14 instanceof ArrayAccess ? ($__internal_compile_14["_users_id_requester"] ?? null) : null), "html", null, true);
+        // line 378
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((($__internal_compile_15 = ($context["params"] ?? null)) && is_array($__internal_compile_15) || $__internal_compile_15 instanceof ArrayAccess ? ($__internal_compile_15["_users_id_requester"] ?? null) : null), "html", null, true);
         yield ",
                 '_users_id_requester_notif': ";
-        // line 375
-        yield json_encode((($__internal_compile_15 = ($context["params"] ?? null)) && is_array($__internal_compile_15) || $__internal_compile_15 instanceof ArrayAccess ? ($__internal_compile_15["_users_id_requester_notif"] ?? null) : null));
+        // line 379
+        yield json_encode((($__internal_compile_16 = ($context["params"] ?? null)) && is_array($__internal_compile_16) || $__internal_compile_16 instanceof ArrayAccess ? ($__internal_compile_16["_users_id_requester_notif"] ?? null) : null));
         yield ",
                 'use_notification': ";
-        // line 376
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((($__internal_compile_16 = (($__internal_compile_17 = ($context["params"] ?? null)) && is_array($__internal_compile_17) || $__internal_compile_17 instanceof ArrayAccess ? ($__internal_compile_17["_users_id_requester_notif"] ?? null) : null)) && is_array($__internal_compile_16) || $__internal_compile_16 instanceof ArrayAccess ? ($__internal_compile_16["use_notification"] ?? null) : null), "html", null, true);
+        // line 380
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((($__internal_compile_17 = (($__internal_compile_18 = ($context["params"] ?? null)) && is_array($__internal_compile_18) || $__internal_compile_18 instanceof ArrayAccess ? ($__internal_compile_18["_users_id_requester_notif"] ?? null) : null)) && is_array($__internal_compile_17) || $__internal_compile_17 instanceof ArrayAccess ? ($__internal_compile_17["use_notification"] ?? null) : null), "html", null, true);
         yield ",
                 'entity_restrict':  ";
-        // line 377
+        // line 381
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Glpi\Application\View\Extension\SessionExtension']->session("glpiactive_entity"), "html", null, true);
         yield "
             });
@@ -469,7 +486,7 @@ class __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a79
      */
     public function getDebugInfo()
     {
-        return array (  440 => 377,  436 => 376,  432 => 375,  428 => 374,  422 => 371,  417 => 369,  413 => 368,  408 => 366,  401 => 362,  393 => 357,  385 => 352,  379 => 349,  373 => 346,  327 => 302,  323 => 300,  321 => 299,  320 => 297,  318 => 295,  311 => 292,  307 => 290,  304 => 289,  302 => 288,  299 => 287,  295 => 285,  293 => 281,  292 => 279,  290 => 277,  286 => 275,  284 => 271,  283 => 269,  281 => 267,  278 => 266,  273 => 262,  271 => 259,  270 => 257,  269 => 255,  265 => 253,  263 => 250,  262 => 248,  261 => 245,  258 => 244,  255 => 219,  253 => 196,  249 => 193,  247 => 192,  246 => 189,  245 => 186,  244 => 185,  243 => 183,  239 => 181,  237 => 178,  236 => 175,  235 => 174,  234 => 172,  233 => 169,  229 => 167,  227 => 161,  226 => 160,  225 => 158,  224 => 155,  221 => 154,  218 => 153,  215 => 152,  212 => 151,  209 => 150,  206 => 149,  203 => 146,  201 => 143,  198 => 142,  195 => 136,  193 => 135,  192 => 133,  191 => 129,  190 => 128,  189 => 126,  184 => 123,  178 => 121,  171 => 116,  169 => 115,  168 => 113,  166 => 111,  158 => 106,  156 => 104,  154 => 103,  151 => 102,  148 => 101,  145 => 100,  143 => 99,  138 => 97,  135 => 96,  133 => 95,  126 => 94,  123 => 84,  116 => 80,  114 => 79,  113 => 77,  107 => 75,  105 => 74,  100 => 71,  98 => 70,  90 => 65,  82 => 60,  77 => 58,  74 => 57,  64 => 54,  61 => 53,  59 => 52,  54 => 49,  52 => 44,  50 => 42,  49 => 41,  48 => 37,  46 => 36,  43 => 35,  41 => 34,  38 => 33,);
+        return array (  457 => 381,  453 => 380,  449 => 379,  445 => 378,  439 => 375,  434 => 373,  430 => 372,  425 => 370,  418 => 366,  410 => 361,  402 => 356,  396 => 353,  390 => 350,  344 => 306,  340 => 304,  338 => 303,  337 => 301,  335 => 299,  328 => 296,  324 => 294,  321 => 293,  319 => 292,  316 => 291,  312 => 289,  310 => 285,  309 => 283,  307 => 281,  303 => 279,  301 => 275,  300 => 273,  298 => 271,  295 => 270,  290 => 266,  288 => 263,  287 => 261,  286 => 259,  282 => 257,  280 => 254,  279 => 252,  278 => 249,  275 => 248,  272 => 223,  270 => 200,  267 => 198,  263 => 196,  261 => 195,  260 => 192,  259 => 189,  258 => 188,  257 => 186,  253 => 184,  251 => 181,  250 => 180,  249 => 178,  247 => 175,  245 => 174,  240 => 171,  234 => 167,  232 => 163,  231 => 162,  230 => 160,  229 => 157,  226 => 156,  224 => 155,  221 => 154,  218 => 153,  215 => 152,  212 => 151,  209 => 150,  206 => 149,  203 => 146,  201 => 143,  198 => 142,  195 => 136,  193 => 135,  192 => 133,  191 => 129,  190 => 128,  189 => 126,  184 => 123,  178 => 121,  171 => 116,  169 => 115,  168 => 113,  166 => 111,  158 => 106,  156 => 104,  154 => 103,  151 => 102,  148 => 101,  145 => 100,  143 => 99,  138 => 97,  135 => 96,  133 => 95,  126 => 94,  123 => 84,  116 => 80,  114 => 79,  113 => 77,  107 => 75,  105 => 74,  100 => 71,  98 => 70,  90 => 65,  82 => 60,  77 => 58,  74 => 57,  64 => 54,  61 => 53,  59 => 52,  54 => 49,  52 => 44,  50 => 42,  49 => 41,  48 => 37,  46 => 36,  43 => 35,  41 => 34,  38 => 33,);
     }
 
     public function getSourceContext()

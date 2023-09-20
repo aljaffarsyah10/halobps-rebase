@@ -159,41 +159,185 @@ class __TwigTemplate_78e92cc7afaacfa23a5636ba4d419325d8005d85029755f679ed615be61
             ";
             }
             // line 89
-            yield "         </div>
+            yield "            <style>
+               /*(Rihan Y. | 20-09-2023) CSS For Aside navbar floating circle background (KipApp - Settama Menjawab)*/
+               .context {
+               width: 100%;
+               position: absolute;
+               top:50vh;
+               
+               }
+
+               .area{
+                  
+               background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+               width: 100%;
+               height:100%;
+               z-index:-100;
+               position: absolute;
+               
+               }
+
+               .circles{
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               overflow: hidden;
+               }
+
+               .circles li{
+               position: absolute;
+               display: block;
+               list-style: none;
+               width: 20px;
+               height: 20px;
+               background: rgba(255, 255, 255, 0.2);
+               animation: animate 25s linear infinite;
+               bottom: -150px;
+               
+               }
+
+               .circles li:nth-child(1){
+               left: 25%;
+               width: 80px;
+               height: 80px;
+               animation-delay: 0s;
+               }
+
+
+               .circles li:nth-child(2){
+               left: 10%;
+               width: 20px;
+               height: 20px;
+               animation-delay: 2s;
+               animation-duration: 12s;
+               }
+
+               .circles li:nth-child(3){
+               left: 70%;
+               width: 20px;
+               height: 20px;
+               animation-delay: 4s;
+               }
+
+               .circles li:nth-child(4){
+               left: 40%;
+               width: 60px;
+               height: 60px;
+               animation-delay: 0s;
+               animation-duration: 18s;
+               }
+
+               .circles li:nth-child(5){
+               left: 65%;
+               width: 20px;
+               height: 20px;
+               animation-delay: 0s;
+               }
+
+               .circles li:nth-child(6){
+               left: 75%;
+               width: 110px;
+               height: 110px;
+               animation-delay: 3s;
+               }
+
+               .circles li:nth-child(7){
+               left: 35%;
+               width: 150px;
+               height: 150px;
+               animation-delay: 7s;
+               }
+
+               .circles li:nth-child(8){
+               left: 50%;
+               width: 25px;
+               height: 25px;
+               animation-delay: 15s;
+               animation-duration: 45s;
+               }
+
+               .circles li:nth-child(9){
+               left: 20%;
+               width: 15px;
+               height: 15px;
+               animation-delay: 2s;
+               animation-duration: 35s;
+               }
+
+               .circles li:nth-child(10){
+               left: 85%;
+               width: 150px;
+               height: 150px;
+               animation-delay: 0s;
+               animation-duration: 11s;
+               }
+
+               @keyframes animate {
+
+               0%{
+                     transform: translateY(0) rotate(0deg);
+                     opacity: 1;
+                     border-radius: 0;
+               }
+
+               100%{
+                     transform: translateY(-1000px) rotate(720deg);
+                     opacity: 0;
+                     border-radius: 50%;
+               }
+
+               }
+               /* End here */
+            </style>
+            <div class=\"area\">
+               <ul class=\"circles\">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+               </ul>
+            </div>
+         </div>
       </aside>
       ";
         }
-        // line 92
+        // line 236
         yield "
       <header class=\"navbar d-print-none sticky-lg-top shadow-sm ";
-        // line 93
+        // line 237
         yield ((($this->extensions['Glpi\Application\View\Extension\SessionExtension']->userPref("page_layout") == "vertical")) ? ("navbar-light navbar-expand-md") : ("navbar-dark navbar-expand-xl topbar"));
         yield "\">
          <div class=\"container-fluid flex-xl-nowrap pe-xl-0\">
             ";
-        // line 95
+        // line 239
         if (($this->extensions['Glpi\Application\View\Extension\SessionExtension']->userPref("page_layout") == "vertical")) {
-            // line 96
+            // line 240
             yield "               ";
             yield Twig\Extension\CoreExtension::include($this->env, $context, "layout/parts/breadcrumbs.html.twig");
             yield "
 
                 <div class=\"ms-lg-auto d-none d-lg-block flex-grow-1 flex-lg-grow-0\">
                      ";
-            // line 99
+            // line 243
             yield Twig\Extension\CoreExtension::include($this->env, $context, "layout/parts/global_search_form.html.twig");
             yield "
                 </div>
 
             ";
         } elseif (($this->extensions['Glpi\Application\View\Extension\SessionExtension']->userPref("page_layout") == "horizontal")) {
-            // line 103
+            // line 247
             yield "               <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbar-menu\">
                   <span class=\"navbar-toggler-icon\"></span>
                </button>
 
                <a href=\"";
-            // line 107
+            // line 251
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Glpi\Application\View\Extension\RoutingExtension']->indexPath(), "html", null, true);
             yield "\" accesskey=\"1\" title=\"";
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Home"), "html", null, true);
@@ -204,30 +348,30 @@ class __TwigTemplate_78e92cc7afaacfa23a5636ba4d419325d8005d85029755f679ed615be61
 
                <div class=\"d-lg-none\">
                   ";
-            // line 113
+            // line 257
             yield Twig\Extension\CoreExtension::include($this->env, $context, "layout/parts/user_header.html.twig");
             yield "
                </div>
 
                <div class=\"collapse navbar-collapse justify-content-center\" id=\"navbar-menu\">
                   ";
-            // line 117
+            // line 261
             yield Twig\Extension\CoreExtension::include($this->env, $context, "layout/parts/menu.html.twig");
             yield "
                   <span class=\"ms-xl-2 d-inline-block mt-2 mt-xl-2\">
                      ";
-            // line 119
+            // line 263
             yield Twig\Extension\CoreExtension::include($this->env, $context, "layout/parts/goto_button.html.twig");
             yield "
                   </span>
                </div>
             ";
         }
-        // line 123
+        // line 267
         yield "
             <div class=\"ms-md-4 d-none d-lg-block\">
                ";
-        // line 125
+        // line 269
         yield Twig\Extension\CoreExtension::include($this->env, $context, "layout/parts/user_header.html.twig");
         yield "
             </div>
@@ -235,18 +379,18 @@ class __TwigTemplate_78e92cc7afaacfa23a5636ba4d419325d8005d85029755f679ed615be61
       </header>
 
       ";
-        // line 130
+        // line 274
         if (($this->extensions['Glpi\Application\View\Extension\SessionExtension']->userPref("page_layout") == "horizontal")) {
-            // line 131
+            // line 275
             yield "      <div class=\"navbar navbar-expand-md navbar-light secondary-bar sticky-md-top shadow-sm\">
          <div class=\"container-fluid justify-content-start\">
             ";
-            // line 133
+            // line 277
             yield Twig\Extension\CoreExtension::include($this->env, $context, "layout/parts/breadcrumbs.html.twig");
             yield "
             <div class=\"ms-md-auto d-none d-md-block flex-grow-1 flex-md-grow-0\">
                 ";
-            // line 135
+            // line 279
             yield Twig\Extension\CoreExtension::include($this->env, $context, "layout/parts/global_search_form.html.twig");
             yield "
             </div>
@@ -254,11 +398,11 @@ class __TwigTemplate_78e92cc7afaacfa23a5636ba4d419325d8005d85029755f679ed615be61
       </div>
       ";
         }
-        // line 140
+        // line 284
         yield "      ";
-        // line 141
+        // line 285
         yield "      ";
-        // line 142
+        // line 286
         yield "      <div class=\"page-wrapper mb-0\">
          <div class=\"page-body container-fluid\">
             <main role=\"main\" id=\"page\" class=\"legacy\">
@@ -287,7 +431,7 @@ class __TwigTemplate_78e92cc7afaacfa23a5636ba4d419325d8005d85029755f679ed615be61
      */
     public function getDebugInfo()
     {
-        return array (  262 => 142,  260 => 141,  258 => 140,  250 => 135,  245 => 133,  241 => 131,  239 => 130,  231 => 125,  227 => 123,  220 => 119,  215 => 117,  208 => 113,  197 => 107,  191 => 103,  184 => 99,  177 => 96,  175 => 95,  170 => 93,  167 => 92,  162 => 89,  154 => 84,  150 => 83,  143 => 79,  138 => 77,  134 => 75,  132 => 74,  129 => 73,  123 => 70,  120 => 69,  118 => 68,  116 => 67,  113 => 66,  107 => 63,  104 => 62,  102 => 61,  92 => 56,  84 => 50,  82 => 49,  75 => 45,  70 => 44,  64 => 41,  61 => 40,  59 => 39,  51 => 38,  48 => 37,  46 => 36,  43 => 35,  41 => 34,  38 => 33,);
+        return array (  406 => 286,  404 => 285,  402 => 284,  394 => 279,  389 => 277,  385 => 275,  383 => 274,  375 => 269,  371 => 267,  364 => 263,  359 => 261,  352 => 257,  341 => 251,  335 => 247,  328 => 243,  321 => 240,  319 => 239,  314 => 237,  311 => 236,  162 => 89,  154 => 84,  150 => 83,  143 => 79,  138 => 77,  134 => 75,  132 => 74,  129 => 73,  123 => 70,  120 => 69,  118 => 68,  116 => 67,  113 => 66,  107 => 63,  104 => 62,  102 => 61,  92 => 56,  84 => 50,  82 => 49,  75 => 45,  70 => 44,  64 => 41,  61 => 40,  59 => 39,  51 => 38,  48 => 37,  46 => 36,  43 => 35,  41 => 34,  38 => 33,);
     }
 
     public function getSourceContext()
