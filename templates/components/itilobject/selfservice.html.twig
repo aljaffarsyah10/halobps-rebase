@@ -179,11 +179,8 @@
                         _n('Category', 'Categories', 1),
                         cat_params|merge({
                             'condition': condition,
-                            'required': true,
-                            'tambahan': 'child',
-                            'unitkerjakategori':  params['itilcategories_idx']
+                            'required': true
                         }),
-                        
                     ) }}
 
                     {{ fields.field(
@@ -197,6 +194,7 @@
                         __('Urgency'),
                         right_field_options
                     ) }}
+               {% endif %}
 
                 {# By Najwa Azrai #}
                {# {% if session('glpiactiveprofile')['helpdesk_hardware'] and session('glpiactiveprofile')['helpdesk_item_type']|length %}
