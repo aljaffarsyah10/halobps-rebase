@@ -264,7 +264,8 @@ class Dropdown
             $params['name'],
             $field_id,
             $params['url'],
-            $p
+            $p,
+            $tambahan
         );
 
         // Add icon
@@ -2924,6 +2925,10 @@ class Dropdown
                                                 $post['permit_select_parent']=true;
                         }
 
+                        if($work_level != 1 & $post['tambahan']=='incident'){
+
+                        
+                        }else{
                                             $temp = ['id'       => $work_parentID,
                                                 'text'     => $output2,
                                                 'level'    => (int)$work_level,
@@ -2934,7 +2939,7 @@ class Dropdown
                                                 $temp['selection_text'] = $selection_text;
                                                 unset($temp['disabled']);
                                             }
-                                            array_unshift($parent_datas, $temp);
+                                            array_unshift($parent_datas, $temp);}
                                         }
                                         $last_level_displayed[$work_level] = $item->fields['id'];
                                         $work_level--;
@@ -2985,7 +2990,8 @@ class Dropdown
                         }
                        
                         if($data['level']>1 & $post['tambahan']=='incident'){
-                        continue;}
+                        }
+                        else{
                         $datastoadd[] = [
                             'id' => $ID,
                             'text' => $outputval,
@@ -2993,7 +2999,7 @@ class Dropdown
                             'title' => $title,
                             'selection_text' => $selection_text,
                             
-                        ];
+                        ];}
                         $count++;
                     }
                     $firstitem = false;
