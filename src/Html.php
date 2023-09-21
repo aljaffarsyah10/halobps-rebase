@@ -4847,11 +4847,17 @@ JAVASCRIPT
      *
      * @return string
      **/
-    public static function jsAjaxDropdown($name, $field_id, $url, $params = [])
+    public static function jsAjaxDropdown($name, $field_id, $url, $params = [], $tambahan='')
     {
         /** @var array $CFG_GLPI */
         global $CFG_GLPI;
 
+        if($tambahan=='incident'){
+            $page_limit=10000;
+        }
+        else{
+            $page_limit=$CFG_GLPI['dropdown_max'] ;
+        }
         $default_options = [
             'value'               => 0,
             'valuename'           => Dropdown::EMPTY_VALUE,
@@ -4951,13 +4957,13 @@ JAVASCRIPT
                      parent_id : document.getElementById('" . $parent_id_field . "').value,";
         }
         $js .= "
-                     page_limit: " . $CFG_GLPI['dropdown_max'] . ", // page size
+                     page_limit: " . $page_limit . ", // page size
                      page: params.page || 1, // page number
                   });
                },
                processResults: function (data, params) {
                   params.page = params.page || 1;
-                  var more = (data.count >= " . $CFG_GLPI['dropdown_max'] . ");
+                  var more = (data.count >= " . $page_limit . ");
 
                   return {
                      results: data.results,

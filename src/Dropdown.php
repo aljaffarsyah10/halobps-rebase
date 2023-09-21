@@ -272,6 +272,14 @@ class Dropdown
             }
         }
 
+        $output .= Html::jsAjaxDropdown(
+            $params['name'],
+            $field_id,
+            $params['url'],
+            $p,
+            $tambahan
+        );
+
         // Add icon
         $add_item_icon = "";
         if (
