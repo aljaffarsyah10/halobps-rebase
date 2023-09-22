@@ -44,13 +44,13 @@
       </span>
    </div> #}
    <div class="footer d-flex flex-column">
-      <span class="text-center">&#169; {{game.gameDate|date("Y")}} BPS RI, Made with &hearts; by Direktorat SIS</span>
+      <a href="https://glpi-project.org" title="Built using GLPI" class="text-center">&#169; {{game.gameDate|date("Y")}} BPS RI, Made with &hearts; by Direktorat SIS</a>
    </div>
 
 
    {% if config('maintenance_mode') %}
       <div id="maintenance-float">
-         <a href="{{ path('front/config.form.php?forcetab=Config$5') }}">HaloSIS Maintenance Mode</a>
+         <a href="{{ path('front/config.form.php?forcetab=Config$5') }}">HaloBPS Maintenance Mode</a>
       </div>
    {% endif %}
 

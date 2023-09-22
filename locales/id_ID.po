@@ -310,7 +310,7 @@ msgstr "%1$s - port %2$s"
 #: src/RuleDictionnarySoftwareCollection.php:163
 #, php-format
 msgid "%1$s - replay rules on existing database: %2$s/%3$s (%4$s Mio)"
-msgstr ""
+msgstr "%1$s - ulangi rules pada database existing: %2$s/%3$s (%4$s Mb)"
 
 #: src/Group.php:901 src/Notepad.php:369
 #: src/NotificationTargetContract.php:180 src/CommonDBVisible.php:251
@@ -1095,13 +1095,13 @@ msgstr "%s Kanban"
 #: src/MailCollector.php:2227
 #, php-format
 msgid "%s Mio"
-msgstr "%s MB"
+msgstr "%s Mb"
 
 #. TRANS: %s is a size
 #: src/Document.php:523
 #, php-format
 msgid "%s Mio max"
-msgstr "Maksimal %s MB"
+msgstr "Maksimal %s Mb"
 
 #: front/knowbaseitem_comment.form.php:67
 #, php-format
@@ -2166,7 +2166,7 @@ msgstr ""
 
 #: src/CronTask.php:981
 msgid "A minimum of 64 Mio is commonly required for GLPI."
-msgstr ""
+msgstr "Minimal dibutuhkan 64 Mb untuk GLPI"
 
 #: src/Marketplace/View.php:761
 #, php-format
@@ -3893,7 +3893,7 @@ msgstr[0] ""
 #: src/Config.php:1440 src/Config.php:2623 src/Entity.php:439
 #: src/Entity.php:1154
 msgid "Assistance"
-msgstr "Bantuan"
+msgstr "Kelola Tiket"
 
 #: src/Profile.php:851 src/Profile.php:1433 src/Profile.php:2859
 #: src/Console/Migration/DatabasesPluginToCoreCommand.php:161
@@ -5751,7 +5751,7 @@ msgstr ""
 
 #: templates/layout/parts/page_header.html.twig
 msgid "Collapse menu"
-msgstr ""
+msgstr "Sembunyikan menu"
 
 #: templates/install/step6.html.twig
 msgid "Collect data"
@@ -8196,6 +8196,44 @@ msgstr ""
 msgid "Download"
 msgstr "Unduh"
 
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Self-Service"
+msgstr "Pengguna"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Observer "
+msgstr "Manajer"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Technician "
+msgstr "Tim Teknisi"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Admin"
+msgstr "Operator"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Welcome,"
+msgstr "Selamat datang,"
+
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Description Incident"
+msgstr "Deskripsi"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Description Request"
+msgstr "Deskripsi"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Download form request"
+msgstr "Unduh formulir permintaan"
+
+#: src/Marketplace/View.php:756 src/RichText/RichText.php:471
+msgid "Choose files"
+msgstr "Pilih formulir"
+
+
 #. TRANS: parameter is the name of the asset
 #: templates/components/form/inventory_info.html.twig
 #: src/Features/Inventoriable.php:133
@@ -9823,6 +9861,7 @@ msgstr ""
 msgid "For security reasons, please remove file: %s"
 msgstr ""
 
+
 #: src/Infocom.php:1126
 msgid ""
 "For this type of item, the financial and administrative information are only"
@@ -10113,7 +10152,7 @@ msgstr ""
 
 #: src/Toolbox.php:915
 msgid "Gio"
-msgstr ""
+msgstr "Gb"
 
 #: src/Consumable.php:222 src/Consumable.php:605
 msgctxt "button"
@@ -12023,7 +12062,7 @@ msgstr "Kunci"
 
 #: src/Toolbox.php:915
 msgid "Kio"
-msgstr ""
+msgstr "Kb"
 
 #: front/knowbaseitem.form.php:172 src/Knowbase.php:47
 #: src/KnowbaseItem_Item.php:86 src/CommonGLPI.php:1464 src/Profile.php:1257
@@ -12039,7 +12078,7 @@ msgstr "Pengetahuan dasar Administrasi"
 #: src/KnowbaseItemCategory.php:48 src/Profile.php:1944
 msgid "Knowledge base category"
 msgid_plural "Knowledge base categories"
-msgstr[0] "Pengetahuan dasar Kategori"
+msgstr[0] "Kategori Basisdata Pengetahuan"
 
 #: src/Item_Ticket.php:452
 msgid "Knowledge base entries"
@@ -13619,7 +13658,7 @@ msgstr[0] "Menit"
 #: src/ComputerVirtualMachine.php:356 src/NetworkEquipment.php:430
 #: src/Item_DeviceHardDrive.php:52
 msgid "Mio"
-msgstr ""
+msgstr "Mb"
 
 #: src/GLPIUploadHandler.php:62
 msgid "Missing a temporary folder"
@@ -17250,7 +17289,7 @@ msgstr ""
 
 #: src/KnowbaseItem.php:858
 msgid "Put this item in the FAQ"
-msgstr ""
+msgstr "Sematkan item ini sebagai FAQ"
 
 #: src/Change.php:584
 msgid "Qualification"
@@ -18691,7 +18730,7 @@ msgstr ""
 
 #: src/TicketSatisfaction.php:129
 msgid "Satisfaction with the resolution of the ticket"
-msgstr ""
+msgstr "Kepuasan terhadap resolusi permasalahan ini"
 
 #: src/Toolbox.php:2180 src/Features/PlanningEvent.php:800 src/Config.php:1033
 msgid "Saturday"
@@ -20094,7 +20133,7 @@ msgstr "Dukungan jam"
 #: src/User.php:2434 src/User.php:2853 src/User.php:6299
 #: src/ContentTemplates/Parameters/UserParameters.php:82
 msgid "Surname"
-msgstr "Nama asli"
+msgstr "Nama Lengkap"
 
 #: src/Config.php:1186
 msgid "Surname, First name"
@@ -24120,7 +24159,7 @@ msgstr ""
 
 #: src/Ticket.php:4706 src/Ticket.php:4897
 msgid "Your tickets in progress"
-msgstr "Tiket Anda dalam proses"
+msgstr "Tiket Anda yang sedang diproses"
 
 #: src/Ticket.php:4625 src/Ticket.php:4830
 msgid "Your tickets to close"
@@ -24504,7 +24543,7 @@ msgstr ""
 #. TRANS: list of unit (o for octet)
 #: src/Toolbox.php:915
 msgid "o"
-msgstr ""
+msgstr "bit"
 
 #: src/Migration.php:693 src/Migration.php:695
 msgid "ok"

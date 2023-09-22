@@ -219,10 +219,7 @@ class Search
      */
     public static function hideColumns($data)
     {
-        $isRoleUser  = !Session::haveRightsOr(
-            "ticket",
-            [Ticket::READALL]
-        );
+        $isRoleUser  = $_SESSION['glpiactiveprofile']['id'] == 1;
 
         if (!$isRoleUser) {
             return $data;

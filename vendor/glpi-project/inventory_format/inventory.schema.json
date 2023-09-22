@@ -1852,8 +1852,7 @@
                 "type": "string",
                 "examples": [
                   "IDE"
-                ],
-                "pattern": "^(SCSI|HDC|IDE|USB|1394|SATA|SAS|ATAPI)$"
+                ]
               },
               "manufacturer": {
                 "type": "string",
@@ -2789,6 +2788,10 @@
             "firmware": {
               "type": "string"
             },
+            "ip": {
+              "type": "string",
+              "title": "Remote device management IP address"
+            },
             "ips": {
               "type": "array",
               "title": "IP addresses",
@@ -2846,7 +2849,7 @@
             },
             "type": {
               "type": "string",
-              "pattern": "^(Computer|Networking|Printer|Storage|Power|Phone|Video|KVM)$"
+              "pattern": "^(Unmanaged|Computer|Networking|Printer|Storage|Power|Phone|Video|KVM)$"
             },
             "uptime": {
               "type": "string",
@@ -2977,8 +2980,8 @@
     "itemtype": {
       "type": "string",
       "title": "Item type",
-      "default": "Computer",
-      "pattern": "^(Computer|Phone|NetworkEquipment|Printer)$"
+      "default": "Unmanaged",
+      "pattern": "^(Unmanaged|Computer|Phone|NetworkEquipment|Printer)$"
     },
     "partial": {
       "type": "boolean",

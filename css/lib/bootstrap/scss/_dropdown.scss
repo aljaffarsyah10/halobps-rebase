@@ -162,7 +162,9 @@
 
   &.active,
   &:active {
-    color: $dropdown-link-active-color;
+    /*(Rihan Y. | 17-02-2023) changing background for checked checkbox*/
+    // color: $dropdown-link-active-color;
+    color: $link-color;
     text-decoration: none;
     @include gradient-bg($dropdown-link-active-bg);
   }

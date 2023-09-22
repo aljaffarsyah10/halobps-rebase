@@ -89,10 +89,13 @@ body.iframed {
 }
 
 .page {
+    /*(Rihan Y. | 08-02-2023) Palettes for default (lightblue) HaloBPS*/
     .glpi-logo {
         background: url($logo) no-repeat;
-        height: 55px;
-        width: 100px;
+        background-size: contain;
+        background-position: center;
+        height: 75px;
+        width: 200px;
     }
 
     .page-body {
@@ -224,6 +227,7 @@ body.iframed {
 }
 
 .page-anonymous {
+    /*(Rihan Y. | 08-02-2023) Palettes for default (lightblue) HaloBPS*/
     .glpi-logo {
         --logo: url(#{$logo-dark-login});
 

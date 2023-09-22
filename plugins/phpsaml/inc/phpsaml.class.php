@@ -81,18 +81,26 @@ class PluginPhpsamlPhpsaml
 		if (isset($config['jit']) && $config['jit'] == 1){
 			$user = new User();
 			if(!$user->getFromDBbyEmail(self::$nameid)){
-				if ((!empty(SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'][0])) && (!empty(SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'][0]))){
+				// (Rihan Y. | 01-03-2023) Alter SAML configuration for JIT Login
+				// if ((!empty(SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'][0])) && (!empty(SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'][0]))){
+					if ((!empty(self::$userdata['username'][0])) && (!empty(self::$userdata['email'][0]))){
 					
-					$password = bin2hex(random_bytes(20));
-					
-					$input = array(
-						"name" => SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'][0],
-						"realname" => SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname'][0],
-						"firstname" => SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/firstname'][0],
-						"_useremails" => array(SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'][0]),
-						"password" => $password,
-						"password2" => $password,
-					);
+						$password = bin2hex(random_bytes(20));
+						
+						$input = array(
+					// 		"name" => SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'][0],
+					// 		"realname" => SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname'][0],
+					// 		"firstname" => SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/firstname'][0],
+					// 		"_useremails" => array(SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'][0]),
+							"name" => self::$userdata['username'][0],
+							"realname" => self::$userdata['first-name'][0],
+							"firstname" => self::$userdata['last-name'][0],
+							"nickname" => self::$userdata['name'][0],
+							"_useremails" => array(self::$userdata['email'][0]),
+							"password" => $password,
+							"password2" => $password,
+							"picture" => self::$userdata['foto'][0],
+						);
 					
 					$newuser = new User();
 					
@@ -147,7 +155,12 @@ class PluginPhpsamlPhpsaml
 			$error = $e->getMessage();
 			Toolbox::logInFile("php-errors", $error . "\n", true);
 			
-			
+			// Set error banner (Rihan Y. | 02-02-2023)
+			// Html::nullHeader("Login", $CFG_GLPI["url_base"] . '/index.php');
+			// echo '<div class="center b">'.$error.'<br><br>';
+			// // Logout whit noAUto to manage auto_login with errors
+			// echo '<a href="' . $CFG_GLPI["url_base"] .'/index.php">' .__('Log in again') . '</a></div>';
+			// Html::nullFooter();
 			echo '<div class="card text-white bg-danger text-sm-center sticky-top row justify-content-md-center"><b>Kesalahan terjadi:</b> <i>'. $error.'</i></div>';
 			
 		}
@@ -183,6 +196,12 @@ class PluginPhpsamlPhpsaml
 				$error = $e->getMessage();
 				Toolbox::logInFile("php-errors", $error . "\n", true);
 				
+				// Set error banner (Rihan Y. | 02-02-2023)
+				// Html::nullHeader("Login", $CFG_GLPI["url_base"] . '/index.php');
+				// echo '<div class="center b">'.$error.'<br><br>';
+				// // Logout whit noAUto to manage auto_login with errors
+				// echo '<a href="' . $CFG_GLPI["url_base"] .'/index.php">' .__('Log in again') . '</a></div>';
+				// Html::nullFooter();
 				echo '<div class="card text-white bg-danger text-sm-center sticky-top row justify-content-md-center"><b>Kesalahan terjadi:</b> <i>'. $error.'</i></div>';
 				
 			}

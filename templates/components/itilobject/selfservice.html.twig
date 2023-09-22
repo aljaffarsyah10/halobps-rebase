@@ -82,7 +82,7 @@
                             </div>
                         {% endset %}
 
-                        {{ fields.dropdownYesNo(
+                        {# {{ fields.dropdownYesNo(
                             'nodelegate',
                             params['nodelegate'],
                             __('This ticket concerns me'),
@@ -90,7 +90,7 @@
                                 'add_field_html': actor_add_form
                             })
                         ) }}
-                    </div>
+                    </div> #}
                     <div class="col-sm-6 {{ config('use_check_pref') and params['nodelegate'] ? "" : "d-none" }}" id="user-info{{ rand }}-block">
                         {% set personal_information %}
                         <div class="d-inline-flex">
@@ -134,9 +134,14 @@
                   _n('Type', 'Types', 1),
                   right_field_options
                ) }}
+                 {# biar ga reload
+                set cat_params = right_field_options|merge({
+                  'on_change': 'this.form.submit()',
+               })
+                #}
 
                {% set cat_params = right_field_options|merge({
-                  'on_change': 'this.form.submit()',
+                 
                }) %}
                {% set condition = {
                   'is_helpdeskvisible': 1
@@ -147,7 +152,26 @@
                   {% set condition = condition|merge({'is_request': 1}) %}
                {% endif %}
 
-               {% if params['type'] == constant('Ticket::DEMAND_TYPE') %}
+                {% if params['type'] == constant('Ticket::INCIDENT_TYPE') %}
+
+                    {{ fields.dropdownField(
+                        'ITILCategory',
+                        'itilcategories_id',
+                        params['itilcategories_id'],
+                        _n('Category', 'Categories', 1),
+                        cat_params|merge({
+                            'condition': condition,
+                            'required': true,
+                            'tambahan': 'incident'
+                        }),
+                    ) }}
+
+
+                {% endif %}
+
+
+
+                {% if params['type'] == constant('Ticket::DEMAND_TYPE') %}
                     {{ fields.dropdownField(
                         'ITILCategory',
                         'itilcategories_id',
@@ -158,6 +182,7 @@
                             'required': true
                         }),
                     ) }}
+
                     {{ fields.field(
                         'urgency',
                         item.dropdownUrgency({
@@ -236,7 +261,7 @@
                   params['name'],
                   __('Title'),
                   right_field_options|merge({
-                    'required': true
+                    'required': false
                   })
                ) }}
             
@@ -268,7 +293,7 @@
                     {% set download_button %}
                         <a class="btn btn-primary" id = "formLink" href="https://laci.bps.go.id/s/553ErqvWBVUUr6K" target="_blank">
                             <i class="fas fa-download mr-2"></i>&nbsp;
-                            {{ __('Download form permintaan') }}
+                            {{ __('Download form request') }}
                         </a>
                     {% endset %}
                     {{ fields.field(
@@ -306,7 +331,7 @@
                     "Layanan E-Learning BPS": 18,
                     "Layanan Kaizala": 19,
                     "Layanan OMS (Ruang Kerja dan Knowledge Management System)": 20,
-                    "Layanan Duplikasi HaloSIS (HIDEN)": 21
+                    "Layanan Duplikasi HaloBPS (HIDEN)": 21
                 }
 
                 const number = numbers[category]
