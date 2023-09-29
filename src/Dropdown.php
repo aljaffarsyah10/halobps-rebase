@@ -95,13 +95,31 @@ class Dropdown
         }
 
         $table = $item->getTable();
-             if(isset($options['tambahan'])){
-        if($options['tambahan']=='incident')
+
+        if(isset($options['reloadkategori'])){ 
+            $reloadkategori=$options['reloadkategori'];
+        }else{
+            $reloadkategori='';
+        }
+
+    if(isset($options['tambahan'])){
+                $unitkerjakategori='';
+        if($options['tambahan']=='incident'){
             $tambahan='incident';
+        }
+        else if($options['tambahan']=='child'){
+            $tambahan='child';
+            if(isset($options['unitkerjakategori'])){
+            $unitkerjakategori=$options['unitkerjakategori'];
+            }
+
+        }
 
     }
-    else
-         $tambahan='';
+    else{
+        $unitkerjakategori='';
+         $tambahan='';}
+
 
         $params['name']                 = $item->getForeignKeyField();
         $params['value']                = (($itemtype == 'Entity') ? $_SESSION['glpiactive_entity'] : '');
@@ -222,6 +240,8 @@ class Dropdown
             'width'                => $params['width'],
             'itemtype'             => $itemtype,
             'tambahan'             => $tambahan,
+            'unitkerjakategori'    => $unitkerjakategori,
+            'reloadkategori'    => $reloadkategori,
             'display_emptychoice'  => $params['display_emptychoice'],
             'placeholder'          => $params['placeholder'],
             'displaywith'          => $params['displaywith'],
@@ -2924,11 +2944,19 @@ class Dropdown
                                                 $defaultdisable=false;
                                                 $post['permit_select_parent']=true;
                         }
-
+                        $ancst=getAncestorsOf($table,$ID);
                         if($work_level != 1 & $post['tambahan']=='incident'){
 
                         
-                        }else{
+                        }
+                        else if($work_level == 1 & $post['tambahan']=='child'){
+
+                        
+                        }
+                        else if(array_key_exists($post['unitkerjakategori'], $ancst)==false){
+                            
+                        }
+                        else{
                                             $temp = ['id'       => $work_parentID,
                                                 'text'     => $output2,
                                                 'level'    => (int)$work_level,
@@ -2992,6 +3020,20 @@ class Dropdown
                         if($data['level']>1 & $post['tambahan']=='incident'){
                         }
                         else{
+         if($post['tambahan']=='child'){
+            
+ $ancst=getAncestorsOf($table,$ID);
+
+                if($data['level']==1)
+                        continue;
+                else if (array_key_exists($post['unitkerjakategori'], $ancst)==false)
+                        continue;
+                    $selection_text=$outputval;
+
+         
+
+        }
+
                         $datastoadd[] = [
                             'id' => $ID,
                             'text' => $outputval,

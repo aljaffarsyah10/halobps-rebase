@@ -1370,6 +1370,11 @@ abstract class CommonITILObject extends CommonDBTM
         } else {
             $categid = $this->fields['itilcategories_id'];
         }
+        if (isset($input['itilcategories_idx'])) {
+            $categidx = $input['itilcategories_idx'];
+        } else {
+            $categidx = $this->fields['itilcategories_idx'];
+        }
 
         $check_allowed_fields_for_template = false;
         $allowed_fields                    = [];
@@ -1479,6 +1484,10 @@ abstract class CommonITILObject extends CommonDBTM
                 return false;
             }
         }
+            if (isset($categidx)) {
+             $input['itilcategories_idx']=$categidx;
+        } 
+
 
         return $input;
     }
