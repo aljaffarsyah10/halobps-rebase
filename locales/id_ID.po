@@ -8471,6 +8471,10 @@ msgstr "Selamat datang,"
 msgid "Description Incident"
 msgstr "Deskripsi"
 
+#: src/ticket
+msgid "Unit"
+msgstr "Unit Kerja"
+
 #: src/Marketplace/View.php:756 src/RichText/RichText.php:471
 msgid "Description Request"
 msgstr "Deskripsi"

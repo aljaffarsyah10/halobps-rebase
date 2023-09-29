@@ -176,13 +176,31 @@
             {% elseif item.getType() == 'Change' %}
                {% set cat_params = cat_params|merge({'condition': {'is_change': 1}}) %}
             {% endif %}
+  {{ fields.dropdownField(
+               'ITILCategory',
+               'itilcategories_idx',
+               item.fields['itilcategories_idx'],
+               __('Unit'),
+               cat_params|merge({
+                            'tambahan': 'incident',
+                            'on_change': 'reloadCategory()'
+                        })
+            ) }}
+
             <span id="category_block_{{ rand }}">
+
+
             {{ fields.dropdownField(
                'ITILCategory',
                'itilcategories_id',
                item.fields['itilcategories_id'],
                _n('Category', 'Categories', 1),
-               cat_params
+               cat_params|merge({
+                              'tambahan': 'child',
+                              'unitkerjakategori': item.fields['itilcategories_idx'],
+                           
+
+                        })
             ) }}
             </span>
 
@@ -518,7 +536,7 @@
        no = 19;
    }else if(judul.includes("Layanan OMS (Ruang Kerja dan Knowledge Management System)")){
        no = 20;
-   }else if(judul.includes("Layanan Duplikasi HaloBPS (HIDEN)")){
+   }else if(judul.includes("Layanan Duplikasi Halosis (HIDEN)")){
        no = 21;
    }
 
@@ -541,13 +559,17 @@ $(function() {
 
 var reloadCategory = function() {
     var type = $('[name=type]').val();
+    var itilcategories_idx = $('[name=itilcategories_idx]').val();
 
     $('#category_block_{{ rand }} .field-container').load(
         '{{ path("ajax/dropdownTicketCategories.php") }}',
         {
             'type': type,
             'entity_restrict': {{ item.fields['entities_id'] }},
-            'value': {{ item.fields['itilcategories_id'] }},
+            'value': {{ item.fields['itilcategories_idx'] }},
+            'reloadkategori': 'benar',
+            'tambahan': 'child',
+            'unitkerjakategori': itilcategories_idx,
         }
     );
 };

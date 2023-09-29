@@ -95,11 +95,28 @@ class Dropdown
         }
 
         $table = $item->getTable();
+
+        if (isset($options['reloadkategori'])) {
+            $reloadkategori = $options['reloadkategori'];
+        } else {
+            $reloadkategori = '';
+        }
+
         if (isset($options['tambahan'])) {
-            if ($options['tambahan'] == 'incident')
+            $unitkerjakategori = '';
+            if ($options['tambahan'] == 'incident') {
                 $tambahan = 'incident';
-        } else
+            } else if ($options['tambahan'] == 'child') {
+                $tambahan = 'child';
+                if (isset($options['unitkerjakategori'])) {
+                    $unitkerjakategori = $options['unitkerjakategori'];
+                }
+            }
+        } else {
+            $unitkerjakategori = '';
             $tambahan = '';
+        }
+
 
         $params['name']                 = $item->getForeignKeyField();
         $params['value']                = (($itemtype == 'Entity') ? $_SESSION['glpiactive_entity'] : '');
@@ -229,6 +246,8 @@ class Dropdown
             'width'                => $params['width'],
             'itemtype'             => $itemtype,
             'tambahan'             => $tambahan,
+            'unitkerjakategori'    => $unitkerjakategori,
+            'reloadkategori'    => $reloadkategori,
             'display_emptychoice'  => $params['display_emptychoice'],
             'placeholder'          => $params['placeholder'],
             'displaywith'          => $params['displaywith'],
@@ -3106,6 +3125,16 @@ JAVASCRIPT;
 
                         if ($data['level'] > 1 & $post['tambahan'] == 'incident') {
                         } else {
+                            if ($post['tambahan'] == 'child') {
+
+                                $ancst = getAncestorsOf($table, $ID);
+
+                                if ($data['level'] == 1)
+                                    continue;
+                                else if (array_key_exists($post['unitkerjakategori'], $ancst) == false)
+                                    continue;
+                                $selection_text = $outputval;
+                            }
                             $datastoadd[] = [
                                 'id' => $ID,
                                 'text' => $outputval,

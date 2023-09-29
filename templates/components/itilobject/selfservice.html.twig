@@ -140,8 +140,11 @@
                })
                 #}
 
+                {% set cat_params1 = right_field_options|merge({
+                  'on_change': 'reloadCategory2(),this.form.submit()',
+               }) %}
                {% set cat_params = right_field_options|merge({
-                 
+                  
                }) %}
                {% set condition = {
                   'is_helpdeskvisible': 1
@@ -158,20 +161,38 @@
                         'ITILCategory',
                         'itilcategories_id',
                         params['itilcategories_id'],
-                        _n('Category', 'Categories', 1),
+                        __('Unit'),
                         cat_params|merge({
                             'condition': condition,
                             'required': true,
-                            'tambahan': 'incident'
+                            'tambahan': 'incident',
+                            'on_change': 'reloadCategory()'
                         }),
                     ) }}
 
+              
+             <input type="hidden" name="itilcategories_idx"  />
 
                 {% endif %}
 
 
 
                 {% if params['type'] == constant('Ticket::DEMAND_TYPE') %}
+
+
+                    {{ fields.dropdownField(
+                        'ITILCategory',
+                        'itilcategories_idx',
+                        params['itilcategories_idx'],
+                        __('Unit'),
+                        cat_params1|merge({
+                            'condition': condition,
+                            'required': true,
+                            'tambahan': 'incident'
+                         
+                        }),
+                    ) }}
+
                     {{ fields.dropdownField(
                         'ITILCategory',
                         'itilcategories_id',
@@ -179,7 +200,9 @@
                         _n('Category', 'Categories', 1),
                         cat_params|merge({
                             'condition': condition,
-                            'required': true
+                            'required': true,
+                            'tambahan': 'child',
+                            'unitkerjakategori': params['itilcategories_idx']
                         }),
                     ) }}
 
@@ -331,7 +354,7 @@
                     "Layanan E-Learning BPS": 18,
                     "Layanan Kaizala": 19,
                     "Layanan OMS (Ruang Kerja dan Knowledge Management System)": 20,
-                    "Layanan Duplikasi HaloBPS (HIDEN)": 21
+                    "Layanan Duplikasi HaloSIS (HIDEN)": 21
                 }
 
                 const number = numbers[category]
@@ -362,6 +385,17 @@
 </div>
 
 <script type="text/javascript">
+
+var reloadCategory = function() {
+    var itilcategories_id = $('[name=itilcategories_id]').val();
+     $('[name=itilcategories_idx]').val(itilcategories_id);
+
+    }
+
+     var  reloadCategory2= function() {
+     $('[name=itilcategories_id]').val(0);
+
+    }
 $(function () {
     $('#btn-collapse-items{{ rand }}').on('click', function() {
         $(this).hide();

@@ -57,6 +57,14 @@ if ($_POST["type"]) {
             $condition['is_incident'] = 1;
             if ($currentcateg->getField('is_incident') == 1) {
                 $opt['value'] = $_POST['value'];
+                if ($_POST["reloadkategori"]) 
+                                 if ($_POST["reloadkategori"] && $_POST["reloadkategori"]=='benar')
+{
+    $opt['value'] = '';
+                $opt['unitkerjakategori'] = $_POST['unitkerjakategori'];
+                $opt['tambahan'] = $_POST['tambahan'];
+             $opt['reloadkategori'] = $_POST['reloadkategori'];}
+
             }
             break;
 
@@ -64,6 +72,12 @@ if ($_POST["type"]) {
             $condition['is_request'] = 1;
             if ($currentcateg->getField('is_request') == 1) {
                 $opt['value'] = $_POST['value'];
+                if ($_POST["reloadkategori"] && $_POST["reloadkategori"]=='benar')
+{
+    $opt['value'] = '';
+    $opt['reloadkategori'] = $_POST['reloadkategori'];
+                $opt['unitkerjakategori'] = $_POST['unitkerjakategori'];
+                $opt['tambahan'] = $_POST['tambahan'];}
             }
             break;
     }
