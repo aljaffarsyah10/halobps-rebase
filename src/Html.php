@@ -4823,13 +4823,14 @@ JAVASCRIPT
     {
         global $CFG_GLPI;
 
-        if($tambahan=='incident'){
+        if($tambahan=='incident' || $tambahan=='child'){
             $page_limit=10000;
         }
         else{
             $page_limit=$CFG_GLPI['dropdown_max'] ;
         }
-        $default_options = [
+
+  $default_options = [
             'value'               => 0,
             'valuename'           => Dropdown::EMPTY_VALUE,
             'multiple'            => false,
@@ -4841,7 +4842,32 @@ JAVASCRIPT
             'display_emptychoice' => false,
             'specific_tags'       => [],
             'parent_id_field'     => null,
+         
         ];
+
+
+       if(isset($params['reloadkategori'])){
+        if($params['reloadkategori']=='benar'){
+    $default_options = [
+            'value'               => 0,
+            'valuename'           => Dropdown::EMPTY_VALUE,
+            'multiple'            => false,
+            'values'              => [],
+            'valuesnames'         => [],
+            'on_change'           => '',
+            'width'               => '80%',
+            'placeholder'         => '',
+            'display_emptychoice' => false,
+            'specific_tags'       => [],
+            'parent_id_field'     => null,
+            'unitkerjakategori'     => $params['unitkerjakategori'],
+            'tambahan'     => $params['tambahan'],
+        ];
+
+        }
+
+       }
+      
         $params = array_merge($default_options, $params);
 
         $value = $params['value'];
