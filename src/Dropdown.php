@@ -119,7 +119,7 @@ class Dropdown
     else{
         $unitkerjakategori='';
          $tambahan='';}
-
+        $linkunduhpermintaan='';
 
         $params['name']                 = $item->getForeignKeyField();
         $params['value']                = (($itemtype == 'Entity') ? $_SESSION['glpiactive_entity'] : '');
@@ -183,12 +183,22 @@ class Dropdown
             && $params['value'] > 0
             || ($itemtype == "Entity" && $params['value'] >= 0)
         ) {
-            $tmpname = self::getDropdownName($table, $params['value'], 1);
-
+            if($tambahan=='child')
+            {$tmpname = self::getDropdownNameChild($table, $params['value'], 1);
             if ($tmpname["name"] != "&nbsp;") {
                 $name    = $tmpname["name"];
                 $comment = $tmpname["comment"];
+                $linkunduhpermintaan = $tmpname["linkunduhpermintaan"];
             }
+    }
+            else{
+            $tmpname = self::getDropdownName($table, $params['value'], 1);
+ if ($tmpname["name"] != "&nbsp;") {
+                $name    = $tmpname["name"];
+                $comment = $tmpname["comment"];
+            }
+            }
+           
         } else if ($params['multiple']) {
             $names = [];
 
@@ -197,7 +207,9 @@ class Dropdown
                     // Specific case, value added by the "toadd" param
                     $names[] = $params['toadd'][$value];
                 } else {
+                 
                     $names[] = self::getDropdownName($table, $value);
+                
                 }
             }
         }
@@ -268,6 +280,9 @@ class Dropdown
         } else {
             $p['value'] = $params['value'];
             $p['valuename'] = $name;
+            if($tambahan=='child'){
+                $p['linkunduhpermintaan'] = $linkunduhpermintaan;
+            }
         }
 
         if ($params['hide_if_no_elements']) {
@@ -473,6 +488,22 @@ class Dropdown
      *
      * @return string the value of the dropdown
      **/
+    public static function getDropdownNameChild($table, $id, $withcomment = 0, $translate = true, $tooltip = true, string $default = '&nbsp;')
+    {
+        global $DB;
+
+        $item = getItemForItemtype(getItemTypeForTable($table));
+
+        if (!is_object($item)) {
+            return $default;
+        }
+
+        if ($item instanceof CommonTreeDropdown) {
+            return getTreeValueCompleteNameChild($table, $id, $withcomment, $translate, $tooltip, $default);
+        }
+        return null ;
+    }
+
     public static function getDropdownName($table, $id, $withcomment = 0, $translate = true, $tooltip = true, string $default = '&nbsp;')
     {
         global $DB;
@@ -2945,6 +2976,9 @@ class Dropdown
                                                 $post['permit_select_parent']=true;
                         }
                         $ancst=getAncestorsOf($table,$ID);
+                        
+
+
                         if($work_level != 1 & $post['tambahan']=='incident'){
 
                         
@@ -2960,7 +2994,7 @@ class Dropdown
                                             $temp = ['id'       => $work_parentID,
                                                 'text'     => $output2,
                                                 'level'    => (int)$work_level,
-                                                'disabled' => $defaultdisable
+                                                'disabled' => $defaultdisable,
                                             ];
                                             if ($post['permit_select_parent']) {
                                                 $temp['title'] = $title;
@@ -3016,7 +3050,7 @@ class Dropdown
                             }
                             $title = sprintf(__('%1$s - %2$s'), $title, $addcomment);
                         }
-                       
+                        $linkunduhpermintaan ='';
                         if($data['level']>1 & $post['tambahan']=='incident'){
                         }
                         else{
@@ -3030,6 +3064,8 @@ class Dropdown
                         continue;
                     $selection_text=$outputval;
 
+                    $linkunduhpermintaan=$data['linkunduhpermintaan'];
+
          
 
         }
@@ -3040,6 +3076,7 @@ class Dropdown
                             'level' => (int)$level,
                             'title' => $title,
                             'selection_text' => $selection_text,
+                            'linkunduhpermintaan' =>$linkunduhpermintaan
                             
                         ];}
                         $count++;

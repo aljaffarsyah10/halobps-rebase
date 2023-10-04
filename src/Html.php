@@ -4873,6 +4873,12 @@ JAVASCRIPT
         $value = $params['value'];
         $width = $params["width"];
         $valuename = $params['valuename'];
+        if($tambahan=='child')
+        {
+            $linkunduhpermintaan = $params['linkunduhpermintaan'];
+            echo"<input type='hidden' id='linkunduhpermintaan' value='".$linkunduhpermintaan."'>";
+
+        }
         $on_change = $params["on_change"];
         $placeholder = $params['placeholder'] ?? '';
         $multiple = $params['multiple'];
@@ -5218,7 +5224,7 @@ JAVASCRIPT
                     || is_array($selected) && in_array($key, $selected))
                 ) ? ' selected="selected"' : '',
                 Html::entities_deep($value)
-            );
+            );  
         }
         $select .= '</select>';
         return $select;

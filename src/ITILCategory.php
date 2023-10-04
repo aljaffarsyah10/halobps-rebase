@@ -97,7 +97,7 @@ class ITILCategory extends CommonTreeDropdown
                 'type'      => 'bool',
                 'list'      => true,
             ],
-        ];
+               ];
 
         $show_for_problem = Session::haveRightsOr('problem', [CREATE, UPDATE, DELETE, Problem::READALL, Problem::READMY]);
 
@@ -143,6 +143,13 @@ class ITILCategory extends CommonTreeDropdown
                     'type'  => 'dropdownValue',
                     'list'  => true,
                 ],
+            [
+                'name'      => 'linkunduhpermintaan',
+                'label'     => __('Request Form (url)'),
+                'type'      => 'text',
+                'list'      => false,
+            ],
+
             ]
         );
         return $tab;

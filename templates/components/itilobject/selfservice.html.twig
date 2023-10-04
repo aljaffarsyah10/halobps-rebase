@@ -144,7 +144,12 @@
                   'on_change': 'reloadCategory2(),this.form.submit()',
                }) %}
                {% set cat_params = right_field_options|merge({
+
                   
+               }) %}
+                 {% set cat_params2 = right_field_options|merge({
+               
+                  'on_change': 'this.form.submit()',
                }) %}
                {% set condition = {
                   'is_helpdeskvisible': 1
@@ -198,7 +203,7 @@
                         'itilcategories_id',
                         params['itilcategories_id'],
                         _n('Category', 'Categories', 1),
-                        cat_params|merge({
+                        cat_params2|merge({
                             'condition': condition,
                             'required': true,
                             'tambahan': 'child',
@@ -314,7 +319,8 @@
 
             {% if params['type'] == constant('Ticket::DEMAND_TYPE') %}
                     {% set download_button %}
-                        <a class="btn btn-primary" id = "formLink" href="https://laci.bps.go.id/s/553ErqvWBVUUr6K" target="_blank">
+                        <a style="display:none;" class="btn btn-primary" 
+                        id = "formLink" href="https://laci.bps.go.id/s/553ErqvWBVUUr6K" target="_blank">
                             <i class="fas fa-download mr-2"></i>&nbsp;
                             {{ __('Download form request') }}
                         </a>
@@ -330,38 +336,12 @@
             <script>
                 let formLink = document.getElementById("formLink");
 
-                let category = $("[name=itilcategories_id]").text();
-                category = category.split(">")[0].trim();
-
-                const numbers = {
-                    "Layanan Koneksi Jaringan": 1,
-                    "Layanan Infrastruktur & Platform Jaringan": 2,
-                    "Layanan Aplikasi Jaringan": 3,
-                    "Layanan Keamanan Jaringan": 4,
-                    "Layanan Crawling Informasi": 5,
-                    "Layanan Monitoring-Dashboard": 6,
-                    "Layanan Aplikasi Data Capture": 7,
-                    "Layanan Aplikasi Sensus-Survei": 8,
-                    "Layanan Data": 9,
-                    "Layanan Konsultasi": 10,
-                    "Layanan Piranti Lunak COTS": 11,
-                    "Layanan Perangkat Keras": 12,
-                    "Layanan Back Office Selindo": 13,
-                    "Layanan Sistem Informasi Manajemen": 14,
-                    "Layanan Meeting Online": 15,
-                    "Layanan WhatsApp Business": 16,
-                    "Layanan Pengelolaan E-Sign": 17,
-                    "Layanan E-Learning BPS": 18,
-                    "Layanan Kaizala": 19,
-                    "Layanan OMS (Ruang Kerja dan Knowledge Management System)": 20,
-                    "Layanan Duplikasi HaloSIS (HIDEN)": 21
-                }
-
-                const number = numbers[category]
-                const path = `/${number}. ${category}`
+                let linkunduhpermintaan = $("#linkunduhpermintaan").val(); 
                 
-                if (category) {
-                    formLink.href="https://laci.bps.go.id/s/553ErqvWBVUUr6K?path=" + path;
+                
+                if (linkunduhpermintaan) {
+                $("#formLink").css("display","")
+                    formLink.href=linkunduhpermintaan;
                 }
             </script>
                  

@@ -295,6 +295,12 @@ function getTreeValueCompleteName($table, $ID, $withcomment = false, $translate 
     return $dbu->getTreeValueCompleteName($table, $ID, $withcomment, $translate, $tooltip, $default);
 }
 
+function getTreeValueCompleteNameChild($table, $ID, $withcomment = false, $translate = true, $tooltip = true, string $default = '&nbsp;')
+{
+    $dbu = new DbUtils();
+    return $dbu->getTreeValueCompleteNameChild($table, $ID, $withcomment, $translate, $tooltip, $default);
+}
+
 
 /**
  * show name category
