@@ -1358,6 +1358,146 @@ final class DbUtils
     }
 
 
+        public function getTreeValueCompleteNameChild($table, $ID, $withcomment = false, $translate = true, $tooltip = true, string $default = '&nbsp;')
+    {
+        global $DB;
+
+        $name    = "";
+        $comment = "";
+
+        $SELECTNAME    = new \QueryExpression("'' AS " . $DB->quoteName('transname'));
+        $SELECTCOMMENT = new \QueryExpression("'' AS " . $DB->quoteName('transcomment'));
+        $JOIN          = [];
+        $JOINS         = [];
+        if ($translate) {
+            if (Session::haveTranslations($this->getItemTypeForTable($table), 'completename')) {
+                $SELECTNAME = 'namet.value AS transname';
+                $JOINS['glpi_dropdowntranslations AS namet'] = [
+                    'ON' => [
+                        'namet'  => 'items_id',
+                        $table   => 'id', [
+                            'AND' => [
+                                'namet.itemtype'  => $this->getItemTypeForTable($table),
+                                'namet.language'  => $_SESSION['glpilanguage'],
+                                'namet.field'     => 'completename'
+                            ]
+                        ]
+                    ]
+                ];
+            }
+            if (Session::haveTranslations($this->getItemTypeForTable($table), 'comment')) {
+                $SELECTCOMMENT = 'namec.value AS transcomment';
+                $JOINS['glpi_dropdowntranslations AS namec'] = [
+                    'ON' => [
+                        'namec'  => 'items_id',
+                        $table   => 'id', [
+                            'AND' => [
+                                'namec.itemtype'  => $this->getItemTypeForTable($table),
+                                'namec.language'  => $_SESSION['glpilanguage'],
+                                'namec.field'     => 'comment'
+                            ]
+                        ]
+                    ]
+                ];
+            }
+
+            if (count($JOINS)) {
+                $JOIN = ['LEFT JOIN' => $JOINS];
+            }
+        }
+
+        $criteria = [
+            'SELECT' => [
+                "$table.*",
+                $SELECTNAME,
+                $SELECTCOMMENT
+            ],
+            'FROM'   => $table,
+            'WHERE'  => ["$table.id" => $ID]
+        ] + $JOIN;
+
+        if ($table == Location::getTable()) {
+            $criteria['SELECT'] = array_merge(
+                $criteria['SELECT'],
+                [
+                    "$table.address",
+                    "$table.town",
+                    "$table.country"
+                ]
+            );
+        }
+
+        $iterator = $DB->request($criteria);
+        $result = $iterator->current();
+
+        if (count($iterator) == 1) {
+            $transname = $result['name'];
+            if ($translate && !empty($transname)) {
+                $name = $transname;
+            } else {
+                $name = $result['name'];
+            }
+
+            $name = CommonTreeDropdown::sanitizeSeparatorInCompletename($name);
+
+            if ($tooltip) {
+                $comment  = sprintf(
+                    __('%1$s: %2$s') . "<br>",
+                    "<span class='b'>" . __('Complete name') . "</span>",
+                    $name
+                );
+                if ($table == Location::getTable()) {
+                     $acomment = '';
+                     $address = $result['address'];
+                     $town    = $result['town'];
+                     $country = $result['country'];
+                    if (!empty($address)) {
+                        $acomment .= $address;
+                    }
+                    if (
+                        !empty($address) &&
+                        (!empty($town) || !empty($country))
+                    ) {
+                        $acomment .= '<br/>';
+                    }
+                    if (!empty($town)) {
+                        $acomment .= $town;
+                    }
+                    if (!empty($country)) {
+                        if (!empty($town)) {
+                            $acomment .= ' - ';
+                        }
+                        $acomment .= $country;
+                    }
+                    if (trim($acomment != '')) {
+                        $comment .= "<span class='b'>&nbsp;" . __('Address:') . "</span> " . $acomment . "<br/>";
+                    }
+                }
+                $comment .= "<span class='b'>&nbsp;" . __('Comments') . "&nbsp;</span>";
+            }
+            $transcomment = $result['transcomment'];
+            if ($translate && !empty($transcomment)) {
+                $comment .= nl2br($transcomment);
+            } else if (!empty($result['comment'])) {
+                $comment .= nl2br($result['comment']);
+            }
+        }
+
+        if (empty($name)) {
+            $name = $default;
+        }
+
+        if ($withcomment) {
+            return [
+                'name'      => $name,
+                'comment'   => $comment,
+                'linkunduhpermintaan' => $result['linkunduhpermintaan']
+            ];
+        }
+        return $name;
+    }
+
+
     /**
      * show name category
      * DO NOT DELETE THIS FUNCTION : USED IN THE UPDATE
