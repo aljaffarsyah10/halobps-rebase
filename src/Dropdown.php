@@ -208,7 +208,6 @@ class Dropdown
                     // Specific case, value added by the "toadd" param
                     $names[] = $params['toadd'][$value];
                 } else {
-
                     $names[] = self::getDropdownName($table, $value);
                 }
             }
