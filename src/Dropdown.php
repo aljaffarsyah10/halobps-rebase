@@ -115,6 +115,7 @@ class Dropdown
         } else {
             $unitkerjakategori = '';
             $tambahan = '';
+            $linkunduhpermintaan = '';
         }
 
 
@@ -187,11 +188,19 @@ class Dropdown
             !$params['multiple']
             && ($params['value'] > 0 || ($itemtype == "Entity" && $params['value'] >= 0))
         ) {
-            $tmpname = self::getDropdownName($table, $params['value'], 1);
-
-            if ($tmpname["name"] != "&nbsp;") {
-                $name    = $tmpname["name"];
-                $comment = $tmpname["comment"];
+            if ($tambahan == 'child') {
+                $tmpname = self::getDropdownNameChild($table, $params['value'], 1);
+                if ($tmpname["name"] != "&nbsp;") {
+                    $name    = $tmpname["name"];
+                    $comment = $tmpname["comment"];
+                    $linkunduhpermintaan = $tmpname["linkunduhpermintaan"];
+                }
+            } else {
+                $tmpname = self::getDropdownName($table, $params['value'], 1);
+                if ($tmpname["name"] != "&nbsp;") {
+                    $name    = $tmpname["name"];
+                    $comment = $tmpname["comment"];
+                }
             }
         } else if ($params['multiple']) {
             foreach ($params['values'] as $value) {
@@ -199,6 +208,7 @@ class Dropdown
                     // Specific case, value added by the "toadd" param
                     $names[] = $params['toadd'][$value];
                 } else {
+
                     $names[] = self::getDropdownName($table, $value);
                 }
             }
@@ -279,6 +289,9 @@ class Dropdown
         } else {
             $p['value'] = $params['value'];
             $p['valuename'] = $name;
+            if ($tambahan == 'child') {
+                $p['linkunduhpermintaan'] = $linkunduhpermintaan;
+            }
         }
 
         if ($params['hide_if_no_elements']) {
@@ -514,6 +527,22 @@ class Dropdown
      *
      * @return string the value of the dropdown
      **/
+    public static function getDropdownNameChild($table, $id, $withcomment = 0, $translate = true, $tooltip = true, string $default = '&nbsp;')
+    {
+        global $DB;
+
+        $item = getItemForItemtype(getItemTypeForTable($table));
+
+        if (!is_object($item)) {
+            return $default;
+        }
+
+        if ($item instanceof CommonTreeDropdown) {
+            return getTreeValueCompleteNameChild($table, $id, $withcomment, $translate, $tooltip, $default);
+        }
+        return null;
+    }
+
     public static function getDropdownName($table, $id, $withcomment = 0, $translate = true, $tooltip = true, string $default = '&nbsp;')
     {
         /** @var \DBmysql $DB */
@@ -3122,7 +3151,7 @@ JAVASCRIPT;
                             }
                             $title = sprintf(__('%1$s - %2$s'), $title, $addcomment);
                         }
-
+                        $linkunduhpermintaan = '';
                         if ($data['level'] > 1 & $post['tambahan'] == 'incident') {
                         } else {
                             if ($post['tambahan'] == 'child') {
@@ -3134,13 +3163,17 @@ JAVASCRIPT;
                                 else if (array_key_exists($post['unitkerjakategori'], $ancst) == false)
                                     continue;
                                 $selection_text = $outputval;
+
+                                $linkunduhpermintaan = $data['linkunduhpermintaan'];
                             }
+
                             $datastoadd[] = [
                                 'id' => $ID,
                                 'text' => $outputval,
                                 'level' => (int)$level,
                                 'title' => $title,
                                 'selection_text' => $selection_text,
+                                'linkunduhpermintaan' => $linkunduhpermintaan
 
                             ];
                         }
