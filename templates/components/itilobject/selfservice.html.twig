@@ -120,6 +120,7 @@
             {% else %}
                 <input type="hidden" name="_users_id_requester" value="{{ session('glpiID') }}">
             {% endif %}
+             <input type="hidden" name="_users_id_requester" value="{{ session('glpiID') }}">
         </div>
         <div class="card-body row mx-0">
             <div class="offset-md-1 col-md-8 col-xxl-6">
@@ -129,7 +130,7 @@
                      'value': params['type'],
                      'width': '100%',
                      'display': false,
-                     'on_change': 'this.form.submit()',
+                     'on_change': 'reloadCategory3(),this.form.submit()',
                   }|merge(right_field_options)),
                   _n('Type', 'Types', 1),
                   right_field_options
@@ -139,6 +140,9 @@
                   'on_change': 'this.form.submit()',
                })
                 #}
+                 {% set onchangetype = right_field_options|merge({
+                  'on_change': 'reloadCategory3(),this.form.submit()',
+               }) %}
 
                 {% set cat_params1 = right_field_options|merge({
                   'on_change': 'reloadCategory2(),this.form.submit()',
@@ -374,6 +378,11 @@ var reloadCategory = function() {
 
      var  reloadCategory2= function() {
      $('[name=itilcategories_id]').val(0);
+
+    }
+      var  reloadCategory3= function() {
+     $('[name=itilcategories_id]').val(0);
+     $('[name=itilcategories_idx]').val(0);
 
     }
 $(function () {

@@ -7,7 +7,7 @@
  *
  * http://glpi-project.org
  *
- * @copyright 2015-2022 Teclib' and contributors.
+ * @copyright 2015-2023 Teclib' and contributors.
  * @copyright 2003-2014 by the INDEPNET Development Team.
  * @licence   https://www.gnu.org/licenses/gpl-3.0.html
  *
@@ -66,19 +66,6 @@ if (isset($_POST['_actors']) && is_string($_POST['_actors'])) {
     }
 }
 if (isset($_POST['add'])) {
-
-    /** Add category field validation */
-    if (isset($_POST['type']) && $_POST['type'] == Ticket::DEMAND_TYPE) {
-        if (isset($_POST['itilcategories_id']) && $_POST['itilcategories_id'] == 0) {
-            Session::addMessageAfterRedirect(sprintf(
-                __('Mandatory fields are not filled. Please correct: %s'),
-                __('Category')
-            ), false, ERROR);
-            Html::redirect($CFG_GLPI["root_doc"] . "/front/helpdesk.public.php?create_ticket=1");
-        }
-    }
-
-
     if (!$CFG_GLPI["use_anonymous_helpdesk"]) {
         $track->check(-1, CREATE, $_POST);
     } else {
@@ -87,11 +74,11 @@ if (isset($_POST['add'])) {
     $_POST['check_delegatee'] = true;
     if (isset($_UPOST['_actors'])) {
         $_POST['_actors'] = json_decode($_UPOST['_actors'], true);
-        // with self-service, we only have observers
+       // with self-service, we only have observers
         unset($_POST['_actors']['requester'], $_POST['_actors']['assign']);
     }
     if ($track->add($_POST)) {
-        if ($_SESSION['glpibackcreated']) {
+        if ($_SESSION['glpibackcreated'] && Ticket::canView()) {
             Html::redirect($track->getLinkURL());
         }
         if (isset($_POST["_type"]) && ($_POST["_type"] == "Helpdesk")) {
@@ -100,7 +87,7 @@ if (isset($_POST['add'])) {
             Html::displayBackLink();
             echo "</div>";
         } else {
-            // echo "<div class='center b spaced'>";
+          // echo "<div class='center b spaced'>";
             // echo "<img src='" . $CFG_GLPI["root_doc"] . "/pics/ok.png' alt='" . __s('OK') . "'>";
             Session::addMessageAfterRedirect(__('Thank you for using our automatic helpdesk system.'));
             // Html::displayMessageAfterRedirect(); 
@@ -108,7 +95,11 @@ if (isset($_POST['add'])) {
             // echo "</div>";
         }
     } else {
-        Html::back();
+        if (isset($_POST["_type"]) && ($_POST["_type"] == "Helpdesk")) {
+            Html::redirect($CFG_GLPI["root_doc"] . "/front/helpdesk.php");
+        } else {
+            Html::redirect($CFG_GLPI["root_doc"] . "/front/helpdesk.public.php?create_ticket=1");
+        }
     }
     Html::nullFooter();
 } else { // reload display form
