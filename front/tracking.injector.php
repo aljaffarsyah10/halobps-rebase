@@ -74,19 +74,6 @@ if (isset($_POST['_actors']) && is_string($_POST['_actors'])) {
     }
 }
 if (isset($_POST['add'])) {
-
-    /** Add category field validation */
-    if (isset($_POST['type']) && $_POST['type'] == Ticket::DEMAND_TYPE) {
-        if (isset($_POST['itilcategories_id']) && $_POST['itilcategories_id'] == 0) {
-            Session::addMessageAfterRedirect(sprintf(
-                __('Mandatory fields are not filled. Please correct: %s'),
-                __('Category')
-            ), false, ERROR);
-            Html::redirect($CFG_GLPI["root_doc"] . "/front/helpdesk.public.php?create_ticket=1");
-        }
-    }
-
-
     if (!$CFG_GLPI["use_anonymous_helpdesk"]) {
         $track->check(-1, CREATE, $_POST);
     } else {
