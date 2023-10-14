@@ -120,7 +120,9 @@
             {% else %}
                 <input type="hidden" name="_users_id_requester" value="{{ session('glpiID') }}">
             {% endif %}
-             <input type="hidden" name="_users_id_requester" value="{{ session('glpiID') }}">
+            {# delegate #}
+                <input type="hidden" name="_users_id_requester" value="{{ session('glpiID') }}">
+
         </div>
         <div class="card-body row mx-0">
             <div class="offset-md-1 col-md-8 col-xxl-6">
