@@ -273,7 +273,7 @@ class __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a79
             // line 205
             yield CoreExtension::callMacro($macros["fields"], "macro_dropdownField", ["ITILCategory", "itilcategories_id", (($__internal_compile_8 =             // line 208
 ($context["params"] ?? null)) && is_array($__internal_compile_8) || $__internal_compile_8 instanceof ArrayAccess ? ($__internal_compile_8["itilcategories_id"] ?? null) : null), _n("Category", "Categories", 1), Twig\Extension\CoreExtension::merge(            // line 210
-($context["cat_params2"] ?? null), ["condition" =>             // line 211
+($context["cat_params"] ?? null), ["condition" =>             // line 211
 ($context["condition"] ?? null), "required" => true, "tambahan" => "child", "unitkerjakategori" => (($__internal_compile_9 =             // line 214
 ($context["params"] ?? null)) && is_array($__internal_compile_9) || $__internal_compile_9 instanceof ArrayAccess ? ($__internal_compile_9["itilcategories_idx"] ?? null) : null)])], 205, $context, $this->getSourceContext());
             // line 216
@@ -371,15 +371,7 @@ class __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a79
         // line 339
         yield "            
             <script>
-                let formLink = document.getElementById(\"formLink\");
-
-                let linkunduhpermintaan = \$(\"#linkunduhpermintaan\").val(); 
-                
-                
-                if (linkunduhpermintaan) {
-                \$(\"#formLink\").css(\"display\",\"\")
-                    formLink.href=linkunduhpermintaan;
-                }
+           
             </script>
                  
           
@@ -388,19 +380,19 @@ class __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a79
         </div>
 
       ";
-        // line 357
+        // line 349
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Glpi\Application\View\Extension\PluginExtension']->callPluginHook(Twig\Extension\CoreExtension::constant("Glpi\\Plugin\\Hooks::POST_ITEM_FORM"), ["item" => ($context["item"] ?? null), "options" => ($context["params"] ?? null)]), "html", null, true);
         yield "
 
         <div class=\"card-footer text-center\">
             <input type=\"hidden\" name=\"entities_id\" value=\"";
-        // line 360
+        // line 352
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["entities_id"] ?? null), "html", null, true);
         yield "\" />
             <button type=\"submit\" class=\"btn btn-primary\" name=\"add\">
                 <i class=\"fas fa-plus\"></i>
                 <span>";
-        // line 363
+        // line 355
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(__("Submit message"), "html", null, true);
         yield "</span>
             </button>
@@ -408,13 +400,14 @@ class __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a79
     </div>
 
    ";
-        // line 368
+        // line 360
         yield Twig\Extension\CoreExtension::include($this->env, $context, "components/itilobject/mainform_close.html.twig");
         yield "
 </div>
 
 <script type=\"text/javascript\">
-
+var itilcategories_id = \$('[name=itilcategories_id]').val();
+     \$('[name=itilcategories_idx]').val(itilcategories_id);
 var reloadCategory = function() {
     var itilcategories_id = \$('[name=itilcategories_id]').val();
      \$('[name=itilcategories_idx]').val(itilcategories_id);
@@ -432,46 +425,46 @@ var reloadCategory = function() {
     }
 \$(function () {
     \$('#btn-collapse-items";
-        // line 389
+        // line 382
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["rand"] ?? null), "html", null, true);
         yield "').on('click', function() {
         \$(this).hide();
     });
 
     \$('#dropdown_nodelegate";
-        // line 393
+        // line 386
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["rand"] ?? null), "html", null, true);
         yield "').on('change', function() {
         var is_for_me = (\$(this).val() == '1');
         \$('#user-info";
-        // line 395
+        // line 388
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["rand"] ?? null), "html", null, true);
         yield "-block').toggleClass('d-none', !is_for_me);
         \$('#delegate_other";
-        // line 396
+        // line 389
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["rand"] ?? null), "html", null, true);
         yield " .card-body')
             .html(\"\")
             .load('";
-        // line 398
+        // line 391
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Glpi\Application\View\Extension\RoutingExtension']->path("ajax/dropdownDelegationUsers.php"), "html", null, true);
         yield "', {
                 'right': \"delegate\",
                 'nodelegate': (is_for_me ? 1 : 0),
                 '_users_id_requester': ";
-        // line 401
+        // line 394
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((($__internal_compile_17 = ($context["params"] ?? null)) && is_array($__internal_compile_17) || $__internal_compile_17 instanceof ArrayAccess ? ($__internal_compile_17["_users_id_requester"] ?? null) : null), "html", null, true);
         yield ",
                 '_users_id_requester_notif': ";
-        // line 402
+        // line 395
         yield json_encode((($__internal_compile_18 = ($context["params"] ?? null)) && is_array($__internal_compile_18) || $__internal_compile_18 instanceof ArrayAccess ? ($__internal_compile_18["_users_id_requester_notif"] ?? null) : null));
         yield ",
                 'use_notification': ";
-        // line 403
+        // line 396
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((($__internal_compile_19 = (($__internal_compile_20 = ($context["params"] ?? null)) && is_array($__internal_compile_20) || $__internal_compile_20 instanceof ArrayAccess ? ($__internal_compile_20["_users_id_requester_notif"] ?? null) : null)) && is_array($__internal_compile_19) || $__internal_compile_19 instanceof ArrayAccess ? ($__internal_compile_19["use_notification"] ?? null) : null), "html", null, true);
         yield ",
                 'entity_restrict':  ";
-        // line 404
+        // line 397
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Glpi\Application\View\Extension\SessionExtension']->session("glpiactive_entity"), "html", null, true);
         yield "
             });
@@ -504,7 +497,7 @@ var reloadCategory = function() {
      */
     public function getDebugInfo()
     {
-        return array (  475 => 404,  471 => 403,  467 => 402,  463 => 401,  457 => 398,  452 => 396,  448 => 395,  443 => 393,  436 => 389,  412 => 368,  404 => 363,  398 => 360,  392 => 357,  372 => 339,  368 => 337,  366 => 336,  365 => 334,  363 => 332,  356 => 329,  351 => 326,  348 => 325,  346 => 324,  343 => 323,  339 => 321,  337 => 317,  336 => 315,  334 => 313,  330 => 311,  328 => 307,  327 => 305,  325 => 303,  322 => 302,  317 => 298,  315 => 295,  314 => 293,  313 => 291,  309 => 289,  307 => 286,  306 => 284,  305 => 281,  302 => 280,  299 => 255,  297 => 232,  294 => 230,  290 => 228,  288 => 227,  287 => 224,  286 => 221,  285 => 220,  284 => 218,  280 => 216,  278 => 214,  277 => 211,  276 => 210,  275 => 208,  274 => 205,  270 => 203,  268 => 198,  267 => 197,  266 => 195,  265 => 192,  261 => 190,  259 => 189,  254 => 186,  246 => 180,  244 => 175,  243 => 174,  242 => 172,  241 => 169,  238 => 168,  236 => 167,  233 => 166,  230 => 165,  227 => 164,  224 => 163,  221 => 162,  218 => 161,  215 => 158,  212 => 154,  209 => 150,  207 => 147,  204 => 146,  201 => 143,  198 => 137,  196 => 136,  195 => 134,  194 => 130,  193 => 129,  192 => 127,  184 => 123,  178 => 121,  171 => 116,  169 => 115,  168 => 113,  166 => 111,  158 => 106,  156 => 104,  154 => 103,  151 => 102,  148 => 101,  145 => 100,  143 => 99,  138 => 97,  135 => 96,  133 => 95,  126 => 94,  123 => 84,  116 => 80,  114 => 79,  113 => 77,  107 => 75,  105 => 74,  100 => 71,  98 => 70,  90 => 65,  82 => 60,  77 => 58,  74 => 57,  64 => 54,  61 => 53,  59 => 52,  54 => 49,  52 => 44,  50 => 42,  49 => 41,  48 => 37,  46 => 36,  43 => 35,  41 => 34,  38 => 33,);
+        return array (  468 => 397,  464 => 396,  460 => 395,  456 => 394,  450 => 391,  445 => 389,  441 => 388,  436 => 386,  429 => 382,  404 => 360,  396 => 355,  390 => 352,  384 => 349,  372 => 339,  368 => 337,  366 => 336,  365 => 334,  363 => 332,  356 => 329,  351 => 326,  348 => 325,  346 => 324,  343 => 323,  339 => 321,  337 => 317,  336 => 315,  334 => 313,  330 => 311,  328 => 307,  327 => 305,  325 => 303,  322 => 302,  317 => 298,  315 => 295,  314 => 293,  313 => 291,  309 => 289,  307 => 286,  306 => 284,  305 => 281,  302 => 280,  299 => 255,  297 => 232,  294 => 230,  290 => 228,  288 => 227,  287 => 224,  286 => 221,  285 => 220,  284 => 218,  280 => 216,  278 => 214,  277 => 211,  276 => 210,  275 => 208,  274 => 205,  270 => 203,  268 => 198,  267 => 197,  266 => 195,  265 => 192,  261 => 190,  259 => 189,  254 => 186,  246 => 180,  244 => 175,  243 => 174,  242 => 172,  241 => 169,  238 => 168,  236 => 167,  233 => 166,  230 => 165,  227 => 164,  224 => 163,  221 => 162,  218 => 161,  215 => 158,  212 => 154,  209 => 150,  207 => 147,  204 => 146,  201 => 143,  198 => 137,  196 => 136,  195 => 134,  194 => 130,  193 => 129,  192 => 127,  184 => 123,  178 => 121,  171 => 116,  169 => 115,  168 => 113,  166 => 111,  158 => 106,  156 => 104,  154 => 103,  151 => 102,  148 => 101,  145 => 100,  143 => 99,  138 => 97,  135 => 96,  133 => 95,  126 => 94,  123 => 84,  116 => 80,  114 => 79,  113 => 77,  107 => 75,  105 => 74,  100 => 71,  98 => 70,  90 => 65,  82 => 60,  77 => 58,  74 => 57,  64 => 54,  61 => 53,  59 => 52,  54 => 49,  52 => 44,  50 => 42,  49 => 41,  48 => 37,  46 => 36,  43 => 35,  41 => 34,  38 => 33,);
     }
 
     public function getSourceContext()
