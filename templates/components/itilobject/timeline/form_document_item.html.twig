@@ -102,7 +102,7 @@
                 <input type="hidden" name="_glpi_csrf_token" value="{{ csrf_token() }}" />
                 {{ call_plugin_hook('pre_item_form', {"item": subitem, 'options': params}) }}
 
-                {{ fields.dropdownField(
+                {# {{ fields.dropdownField(
                     'DocumentCategory',
                     'documentcategories_id',
                     null,
@@ -113,7 +113,7 @@
                         'full_width': true,
                         'is_horizontal': false
                     }
-                ) }}
+                ) }} #}
 
                 {% set max_size %}
                     <div class="alert alert-info">
