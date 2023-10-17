@@ -3042,10 +3042,11 @@ class Dropdown
                         }
 
                         $title = CommonTreeDropdown::sanitizeSeparatorInCompletename($title);
-if(isset($post['tambahan'])==false){
+
+                        $selection_text = $title;
+                        if(isset($post['tambahan'])==false){
 $post['tambahan']='';
                         }
-                        $selection_text = $title;
 
                         if (isset($data["comment"])) {
                             if (isset($data['transcomment']) && !empty($data['transcomment'])) {

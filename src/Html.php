@@ -1581,6 +1581,7 @@ HTML;
                 }
                 // Define default link :
                 if (!isset($menu[$category]['default']) && isset($menu[$category]['content']) && count($menu[$category]['content'])) {
+                    //print_r($menu[$category]['content']);
                     foreach ($menu[$category]['content'] as $val) {
                         if (isset($val['page'])) {
                             $menu[$category]['default'] = $val['page'];
@@ -1589,7 +1590,7 @@ HTML;
                     }
                 }
             }
-
+$menu['helpdesk']['content']['ticket']['page']=$menu['helpdesk']['content']['ticket']['page'].'?criteria%5B0%5D%5Blink%5D=AND&criteria%5B0%5D%5Bfield%5D=112&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=mygroups&itemtype=Ticket&start=0&sort%5B%5D=19&order%5B%5D=DESC';
             $allassets = [
                 'Computer',
                 'Monitor',
@@ -5018,9 +5019,9 @@ JAVASCRIPT
                 stripslashes($on_change) . ";";
             $js .="});";
         }
-           if($tambahan=='child')
-    if($params['tipetiket'] != '1'){
-     
+    
+        if($tambahan=='child')
+        if($params['tipetiket'] != '1'){
             $js .= "let formLink = document.getElementById('formLink');
             ";
             $js .= "if('".$linkunduhpermintaan."'.length > 6){";
@@ -5039,7 +5040,6 @@ JAVASCRIPT
             $js .=  "$('#formLink').css('display','none');}";
              $js .= "}";
             $js .="});";
-    }
         }
          // $js .= " $('#$field_id').on('change', function(e) {" .
          //        stripslashes($on_change) . "; alert(JSON.stringify($(this).select2('data')[0].linkunduhpermintaan));});";
