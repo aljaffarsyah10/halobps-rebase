@@ -19023,6 +19023,9 @@ msgstr "Teknisi yang ditugaskan"
 msgid "Technician group"
 msgstr "Grup teknisi"
 
+msgid "Technician groups"
+msgstr "Grup teknisi2"
+
 #: src/Appliance.php:181 src/DomainRecord.php:121 src/DomainRecord.php:454 src/CommonITILTask.php:935
 #: src/Domain_Item.php:525 src/DatabaseInstance.php:425 src/Domain.php:122 src/Domain.php:166
 msgid "Technician in charge"

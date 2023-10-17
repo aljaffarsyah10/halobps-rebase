@@ -222,10 +222,18 @@ class Search
         $isRoleUser  = $_SESSION['glpiactiveprofile']['id'] == 1;
 
         if (!$isRoleUser) {
+        $hidden_columns = ['Technician groups'];
+        $hidden_columns = array_map(function ($col) {
+            return __($col);
+        }, $hidden_columns);
+        $data['cols'] = array_filter($data['cols'], function ($col) use ($hidden_columns) {
+            return !in_array($col['name'], $hidden_columns);
+        });
+
             return $data;
         }
 
-        $hidden_columns = ['Technician', 'Technician group'];
+        $hidden_columns = ['Technician', 'Technician group','Technician groups'];
         $hidden_columns = array_map(function ($col) {
             return __($col);
         }, $hidden_columns);
