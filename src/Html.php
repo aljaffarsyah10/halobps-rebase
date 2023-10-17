@@ -1383,7 +1383,7 @@ HTML;
                 ],
                 'icon'  => 'ti ti-wallet'
             ],
-              'knowledge' => [
+            'knowledge' => [
                 'title'   => __('Knowledge base'),
                 'default' => '/front/knowbaseitem.php',
                 'icon'    => 'ti ti-lifebuoy',
@@ -1392,7 +1392,8 @@ HTML;
                 'title' => __('Tools'),
                 'types' => [
                     // /*'Project', 'Reminder', 'RSSFeed',*/ 'KnowbaseItem',
-                    /*'ReservationItem',*/ 'Report', 'MigrationCleaner',
+                    /*'ReservationItem',*/
+                    'Report', 'MigrationCleaner',
                     'SavedSearch', 'Impact'
                 ],
                 'icon' => 'ti ti-briefcase'
@@ -1508,6 +1509,7 @@ HTML;
                 }
                 // Define default link :
                 if (!isset($menu[$category]['default']) && isset($menu[$category]['content']) && count($menu[$category]['content'])) {
+                    //print_r($menu[$category]['content']);
                     foreach ($menu[$category]['content'] as $val) {
                         if (isset($val['page'])) {
                             $menu[$category]['default'] = $val['page'];
@@ -1516,7 +1518,7 @@ HTML;
                     }
                 }
             }
-
+            $menu['helpdesk']['content']['ticket']['page'] = $menu['helpdesk']['content']['ticket']['page'] . '?criteria%5B0%5D%5Blink%5D=AND&criteria%5B0%5D%5Bfield%5D=112&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=mygroups&itemtype=Ticket&start=0&sort%5B%5D=19&order%5B%5D=DESC';
             $allassets = [
                 'Computer',
                 'Monitor',
@@ -4847,19 +4849,18 @@ JAVASCRIPT
      *
      * @return string
      **/
-    public static function jsAjaxDropdown($name, $field_id, $url, $params = [], $tambahan='')
+    public static function jsAjaxDropdown($name, $field_id, $url, $params = [], $tambahan = '')
     {
         /** @var array $CFG_GLPI */
         global $CFG_GLPI;
 
-        if($tambahan=='incident' || $tambahan=='child'){
-            $page_limit=10000;
-        }
-        else{
-            $page_limit=$CFG_GLPI['dropdown_max'] ;
+        if ($tambahan == 'incident' || $tambahan == 'child') {
+            $page_limit = 10000;
+        } else {
+            $page_limit = $CFG_GLPI['dropdown_max'];
         }
 
-  $default_options = [
+        $default_options = [
             'value'               => 0,
             'valuename'           => Dropdown::EMPTY_VALUE,
             'multiple'            => false,
@@ -4871,42 +4872,38 @@ JAVASCRIPT
             'display_emptychoice' => false,
             'specific_tags'       => [],
             'parent_id_field'     => null,
-         
+
         ];
 
 
-       if(isset($params['reloadkategori'])){
-        if($params['reloadkategori']=='benar'){
-    $default_options = [
-            'value'               => 0,
-            'valuename'           => Dropdown::EMPTY_VALUE,
-            'multiple'            => false,
-            'values'              => [],
-            'valuesnames'         => [],
-            'on_change'           => '',
-            'width'               => '80%',
-            'placeholder'         => '',
-            'display_emptychoice' => false,
-            'specific_tags'       => [],
-            'parent_id_field'     => null,
-            'unitkerjakategori'     => $params['unitkerjakategori'],
-            'tambahan'     => $params['tambahan'],
-        ];
-
+        if (isset($params['reloadkategori'])) {
+            if ($params['reloadkategori'] == 'benar') {
+                $default_options = [
+                    'value'               => 0,
+                    'valuename'           => Dropdown::EMPTY_VALUE,
+                    'multiple'            => false,
+                    'values'              => [],
+                    'valuesnames'         => [],
+                    'on_change'           => '',
+                    'width'               => '80%',
+                    'placeholder'         => '',
+                    'display_emptychoice' => false,
+                    'specific_tags'       => [],
+                    'parent_id_field'     => null,
+                    'unitkerjakategori'     => $params['unitkerjakategori'],
+                    'tambahan'     => $params['tambahan'],
+                ];
+            }
         }
 
-       }
-      
         $params = array_merge($default_options, $params);
 
         $value = $params['value'];
         $width = $params["width"];
         $valuename = $params['valuename'];
-        if($tambahan=='child')
-        {
+        if ($tambahan == 'child') {
             $linkunduhpermintaan = $params['linkunduhpermintaan'];
-            echo"<input type='hidden' id='linkunduhpermintaan' value='".$linkunduhpermintaan."'>";
-
+            echo "<input type='hidden' id='linkunduhpermintaan' value='" . $linkunduhpermintaan . "'>";
         }
         $on_change = $params["on_change"];
         $placeholder = $params['placeholder'] ?? '';
@@ -5046,6 +5043,30 @@ JAVASCRIPT
             $js .= " $('#$field_id').on('change', function(e) {" .
                 stripslashes($on_change) . "});";
         }
+
+        if ($tambahan == 'child')
+            if ($params['tipetiket'] != '1') {
+                $js .= "let formLink = document.getElementById('formLink');
+            ";
+                $js .= "if('" . $linkunduhpermintaan . "'.length > 6){";
+                $js .= "$('#formLink').css('display','');";
+                $js .= "formLink.href='" . $linkunduhpermintaan . "';}";
+                $js .= "$('#$field_id').on('change', function(e) {";
+                $js .= "if($(this).select2('data')[0].selected){";
+                $js .= "if('" . $linkunduhpermintaan . "'.length > 6){";
+                $js .= "$('#formLink').css('display','');";
+                $js .= "formLink.href='" . $linkunduhpermintaan . "';} else{";
+                $js .=  "$('#formLink').css('display','');}";
+                $js .= "} else{";
+                $js .= "if(($(this).select2('data')[0].linkunduhpermintaan).length > 6){";
+                $js .= "$('#formLink').css('display','');";
+                $js .= "formLink.href=$(this).select2('data')[0].linkunduhpermintaan; }else{";
+                $js .=  "$('#formLink').css('display','none');}";
+                $js .= "}";
+                $js .= "});";
+            }
+        // $js .= " $('#$field_id').on('change', function(e) {" .
+        //        stripslashes($on_change) . "; alert(JSON.stringify($(this).select2('data')[0].linkunduhpermintaan));});";
 
         $js .= " $('label[for=$field_id]').on('click', function(){ $('#$field_id').select2('open'); });";
         $js .= " $('#$field_id').on('select2:open', function(e){";
@@ -5253,7 +5274,7 @@ JAVASCRIPT
                     || is_array($selected) && in_array($key, $selected))
                 ) ? ' selected="selected"' : '',
                 Html::entities_deep($value)
-            );  
+            );
         }
         $select .= '</select>';
         return $select;

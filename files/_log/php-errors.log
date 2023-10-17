@@ -29180,3 +29180,53 @@ Compile css/palettes/lightblue.scss  {"user":"2@YOSRAL-34005894"}
   src\Ticket.php:4071                                Glpi\Application\View\TemplateRenderer->display()
   front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
   
+[2024-05-14 10:07:29] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected variable "$js", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\src\Html.php at line 5076
+  Backtrace :
+  inc\includes.php:61                                glpi_autoload()
+  front\helpdesk.public.php:41                       include()
+  
+[2024-05-14 10:07:32] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected variable "$js", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\src\Html.php at line 5076
+  Backtrace :
+  inc\includes.php:61                                glpi_autoload()
+  front\helpdesk.public.php:41                       include()
+  
+[2024-05-14 10:07:33] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected variable "$js", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\src\Html.php at line 5076
+  Backtrace :
+  inc\includes.php:61                                glpi_autoload()
+  front\helpdesk.public.php:41                       include()
+  
+[2024-05-14 10:08:19] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected variable "$js", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\src\Html.php at line 5076
+  Backtrace :
+  inc\includes.php:61                                glpi_autoload()
+  front\helpdesk.public.php:41                       include()
+  
+[2024-05-14 10:08:28] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected variable "$js", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\src\Html.php at line 5076
+  Backtrace :
+  inc\includes.php:61                                glpi_autoload()
+  front\helpdesk.public.php:41                       include()
+  
+[2024-05-14 10:08:31] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected variable "$js", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\src\Html.php at line 5076
+  Backtrace :
+  inc\includes.php:61                                glpi_autoload()
+  front\helpdesk.public.php:41                       include()
+  
+[2024-05-14 10:10:58] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected variable "$js", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\src\Html.php at line 5076
+  Backtrace :
+  inc\includes.php:61                                glpi_autoload()
+  front\helpdesk.public.php:41                       include()
+  
+[2024-05-14 10:11:30] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected variable "$js", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\src\Html.php at line 5076
+  Backtrace :
+  inc\includes.php:61                                glpi_autoload()
+  front\helpdesk.public.php:41                       include()
+  
+[2024-05-14 10:11:33] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected variable "$js", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\src\Html.php at line 5076
+  Backtrace :
+  inc\includes.php:61                                glpi_autoload()
+  front\central.php:43                               include()
+  
+[2024-05-14 10:11:40] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected variable "$js", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\src\Html.php at line 5076
+  Backtrace :
+  inc\includes.php:61                                glpi_autoload()
+  default.php:89                                     include()
+  

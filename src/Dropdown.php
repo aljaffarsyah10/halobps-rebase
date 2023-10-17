@@ -3141,6 +3141,9 @@ JAVASCRIPT;
                         $title = CommonTreeDropdown::sanitizeSeparatorInCompletename($title);
 
                         $selection_text = $title;
+                        if (isset($post['tambahan']) == false) {
+                            $post['tambahan'] = '';
+                        }
 
                         if (isset($data["comment"])) {
                             if (isset($data['transcomment']) && !empty($data['transcomment'])) {
