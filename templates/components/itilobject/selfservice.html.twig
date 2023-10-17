@@ -120,9 +120,7 @@
             {% else %}
                 <input type="hidden" name="_users_id_requester" value="{{ session('glpiID') }}">
             {% endif %}
-            {# delegate #}
-                <input type="hidden" name="_users_id_requester" value="{{ session('glpiID') }}">
-
+             <input type="hidden" name="_users_id_requester" value="{{ session('glpiID') }}">
         </div>
         <div class="card-body row mx-0">
             <div class="offset-md-1 col-md-8 col-xxl-6">
@@ -209,7 +207,7 @@
                         'itilcategories_id',
                         params['itilcategories_id'],
                         _n('Category', 'Categories', 1),
-                        cat_params2|merge({
+                        cat_params|merge({
                             'condition': condition,
                             'required': true,
                             'tambahan': 'child',
@@ -340,15 +338,7 @@
               {% endif %}
             
             <script>
-                let formLink = document.getElementById("formLink");
-
-                let linkunduhpermintaan = $("#linkunduhpermintaan").val(); 
-                
-                
-                if (linkunduhpermintaan) {
-                $("#formLink").css("display","")
-                    formLink.href=linkunduhpermintaan;
-                }
+           
             </script>
                  
           
@@ -371,7 +361,8 @@
 </div>
 
 <script type="text/javascript">
-
+var itilcategories_id = $('[name=itilcategories_id]').val();
+     $('[name=itilcategories_idx]').val(itilcategories_id);
 var reloadCategory = function() {
     var itilcategories_id = $('[name=itilcategories_id]').val();
      $('[name=itilcategories_idx]').val(itilcategories_id);

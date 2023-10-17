@@ -52,9 +52,11 @@ $currentcateg = new ITILCategory();
 $currentcateg->getFromDB($_POST['value']);
 
 if ($_POST["type"]) {
+    $opt['tipetiket'] = $_POST['type'];
     switch ($_POST['type']) {
         case Ticket::INCIDENT_TYPE:
             $condition['is_incident'] = 1;
+
             if ($currentcateg->getField('is_incident') == 1) {
                 $opt['value'] = $_POST['value'];
                 if ($_POST["reloadkategori"]) 

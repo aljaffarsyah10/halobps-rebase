@@ -5015,8 +5015,34 @@ JAVASCRIPT
          ";
         if (!empty($on_change)) {
             $js .= " $('#$field_id').on('change', function(e) {" .
-                stripslashes($on_change) . "});";
+                stripslashes($on_change) . ";";
+            $js .="});";
         }
+           if($tambahan=='child')
+    if($params['tipetiket'] != '1'){
+     
+            $js .= "let formLink = document.getElementById('formLink');
+            ";
+            $js .= "if('".$linkunduhpermintaan."'.length > 6){";
+            $js .= "$('#formLink').css('display','');";
+            $js .= "formLink.href='".$linkunduhpermintaan."';}";
+            $js .="$('#$field_id').on('change', function(e) {";
+            $js .= "if($(this).select2('data')[0].selected){";
+            $js .= "if('".$linkunduhpermintaan."'.length > 6){";
+            $js .= "$('#formLink').css('display','');";
+            $js .= "formLink.href='".$linkunduhpermintaan."';} else{";
+            $js .=  "$('#formLink').css('display','');}";
+            $js .="} else{";
+            $js .= "if(($(this).select2('data')[0].linkunduhpermintaan).length > 6){";
+            $js .= "$('#formLink').css('display','');";
+            $js .="formLink.href=$(this).select2('data')[0].linkunduhpermintaan; }else{";
+            $js .=  "$('#formLink').css('display','none');}";
+             $js .= "}";
+            $js .="});";
+    }
+        }
+         // $js .= " $('#$field_id').on('change', function(e) {" .
+         //        stripslashes($on_change) . "; alert(JSON.stringify($(this).select2('data')[0].linkunduhpermintaan));});";
 
         $js .= " $('label[for=$field_id]').on('click', function(){ $('#$field_id').select2('open'); });";
         $js .= " $('#$field_id').on('select2:open', function(e){";

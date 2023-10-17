@@ -98,8 +98,10 @@ class Dropdown
 
         if(isset($options['reloadkategori'])){ 
             $reloadkategori=$options['reloadkategori'];
+            $tipetiket=$options['tipetiket'];
         }else{
             $reloadkategori='';
+            $tipetiket='';
         }
 
     if(isset($options['tambahan'])){
@@ -254,6 +256,7 @@ class Dropdown
             'tambahan'             => $tambahan,
             'unitkerjakategori'    => $unitkerjakategori,
             'reloadkategori'    => $reloadkategori,
+            'tipetiket'    => $tipetiket,
             'display_emptychoice'  => $params['display_emptychoice'],
             'placeholder'          => $params['placeholder'],
             'displaywith'          => $params['displaywith'],
@@ -3039,7 +3042,9 @@ class Dropdown
                         }
 
                         $title = CommonTreeDropdown::sanitizeSeparatorInCompletename($title);
-
+if(isset($post['tambahan'])==false){
+$post['tambahan']='';
+                        }
                         $selection_text = $title;
 
                         if (isset($data["comment"])) {

@@ -267,7 +267,7 @@
 
             {% if item.getType() == 'Ticket' and item.fields['type'] == constant('Ticket::DEMAND_TYPE') %}
                     {% set download_button %}
-                        <a class="btn btn-primary" id = "formLink" href="https://laci.bps.go.id/s/553ErqvWBVUUr6K" target="_blank">
+                        <a style="display:none;" class="btn btn-primary" id = "formLink" href="https://laci.bps.go.id/s/553ErqvWBVUUr6K" target="_blank">
                             <i class="fas fa-download"></i>
                              &nbsp;{{ __('Download form request') }}
                         </a>
@@ -488,65 +488,9 @@
     </span>
 </div>
 
-<script type="text/javascript">
-   let formLink = document.getElementById("formLink");
-   let id = "category_block_"+{{ rand }}
-   let option = document.getElementById(id).children[0].children[1].childNodes[1].childNodes[1];
-   let judul = option.options[option.selectedIndex].text;
-   let no = 0;
-   if(judul.includes("Layanan Aplikasi Jaringan")){
-       no = 3;
-   }else if(judul.includes("Layanan Keamanan Jaringan")){
-       no = 4;
-   }else if(judul.includes("Layanan Konsultasi")){
-       no = 10;
-   }else if(judul.includes("Layanan Koneksi Jaringan")){
-       no = 1;
-   }else if(judul.includes("Layanan Infrastruktur &amp; Platform Jaringan")){
-       no = 2;
-   }else if(judul.includes("Layanan Crawling Informasi")){
-       no = 5;
-   }else if(judul.includes("Layanan Monitoring-Dashboard")){
-       no = 6;
-   }else if(judul.includes("Layanan Aplikasi Data Capture")){
-       no = 7;
-   }else if(judul.includes("Layanan Aplikasi Sensus-Survei")){
-       no = 8;
-   }else if(judul.includes("Layanan Data")){
-       no = 9;
-   }else if(judul.includes("Layanan Konsultasi")){
-       no = 10;
-   }else if(judul.includes("Layanan Piranti Lunak COTS")){
-       no = 11;
-   }else if(judul.includes("Layanan Perangkat Keras")){
-       no = 12;
-   }else if(judul.includes("Layanan Back Office Selindo")){
-       no = 13;
-   }else if(judul.includes("Layanan Sistem Informasi Manajemen")){
-       no = 14;
-   }else if(judul.includes("Layanan Meeting Online")){
-       no = 15;
-   }else if(judul.includes("Layanan WhatsApp Business")){
-       no = 16;
-   }else if(judul.includes("Layanan Pengelolaan E-Sign")){
-       no = 17;
-   }else if(judul.includes("Layanan Elearning BPS")){
-       no = 18;
-   }else if(judul.includes("Layanan Kaizala")){
-       no = 19;
-   }else if(judul.includes("Layanan OMS (Ruang Kerja dan Knowledge Management System)")){
-       no = 20;
-   }else if(judul.includes("Layanan Duplikasi Halosis (HIDEN)")){
-       no = 21;
-   }
-
-   judul = judul.trim();
-   const serah = judul.split(" > ");
-   judul = serah[0];
-   judul = judul.replace("&amp;","%26");
-   formLink.href="https://laci.bps.go.id/s/553ErqvWBVUUr6K?path=%2F"+no+".%20"+judul;
-
-</script>
+    <script>
+              
+            </script>
 
 <script type="text/javascript">
 $(function() {
@@ -556,7 +500,13 @@ $(function() {
       })
    }
 });
-
+{% if session('glpiactiveprofile')['id'] != 1 %}
+var itilcategories_id = $('[name=itilcategories_id]').val();
+var itilcategories_idx = $('[name=itilcategories_idx]').val();
+if(itilcategories_id==itilcategories_idx){
+   $('[name=itilcategories_id]').val(0);
+}
+{% endif %}
 var reloadCategory = function() {
     var type = $('[name=type]').val();
     var itilcategories_idx = $('[name=itilcategories_idx]').val();
