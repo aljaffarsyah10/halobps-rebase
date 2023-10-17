@@ -1518,7 +1518,7 @@ HTML;
                     }
                 }
             }
-            $menu['helpdesk']['content']['ticket']['page'] = $menu['helpdesk']['content']['ticket']['page'] . '?criteria%5B0%5D%5Blink%5D=AND&criteria%5B0%5D%5Bfield%5D=112&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=mygroups&itemtype=Ticket&start=0&sort%5B%5D=19&order%5B%5D=DESC';
+            $menu['helpdesk']['content']['ticket']['page'] = $menu['helpdesk']['content']['ticket']['page'] . '?criteria%5B0%5D%5Blink%5D=AND&criteria%5B0%5D%5Bfield%5D=222&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=mygroups&itemtype=Ticket&start=0&sort%5B%5D=19&order%5B%5D=DESC';
             $allassets = [
                 'Computer',
                 'Monitor',

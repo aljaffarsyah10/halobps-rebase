@@ -1757,9 +1757,9 @@ abstract class CommonITILObject extends CommonDBTM
                 return false;
             }
         }
-            if (isset($categidx)) {
-             $input['itilcategories_idx']=$categidx;
-        } 
+        if (isset($categidx)) {
+            $input['itilcategories_idx'] = $categidx;
+        }
 
 
         return $input;
@@ -2150,7 +2150,6 @@ abstract class CommonITILObject extends CommonDBTM
 
         // get again object to reload actors
         $this->loadActors();
-
         // Check dates change interval due to the fact that second are not displayed in form
         if (
             (($key = array_search('date', $this->updates)) !== false)
@@ -4603,6 +4602,25 @@ abstract class CommonITILObject extends CommonDBTM
                 ]
             ]
         ];
+        $tab[] = [
+            'id'                 => '222', // Also in Group_Ticket::post_addItem() and Log::getHistoryData()
+            'table'              => 'glpi_groups',
+            'field'              => 'completename',
+            'datatype'           => 'dropdown',
+            'name'               => __('Technician groups'),
+            'forcegroupby'       => true,
+            'massiveaction'      => false,
+            'condition'          => ['is_assign' => 1],
+            'joinparams'         => [
+                'beforejoin'         => [
+                    'table'              => 'glpi_groups_ticketss',
+                    'joinparams'         => [
+                        'jointype'           => 'child',
+                        'condition'          => ['NEWTABLE.type' => CommonITILActor::ASSIGN]
+                    ]
+                ]
+            ]
+        ];
 
         $tab[] = [
             'id'                 => 'notification',
@@ -6324,7 +6342,6 @@ abstract class CommonITILObject extends CommonDBTM
     {
         /** @var \DBmysql $DB */
         global $DB;
-
         $p = [
             'output_type'            => Search::HTML_OUTPUT,
             'row_num'                => 0,
