@@ -81,10 +81,11 @@ class TicketSatisfaction extends CommonDBTM
             return false;
         }
 
-       // you can't change if your answer > 12h
+       //Prevent to be edited if has been answered, no more 12h of edit opportunity
         if (
             !is_null($this->fields['date_answered'])
-            && ((time() - strtotime($this->fields['date_answered'])) > (12 * HOUR_TIMESTAMP))
+            // you can't change if your answer > 12h
+            // && ((time() - strtotime($this->fields['date_answered'])) > (12 * HOUR_TIMESTAMP))
         ) {
             return false;
         }
@@ -121,13 +122,13 @@ class TicketSatisfaction extends CommonDBTM
         } else { // for internal inquest => form
             $this->showFormHeader($options);
 
-           // Set default satisfaction to 3 if not set
+           // Set default satisfaction to 5 if not set
             if (is_null($this->fields["satisfaction"])) {
-                $this->fields["satisfaction"] = 3;
+                $this->fields["satisfaction"] = 5;
             }
             echo "<tr class='tab_bg_2'>";
             echo "<td>" . __('Satisfaction with the resolution of the ticket') . "</td>";
-            echo "<td>";
+            echo "<td style='text-align: center;'>";
             echo "<input type='hidden' name='tickets_id' value='$tid'>";
 
             echo "<select id='satisfaction_data' name='satisfaction'>";
@@ -137,7 +138,7 @@ class TicketSatisfaction extends CommonDBTM
                   ">$i</option>";
             }
             echo "</select>";
-            echo "<div class='rateit' id='stars'></div>";
+            echo "<div class='rateit' data-rateit-mode='font' id='stars'></div>";
             echo  "<script type='text/javascript'>";
             echo "$(function() {";
             echo "$('#stars').rateit({value: " . $this->fields["satisfaction"] . ",
@@ -171,11 +172,17 @@ class TicketSatisfaction extends CommonDBTM
 
     public function prepareInputForUpdate($input)
     {
-        if ($input['satisfaction'] >= 0) {
+        //mandatory, modified
+        if($input['satisfaction'] < 4 && (strlen(trim($input['comment'])) < 10)){
+            Session::addMessageAfterRedirect(
+                $msg='Maafkan pelayanan kami yang kurang optimal 🙏</br></br>Mohon agar Anda memberikan kritik dan atau saran untuk HALOBPS yang lebih baik 😅',
+                $message_type = ERROR             
+            );
+            return false;
+        } else{
             $input["date_answered"] = $_SESSION["glpi_currenttime"];
+            return $input;
         }
-
-        return $input;
     }
 
 
