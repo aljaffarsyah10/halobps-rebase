@@ -40,6 +40,7 @@ nbproject
 package-lock.json
 public/build/
 public/lib/
+!public/lib/jquery.rateit.*
 tests/web/error.log
 inventory-vendors/*.json
 locales/*.mo

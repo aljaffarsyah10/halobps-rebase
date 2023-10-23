@@ -12150,7 +12150,7 @@ msgstr ""
 
 #: src/NotificationTargetTicket.php:818
 msgid "Invitation to fill out the survey"
-msgstr ""
+msgstr "Anda dapat mengisinya melalui tautan berikut:"
 
 #: templates/components/infocom.html.twig src/Infocom.php:1251
 #: src/Infocom.php:1667
@@ -19431,7 +19431,7 @@ msgstr "Survei kepuasan"
 
 #: src/NotificationTargetTicket.php:149
 msgid "Satisfaction survey answer"
-msgstr ""
+msgstr "Penyelesaian Laporan/Aduan"
 
 #: src/Entity.php:1351
 msgid "Satisfaction survey configuration"
