@@ -48,7 +48,7 @@
 
             .rateit .rateit-hover {
                 background: url(jquery.rateit/scripts/star.gif) left -64px;
-                color: rgb(23, 170, 141);
+                color: rgb(239, 197, 41);
             }
 
             .rateit .rateit-hover-rtl {
@@ -57,7 +57,7 @@
 
             .rateit .rateit-selected {
                 background: url(jquery.rateit/scripts/star.gif) left -64px;
-                color: rgb(35, 92, 134);
+                color: rgb(191, 66, 66);
             }
 
             .rateit .rateit-selected-rtl {
@@ -66,7 +66,7 @@
 
             .rateit .rateit-preset {
                 background: url(jquery.rateit/scripts/star.gif) left -96px;
-                color: rgb(64, 176, 201);
+                color: rgb(239, 107, 34);
             }
 
             .rateit .rateit-preset-rtl {
@@ -139,8 +139,8 @@
 
 
 .rateit.rateit-font .rateit-reset:hover, .rateit.rateit-font button.rateit-reset:focus {
-    background: #235c86; /* Old browsers */
-    background: radial-gradient(ellipse at center, #235c86 55%,#42b0c9 77%,#93c1cb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: #e6574b; /* Old browsers */
+    background: radial-gradient(ellipse at center, #e6574b 55%,#f6836b 77%,#f9d3cc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     background-position: 0 0;
 }
 
