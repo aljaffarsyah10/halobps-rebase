@@ -239,7 +239,7 @@ if (isset($_GET['create_ticket'])) {
 
     Html::requireJs('masonry');
     TemplateRenderer::getInstance()->display('pages/self-service/home.html.twig', [
-        'password_alert' => $user->getPasswordExpirationMessage(),
+        'password_alert' => $password_alert,
         'ticket_summary' => $ticket_summary,
         'survey_list'    => $survey_list,
         // 'reminder_list'  => $reminder_list,

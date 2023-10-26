@@ -29230,3 +29230,4 @@ Compile css/palettes/lightblue.scss  {"user":"2@YOSRAL-34005894"}
   inc\includes.php:61                                glpi_autoload()
   default.php:89                                     include()
   
+[2024-05-14 10:19:45] glpiphplog.ALERT:   *** PHP Compile Error (64): Cannot redeclare KnowbaseItem::showRecentPopular() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\src\KnowbaseItem.php at line 2401  
