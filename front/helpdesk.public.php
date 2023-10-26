@@ -210,9 +210,32 @@ if (isset($_GET['create_ticket'])) {
     //     $rss_feed = RSSFeed::showListForCentral(false, false);
     // }
 
-    $kb_popular    = "";
-    $kb_recent     = "";
-    $kb_lastupdate = "";
+    // banner beranda
+    echo "<div class='d-flex mb-3'> <img class='d-flex flex-wrap align-items-center' alt='HaloSIS Quote' src='../pics/layout/global_layout_quote.png'/></div>";
+    //search bar
+    echo "<div style='  background-color:transparent;padding-top:10px;'>";
+    $ki = new KnowbaseItem();
+    $ki->searchForm($_GET);
+    echo "</div>";
+
+    // $kb_popular    = "";
+    // $kb_recent     = "";
+    // $kb_lastupdate = "";
+
+    if (Session::haveRight('knowbase', KnowbaseItem::READFAQ)) {
+        // $kb_popular    = KnowbaseItem::showRecentPopular("popular");
+        // $kb_recent     = KnowbaseItem::showRecentPopular("recent");
+        // $kb_lastupdate = KnowbaseItem::showRecentPopular("lastupdate");
+        // echo "<div class='card mb-4'><div class='card-body'><table class='table mx-auto'><tr class='noHover'><td class='center top'>";
+        // $kb_popular = KnowbaseItem::showRecentPopular("recent");
+        //     echo "</td><td class='center top'>";
+        // $kb_recent = KnowbaseItem::showRecentPopular("lastupdate");
+        //     echo "</td><td class='center top'>";
+        // $kb_lastupdate = KnowbaseItem::showRecentPopular("popular");
+        //     echo "</td></tr>";
+        //     echo "</table></div></div>";
+        $kb_popular    = KnowbaseItem::showMostPopular("popular");
+    };
 
     Html::requireJs('masonry');
     TemplateRenderer::getInstance()->display('pages/self-service/home.html.twig', [
@@ -221,24 +244,10 @@ if (isset($_GET['create_ticket'])) {
         'survey_list'    => $survey_list,
         // 'reminder_list'  => $reminder_list,
         // 'rss_feed'       => $rss_feed,
-        'kb_popular'     => $kb_popular,
-        'kb_recent'      => $kb_recent,
-        'kb_lastupdate'  => $kb_lastupdate,
+        // 'kb_popular'     => $kb_popular,
+        // 'kb_recent'      => $kb_recent,
+        // 'kb_lastupdate'  => $kb_lastupdate,
     ]);
-
-    if (Session::haveRight('knowbase', KnowbaseItem::READFAQ)) {
-        // $kb_popular    = KnowbaseItem::showRecentPopular("popular");
-        // $kb_recent     = KnowbaseItem::showRecentPopular("recent");
-        // $kb_lastupdate = KnowbaseItem::showRecentPopular("lastupdate");
-        echo "<div class='card mb-4'><div class='card-body'><table class='table mx-auto'><tr class='noHover'><td class='center top'>";
-        $kb_popular = KnowbaseItem::showRecentPopular("recent");
-        echo "</td><td class='center top'>";
-        $kb_recent = KnowbaseItem::showRecentPopular("lastupdate");
-        echo "</td><td class='center top'>";
-        $kb_lastupdate = KnowbaseItem::showRecentPopular("popular");
-        echo "</td></tr>";
-        echo "</table></div></div>";
-    };
 }
 
 Html::helpFooter();
