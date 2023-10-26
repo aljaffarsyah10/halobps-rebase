@@ -1215,7 +1215,7 @@ class KnowbaseItem extends CommonDBVisible implements ExtraVisibilityCriteria
         }
 
         echo "<form method='get' action='" . $this->getSearchURL() . "' class='d-flex justify-content-center'>";
-        echo "<input class='form-control me-1' type='text' size='50' name='contains' value=\"" .
+        echo "<input class='form-control me-1' placeholder = 'Cari Pengetahuan...' type='text' size='50' name='contains' value=\"" .
              Html::cleanInputText(stripslashes($params["contains"])) . "\">";
         echo "<input type='submit' value=\"" . _sx('button', 'Search') . "\" class='btn btn-primary'>";
         echo "</table>";
@@ -1950,6 +1950,136 @@ class KnowbaseItem extends CommonDBVisible implements ExtraVisibilityCriteria
      *
      * @return void
      **/
+
+     //diah - show Top Pengetahuan di Beranda
+    public static function showMostPopular(string $type = "", bool $display = true)
+    {
+        global $DB;
+
+        $faq = !Session::haveRight(self::$rightname, READ);
+
+        $criteria = [
+            'SELECT'    => ['glpi_knowbaseitems.*'],
+            'DISTINCT'  => true,
+            'FROM'      => self::getTable(),
+            'WHERE'     => [],
+            'LIMIT'     => 3,
+            'ORDERBY'   => 'view DESC'
+        ];
+            $title   = __('TOP PENGETAHUAN');
+
+       // Force all joins for not published to verify no visibility set
+        $restrict = self::getVisibilityCriteria(true);
+        unset($restrict['WHERE']);
+        unset($restrict['SELECT']);
+        $criteria = array_merge($criteria, $restrict);
+
+        if (Session::getLoginUserID()) {
+            $restrict = self::getVisibilityCriteria();
+            $criteria['WHERE'] = array_merge($criteria['WHERE'], $restrict['WHERE']);
+        } else {
+           // Anonymous access
+            if (Session::isMultiEntitiesMode()) {
+                $criteria['WHERE']['glpi_entities_knowbaseitems.entities_id'] = 0;
+                $criteria['WHERE']['glpi_entities_knowbaseitems.is_recursive'] = 1;
+            }
+        }
+
+       // Only published
+        $criteria['WHERE'][] = [
+            'NOT'  => [
+                'glpi_entities_knowbaseitems.entities_id' => null,
+                'glpi_knowbaseitems_profiles.profiles_id' => null,
+                'glpi_groups_knowbaseitems.groups_id'     => null,
+                'glpi_knowbaseitems_users.users_id'       => null
+            ]
+        ];
+
+       // Add visibility date
+        $criteria['WHERE'][] = [
+            'OR'  => [
+                ['glpi_knowbaseitems.begin_date' => null],
+                ['glpi_knowbaseitems.begin_date' => ['<', new QueryExpression('NOW()')]]
+            ]
+        ];
+        $criteria['WHERE'][] = [
+            'OR'  => [
+                ['glpi_knowbaseitems.end_date'   => null],
+                ['glpi_knowbaseitems.end_date'   => ['>', new QueryExpression('NOW()')]]
+            ]
+        ];
+
+        if ($faq) { // FAQ
+            $criteria['WHERE']['glpi_knowbaseitems.is_faq'] = 1;
+        }
+
+        echo"<style>
+        #wrapper_helpdesk_popfaq{
+            background:#1cbb9b ;
+            height: 100%;
+            padding: 10px 10px 1px;            
+        }
+		#flex-container_helpdesk_popfaq {
+			display: flex;
+			flex-direction:row;
+        }
+        .flex-item_helpdesk_popfaq {
+            flex-basis: 100%;
+            padding:20px;
+            height: 130px;
+            margin: 15px 20px;
+            background: white;
+            font-size: 115%;
+            //color: #f3c015;
+            color: #f3c015;
+            text-align: center;    
+            border-radius:30px; 
+            box-shadow: 3px 6px #888888;    
+            //box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 rgba(0,0,0,0.5);       
+        }
+        .hr_helpdesk_popfaq{
+            padding:5px;
+        }
+	    </style>";
+
+        $iterator = $DB->request($criteria);
+
+        $output = "<hr class='hr_helpdesk_popfaq'>";
+        if (count($iterator)) {
+            $output .= "<h2 style='font-size:25px; text-align:center; margin:20px'><b>" . $title . "</b></h2>";
+            $output .= "<div id='wrapper_helpdesk_popfaq'><div id='flex-container_helpdesk_popfaq'>";
+            foreach ($iterator as $data) {
+                $name = $data['name'];
+
+                if (isset($data['transname']) && !empty($data['transname'])) {
+                    $name = $data['transname'];
+                }
+                
+                $output .= "<div class='flex-item_helpdesk_popfaq'>";
+                if ($data['is_faq']) {
+                    $output .= "<i class='fa fa-fw fa-question-circle faq' style='font-size: 20px;' title='" . __("This item is part of the FAQ") . "'></i>";
+                }
+                $output .= "<p color='white'>". Html::link(Html::resume_text($name, 80), KnowbaseItem::getFormURLWithID($data["id"]), [
+                    'class' => $data['is_faq'] ? 'faq' : 'knowbase',
+                    'title' => $data['is_faq'] ? __s("This item is part of the FAQ") : ''
+                ])."</p>";
+                $output .= "</div>";
+            }            
+            $output .= "</div>";
+            $output .= "<p align='center'><a href='../front/helpdesk.faq.php' style='font-size:17px;color:white;'>Lihat pengetahuan lainnya ...</a></p>";
+            $output .= "</div><hr class='hr_helpdesk_popfaq'>";
+        }
+
+        
+
+        if ($display) {
+            echo $output;
+        } else {
+            return $output;
+        }
+    }
+
+
     public static function showRecentPopular(string $type = "", bool $display = true)
     {
         global $DB;
