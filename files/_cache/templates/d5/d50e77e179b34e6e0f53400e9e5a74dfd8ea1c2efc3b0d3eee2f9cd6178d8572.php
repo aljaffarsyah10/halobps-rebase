@@ -417,8 +417,16 @@ class __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a79
 </div>
 
 <script type=\"text/javascript\">
-
-var reloadCategory = function() {
+            ";
+        // line 374
+        if (((($__internal_compile_17 = ($context["params"] ?? null)) && is_array($__internal_compile_17) || $__internal_compile_17 instanceof ArrayAccess ? ($__internal_compile_17["type"] ?? null) : null) == Twig\Extension\CoreExtension::constant("Ticket::INCIDENT_TYPE"))) {
+            // line 375
+            yield "                var itilcategories_id = \$('[name=itilcategories_id]').val();
+                \$('[name=itilcategories_idx]').val(itilcategories_id);
+            ";
+        }
+        // line 378
+        yield "var reloadCategory = function() {
     var itilcategories_id = \$('[name=itilcategories_id]').val();
      \$('[name=itilcategories_idx]').val(itilcategories_id);
 
@@ -435,46 +443,46 @@ var reloadCategory = function() {
     }
 \$(function () {
     \$('#btn-collapse-items";
-        // line 391
+        // line 394
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["rand"] ?? null), "html", null, true);
         yield "').on('click', function() {
         \$(this).hide();
     });
 
     \$('#dropdown_nodelegate";
-        // line 395
+        // line 398
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["rand"] ?? null), "html", null, true);
         yield "').on('change', function() {
         var is_for_me = (\$(this).val() == '1');
         \$('#user-info";
-        // line 397
+        // line 400
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["rand"] ?? null), "html", null, true);
         yield "-block').toggleClass('d-none', !is_for_me);
         \$('#delegate_other";
-        // line 398
+        // line 401
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["rand"] ?? null), "html", null, true);
         yield " .card-body')
             .html(\"\")
             .load('";
-        // line 400
+        // line 403
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Glpi\Application\View\Extension\RoutingExtension']->path("ajax/dropdownDelegationUsers.php"), "html", null, true);
         yield "', {
                 'right': \"delegate\",
                 'nodelegate': (is_for_me ? 1 : 0),
                 '_users_id_requester': ";
-        // line 403
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((($__internal_compile_17 = ($context["params"] ?? null)) && is_array($__internal_compile_17) || $__internal_compile_17 instanceof ArrayAccess ? ($__internal_compile_17["_users_id_requester"] ?? null) : null), "html", null, true);
+        // line 406
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((($__internal_compile_18 = ($context["params"] ?? null)) && is_array($__internal_compile_18) || $__internal_compile_18 instanceof ArrayAccess ? ($__internal_compile_18["_users_id_requester"] ?? null) : null), "html", null, true);
         yield ",
                 '_users_id_requester_notif': ";
-        // line 404
-        yield json_encode((($__internal_compile_18 = ($context["params"] ?? null)) && is_array($__internal_compile_18) || $__internal_compile_18 instanceof ArrayAccess ? ($__internal_compile_18["_users_id_requester_notif"] ?? null) : null));
+        // line 407
+        yield json_encode((($__internal_compile_19 = ($context["params"] ?? null)) && is_array($__internal_compile_19) || $__internal_compile_19 instanceof ArrayAccess ? ($__internal_compile_19["_users_id_requester_notif"] ?? null) : null));
         yield ",
                 'use_notification': ";
-        // line 405
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((($__internal_compile_19 = (($__internal_compile_20 = ($context["params"] ?? null)) && is_array($__internal_compile_20) || $__internal_compile_20 instanceof ArrayAccess ? ($__internal_compile_20["_users_id_requester_notif"] ?? null) : null)) && is_array($__internal_compile_19) || $__internal_compile_19 instanceof ArrayAccess ? ($__internal_compile_19["use_notification"] ?? null) : null), "html", null, true);
+        // line 408
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((($__internal_compile_20 = (($__internal_compile_21 = ($context["params"] ?? null)) && is_array($__internal_compile_21) || $__internal_compile_21 instanceof ArrayAccess ? ($__internal_compile_21["_users_id_requester_notif"] ?? null) : null)) && is_array($__internal_compile_20) || $__internal_compile_20 instanceof ArrayAccess ? ($__internal_compile_20["use_notification"] ?? null) : null), "html", null, true);
         yield ",
                 'entity_restrict':  ";
-        // line 406
+        // line 409
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Glpi\Application\View\Extension\SessionExtension']->session("glpiactive_entity"), "html", null, true);
         yield "
             });
@@ -507,7 +515,7 @@ var reloadCategory = function() {
      */
     public function getDebugInfo()
     {
-        return array (  478 => 406,  474 => 405,  470 => 404,  466 => 403,  460 => 400,  455 => 398,  451 => 397,  446 => 395,  439 => 391,  415 => 370,  407 => 365,  401 => 362,  395 => 359,  375 => 341,  371 => 339,  369 => 338,  368 => 336,  366 => 334,  359 => 331,  354 => 328,  351 => 327,  349 => 326,  346 => 325,  342 => 323,  340 => 319,  339 => 317,  337 => 315,  333 => 313,  331 => 309,  330 => 307,  328 => 305,  325 => 304,  320 => 300,  318 => 297,  317 => 295,  316 => 293,  312 => 291,  310 => 288,  309 => 286,  308 => 283,  305 => 282,  302 => 257,  300 => 234,  297 => 232,  293 => 230,  291 => 229,  290 => 226,  289 => 223,  288 => 222,  287 => 220,  283 => 218,  281 => 216,  280 => 213,  279 => 212,  278 => 210,  277 => 207,  273 => 205,  271 => 200,  270 => 199,  269 => 197,  268 => 194,  264 => 192,  262 => 191,  257 => 188,  249 => 182,  247 => 177,  246 => 176,  245 => 174,  244 => 171,  241 => 170,  239 => 169,  236 => 168,  233 => 167,  230 => 166,  227 => 165,  224 => 164,  221 => 163,  218 => 160,  215 => 156,  212 => 152,  210 => 149,  207 => 148,  204 => 145,  201 => 139,  199 => 138,  198 => 136,  197 => 132,  196 => 131,  195 => 129,  186 => 124,  184 => 123,  178 => 121,  171 => 116,  169 => 115,  168 => 113,  166 => 111,  158 => 106,  156 => 104,  154 => 103,  151 => 102,  148 => 101,  145 => 100,  143 => 99,  138 => 97,  135 => 96,  133 => 95,  126 => 94,  123 => 84,  116 => 80,  114 => 79,  113 => 77,  107 => 75,  105 => 74,  100 => 71,  98 => 70,  90 => 65,  82 => 60,  77 => 58,  74 => 57,  64 => 54,  61 => 53,  59 => 52,  54 => 49,  52 => 44,  50 => 42,  49 => 41,  48 => 37,  46 => 36,  43 => 35,  41 => 34,  38 => 33,);
+        return array (  486 => 409,  482 => 408,  478 => 407,  474 => 406,  468 => 403,  463 => 401,  459 => 400,  454 => 398,  447 => 394,  429 => 378,  424 => 375,  422 => 374,  415 => 370,  407 => 365,  401 => 362,  395 => 359,  375 => 341,  371 => 339,  369 => 338,  368 => 336,  366 => 334,  359 => 331,  354 => 328,  351 => 327,  349 => 326,  346 => 325,  342 => 323,  340 => 319,  339 => 317,  337 => 315,  333 => 313,  331 => 309,  330 => 307,  328 => 305,  325 => 304,  320 => 300,  318 => 297,  317 => 295,  316 => 293,  312 => 291,  310 => 288,  309 => 286,  308 => 283,  305 => 282,  302 => 257,  300 => 234,  297 => 232,  293 => 230,  291 => 229,  290 => 226,  289 => 223,  288 => 222,  287 => 220,  283 => 218,  281 => 216,  280 => 213,  279 => 212,  278 => 210,  277 => 207,  273 => 205,  271 => 200,  270 => 199,  269 => 197,  268 => 194,  264 => 192,  262 => 191,  257 => 188,  249 => 182,  247 => 177,  246 => 176,  245 => 174,  244 => 171,  241 => 170,  239 => 169,  236 => 168,  233 => 167,  230 => 166,  227 => 165,  224 => 164,  221 => 163,  218 => 160,  215 => 156,  212 => 152,  210 => 149,  207 => 148,  204 => 145,  201 => 139,  199 => 138,  198 => 136,  197 => 132,  196 => 131,  195 => 129,  186 => 124,  184 => 123,  178 => 121,  171 => 116,  169 => 115,  168 => 113,  166 => 111,  158 => 106,  156 => 104,  154 => 103,  151 => 102,  148 => 101,  145 => 100,  143 => 99,  138 => 97,  135 => 96,  133 => 95,  126 => 94,  123 => 84,  116 => 80,  114 => 79,  113 => 77,  107 => 75,  105 => 74,  100 => 71,  98 => 70,  90 => 65,  82 => 60,  77 => 58,  74 => 57,  64 => 54,  61 => 53,  59 => 52,  54 => 49,  52 => 44,  50 => 42,  49 => 41,  48 => 37,  46 => 36,  43 => 35,  41 => 34,  38 => 33,);
     }
 
     public function getSourceContext()
