@@ -361,8 +361,10 @@
 </div>
 
 <script type="text/javascript">
-var itilcategories_id = $('[name=itilcategories_id]').val();
-     $('[name=itilcategories_idx]').val(itilcategories_id);
+            {% if params['type'] == constant('Ticket::INCIDENT_TYPE') %}
+                var itilcategories_id = $('[name=itilcategories_id]').val();
+                $('[name=itilcategories_idx]').val(itilcategories_id);
+            {% endif %}
 var reloadCategory = function() {
     var itilcategories_id = $('[name=itilcategories_id]').val();
      $('[name=itilcategories_idx]').val(itilcategories_id);
