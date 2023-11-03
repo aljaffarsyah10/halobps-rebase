@@ -910,13 +910,14 @@ class Ticket extends CommonITILObject
 
         if (Session::getCurrentInterface() == 'central') {
             $this->addStandardTab(Ticket_Contract::class, $ong, $options);
+            $this->addStandardTab('Log', $ong, $options);
         }
 
         if (
             Entity::getAnonymizeConfig($this->getEntityID()) == Entity::ANONYMIZE_DISABLED
             || Session::getCurrentInterface() == 'central'
         ) {
-            $this->addStandardTab('Log', $ong, $options);
+          //  $this->addStandardTab('Log', $ong, $options);
         }
 
         return $ong;
