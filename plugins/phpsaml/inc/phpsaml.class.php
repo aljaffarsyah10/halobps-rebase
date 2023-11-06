@@ -85,22 +85,47 @@ class PluginPhpsamlPhpsaml
 				// if ((!empty(SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'][0])) && (!empty(SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'][0]))){
 					if ((!empty(self::$userdata['username'][0])) && (!empty(self::$userdata['email'][0]))){
 					
-						$password = bin2hex(random_bytes(20));
-						
+						$password			= bin2hex(random_bytes(20));
+						$jabesker			= self::$userdata['jabatan'][0] . ' | ' . self::$userdata['kabupaten'][0];
+						if(self::$userdata['eselon'][0] != '-'){
+							$jabesker = 'Eselon ' . self::$userdata['eselon'][0] . ' - ' . $jabesker;
+						}
+
 						$input = array(
 					// 		"name" => SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'][0],
 					// 		"realname" => SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname'][0],
 					// 		"firstname" => SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/firstname'][0],
 					// 		"_useremails" => array(SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'][0]),
-							"language" => "id_ID",
-							"name" => self::$userdata['username'][0],
-							"realname" => self::$userdata['first-name'][0] . ' ' . self::$userdata['last-name'][0],
-							"firstname" => self::$userdata['last-name'][0],
-							"nickname" => self::$userdata['name'][0],
-							"_useremails" => array(self::$userdata['email'][0]),
-							"password" => $password,
-							"password2" => $password,
-							"picture" => self::$userdata['foto'][0],
+							"language" 				=> 'id_ID',
+							"timezone"				=> 'Asia/Jakarta',
+							"name"					=> self::$userdata['username'][0],
+							//fullname from separated names (firstname . ' ' . lastname)
+							"realname" 				=> self::$userdata['first-name'][0] . ' ' . self::$userdata['last-name'][0],
+							"firstname" 			=> self::$userdata['last-name'][0],
+							//solid fullname (name)
+							"nickname" 				=> self::$userdata['name'][0],
+							"_useremails" 			=> array(self::$userdata['email'][0]),
+							"password"  			=> $password,
+							"password2" 			=> $password,
+							//niplama
+							"phone2"				=> self::$userdata['nip-lama'][0],
+							//jabatan|eselon|satker
+							"comment"				=> $jabesker,
+							//golongan
+							// "user_dn"				=> self::$userdata['golongan'][0],
+							//nipbaru - golongan
+							"registration_number"	=> self::$userdata['nip'][0] . ' - Gol. ' . self::$userdata['golongan'][0],
+							
+							//TODO: set profile picture via link on the view files so it could be displayed, no field could be filled
+							//TODO: set `comment` field as positions (Jabatan/Eselon/Satker), no field could be filled
+							//TODO: set `mobile` field as true phone number, place it on top of `phone` in the display field (No. HP), no field could be filled
+							//TODO: set `phone` field as extension number of office (Telp. Ekstensi), no field could be filled
+							//TODO: set fields in `glpi_locations` table as this (locations_id:organisasi, state:provinsi, country:('Pusat'|'Provinsi'|'Kabupaten'), address:alamat_kantor, completename:(provinsi|kabupaten)), no field could be filled
+							//TODO: manually insert all of satker possibilities in `glpi_locatinons` table, location_id as foreign key in `glpi_users` table
+							//TODO: upsert automatically when `comment`, `registration_number` and `glpi_locations:locations_id (organisasi)` changes from the old one as comparison
+							//TODO: kindly confirm about output of SSO SAML `kabupaten` and `provinsi`, check if it could printout 'Kota'|'Kabupaten' and 'Pusat'|'Provinsi' in splitted way, not merged
+
+							"_picture" => self::$userdata['foto'][0],
 						);
 					
 					$newuser = new User();

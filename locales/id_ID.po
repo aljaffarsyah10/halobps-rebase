@@ -16886,7 +16886,7 @@ msgstr "Personalisasi"
 #: src/ContentTemplates/Parameters/UserParameters.php:78
 msgid "Phone"
 msgid_plural "Phones"
-msgstr[0] "Telepon"
+msgstr[0] "Telp. Ekstensi"
 
 #: src/AuthLDAP.php:967 src/AuthLDAP.php:1158 src/AuthLDAP.php:4028
 msgctxt "ldap"
@@ -16934,7 +16934,7 @@ msgstr ""
 #: src/User.php:6623
 msgid "Picture"
 msgid_plural "Pictures"
-msgstr[0] ""
+msgstr[0] "Foto/Gambar"
 
 #: src/Dashboard/Widget.php:71
 msgid "Pie"
