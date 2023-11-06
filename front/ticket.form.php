@@ -120,7 +120,7 @@ if (isset($_POST["add"])) {
     Session::addMessageAfterRedirect(
         __('You have been redirected because you no longer have access to this ticket'),
         true,
-        ERROR
+        WARNING
     );
     Html::redirect($CFG_GLPI["root_doc"] . "/front/ticket.php");
 } else if (isset($_POST['delete'])) {
