@@ -5395,7 +5395,7 @@ msgstr ""
 #: src/Certificate.php:426 src/RuleDictionnaryPrinter.php:85 src/Transfer.php:148 src/Transfer.php:3886
 #: src/MailCollector.php:323 src/MailCollector.php:518 src/DbUtils.php:1337 src/NetworkName.php:152
 #: src/Contact.php:367 src/RuleImportEntity.php:132 src/DomainRecord.php:137 src/DomainRecord.php:481
-#: src/RuleAsset.php:112 src/RuleAsset.php:195 src/User.php:2613 src/User.php:3608 src/CommonDropdown.php:439
+#: src/RuleAsset.php:112 src/RuleAsset.php:195 src/CommonDropdown.php:439
 #: src/NotificationTargetTicket.php:689 src/NotificationTargetTicket.php:700 src/Infocom.php:1631
 #: src/Software.php:397 src/Software.php:617 src/NotificationTargetChange.php:313
 #: src/NotificationTargetChange.php:324 src/Rule.php:763 src/Rule.php:932 src/CommonDBTM.php:3494 src/Vlan.php:184
@@ -5414,6 +5414,10 @@ msgstr ""
 #: ajax/dropdownMassiveActionAddValidator.php:57 ajax/dropdownMassiveActionAddValidator.php:146
 msgid "Comments"
 msgstr "Komentar"
+
+#: src/User.php:2613 src/User.php:3608
+msgid "Comments"
+msgstr "Jabatan/Eselon"
 
 #: src/Infocom.php:1428
 msgid "Comments on financial and administrative information"
@@ -15160,7 +15164,7 @@ msgstr "Personalisasi"
 #: src/ContentTemplates/Parameters/UserParameters.php:78 src/Phone.php:78
 msgid "Phone"
 msgid_plural "Phones"
-msgstr[0] "Telepon"
+msgstr[0] "Telp. Ekstensi"
 
 #: src/AuthLDAP.php:924 src/AuthLDAP.php:1115 src/AuthLDAP.php:3756
 msgctxt "ldap"
@@ -15204,7 +15208,7 @@ msgstr ""
 #: src/CommonDropdown.php:184
 msgid "Picture"
 msgid_plural "Pictures"
-msgstr[0] ""
+msgstr[0] "Foto/Gambar"
 
 #: src/Dashboard/Widget.php:70
 msgid "Pie"
