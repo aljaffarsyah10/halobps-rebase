@@ -35,7 +35,17 @@
 
 <span id="user_{{ rand }}">
     <i class="ti ti-user ms-1"></i>
+    {% if get_current_interface() == 'helpdesk' and users_id != session('glpiID') %}
+        {% if glpiactiveprofileid == null %}
+            Tim Teknis
+        {% else %}
+            {{ get_item_link('Profile', glpiactiveprofileid, {'enable_anonymization': enable_anonymization}) }}
+        {% endif %}
+
+
+    {% else %}
     {{ get_item_link('User', users_id, {'enable_anonymization': enable_anonymization}) }}
+   {% endif %}
 </span>
 
 {% if not enable_anonymization %}
