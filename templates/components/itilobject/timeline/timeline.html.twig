@@ -46,13 +46,14 @@
       {% set entry_i = entry['item'] %}
       {% set entry_object = get_item(entry['type'], entry_i['id']) %}
       {% set users_id = entry_i['users_id'] %}
+      {% set glpiactiveprofileid = entry_i['glpiactiveprofileid'] %}
+
       {% set is_private = entry_i['is_private'] ?? false %}
       {% set date_creation = entry_i['date_creation'] ?? entry_i['date'] %}
       {% set date_mod = entry_i['date_mod'] %}
       {% set entry_rand = random() %}
       {% set is_current_user = users_id == session('glpiID') %}
       {% set anonym_user = true %}
-
       {# Fix solution type #}
       {% if entry['type'] is same as 'Solution' %}
          {% set entry = entry|merge({'type': 'ITILSolution'}) %}

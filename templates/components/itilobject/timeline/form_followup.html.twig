@@ -120,6 +120,10 @@
                            <i class="fas fa-reply fa-fw me-1"
                               title="{{ _n('Followup template', 'Followup templates', get_plural_number()) }}"></i>
                         {% endset %}
+
+                           
+                            <input type="hidden" name="glpiactiveprofileid" value="{{ session('glpiactiveprofile')['id'] }}">
+
                         {{ fields.dropdownField(
                            'ITILFollowupTemplate',
                            'itilfollowuptemplates_id',
