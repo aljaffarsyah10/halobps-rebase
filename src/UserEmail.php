@@ -201,7 +201,7 @@ class UserEmail extends CommonDBChild
      *
      * @return void
      **/
-    public static function showForUser(User $user)
+    public static function showForUser(User $user, $is_canedit = true)
     {
 
         $users_id = $user->getID();
@@ -213,7 +213,9 @@ class UserEmail extends CommonDBChild
             return false;
         }
         $canedit = ($user->can($users_id, UPDATE) || ($users_id == Session::getLoginUserID()));
-
+        if(!$is_canedit){
+            $canedit = false;
+        }
         parent::showChildsForItemForm($user, '_useremails', $canedit);
     }
 
@@ -221,7 +223,7 @@ class UserEmail extends CommonDBChild
     /**
      * @param $user
      **/
-    public static function showAddEmailButton(User $user)
+    public static function showAddEmailButton(User $user, $is_canedit = true)
     {
 
         $users_id = $user->getID();
@@ -229,7 +231,9 @@ class UserEmail extends CommonDBChild
             return false;
         }
         $canedit = ($user->can($users_id, UPDATE) || ($users_id == Session::getLoginUserID()));
-
+        if(!$is_canedit){
+            $canedit = false;
+        }
         parent::showAddChildButtonForItemForm($user, '_useremails', $canedit);
 
         return;

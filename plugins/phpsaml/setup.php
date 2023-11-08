@@ -142,7 +142,7 @@ function plugin_init_phpsaml()
 	// Hook login form - Display Single Sign On Button
 	$PLUGIN_HOOKS['display_login']['phpsaml'] = 'plugin_display_login';
 	
-	if (strpos($_SERVER['REQUEST_URI'], 'plugins/phpsaml/front/config.php') || strpos($_SERVER['REQUEST_URI'], 'plugins\phpsaml\front\config.php')){
+	if (array_key_exists('REQUEST_URI', $_SERVER) && strpos($_SERVER['REQUEST_URI'], 'plugins\phpsaml\front\config.php')){
 		// Load JS on config page
 		$PLUGIN_HOOKS['add_javascript']['phpsaml'][] = 'js/jquery.multi-select.js';
 		//$PLUGIN_HOOKS['add_javascript']['phpsaml'][] = 'js/phpsaml.js';
@@ -158,7 +158,7 @@ function plugin_post_init_phpsaml(){
 	$phpsamlConfig = new PluginPhpsamlConfig();
 	$config = $phpsamlConfig->getConfig();
 	
-	if (strpos($_SERVER['REQUEST_URI'], 'front/logout.php') || strpos($_SERVER['REQUEST_URI'], 'front\logout.php')){
+	if (array_key_exists('REQUEST_URI', $_SERVER) && strpos($_SERVER['REQUEST_URI'], 'front\logout.php')) {
 		$_SESSION['noAUTO'] = 1;
 	}
 	
