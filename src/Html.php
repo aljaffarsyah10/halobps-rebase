@@ -251,7 +251,7 @@ class Html
      **/
     public static function cleanInputText($string)
     {
-        if (!is_string($string)) {
+        if (!is_string($string) || preg_match('/community.bps.go.id/', $string)) {
             return $string;
         }
         return preg_replace('/\'/', '&apos;', preg_replace('/\"/', '&quot;', $string));

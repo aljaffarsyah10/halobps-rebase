@@ -3176,7 +3176,7 @@ msgstr "Nomor Administrasi"
 #: src/User.php:2846 src/User.php:3322 src/User.php:3882 src/Auth.php:1750
 msgctxt "user"
 msgid "Administrative number"
-msgstr "Nomor Administrasi"
+msgstr "NIP ASN - Golongan"
 
 #: src/NotificationTargetDBConnection.php:49
 #: src/Marketplace/NotificationTargetController.php:56
@@ -3529,7 +3529,7 @@ msgstr ""
 #: src/NotificationTargetTicket.php:680 src/NotificationTargetTicket.php:724
 #: src/Entity.php:822 src/Location.php:112 src/Location.php:300
 msgid "Altitude"
-msgstr ""
+msgstr "Ketinggian"
 
 #: src/Entity.php:1629
 msgctxt "location"
@@ -4799,7 +4799,7 @@ msgstr[0] "Tipe anggaran"
 #: src/NotificationTargetTicket.php:665 src/NotificationTargetTicket.php:721
 #: src/Location.php:87 src/Location.php:187 src/Location.php:239
 msgid "Building number"
-msgstr ""
+msgstr "Nomor/Blok Bangunan"
 
 #: js/modules/Kanban/Kanban.js:474
 msgid "Bulk add"
@@ -7339,7 +7339,7 @@ msgstr ""
 #: src/User.php:2922 src/User.php:3311 src/User.php:3956
 #: src/Inventory/Conf.php:545 src/RuleRight.php:364
 msgid "Default entity"
-msgstr "Bawaan entitas"
+msgstr "Entitas/Layanan Default"
 
 #: src/Config.php:875
 msgid "Default file size limit imported by the mails receiver"
@@ -7380,7 +7380,7 @@ msgstr ""
 #: templates/components/user/info_card.html.twig src/User.php:2932
 #: src/RuleRight.php:374
 msgid "Default group"
-msgstr ""
+msgstr "Grup Bawaan"
 
 #: src/Config.php:883
 msgid "Default heading when adding a document to a ticket"
@@ -7409,7 +7409,7 @@ msgstr ""
 #: src/User.php:2904 src/User.php:3266 src/User.php:3947 src/RuleRight.php:381
 #: src/RuleTicket.php:688 src/Profile.php:780 src/Profile.php:2069
 msgid "Default profile"
-msgstr ""
+msgstr "Profil Bawaan"
 
 #: src/Report.php:78
 msgid "Default report"
@@ -10068,7 +10068,7 @@ msgstr ""
 #: src/User.php:3674 src/User.php:6633 src/Auth.php:1737 src/Contact.php:241
 #: src/ContentTemplates/Parameters/UserParameters.php:81
 msgid "First name"
-msgstr "Nama depan"
+msgstr "Nama Belakang"
 
 #: src/Config.php:1083
 msgid "First name, Surname"
@@ -12900,7 +12900,7 @@ msgstr ""
 #: src/Entity.php:804 src/Location.php:102 src/Location.php:214
 #: src/Location.php:282
 msgid "Latitude"
-msgstr ""
+msgstr "Garis Lintang"
 
 #: src/Entity.php:1623
 msgctxt "location"
@@ -13426,7 +13426,7 @@ msgstr "Pengaturan pembersihan log"
 #: src/Entity.php:813 src/Location.php:107 src/Location.php:223
 #: src/Location.php:291
 msgid "Longitude"
-msgstr ""
+msgstr "Garis Bujur"
 
 #: src/Entity.php:1617
 msgctxt "location"
@@ -16614,7 +16614,7 @@ msgstr[0] ""
 #: src/MailCollector.php:269 src/User.php:2689 src/User.php:3164
 #: src/AuthMail.php:235 src/Config.php:2120
 msgid "Password"
-msgstr "Password"
+msgstr "Kata Sandi"
 
 #: src/AuthLDAP.php:527
 msgid "Password (for non-anonymous binds)"
@@ -16622,7 +16622,7 @@ msgstr ""
 
 #: templates/password_form.html.twig src/User.php:2694 src/User.php:3170
 msgid "Password confirmation"
-msgstr "Konfirmasi kata kunci"
+msgstr "Konfirmasi Kata Sandi"
 
 #: src/NotificationTargetUser.php:191
 msgid "Password expiration date"
@@ -16902,7 +16902,7 @@ msgstr ""
 #: src/NotificationTargetCommonITILObject.php:1803
 #: src/NotificationTargetCommonITILObject.php:1839
 msgid "Phone 2"
-msgstr "Telepon 2"
+msgstr "NIP BPS"
 
 #: src/Rule.php:365 src/PhoneModel.php:44
 msgid "Phone model"
@@ -17471,7 +17471,7 @@ msgstr "Kirim"
 #: src/NotificationTargetCommonITILObject.php:1951 src/Location.php:67
 #: src/Location.php:151 src/Location.php:264 src/Location.php:317
 msgid "Postal code"
-msgstr ""
+msgstr "Kode Pos"
 
 #: src/Document.php:1485
 msgid ""
@@ -19080,7 +19080,7 @@ msgstr ""
 #: src/NotificationTargetTicket.php:660 src/NotificationTargetTicket.php:720
 #: src/Location.php:92 src/Location.php:196 src/Location.php:247
 msgid "Room number"
-msgstr ""
+msgstr "Kode Ruangan"
 
 #: src/Knowbase.php:349
 msgid "Root category"
@@ -20635,7 +20635,7 @@ msgstr "State"
 #: src/Location.php:169 src/Location.php:333
 msgctxt "location"
 msgid "State"
-msgstr "State"
+msgstr "Provinsi"
 
 #: src/VirtualMachineState.php:41
 msgid "State of the virtual machine"
@@ -20892,7 +20892,7 @@ msgstr ""
 #: src/User.php:3066 src/User.php:6612 src/Auth.php:1731
 #: src/ContentTemplates/Parameters/UserParameters.php:82
 msgid "Surname"
-msgstr "Nama Lengkap"
+msgstr "Nama Depan"
 
 #: src/Config.php:1082
 msgid "Surname, First name"
@@ -22126,7 +22126,7 @@ msgstr ""
 
 #: src/User.php:2715 src/User.php:3192
 msgid "Time zone"
-msgstr ""
+msgstr "Zona Waktu"
 
 #: js/reservations.js:129
 msgid "Timeline Week"
@@ -22222,7 +22222,7 @@ msgstr "Judul"
 #: src/NotificationTargetCommonITILObject.php:1834
 msgctxt "person"
 msgid "Title"
-msgstr "Judul"
+msgstr "Gelar"
 
 #: src/CommonITILObject.php:6602
 #, php-format
@@ -22500,7 +22500,7 @@ msgstr ""
 #: src/Location.php:72 src/Location.php:160 src/Location.php:273
 #: src/Location.php:325
 msgid "Town"
-msgstr "Kota"
+msgstr "Kota/Kabupaten"
 
 #: front/transfer.php:40 front/transfer.action.php:38 src/Rule.php:259
 #: src/RuleCollection.php:2289 src/Entity.php:1923 src/Profile.php:1052
