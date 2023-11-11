@@ -136,12 +136,6 @@ class PluginPhpsamlPhpsaml
 			'registration_number'					=> self::$userdata['nip'][0] . ' - ' . self::$userdata['golongan'][0],
 			'locations_id'							=> $location_id > -1 ? $location_id : 0,
 			'date_mod'								=> $_SESSION['glpi_currenttime']
-
-			//TODO: set profile picture via link on the view files so it could be displayed, no field could be filled
-			//TODO: set fields in `glpi_locations` table as this (locations_id:organisasi, state:provinsi, country:('Pusat'|'Provinsi'|'Kabupaten'), address:alamat_kantor, completename:(provinsi|kabupaten)), no field could be filled
-			//TODO: manually insert all of satker possibilities in `glpi_locatinons` table, location_id as foreign key in `glpi_users` table
-			//TODO: upsert automatically when `comment`, `registration_number` and `glpi_locations:locations_id (organisasi)` changes from the old one as comparison (user->update($input_array))
-			//		recreate new public static function getUserByEmail(`name`|`username`), get the id and mock the getUserByForgottenPasswordToken($input) function
 		];
 
 		//Updating Existing User
@@ -170,7 +164,6 @@ class PluginPhpsamlPhpsaml
 		if (isset($config['jit']) && $config['jit'] == 1 && !$user->getIdByName($username)) {
 			//(Rihan Y. | 01-03-2023) Alter SAML configuration for JIT Login
 			//Inserting New User
-			//if ((!empty(SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'][0])) && (!empty(SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'][0]))){
 			if ((!empty($username)) && (!empty($email))) {
 
 				$user_id = $user->add($user_input);
