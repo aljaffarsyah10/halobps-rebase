@@ -6104,18 +6104,16 @@ HTML;
         $picture = Html::cleanInputText($picture);
 
         if (!empty($picture)) {
-            if(preg_match('/community.bps.go.id/', $picture)){
+            if (preg_match('/community.bps.go.id/', $picture)) {
 
                 return $picture;
-
-            } else{
+            } else {
 
                 $tmp = explode(".", $picture);
                 if (count($tmp) == 2) {
                     return $CFG_GLPI["root_doc"] . "/front/document.send.php?file=_pictures/" . $tmp[0] .
                         "_min." . $tmp[1];
                 }
-                
             }
         }
 
@@ -6919,7 +6917,6 @@ HTML;
     }
 
     /**
-<<<<<<< HEAD
      * Get name of the user with ID
      *
      * @param integer $ID   ID of the user.
@@ -7008,75 +7005,5 @@ HTML;
             'id'                   => $this->fields['id'],
             'savedsearches_pinned' => exportArrayToDB($all_pinned),
         ]));
-=======
-     * Update user via SAML SSO Plugin's Login.
-     * @author Rihan Y. | 07-11-2023
-     * @param integer $ID      ID of user
-     * @param integer $input   Key-value pair of fields to be updated
-     *
-     * @return boolean
-     */
-    public function updateViaSaml(int $ID, array $input)
-    {
-        global $DB;
-        $result = $DB->update(
-            'glpi_users',
-            [
-                'language' 				=> $input['language'],
-				'timezone'				=> $input['timezone'],
-				'nickname' 				=> $input['nickname'],
-				'picture' 				=> $input['picture'],
-				'phone2'				=> $input['phone2'],
-				'comment'				=> $input['comment'],
-				'registration_number'	=> $input['registration_number'],
-				'date_mod'				=> $_SESSION['glpi_currenttime']
-            ],
-            [
-                'id' => $ID
-            ]
-        );
-
-        if ($result) {
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Upsert new location via SAML SSO Plugin's Login after being inserted
-     * @author Rihan Y. | 07-11-2023
-     * @param integer $locations_id
-     *
-     * @return boolean
-     */
-    public function upsertLocationID(int $ID, string $locations_id)
-    {
-        global $DB;
-
-        $result = $DB->update(
-            'glpi_users',
-            [
-                'glpi_users.locations_id' => $locations_id,
-            ],
-            [
-                'id' => $ID
-            ]
-        );
-
-        if ($result) {
-            return true;
-        }
-        return false;
-    }
-
-    function disable_input()
-    {
-        return $this->disable_input;
-    }
-
-    function is_admin()
-    {
-        return $this->is_admin;
->>>>>>> 8c02fd126 (Workarounds #18:)
     }
 }

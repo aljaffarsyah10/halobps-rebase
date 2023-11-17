@@ -228,9 +228,12 @@ class Telemetry extends CommonGLPI
             $distro = preg_replace('/\s+$/S', '', file_get_contents('/etc/redhat-release'));
         }
         $os = [
-            'family'       => php_uname('s'),
+            // (Rihan Y. | 17-11-2023) Edited with alternative function to prevent error not found function in php_uname(a s n r v m)
+            // 'family'       => php_uname('s'),
+            'family'       => \PHP_OS_FAMILY,
             'distribution' => ($distro ?: ''),
-            'version'      => php_uname('r')
+            // 'version'      => php_uname('r')
+            'version'      => \PHP_OS 
         ];
         return $os;
     }

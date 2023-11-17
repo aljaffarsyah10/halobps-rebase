@@ -40,7 +40,7 @@ class __TwigTemplate_3253f05b224c2fe5d69262f9f26d6f8a3a1644dc1f7c106548e4d4c5d8e
         // line 34
         $context["enable_anonymization"] = (($context["enable_anonymization"]) ?? (false));
         // line 35
-        $context["avatar_size"] = (($context["avatar_size"]) ?? ("avatar-md"));
+        $context["avatar_size"] = (($context["avatar_size"]) ?? ("avatar-2xl"));
         // line 36
         $context["anonymized"] = (($context["enable_anonymization"] ?? null) && ($this->extensions['Glpi\Application\View\Extension\ConfigExtension']->getEntityConfig("anonymize_support_agents", $this->extensions['Glpi\Application\View\Extension\SessionExtension']->session("glpiactive_entity")) != Twig\Extension\CoreExtension::constant("Entity::ANONYMIZE_DISABLED")));
         // line 37
