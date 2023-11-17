@@ -2008,7 +2008,9 @@ class Config extends CommonDBTM
 
         echo "<tr><th class='section-header'>Server</th></tr>\n";
         echo "<tr class='tab_bg_1'><td><pre class='section-content'>\n&nbsp;\n";
-        echo wordwrap("Operating system: " . php_uname() . "\n", $p['word_wrap_width'], "\n\t");
+        // (Rihan Y. | 17-11-2023) Edited with alternative function to prevent error not found function in php_uname(a s n r v m)
+        // echo wordwrap("Operating system: " . php_uname() . "\n", $p['word_wrap_width'], "\n\t");
+        echo wordwrap("Operating system: " . \PHP_OS_FAMILY . ' ' . \PHP_OS . "\n", $p['word_wrap_width'], "\n\t");
         $exts = get_loaded_extensions();
         sort($exts);
         echo wordwrap(

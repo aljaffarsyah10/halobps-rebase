@@ -271,7 +271,9 @@ class NotificationTarget extends CommonDBChild
                 $this->obj->getField('id'),
                 time(),
                 rand(),
-                php_uname('n')
+                // (Rihan Y. | 17-11-2023) Edited with alternative function to prevent error not found function in php_uname(a s n r v m)
+                // php_uname('n')
+                gethostname()
             );
         }
 
@@ -280,7 +282,9 @@ class NotificationTarget extends CommonDBChild
             Config::getUuid('notification'),
             time(),
             rand(),
-            php_uname('n')
+            // (Rihan Y. | 17-11-2023) Edited with alternative function to prevent error not found function in php_uname(a s n r v m)
+            // php_uname('n')
+            gethostname()
         );
     }
 

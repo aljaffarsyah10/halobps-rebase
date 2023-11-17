@@ -342,7 +342,9 @@ class Toolbox
 
         $extra = [];
         if (method_exists('Session', 'getLoginUserID')) {
-            $extra['user'] = Session::getLoginUserID() . '@' . php_uname('n');
+            // (Rihan Y. | 17-11-2023) Edited with alternative function to prevent error not found function in php_uname(a s n r v m)
+            // $extra['user'] = Session::getLoginUserID() . '@' . php_uname('n');
+            $extra['user'] = Session::getLoginUserID() . '@' . gethostname();
         }
         if ($tps && function_exists('memory_get_usage')) {
             $extra['mem_usage'] = number_format(microtime(true) - $tps, 3) . '", ' .
@@ -563,7 +565,9 @@ class Toolbox
 
         $user = '';
         if (method_exists('Session', 'getLoginUserID')) {
-            $user = " [" . Session::getLoginUserID() . '@' . php_uname('n') . "]";
+            // (Rihan Y. | 17-11-2023) Edited with alternative function to prevent error not found function in php_uname(a s n r v m)
+            // $user = " [" . Session::getLoginUserID() . '@' . php_uname('n') . "]";
+            $user = " [" . Session::getLoginUserID() . '@' . gethostname() . "]";
         }
 
         $ok = true;
