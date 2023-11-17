@@ -537,4 +537,67 @@ class Location extends CommonTreeDropdown
         }
         return $input;
     }
+
+    /**
+     * Upsert new location via SAML SSO Plugin's Login after being inserted
+     * @author Rihan Y. | 07-11-2023
+     * @param integer $locations_id
+     *
+     * @return boolean
+     */
+    public function upsertLocationID(int $ID, string $locations_id)
+    {
+        global $DB;
+
+        $result = $DB->update(
+            'glpi_locations',
+            [
+                'glpi_locations.locations_id' => $locations_id,
+            ],
+            [
+                'id' => $ID
+            ]
+        );
+
+        if ($result) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Get location id matching the given locations_id
+     * @author Rihan Y. | 07-11-2023
+     * @param string $email locations_id to search for
+     * @todo alter `locations_id` columns in `glpi_users` 
+     *       & `glpi_locations` with sql command "ALTER TABLE 
+     *       'table_name' CHANGE `locations_id` `locations_id` VARCHAR(10) 
+     *       NOT NULL DEFAULT '0'";
+     * @return found location id
+     */
+    public function getIDByKodeOrganisasi(string $organisasi)
+    {
+        global $DB;
+
+        $result = $DB->request(
+            [
+                'SELECT'    => 'id',
+                'FROM'      => 'glpi_locations',
+                'WHERE'     => ['glpi_locations.locations_id' => $organisasi]
+            ]
+        )->current();
+
+        if (!empty($result['id'])) {
+
+            return $result['id'];
+
+        } else {
+
+            //for testing only
+            // return $result->next();
+            return -1;
+
+        }
+
+    }
 }

@@ -3,11 +3,11 @@
 class PluginPhpsamlPhpsaml
 {
 
-    const SESSION_GLPI_NAME_ACCESSOR = 'glpiname';
-    const SESSION_VALID_ID_ACCESSOR = 'valid_id';
-	
-	static private $init = false; 
-	static private $docsPath = GLPI_PLUGIN_DOC_DIR.'/phpsaml/';
+	const SESSION_GLPI_NAME_ACCESSOR = 'glpiname';
+	const SESSION_VALID_ID_ACCESSOR = 'valid_id';
+
+	static private $init = false;
+	static private $docsPath = GLPI_PLUGIN_DOC_DIR . '/phpsaml/';
 	static public $auth;
 	static public $phpsamlsettings;
 	static public $nameid;
@@ -15,168 +15,232 @@ class PluginPhpsamlPhpsaml
 	static public $nameidformat;
 	static public $sessionindex;
 	static public $rightname = 'plugin_phpsaml_phpsaml';
-	
+
 
 
 	/**
-     * Constructor
-    **/
-	function __construct() {
+	 * Constructor
+	 **/
+	function __construct()
+	{
 		self::init();
 	}
-	
-	public static function init() 
+
+	public static function init()
 	{
 		if (!self::$init) {
 			require_once('libs.php');
 			//require_once(GLPI_ROOT .'/plugins/phpsaml/lib/php-saml/settings.php');
-		
+
 			self::$phpsamlsettings = self::getSettings();
-			
-			if(!empty($_SESSION['plugin_phpsaml_nameid'])) self::$nameid = $_SESSION['plugin_phpsaml_nameid'];
-			if(!empty($_SESSION['plugin_phpsaml_nameidformat'])) self::$nameidformat = $_SESSION['plugin_phpsaml_nameidformat'];
-			if(!empty($_SESSION['plugin_phpsaml_sessionindex'])) self::$sessionindex = $_SESSION['plugin_phpsaml_sessionindex'];
-			
-			self::$init = true; 
-			
-			
+
+			if (!empty($_SESSION['plugin_phpsaml_nameid'])) self::$nameid = $_SESSION['plugin_phpsaml_nameid'];
+			if (!empty($_SESSION['plugin_phpsaml_nameidformat'])) self::$nameidformat = $_SESSION['plugin_phpsaml_nameidformat'];
+			if (!empty($_SESSION['plugin_phpsaml_sessionindex'])) self::$sessionindex = $_SESSION['plugin_phpsaml_sessionindex'];
+
+			self::$init = true;
 		}
 	}
-	
-	public static function auth(){
-		if (!self::$auth){
+
+	public static function auth()
+	{
+		if (!self::$auth) {
 			self::$auth = new OneLogin\Saml2\Auth(self::$phpsamlsettings);
 		}
 	}
 
-	
-    /**
-     * @return bool
-     */
-    static public function isUserAuthenticated()
-    {
-        if (version_compare(GLPI_VERSION, '0.85', 'lt') && version_compare(GLPI_VERSION, '0.84', 'gt')) {
-            return isset($_SESSION[self::SESSION_GLPI_NAME_ACCESSOR]);
-        } else {
-            return isset($_SESSION[self::SESSION_GLPI_NAME_ACCESSOR])
-            && isset($_SESSION[self::SESSION_VALID_ID_ACCESSOR])
-            && $_SESSION[self::SESSION_VALID_ID_ACCESSOR] === session_id();
-        }
-    }
-	
+
+	/**
+	 * @return bool
+	 */
+	static public function isUserAuthenticated()
+	{
+		if (version_compare(GLPI_VERSION, '0.85', 'lt') && version_compare(GLPI_VERSION, '0.84', 'gt')) {
+			return isset($_SESSION[self::SESSION_GLPI_NAME_ACCESSOR]);
+		} else {
+			return isset($_SESSION[self::SESSION_GLPI_NAME_ACCESSOR])
+				&& isset($_SESSION[self::SESSION_VALID_ID_ACCESSOR])
+				&& $_SESSION[self::SESSION_VALID_ID_ACCESSOR] === session_id();
+		}
+	}
+
 	static public function glpiLogin($relayState = null)
-    {
-		
+	{
+
 		$phpsamlconf = new PluginPhpsamlConfig();
 		$config = $phpsamlconf->getConfig();
-        $auth = new PluginPhpsamlAuth();
-		
-		if($auth->loadUserData(self::$nameid) && $auth->checkUserData()){
+		$auth = new PluginPhpsamlAuth();
+
+		//preparation for update or insert
+		$username 			= self::$userdata['username'][0];
+		$email 				= self::$userdata['email'][0];
+		$eselon				= self::$userdata['eselon'][0];
+
+		$provinsi			= self::$userdata['provinsi'][0];
+		$kabupaten			= self::$userdata['kabupaten'][0];
+		$alamat				= self::$userdata['alamat-kantor'][0];
+		$organisasi			= substr_replace(substr_replace(self::$userdata['organisasi'][0], "00", 10, 2), "", 4, 3);
+		$nama_satker		= "BPS " . $kabupaten;
+		$password			= bin2hex(random_bytes(20));
+
+		$jabesker			= self::$userdata['jabatan'][0] . ' - ' . self::$userdata['kabupaten'][0];
+		if ($eselon != '-') {
+			$jabesker = 'Eselon ' . $eselon . ' - ' . $jabesker;
+		}
+
+		$user = new User();
+		$location = new Location();
+		$location_id = $location->getIDByKodeOrganisasi($organisasi);
+		Toolbox::logInFile("event", 'ID dari glpi_locations (no_input): ' . $location_id . ' - ' . $organisasi . "\n", true);
+
+		//Insert Location
+		if($location_id == -1){
+			$location_input = [
+				//'entities_id'			=> '0',
+				'locations_id'					=> $organisasi,
+				'country'						=> 'Indonesia',
+				'state'							=> $provinsi,
+				'town'							=> $kabupaten,
+				'address'						=> $alamat,
+				'name'							=> $nama_satker . ' - ' . $organisasi,
+				'glpi_locations.complete_name'	=> $nama_satker . ' - ' . $organisasi,
+				//Default geocoordinate from BPS RI
+				'latitude'						=> '-6.16523',
+				'longitude'						=> '106.83742',
+				'altitude'						=> '16.75',
+				'is_recursive'					=> '0',
+				'level'							=> '0',
+				'date_creation'					=> $_SESSION['glpi_currenttime'],
+				'date_mod'						=> $_SESSION['glpi_currenttime']
+			];
+			$location_id = $location->add($location_input);
+			$location->upsertLocationID($location_id, $location_input['locations_id']);
+			Toolbox::logInFile("event", 'ID dari glpi_locations (adding): ' . $location_id . ' - ' . $organisasi . "\n", true);
+		}
+
+		$user_input = [
+			'language' 								=> 'id_ID',
+			'timezone'								=> 'Asia/Jakarta',
+			'name'									=> $username,
+			'email'									=> $email,
+			'realname' 								=> self::$userdata['first-name'][0],
+			'firstname' 							=> self::$userdata['last-name'][0],
+			'nickname' 								=> self::$userdata['name'][0],
+			'_useremails' 							=> array(self::$userdata['email'][0]),
+			'picture' 								=> self::$userdata['foto'][0],
+			'password'  							=> $password,
+			'password2' 							=> $password,
+			'phone2'								=> self::$userdata['nip-lama'][0],
+			'comment'								=> $jabesker,
+			//'user_dn'								=> self::$userdata['golongan'][0],
+			'registration_number'					=> self::$userdata['nip'][0] . ' - ' . self::$userdata['golongan'][0],
+			'locations_id'							=> $location_id > -1 ? $location_id : 0,
+			'date_mod'								=> $_SESSION['glpi_currenttime']
+		];
+
+		//Updating Existing User
+		if ((!empty($username)) && (!empty($email))) {
+
+			$user_id = $user->getIdByName(self::$userdata['username'][0]);
+			$user->updateViaSaml($user_id, $user_input);
+			$user->upsertLocationID($user_id, $location_id);
+
+			Toolbox::logInFile("event", 'Updating User, SAML SSO $ID: ' . $user_id . "\n", true);
+
+		} else {
+
+			$error = "JIT Error: Unable to update user because missing claims (emailaddress and phone2)";
+			Toolbox::logInFile("php-errors", $error . "\n", true);
+
+		}
+
+		if ($auth->loadUserData(self::$nameid) && $auth->checkUserData()) {
 			Session::init($auth);
 			self::redirectToMainPage($relayState);
 			return;
 		}
-		
+
 		// JIT Provisioning added version 1.1.3
-		if (isset($config['jit']) && $config['jit'] == 1){
-			$user = new User();
-			if(!$user->getFromDBbyEmail(self::$nameid)){
-				// (Rihan Y. | 01-03-2023) Alter SAML configuration for JIT Login
-				// if ((!empty(SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'][0])) && (!empty(SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'][0]))){
-					if ((!empty(self::$userdata['username'][0])) && (!empty(self::$userdata['email'][0]))){
-					
-						$password = bin2hex(random_bytes(20));
-						
-						$input = array(
-					// 		"name" => SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'][0],
-					// 		"realname" => SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname'][0],
-					// 		"firstname" => SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/firstname'][0],
-					// 		"_useremails" => array(SELF::$userdata['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'][0]),
-							"language" => "id_ID",
-							"name" => self::$userdata['username'][0],
-							"realname" => self::$userdata['first-name'][0] . ' ' . self::$userdata['last-name'][0],
-							"firstname" => self::$userdata['last-name'][0],
-							"nickname" => self::$userdata['name'][0],
-							"_useremails" => array(self::$userdata['email'][0]),
-							"password" => $password,
-							"password2" => $password,
-							"picture" => self::$userdata['foto'][0],
-						);
-					
-					$newuser = new User();
-					
-					$id = $newuser->add($input);
-					
-					if($auth->loadUserData(self::$nameid) && $auth->checkUserData()){
-						Session::init($auth);
-						self::redirectToMainPage($relayState);
-						return;
-					}
-				} else {
-					$error = "JIT Error: Unable to create user because missing claims (emailaddress)";
-					Toolbox::logInFile("php-errors", $error . "\n", true);
-				}	
+		if (isset($config['jit']) && $config['jit'] == 1 && !$user->getIdByName($username)) {
+			//(Rihan Y. | 01-03-2023) Alter SAML configuration for JIT Login
+			//Inserting New User
+			if ((!empty($username)) && (!empty($email))) {
+
+				$user_id = $user->add($user_input);
+				$user->upsertLocationID($user_id, $location_id);
+				Toolbox::logInFile("event", 'Adding User, SAML SSO $ID: ' . $user_id . "\n", true);
+
+				if ($auth->loadUserData(self::$nameid) && $auth->checkUserData()) {
+					Session::init($auth);
+					self::redirectToMainPage($relayState);
+					return;
+				}
+
 			} else {
-				$error = "JIT Error: Unable to create user because the email address already exists";
+
+				$error = "JIT Error: Unable to create user because missing claims (emailaddress and phone2)";
 				Toolbox::logInFile("php-errors", $error . "\n", true);
+
 			}
+
 		} else {
+
 			$error = "User or NameID not found.  Enable JIT Provisioning or manually create the user account";
 			Toolbox::logInFile("php-errors", $error . "\n", true);
+
 		}
-		
+
 		throw new Exception($error);
 		sloRequest();
-    }
-	
+	}
+
 	static public function glpiLogout()
 	{
 		$valid_id = $_SESSION['valid_id'];
 		$cookie_key = array_search($valid_id, $_COOKIE);
-		
+
 		Session::destroy();
-		
+
 		//Remove cookie to allow new login
 		$cookie_path = ini_get('session.cookie_path');
-		
+
 		if (isset($_COOKIE[$cookie_key])) {
-		   setcookie($cookie_key, '', time() - 3600, $cookie_path);
-		   unset($_COOKIE[$cookie_key]);
+			setcookie($cookie_key, '', time() - 3600, $cookie_path);
+			unset($_COOKIE[$cookie_key]);
 		}
 	}
-	
+
 	static public function ssoRequest($redirect)
 	{
 		global $CFG_GLPI;
-		
+
 		try {
 			self::auth();
 			self::$auth->login($returnTo = $redirect);
 		} catch (Exception $e) {
 			$error = $e->getMessage();
 			Toolbox::logInFile("php-errors", $error . "\n", true);
-			
+
 			// Set error banner (Rihan Y. | 02-02-2023)
 			// Html::nullHeader("Login", $CFG_GLPI["url_base"] . '/index.php');
 			// echo '<div class="center b">'.$error.'<br><br>';
 			// // Logout whit noAUto to manage auto_login with errors
 			// echo '<a href="' . $CFG_GLPI["url_base"] .'/index.php">' .__('Log in again') . '</a></div>';
 			// Html::nullFooter();
-			echo '<div class="card text-white bg-danger text-sm-center sticky-top row justify-content-md-center"><b>Kesalahan terjadi:</b> <i>'. $error.'</i></div>';
-			
+			echo '<div class="card text-white bg-danger text-sm-center sticky-top row justify-content-md-center"><b>Kesalahan terjadi:</b> <i>' . $error . '</i></div>';
 		}
 	}
-	
+
 	static public function sloRequest()
 	{
 		global $CFG_GLPI;
-		
+
 		$returnTo 		= null;
 		$parameters 	= array();
 		$nameId 		= null;
 		$sessionIndex 	= null;
 		$nameIdFormat 	= null;
-		
+
 		if (isset(self::$nameid)) {
 			$nameId = self::$nameid;
 		}
@@ -189,71 +253,71 @@ class PluginPhpsamlPhpsaml
 
 		self::glpiLogout();
 
-		if (!empty(self::$phpsamlsettings['idp']['singleLogoutService'])){
+		if (!empty(self::$phpsamlsettings['idp']['singleLogoutService'])) {
 			try {
 				self::auth();
 				self::$auth->logout($returnTo, $parameters, $nameId, $sessionIndex, false, $nameIdFormat);
 			} catch (Exception $e) {
 				$error = $e->getMessage();
 				Toolbox::logInFile("php-errors", $error . "\n", true);
-				
+
 				// Set error banner (Rihan Y. | 02-02-2023)
 				// Html::nullHeader("Login", $CFG_GLPI["url_base"] . '/index.php');
 				// echo '<div class="center b">'.$error.'<br><br>';
 				// // Logout whit noAUto to manage auto_login with errors
 				// echo '<a href="' . $CFG_GLPI["url_base"] .'/index.php">' .__('Log in again') . '</a></div>';
 				// Html::nullFooter();
-				echo '<div class="card text-white bg-danger text-sm-center sticky-top row justify-content-md-center"><b>Kesalahan terjadi:</b> <i>'. $error.'</i></div>';
-				
+				echo '<div class="card text-white bg-danger text-sm-center sticky-top row justify-content-md-center"><b>Kesalahan terjadi:</b> <i>' . $error . '</i></div>';
 			}
 		}
-		
 	}
-	
-    static public function redirectToMainPage($relayState = null)
-    {
-        global $CFG_GLPI;
-        $REDIRECT = "";
-        $destinationUrl = $CFG_GLPI['url_base'];
 
-        if ($relayState) {
-            $REDIRECT = "?redirect=" . rawurlencode($relayState);
-        }
+	static public function redirectToMainPage($relayState = null)
+	{
+		global $CFG_GLPI;
+		$REDIRECT = "";
+		$destinationUrl = $CFG_GLPI['url_base'];
 
-        if (isset($_SESSION["glpiactiveprofile"])) {
-            if ($_SESSION["glpiactiveprofile"]["interface"] == "helpdesk") {
-                if ($_SESSION['glpiactiveprofile']['create_ticket_on_login']
-                    && empty($REDIRECT)
-                ) {
-                    $destinationUrl .= "/front/helpdesk.public.php?create_ticket=1";
-                } else {
-                    $destinationUrl .= "/front/helpdesk.public.php$REDIRECT";
-                }
+		if ($relayState) {
+			$REDIRECT = "?redirect=" . rawurlencode($relayState);
+		}
 
-            } else {
-                if ($_SESSION['glpiactiveprofile']['create_ticket_on_login']
-                    && empty($REDIRECT)
-                ) {
-                    $destinationUrl .= "/front/ticket.form.php";
-                } else {
-                    $destinationUrl .= "/front/central.php$REDIRECT";
-                }
-            }
-        }
+		if (isset($_SESSION["glpiactiveprofile"])) {
+			if ($_SESSION["glpiactiveprofile"]["interface"] == "helpdesk") {
+				if (
+					$_SESSION['glpiactiveprofile']['create_ticket_on_login']
+					&& empty($REDIRECT)
+				) {
+					$destinationUrl .= "/front/helpdesk.public.php?create_ticket=1";
+				} else {
+					$destinationUrl .= "/front/helpdesk.public.php$REDIRECT";
+				}
+			} else {
+				if (
+					$_SESSION['glpiactiveprofile']['create_ticket_on_login']
+					&& empty($REDIRECT)
+				) {
+					$destinationUrl .= "/front/ticket.form.php";
+				} else {
+					$destinationUrl .= "/front/central.php$REDIRECT";
+				}
+			}
+		}
 
-        header("Location: " . $destinationUrl);
-    }
-	
-	static public function getSettings(){
+		header("Location: " . $destinationUrl);
+	}
+
+	static public function getSettings()
+	{
 		global $CFG_GLPI;
 		$glpiUrl = $CFG_GLPI['url_base'];
 
 		$phpsamlconf = new PluginPhpsamlConfig();
 		$config = $phpsamlconf->getConfig();
-		
-		
 
-		$phpsamlsettings = array (
+
+
+		$phpsamlsettings = array(
 			// If 'strict' is True, then the PHP Toolkit will reject unsigned
 			// or unencrypted messages if it expects them signed or encrypted
 			// Also will reject the messages if not strictly follow the SAML
@@ -270,62 +334,62 @@ class PluginPhpsamlPhpsaml
 			'baseurl' => null,
 
 			// Service Provider Data that we are deploying
-			'sp' => array (
+			'sp' => array(
 				// Identifier of the SP entity  (must be a URI)
-				'entityId' => $glpiUrl.'/',
+				'entityId' => $glpiUrl . '/',
 				// Specifies info about where and how the <AuthnResponse> message MUST be
 				// returned to the requester, in this case our SP.
-				'assertionConsumerService' => array (
+				'assertionConsumerService' => array(
 					// URL Location where the <Response> from the IdP will be returned
-					'url' => $glpiUrl. "/plugins/phpsaml/front/acs.php",
+					'url' => $glpiUrl . "/plugins/phpsaml/front/acs.php",
 				),
 				// If you need to specify requested attributes, set a
 				// attributeConsumingService. nameFormat, attributeValue and
 				// friendlyName can be omitted. Otherwise remove this section.
-				
+
 				// Specifies info about where and how the <Logout Response> message MUST be
 				// returned to the requester, in this case our SP.
-				'singleLogoutService' => array (
+				'singleLogoutService' => array(
 					// URL Location where the <Response> from the IdP will be returned
-					'url' => $glpiUrl ."/plugins/phpsaml/front/slo.php",
+					'url' => $glpiUrl . "/plugins/phpsaml/front/slo.php",
 				),
 				'x509cert' => (isset($config['saml_sp_certificate']) ? $config['saml_sp_certificate'] : ''),
 				'privateKey' => (isset($config['saml_sp_certificate_key']) ? $config['saml_sp_certificate_key'] : ''),
 				// Specifies constraints on the name identifier to be used to
 				// represent the requested subject.
 				// Take a look on lib/Saml2/Constants.php to see the NameIdFormat supported
-				'NameIDFormat' => 'urn:oasis:names:tc:SAML:1.1:nameid-format:'.(isset($config['saml_sp_nameid_format']) ? $config['saml_sp_nameid_format'] : 'unspecified'),
+				'NameIDFormat' => 'urn:oasis:names:tc:SAML:1.1:nameid-format:' . (isset($config['saml_sp_nameid_format']) ? $config['saml_sp_nameid_format'] : 'unspecified'),
 			),
 
 			// Identity Provider Data that we want connect with our SP
-			'idp' => array (
+			'idp' => array(
 				// Identifier of the IdP entity  (must be a URI)
 				'entityId' => (isset($config['saml_idp_entity_id']) ? $config['saml_idp_entity_id'] : ''),
 				// SSO endpoint info of the IdP. (Authentication Request protocol)
-				'singleSignOnService' => array (
+				'singleSignOnService' => array(
 					// URL Target of the IdP where the SP will send the Authentication Request Message
 					'url' => (isset($config['saml_idp_single_sign_on_service']) ? $config['saml_idp_single_sign_on_service'] : ''),
 				),
 				// SLO endpoint info of the IdP.
-				'singleLogoutService' => array (
+				'singleLogoutService' => array(
 					// URL Location of the IdP where the SP will send the SLO Request
 					'url' => (isset($config['saml_idp_single_logout_service']) ? $config['saml_idp_single_logout_service'] : ''),
 				),
 				// Public x509 certificate of the IdP
 				'x509cert' => (isset($config['saml_idp_certificate']) ? $config['saml_idp_certificate'] : ''),
-				
+
 			),
 			// Compression settings 
 			// Handle if the getRequest/getResponse methods will return the Request/Response deflated.
 			// But if we provide a $deflate boolean parameter to the getRequest or getResponse
 			// method it will have priority over the compression settings.
-			'compress' => array (
+			'compress' => array(
 				'requests' => true,
 				'responses' => true
 			),
 
 			// Security settings
-			'security' => array (
+			'security' => array(
 
 				/** signatures and encryptions offered */
 
@@ -419,15 +483,16 @@ class PluginPhpsamlPhpsaml
 		);
 		return $phpsamlsettings;
 	}
-	
-	static public function getAuthn($value){
-		if(preg_match('/^none,.+/i', $value)){
+
+	static public function getAuthn($value)
+	{
+		if (preg_match('/^none,.+/i', $value)) {
 			$array = explode(',', $value);
 			$output = array();
 			// TODO: Current configuration input field allows multiple Items, logic below will select the first found then break. 
 			// Because of this the end result might not be what the user expects based on the config screen.
-			foreach ($array as $item){
-				switch($item){
+			foreach ($array as $item) {
+				switch ($item) {
 					case 'PasswordProtectedTransport':
 						$output[] = 'urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport';
 						break;
@@ -440,7 +505,7 @@ class PluginPhpsamlPhpsaml
 				}
 			}
 			return $output;
-		}else{
+		} else {
 			return false;
 		}
 	}

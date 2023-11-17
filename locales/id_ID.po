@@ -2802,7 +2802,7 @@ msgstr "Nomor Administrasi"
 #: src/User.php:3675
 msgctxt "user"
 msgid "Administrative number"
-msgstr "Nomor Administrasi"
+msgstr "NIP ASN - Golongan"
 
 #: src/NotificationTargetDBConnection.php:49 src/NotificationTarget.php:1002
 #: src/Marketplace/NotificationTargetController.php:56
@@ -3123,7 +3123,7 @@ msgstr ""
 #: src/Location.php:112 src/Location.php:300 src/NotificationTargetTicket.php:645
 #: src/NotificationTargetTicket.php:664 src/Entity.php:791
 msgid "Altitude"
-msgstr ""
+msgstr "Ketinggian"
 
 #: src/Entity.php:1583
 msgctxt "location"
@@ -4299,7 +4299,7 @@ msgstr[0] "Tipe anggaran"
 #: src/Location.php:87 src/Location.php:187 src/Location.php:239 src/NotificationTargetTicket.php:630
 #: src/NotificationTargetTicket.php:661
 msgid "Building number"
-msgstr ""
+msgstr "Nomor/Blok Bangunan"
 
 #: js/modules/Kanban/Kanban.js:467
 msgid "Bulk add"
@@ -5414,6 +5414,10 @@ msgstr ""
 #: ajax/dropdownMassiveActionAddValidator.php:57 ajax/dropdownMassiveActionAddValidator.php:146
 msgid "Comments"
 msgstr "Komentar"
+
+#: src/User.php:2628 src/User.php:3638
+msgid "Occupation"
+msgstr "Jabatan Fungsional/Struktural"
 
 #: src/Infocom.php:1428
 msgid "Comments on financial and administrative information"
@@ -6546,7 +6550,7 @@ msgstr ""
 
 #: src/RuleRight.php:364 src/User.php:2695 src/User.php:3098 src/User.php:3749
 msgid "Default entity"
-msgstr "Bawaan entitas"
+msgstr "Entitas/Layanan Default"
 
 #: src/Config.php:983
 msgid "Default file size limit imported by the mails receiver"
@@ -6586,7 +6590,7 @@ msgstr ""
 
 #: templates/components/user/info_card.html.twig src/RuleRight.php:374 src/User.php:2705
 msgid "Default group"
-msgstr ""
+msgstr "Grup Bawaan"
 
 #: src/Config.php:991
 msgid "Default heading when adding a document to a ticket"
@@ -6615,7 +6619,7 @@ msgstr ""
 #: src/RuleRight.php:381 src/Profile.php:748 src/Profile.php:2141 src/User.php:2677 src/User.php:3053
 #: src/User.php:3740 src/RuleTicket.php:626
 msgid "Default profile"
-msgstr ""
+msgstr "Profil Bawaan"
 
 #: src/Report.php:74
 msgid "Default report"
@@ -9006,7 +9010,7 @@ msgstr ""
 #: src/Auth.php:1666 src/Contact.php:238 src/User.php:2445 src/User.php:2888 src/User.php:3468 src/User.php:6320
 #: src/NotificationTargetUser.php:152 src/ContentTemplates/Parameters/UserParameters.php:81
 msgid "First name"
-msgstr "Nama depan"
+msgstr "Nama Belakang"
 
 #: src/Config.php:1187
 msgid "First name, Surname"
@@ -11532,7 +11536,7 @@ msgstr ""
 #: src/Location.php:102 src/Location.php:214 src/Location.php:282 src/NotificationTargetTicket.php:635
 #: src/NotificationTargetTicket.php:662 src/Entity.php:773
 msgid "Latitude"
-msgstr ""
+msgstr "Garis Lintang"
 
 #: src/Entity.php:1577
 msgctxt "location"
@@ -11996,6 +12000,10 @@ msgstr "Operator logika"
 msgid "Login"
 msgstr "Login"
 
+#: src/User.php:2871
+msgid "Username"
+msgstr "Nama Akun"
+
 #: src/AuthLDAP.php:498 src/AuthLDAP.php:1088
 msgid "Login field"
 msgstr ""
@@ -12031,7 +12039,7 @@ msgstr "Pengaturan pembersihan log"
 #: src/Location.php:107 src/Location.php:223 src/Location.php:291 src/NotificationTargetTicket.php:640
 #: src/NotificationTargetTicket.php:663 src/Entity.php:782
 msgid "Longitude"
-msgstr ""
+msgstr "Garis Bujur"
 
 #: src/Entity.php:1571
 msgctxt "location"
@@ -14903,7 +14911,7 @@ msgstr[0] ""
 #: templates/password_form.html.twig src/AuthMail.php:235 src/MailCollector.php:267 src/User.php:2462
 #: src/User.php:2951 src/Config.php:2187
 msgid "Password"
-msgstr "Password"
+msgstr "Kata Sandi"
 
 #: src/AuthLDAP.php:485
 msgid "Password (for non-anonymous binds)"
@@ -14911,7 +14919,7 @@ msgstr ""
 
 #: templates/password_form.html.twig src/User.php:2467 src/User.php:2957
 msgid "Password confirmation"
-msgstr "Konfirmasi kata kunci"
+msgstr "Konfirmasi Kata Sandi"
 
 #: src/NotificationTargetUser.php:190
 msgid "Password expiration date"
@@ -15160,7 +15168,7 @@ msgstr "Personalisasi"
 #: src/ContentTemplates/Parameters/UserParameters.php:78 src/Phone.php:78
 msgid "Phone"
 msgid_plural "Phones"
-msgstr[0] "Telepon"
+msgstr[0] "Telp. Ekstensi"
 
 #: src/AuthLDAP.php:924 src/AuthLDAP.php:1115 src/AuthLDAP.php:3756
 msgctxt "ldap"
@@ -15173,7 +15181,7 @@ msgstr ""
 #: src/Contact.php:263 src/User.php:2604 src/User.php:3074 src/User.php:3526
 #: src/ContentTemplates/Parameters/UserParameters.php:79
 msgid "Phone 2"
-msgstr "Telepon 2"
+msgstr "NIP BPS"
 
 #: src/PhoneModel.php:44 src/Rule.php:366
 msgid "Phone model"
@@ -15204,7 +15212,7 @@ msgstr ""
 #: src/CommonDropdown.php:184
 msgid "Picture"
 msgid_plural "Pictures"
-msgstr[0] ""
+msgstr[0] "Foto/Gambar"
 
 #: src/Dashboard/Widget.php:70
 msgid "Pie"
@@ -15639,7 +15647,7 @@ msgstr "Kirim"
 #: src/Contact.php:303 src/ContentTemplates/Parameters/SupplierParameters.php:72 src/Entity.php:738
 #: src/Entity.php:1536 src/Supplier.php:202
 msgid "Postal code"
-msgstr ""
+msgstr "Kode Pos"
 
 #: src/Document.php:1425
 msgid "Potential upload attack or file too large. Moving temporary file failed."
@@ -17119,7 +17127,7 @@ msgstr ""
 #: src/Location.php:92 src/Location.php:196 src/Location.php:247 src/NotificationTargetTicket.php:625
 #: src/NotificationTargetTicket.php:660
 msgid "Room number"
-msgstr ""
+msgstr "Kode Ruangan"
 
 #: src/Knowbase.php:338
 msgid "Root category"
@@ -18543,7 +18551,7 @@ msgstr "State"
 #: src/Supplier.php:210
 msgctxt "location"
 msgid "State"
-msgstr "State"
+msgstr "Provinsi"
 
 #: src/VirtualMachineState.php:41
 msgid "State of the virtual machine"
@@ -18754,7 +18762,7 @@ msgstr "Dukungan jam"
 #: src/Auth.php:1660 src/User.php:2434 src/User.php:2853 src/User.php:6299
 #: src/ContentTemplates/Parameters/UserParameters.php:82
 msgid "Surname"
-msgstr "Nama Lengkap"
+msgstr "Nama Depan"
 
 #: src/Config.php:1186
 msgid "Surname, First name"
@@ -19852,7 +19860,7 @@ msgstr ""
 
 #: src/User.php:2488 src/User.php:2979
 msgid "Time zone"
-msgstr ""
+msgstr "Zona Waktu"
 
 #: js/reservations.js:122
 msgid "Timeline Week"
@@ -19923,12 +19931,16 @@ msgstr ""
 msgid "Title"
 msgstr "Judul"
 
+#: src/User.php:3754
+msgid "Titled"
+msgstr "Gelar"
+
 #: templates/components/user/info_card.html.twig front/stat.graph.php:241 front/stat.tracking.php:91
 #: src/AuthLDAP.php:934 src/AuthLDAP.php:1142 src/AuthLDAP.php:3759 src/Auth.php:1728
 #: src/NotificationTargetCommonITILObject.php:1746 src/NotificationTargetCommonITILObject.php:1770 src/User.php:2630
 msgctxt "person"
 msgid "Title"
-msgstr "Judul"
+msgstr "Gelar"
 
 #: src/CommonITILObject.php:6245
 #, php-format
@@ -20185,7 +20197,7 @@ msgstr ""
 
 #: src/Location.php:72 src/Location.php:160 src/Location.php:273 src/Location.php:325
 msgid "Town"
-msgstr "Kota"
+msgstr "Kota/Kabupaten"
 
 #: front/transfer.php:40 front/transfer.action.php:38 src/RuleCollection.php:2210 src/Profile.php:1831
 #: src/Profile.php:2732 src/Rule.php:260 src/Entity.php:1878

@@ -11,6 +11,9 @@ config/config_db.php
 config/glpi.key
 config/glpicrypt.key
 config/local_define.php
+files/_log/php-errors.log
+files/_log/event.log
+files/_log/cron.log
 tests/config_db*
 tests/cache.php
 marketplace/*
