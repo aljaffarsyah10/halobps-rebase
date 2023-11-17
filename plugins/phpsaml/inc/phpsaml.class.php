@@ -221,11 +221,14 @@ class PluginPhpsamlPhpsaml
 			$error = $e->getMessage();
 			Toolbox::logInFile("php-errors", $error . "\n", true);
 <<<<<<< HEAD
+<<<<<<< HEAD
 			
 			
 			echo '<div class="card text-white bg-danger text-sm-center sticky-top row justify-content-md-center"><b>Kesalahan terjadi:</b> <i>'. $error.'</i></div>';
 			
 =======
+=======
+>>>>>>> 1381cb758 (Merge branch 'pusher' of https://devops.bps.go.id/halosis/glpi into pusher)
 
 			// Set error banner (Rihan Y. | 02-02-2023)
 			// Html::nullHeader("Login", $CFG_GLPI["url_base"] . '/index.php');
@@ -234,7 +237,10 @@ class PluginPhpsamlPhpsaml
 			// echo '<a href="' . $CFG_GLPI["url_base"] .'/index.php">' .__('Log in again') . '</a></div>';
 			// Html::nullFooter();
 			echo '<div class="card text-white bg-danger text-sm-center sticky-top row justify-content-md-center"><b>Kesalahan terjadi:</b> <i>' . $error . '</i></div>';
+<<<<<<< HEAD
 >>>>>>> 8c02fd126 (Workarounds #18:)
+=======
+>>>>>>> 1381cb758 (Merge branch 'pusher' of https://devops.bps.go.id/halosis/glpi into pusher)
 		}
 	}
 
@@ -268,10 +274,13 @@ class PluginPhpsamlPhpsaml
 				$error = $e->getMessage();
 				Toolbox::logInFile("php-errors", $error . "\n", true);
 <<<<<<< HEAD
+<<<<<<< HEAD
 				
 				echo '<div class="card text-white bg-danger text-sm-center sticky-top row justify-content-md-center"><b>Kesalahan terjadi:</b> <i>'. $error.'</i></div>';
 				
 =======
+=======
+>>>>>>> 1381cb758 (Merge branch 'pusher' of https://devops.bps.go.id/halosis/glpi into pusher)
 
 				// Set error banner (Rihan Y. | 02-02-2023)
 				// Html::nullHeader("Login", $CFG_GLPI["url_base"] . '/index.php');
@@ -280,7 +289,10 @@ class PluginPhpsamlPhpsaml
 				// echo '<a href="' . $CFG_GLPI["url_base"] .'/index.php">' .__('Log in again') . '</a></div>';
 				// Html::nullFooter();
 				echo '<div class="card text-white bg-danger text-sm-center sticky-top row justify-content-md-center"><b>Kesalahan terjadi:</b> <i>' . $error . '</i></div>';
+<<<<<<< HEAD
 >>>>>>> 8c02fd126 (Workarounds #18:)
+=======
+>>>>>>> 1381cb758 (Merge branch 'pusher' of https://devops.bps.go.id/halosis/glpi into pusher)
 			}
 		}
 	}

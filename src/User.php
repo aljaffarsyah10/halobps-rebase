@@ -3003,6 +3003,7 @@ HTML;
 
                 User::dropdown([
                     'name'   => 'users_id_supervisor',
+<<<<<<< HEAD
                     'value'         => $this->fields["users_id_supervisor"],
                     'rand'          => $userrand,
                     'entity'        => $_SESSION["glpiactive_entity"],
@@ -3010,6 +3011,13 @@ HTML;
                     'used'          => [$this->getID()],
                     'right'         => 'all',
                     'readonly'      => !$this->is_admin
+=======
+                    'value'  => $this->fields["users_id_supervisor"],
+                    'rand'   => $userrand,
+                    'entity' => $_SESSION["glpiactive_entity"],
+                    'right'  => 'all',
+                    'readonly' => !$this->is_admin
+>>>>>>> 1381cb758 (Merge branch 'pusher' of https://devops.bps.go.id/halosis/glpi into pusher)
                 ]);
                 echo "</td></tr>";
             }
@@ -6104,16 +6112,28 @@ HTML;
         $picture = Html::cleanInputText($picture);
 
         if (!empty($picture)) {
+<<<<<<< HEAD
             if (preg_match('/community.bps.go.id/', $picture)) {
 
                 return $picture;
             } else {
+=======
+            if(preg_match('/community.bps.go.id/', $picture)){
+
+                return $picture;
+
+            } else{
+>>>>>>> 1381cb758 (Merge branch 'pusher' of https://devops.bps.go.id/halosis/glpi into pusher)
 
                 $tmp = explode(".", $picture);
                 if (count($tmp) == 2) {
                     return $CFG_GLPI["root_doc"] . "/front/document.send.php?file=_pictures/" . $tmp[0] .
                         "_min." . $tmp[1];
                 }
+<<<<<<< HEAD
+=======
+                
+>>>>>>> 1381cb758 (Merge branch 'pusher' of https://devops.bps.go.id/halosis/glpi into pusher)
             }
         }
 
