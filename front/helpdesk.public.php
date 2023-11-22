@@ -176,7 +176,11 @@ if (isset($_GET['create_ticket'])) {
 
     if (!hasFilledSurvey()) {
         Session::addMessageAfterRedirect('Harap isi survei kepuasan terlebih dahulu.', true, WARNING);
-        Html::redirect($CFG_GLPI['root_doc'] . "/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=6&criteria%5B0%5D%5Blink%5D=AND&criteria%5B1%5D%5Bfield%5D=60&criteria%5B1%5D%5Bsearchtype%5D=contains&criteria%5B1%5D%5Bvalue%5D=%5E&criteria%5B1%5D%5Blink%5D=AND&criteria%5B2%5D%5Bfield%5D=61&criteria%5B2%5D%5Bsearchtype%5D=contains&criteria%5B2%5D%5Bvalue%5D=NULL&criteria%5B2%5D%5Blink%5D=AND&criteria%5B3%5D%5Bfield%5D=4&criteria%5B3%5D%5Bsearchtype%5D=equals&criteria%5B3%5D%5Bvalue%5D=3&criteria%5B3%5D%5Blink%5D=AND&reset=reset");
+        //Html::redirect($CFG_GLPI['root_doc'] . "/front/ticket.php?criteria%5B0%5D%5Bfield%5D=12&criteria%5B0%5D%5Bsearchtype%5D=equals&criteria%5B0%5D%5Bvalue%5D=6&criteria%5B0%5D%5Blink%5D=AND&criteria%5B1%5D%5Bfield%5D=60&criteria%5B1%5D%5Bsearchtype%5D=contains&criteria%5B1%5D%5Bvalue%5D=%5E&criteria%5B1%5D%5Blink%5D=AND&criteria%5B2%5D%5Bfield%5D=61&criteria%5B2%5D%5Bsearchtype%5D=contains&criteria%5B2%5D%5Bvalue%5D=NULL&criteria%5B2%5D%5Blink%5D=AND&criteria%5B3%5D%5Bfield%5D=4&criteria%5B3%5D%5Bsearchtype%5D=equals&criteria%5B3%5D%5Bvalue%5D=3&criteria%5B3%5D%5Blink%5D=AND&reset=reset");
+
+        //redirect to satisfaction survey form
+        $ticket_satisfactions_id = Ticket::getIDTicketSatisfactions();
+        Html::redirect($CFG_GLPI['root_doc'] . "/front/ticket.form.php?id=".$ticket_satisfactions_id."&forcetab=Ticket$3");
     }
     
     Html::helpHeader(__('New ticket'), "create_ticket");
