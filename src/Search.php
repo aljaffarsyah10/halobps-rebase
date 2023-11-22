@@ -723,7 +723,6 @@ class Search
         $data['sql']['search'] = '';
 
         $searchopt        = &self::getOptions($data['itemtype']);
-
         $blacklist_tables = [];
         $orig_table = self::getOrigTableName($data['itemtype']);
         if (isset($CFG_GLPI['union_search_type'][$data['itemtype']])) {
@@ -1145,7 +1144,12 @@ class Search
             $QUERY .= str_replace($CFG_GLPI["union_search_type"][$data['itemtype']] . ".", "", $ORDER) .
                 $LIMIT;
         } else {
-            $QUERY = $SELECT .
+
+            if($data['itemtype']=='Ticket')
+                if(Session::getCurrentInterface() != "helpdesk"){
+               $SELECT= $SELECT .",(select max(date) from glpi_itilfollowups glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id and glpi_itilfollowups2.users_id = glpi_tickets.users_id_recipient and glpi_itilfollowups2.content like '%?%') as belumbalas, (select max(date) from glpi_itilfollowups glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id and glpi_itilfollowups2.users_id = glpi_tickets.users_id_recipient)  as balasanrequester, (select max(date) from glpi_itilfollowups glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id)  as belumbalas2";
+            }
+            $QUERY = $SELECT.
                 $FROM .
                 $WHERE .
                 $GROUPBY .
@@ -1638,6 +1642,7 @@ class Search
                 $row = $DBread->fetchAssoc($result);
                 $newrow        = [];
                 $newrow['raw'] = $row;
+                //print_r ($row);
 
                 // Parse datas
                 foreach ($newrow['raw'] as $key => $val) {
@@ -1649,8 +1654,8 @@ class Search
                         $fieldname = 'name';
                         if (isset($matches[5])) {
                             $fieldname = $matches[5];
+                            
                         }
-
                         // No Group_concat case
                         if ($fieldname == 'content' || !is_string($val) || strpos($val, self::LONGSEP) === false) {
                             $newrow[$j]['count'] = 1;
@@ -1671,6 +1676,7 @@ class Search
                                 } else {
                                     $newrow[$j][0][$fieldname] = $val;
                                 }
+
                             }
                         } else {
                             if (!isset($newrow[$j])) {
@@ -6983,7 +6989,25 @@ JAVASCRIPT;
                         ) {
                             $name = sprintf(__('%1$s (%2$s)'), $name, $data[$ID][0]['id']);
                         }
+
+
+            if($itemtype=='Ticket' and Session::getCurrentInterface() != "helpdesk"){
+                        
+                        if($data['belumbalas2'] == null){
+                            $out    .= $name . "</a>(!)";
+                        }else{
+                            if($data['belumbalas'] == null)
+                                if($data['balasanrequester'] == null)
+                                    $out    .= $name . "</a>";
+                                else
+                                    $out    .= $name . "</a>(!)";
+                            else
+                                $out    .= $name . "</a>(?)";}
+
+                        }else 
                         $out    .= $name . "</a>";
+
+
                         $out     = sprintf(
                             __('%1$s %2$s'),
                             $out,
