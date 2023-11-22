@@ -223,18 +223,18 @@ class Search
         $isRoleUser  = $_SESSION['glpiactiveprofile']['id'] == 1;
 
         if (!$isRoleUser) {
-        $hidden_columns = ['Technician groups'];
-        $hidden_columns = array_map(function ($col) {
-            return __($col);
-        }, $hidden_columns);
-        $data['cols'] = array_filter($data['cols'], function ($col) use ($hidden_columns) {
-            return !in_array($col['name'], $hidden_columns);
-        });
+            $hidden_columns = ['Technician groups'];
+            $hidden_columns = array_map(function ($col) {
+                return __($col);
+            }, $hidden_columns);
+            $data['cols'] = array_filter($data['cols'], function ($col) use ($hidden_columns) {
+                return !in_array($col['name'], $hidden_columns);
+            });
 
             return $data;
         }
 
-        $hidden_columns = ['Technician', 'Technician group','Technician groups'];
+        $hidden_columns = ['Technician', 'Technician group', 'Technician groups'];
         $hidden_columns = array_map(function ($col) {
             return __($col);
         }, $hidden_columns);
@@ -732,8 +732,7 @@ class Search
         $data['sql']['search'] = '';
         $data['sql']['raw']    = [];
 
-        $searchopt        = self::getOptions($data['itemtype']);
-
+        $searchopt        = &self::getOptions($data['itemtype']);
         $blacklist_tables = [];
         $orig_table = self::getOrigTableName($data['itemtype']);
         if (isset($CFG_GLPI['union_search_type'][$data['itemtype']])) {
@@ -1660,6 +1659,7 @@ class Search
                 $row = $DBread->fetchAssoc($result);
                 $newrow        = [];
                 $newrow['raw'] = $row;
+                //print_r ($row);
 
                 // Parse datas
                 foreach ($newrow['raw'] as $key => $val) {
@@ -1672,7 +1672,6 @@ class Search
                         if (isset($matches[5])) {
                             $fieldname = $matches[5];
                         }
-
                         // No Group_concat case
                         if ($fieldname == 'content' || !is_string($val) || strpos($val, self::LONGSEP) === false) {
                             $newrow[$j]['count'] = 1;
@@ -7371,7 +7370,23 @@ JAVASCRIPT;
                         ) {
                             $name = sprintf(__('%1$s (%2$s)'), $name, $data[$ID][0]['id']);
                         }
-                        $out    .= $name . "</a>";
+
+
+                        if ($itemtype == 'Ticket' and Session::getCurrentInterface() != "helpdesk") {
+
+                            if ($data['belumbalas2'] == null) {
+                                $out    .= $name . "</a>(!)";
+                            } else {
+                                if ($data['belumbalas'] == null)
+                                    if ($data['balasanrequester'] == null)
+                                        $out    .= $name . "</a>";
+                                    else
+                                        $out    .= $name . "</a>(!)";
+                                else
+                                    $out    .= $name . "</a>(?)";
+                            }
+                        } else
+                            $out    .= $name . "</a>";
 
                         // Add tooltip
                         $id = $data[$ID][0]['id'];
