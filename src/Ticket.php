@@ -7091,4 +7091,29 @@ JAVASCRIPT;
     {
         return TicketParameters::class;
     }
+
+    /**
+     * Get tickets id from ticket satisfaction
+     * @author Diah H. | 22-11-2023
+     * 
+     * @return tickets_id
+     */
+
+     public static function getIDTicketSatisfactions()
+     {
+         global $DB;
+         $result = $DB->request(
+             [
+                 'SELECT'        => 't1.tickets_id AS id',
+                 'FROM'          => 'glpi_ticketsatisfactions AS t1',
+                 'INNER JOIN'    => ['glpi_tickets_users AS t2'      => ['FKEY' => [ 't1'  => 'tickets_id',
+                                                                                     't2'  => 'tickets_id']]],
+                 'WHERE'         => ['t1.date_answered' => NULL,
+                                     't2.users_id'      => Session::getLoginUserID()],
+                 'ORDERBY'       => 't1.date_begin',
+                 'LIMIT'         => 1
+             ]
+         )->current();
+         return $result['id'];
+     }
 }
