@@ -1147,7 +1147,7 @@ class Search
 
             if($data['itemtype']=='Ticket')
                 if(Session::getCurrentInterface() != "helpdesk"){
-               $SELECT= $SELECT .",(select max(date) from glpi_itilfollowups glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id and glpi_itilfollowups2.users_id = glpi_tickets.users_id_recipient and glpi_itilfollowups2.content like '%?%') as belumbalas, (select max(date) from glpi_itilfollowups glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id and glpi_itilfollowups2.users_id = glpi_tickets.users_id_recipient)  as balasanrequester, (select max(date) from glpi_itilfollowups glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id)  as belumbalas2";
+               $SELECT= $SELECT .",(select date from glpi_komentarterbaru glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id and glpi_itilfollowups2.users_id = glpi_tickets.users_id_recipient and glpi_itilfollowups2.content like '%?%') as belumbalas, (select date from glpi_komentarterbaru glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id and glpi_itilfollowups2.users_id = glpi_tickets.users_id_recipient)  as balasanrequester, (select date from glpi_komentarterbaru glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id)  as belumbalas2";
             }
             $QUERY = $SELECT.
                 $FROM .
