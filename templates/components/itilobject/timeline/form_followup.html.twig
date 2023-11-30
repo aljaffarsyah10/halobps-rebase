@@ -119,6 +119,7 @@
                      }
                   ) }}
                </div>
+               <input type="hidden" name="glpiactiveprofileid" value="{{ session('glpiactiveprofile')['id'] }}">
                {% if get_current_interface() == 'central' %}
                   <div class="col-12 col-xl-5 col-xxl-4 order-first order-md-last pe-0 pe-xxl-auto">
                      <div class="row">
@@ -129,7 +130,7 @@
                         {% endset %}
 
                            
-                            <input type="hidden" name="glpiactiveprofileid" value="{{ session('glpiactiveprofile')['id'] }}">
+                            
 
                         {{ fields.dropdownField(
                            'ITILFollowupTemplate',
