@@ -3272,6 +3272,60 @@ abstract class CommonITILObject extends CommonDBTM
     }
 
 
+
+    /**
+     * Dropdown of ITIL object No BMN
+     *
+     * @since 0.84 new proto
+     *
+     * @param $options array of options
+     *       - name     : select name (default is urgency)
+     *       - value    : default value (default 0)
+     *       - showtype : list proposed : normal, search (default normal)
+     *       - display  : boolean if false get string
+     *
+     * @return string id of the select
+     **/
+    public static function dropdownBMN(array $options = [])
+    {
+        global $CFG_GLPI;
+
+        $p = [
+            'name'     => 'nup_bmn',
+            'value'    => 0,
+            'showtype' => 'normal',
+            'display'  => true,
+        ];
+
+        if (is_array($options) && count($options)) {
+            foreach ($options as $key => $val) {
+                $p[$key] = $val;
+            }
+        }
+
+        if (isset($CFG_GLPI[static::URGENCY_MASK_FIELD])) {
+            // var_dump($_SESSION['glpiID']);
+            $values = [
+                'BMN 1',
+                'BMN 2',
+                'BMN 3',
+                'BMN 4',
+                'BMN 5',
+            ];
+        };
+
+
+        //     if (
+        //             ($p['showtype'] == 'search')
+        //             || ($CFG_GLPI[static::URGENCY_MASK_FIELD] & (1 << 5))
+        //         ) {
+
+        return Dropdown::showFromArray($p['name'], $values, $p);
+    }
+
+
+
+
     /**
      * Dropdown of ITIL object Impact
      *

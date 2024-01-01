@@ -28915,6 +28915,7 @@ Compile css/palettes/lightblue.scss  {"user":"2@YOSRAL-34005894"}
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8cc5be255 (changes related to #33 (1))
 =======
 >>>>>>> 0a71bb790 (Merge Reinit-all @yosral to Pusher (per 090223))
@@ -29240,4 +29241,236 @@ Compile css/palettes/lightblue.scss  {"user":"2@YOSRAL-34005894"}
   Backtrace :
   src\CommonDBTM.php:1612                            User->prepareInputForUpdate()
   ajax\itillayout.php:56                             CommonDBTM->update()
+=======
+[2023-12-31 12:44:48] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/1045): Access denied for user 'halosisw_halodev'@'localhost' (using password: YES) in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php at line 250
+  Backtrace :
+  src\DBmysql.php:250                                mysqli->real_connect()
+  src\DBmysql.php:209                                DBmysql->connect()
+  src\DBConnection.php:412                           DBmysql->__construct()
+  src\DBConnection.php:501                           DBConnection::switchToMaster()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  default.php:89                                     include()
+  
+[2023-12-31 12:44:48] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "glpilanguage" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Html.php at line 1232
+  Backtrace :
+  src\Html.php:2157                                  Html::includeHeader()
+  src\DBConnection.php:600                           Html::nullHeader()
+  src\DBConnection.php:536                           DBConnection::displayMySQLError()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  default.php:89                                     include()
+  
+[2023-12-31 12:44:48] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Html.php at line 1232
+  Backtrace :
+  src\Html.php:2157                                  Html::includeHeader()
+  src\DBConnection.php:600                           Html::nullHeader()
+  src\DBConnection.php:536                           DBConnection::displayMySQLError()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  default.php:89                                     include()
+  
+[2023-12-31 12:44:48] glpiphplog.WARNING:   *** PHP Warning (2): Trying to access array offset on value of type null in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Html.php at line 1232
+  Backtrace :
+  src\Html.php:2157                                  Html::includeHeader()
+  src\DBConnection.php:600                           Html::nullHeader()
+  src\DBConnection.php:536                           DBConnection::displayMySQLError()
+  inc\config.php:116                                 DBConnection::establishDBConnection()
+  inc\includes.php:53                                include_once()
+  default.php:89                                     include()
+  
+[2023-12-31 12:50:57] glpiphplog.WARNING: Test logger  
+[2023-12-31 12:50:58] glpiphplog.WARNING: Test logger  
+[2023-12-31 12:50:59] glpiphplog.WARNING:   *** PHP Warning (2): fopen(D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev/locales/en_US.po): Failed to open stream: No such file or directory in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\locale.php at line 94
+  Backtrace :
+  front\locale.php:94                                fopen()
+  
+[2023-12-31 12:50:59] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev/locales/en_US.po". in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\locale.php at line 97
+  Backtrace :
+  front\locale.php:97                                trigger_error()
+  
+[2023-12-31 12:55:56] glpiphplog.DEBUG: Html::compileScss() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Html.php line 6917
+Compile css/palettes/lightblue.scss  {"user":"@LAPTOP-3QJ309BV"} 
+[2023-12-31 12:56:08] glpiphplog.WARNING:   *** PHP Warning (2): fopen(D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev/locales/en_US.po): Failed to open stream: No such file or directory in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\locale.php at line 94
+  Backtrace :
+  front\locale.php:94                                fopen()
+  
+[2023-12-31 12:56:08] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev/locales/en_US.po". in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\locale.php at line 97
+  Backtrace :
+  front\locale.php:97                                trigger_error()
+  
+[2023-12-31 12:56:12] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\Ticket.php:1680                                NotificationEvent::raiseEvent()
+  src\CommonDBTM.php:1716                            Ticket->post_updateItem()
+  src\Ticket.php:5832                                CommonDBTM->update()
+  src\CronTask.php:1018                              Ticket::cronCloseTicket()
+  front\cron.php:64                                  CronTask::launch()
+  
+[2023-12-31 12:56:12] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\TicketSatisfaction.php:196                     NotificationEvent::raiseEvent()
+  src\CommonDBTM.php:1322                            TicketSatisfaction->post_addItem()
+  src\Ticket.php:1714                                CommonDBTM->add()
+  src\CommonDBTM.php:1716                            Ticket->post_updateItem()
+  src\Ticket.php:5832                                CommonDBTM->update()
+  src\CronTask.php:1018                              Ticket::cronCloseTicket()
+  front\cron.php:64                                  CronTask::launch()
+  
+[2023-12-31 12:56:16] glpiphplog.WARNING:   *** PHP Warning (2): fopen(D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev/locales/en_US.po): Failed to open stream: No such file or directory in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\locale.php at line 94
+  Backtrace :
+  front\locale.php:94                                fopen()
+  
+[2023-12-31 12:56:16] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev/locales/en_US.po". in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\locale.php at line 97
+  Backtrace :
+  front\locale.php:97                                trigger_error()
+  
+[2024-01-01 10:18:03] glpiphplog.WARNING:   *** PHP Warning (2): fopen(D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev/locales/en_US.po): Failed to open stream: No such file or directory in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\locale.php at line 94
+  Backtrace :
+  front\locale.php:94                                fopen()
+  
+[2024-01-01 10:18:03] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev/locales/en_US.po". in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\locale.php at line 97
+  Backtrace :
+  front\locale.php:97                                trigger_error()
+  
+[2024-01-01 10:18:13] glpiphplog.WARNING:   *** PHP Warning (2): fopen(D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev/locales/en_US.po): Failed to open stream: No such file or directory in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\locale.php at line 94
+  Backtrace :
+  front\locale.php:94                                fopen()
+  
+[2024-01-01 10:18:13] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev/locales/en_US.po". in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\locale.php at line 97
+  Backtrace :
+  front\locale.php:97                                trigger_error()
+  
+[2024-01-01 10:18:14] glpiphplog.WARNING:   *** PHP Warning (2): fopen(D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev/locales/en_US.po): Failed to open stream: No such file or directory in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\locale.php at line 94
+  Backtrace :
+  front\locale.php:94                                fopen()
+  
+[2024-01-01 10:18:14] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev/locales/en_US.po". in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\locale.php at line 97
+  Backtrace :
+  front\locale.php:97                                trigger_error()
+  
+[2024-01-01 10:18:18] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\User.php at line 841
+  Backtrace :
+  src\CommonDBTM.php:1590                            User->prepareInputForUpdate()
+  src\User.php:5763                                  CommonDBTM->update()
+  src\Auth.php:1034                                  User->getAuthToken()
+  front\login.php:89                                 Auth->login()
+  
+[2024-01-01 10:19:22] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\User.php at line 841
+  Backtrace :
+  src\CommonDBTM.php:1590                            User->prepareInputForUpdate()
+  src\User.php:5763                                  CommonDBTM->update()
+  src\Auth.php:1034                                  User->getAuthToken()
+  front\login.php:89                                 Auth->login()
+  
+[2024-01-01 10:19:48] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\User.php at line 841
+  Backtrace :
+  src\CommonDBTM.php:1590                            User->prepareInputForUpdate()
+  src\User.php:5763                                  CommonDBTM->update()
+  src\Auth.php:1034                                  User->getAuthToken()
+  front\login.php:89                                 Auth->login()
+  
+[2024-01-01 10:20:13] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\User.php at line 841
+  Backtrace :
+  src\CommonDBTM.php:1590                            User->prepareInputForUpdate()
+  src\User.php:5763                                  CommonDBTM->update()
+  src\Auth.php:1034                                  User->getAuthToken()
+  front\login.php:89                                 Auth->login()
+  
+[2024-01-01 10:27:52] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\User.php at line 841
+  Backtrace :
+  src\CommonDBTM.php:1590                            User->prepareInputForUpdate()
+  src\User.php:5763                                  CommonDBTM->update()
+  src\Auth.php:1034                                  User->getAuthToken()
+  front\login.php:89                                 Auth->login()
+  
+[2024-01-01 10:56:55] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected single-quoted string "nup_bmn", expecting "]" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Ticket.php at line 1987
+  Backtrace :
+  front\helpdesk.public.php:68                       glpi_autoload()
+  front\helpdesk.public.php:177                      hasFilledSurvey()
+  
+[2024-01-01 10:56:58] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected single-quoted string "nup_bmn", expecting "]" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Ticket.php at line 1987
+  Backtrace :
+  front\helpdesk.public.php:68                       glpi_autoload()
+  front\helpdesk.public.php:177                      hasFilledSurvey()
+  
+[2024-01-01 10:57:12] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected single-quoted string "nup_bmn", expecting "]" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Ticket.php at line 1987
+  Backtrace :
+  src\Html.php:1656                                  glpi_autoload()
+  src\Html.php:2055                                  Html::generateHelpMenu()
+  front\helpdesk.public.php:190                      Html::helpHeader()
+  
+[2024-01-01 11:01:44] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7831                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:80                     CommonDBTM->add()
+>>>>>>> b5f319073 (add field nup_bmn & insert to db in role user)
+  
+[2024-05-24 02:35:11] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\config\config_db.php at line 5
+  Backtrace :
+  inc\includes.php:58                                include_once()
+  ajax\notifications_ajax.php:36                     include()
+  
+[2024-05-24 02:35:15] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\config\config_db.php at line 5
+  Backtrace :
+  inc\includes.php:58                                include_once()
+  ajax\notifications_ajax.php:36                     include()
+  
+[2024-05-24 02:35:20] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\config\config_db.php at line 5
+  Backtrace :
+  inc\includes.php:58                                include_once()
+  ajax\notifications_ajax.php:36                     include()
+  
+[2024-05-24 02:35:25] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\config\config_db.php at line 5
+  Backtrace :
+  inc\includes.php:58                                include_once()
+  ajax\notifications_ajax.php:36                     include()
+  
+[2024-05-24 02:35:30] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\config\config_db.php at line 5
+  Backtrace :
+  inc\includes.php:58                                include_once()
+  ajax\notifications_ajax.php:36                     include()
+  
+[2024-05-24 02:35:35] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\config\config_db.php at line 5
+  Backtrace :
+  inc\includes.php:58                                include_once()
+  ajax\notifications_ajax.php:36                     include()
+  
+[2024-05-24 02:35:40] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\config\config_db.php at line 5
+  Backtrace :
+  inc\includes.php:58                                include_once()
+  ajax\notifications_ajax.php:36                     include()
+  
+[2024-05-24 02:35:45] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\config\config_db.php at line 5
+  Backtrace :
+  inc\includes.php:58                                include_once()
+  ajax\notifications_ajax.php:36                     include()
+  
+[2024-05-24 02:35:50] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\config\config_db.php at line 5
+  Backtrace :
+  inc\includes.php:58                                include_once()
+  ajax\notifications_ajax.php:36                     include()
+  
+[2024-05-24 02:35:55] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\config\config_db.php at line 5
+  Backtrace :
+  inc\includes.php:58                                include_once()
+  ajax\notifications_ajax.php:36                     include()
+  
+[2024-05-24 02:36:00] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\config\config_db.php at line 5
+  Backtrace :
+  inc\includes.php:58                                include_once()
+  ajax\notifications_ajax.php:36                     include()
+  
+[2024-05-24 02:36:14] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<", expecting "function" or "const" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\config\config_db.php at line 5
+  Backtrace :
+  inc\includes.php:58                                include_once()
+  ajax\notifications_ajax.php:36                     include()
   
