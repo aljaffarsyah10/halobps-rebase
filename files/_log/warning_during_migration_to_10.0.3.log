@@ -2,4 +2,10 @@
 The database schema is not consistent with the current GLPI version.
 It is recommended to run the "php bin/console glpi:database:check_schema_integrity" command to see the differences. @ 2023-01-30 11:19:52 [@DESKTOP-T5H1325]
 The database schema is not consistent with the current GLPI version.
+It is recommended to run the "php bin/console glpi:database:check_schema_integrity" command to see the differences. @ 2023-12-31 12:54:34 [@LAPTOP-3QJ309BV]
+The database schema is not consistent with the current GLPI version.
+It is recommended to run the "php bin/console glpi:database:check_schema_integrity" command to see the differences. @ 2023-12-31 12:55:37 [@LAPTOP-3QJ309BV]
+The database schema is not consistent with the current GLPI version.
+It is recommended to run the "php bin/console glpi:database:check_schema_integrity" command to see the differences. @ 2023-12-31 12:55:49 [@LAPTOP-3QJ309BV]
+The database schema is not consistent with the current GLPI version.
 It is recommended to run the "php bin/console glpi:database:check_schema_integrity" command to see the differences. @ 

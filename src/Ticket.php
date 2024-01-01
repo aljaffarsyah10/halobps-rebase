@@ -917,7 +917,7 @@ class Ticket extends CommonITILObject
             Entity::getAnonymizeConfig($this->getEntityID()) == Entity::ANONYMIZE_DISABLED
             || Session::getCurrentInterface() == 'central'
         ) {
-          //  $this->addStandardTab('Log', $ong, $options);
+            //  $this->addStandardTab('Log', $ong, $options);
         }
 
         return $ong;
@@ -1983,7 +1983,8 @@ class Ticket extends CommonITILObject
             $toadd = [
                 'type'       => $type,
                 'items_id' => $this->fields['id'],
-                'itemtype' => 'Ticket'
+                'itemtype' => 'Ticket',
+                'nup_bmn'    =>   $this->fields['nup_bmn']
             ];
 
             if (
@@ -2010,11 +2011,12 @@ class Ticket extends CommonITILObject
                 $type = "solved";
             }
             $toadd = [
-                "type"        => $type,
+                "type"         => $type,
                 "tickets_id"   => $this->fields['id'],
                 "actiontime"   => $this->input["actiontime"],
                 "state"        => Planning::DONE,
-                "content"      => __("Auto-created task")
+                "content"      => __("Auto-created task"),
+                "nup_bmn"        => $this->fields['nup_bmn'],
             ];
 
             if (isset($this->input["plan"]) && count($this->input["plan"])) {
@@ -3881,6 +3883,7 @@ JAVASCRIPT;
             ],
             'name'                      => '',
             'content'                   => '',
+            'nup_bmn'                     => '',
             'itilcategories_id'         => 0,
             'itilcategories_idx'        => 0,
             'locations_id'              => 0,
@@ -6578,6 +6581,7 @@ JAVASCRIPT;
                         'itemtype'        => 'Ticket',
                         'items_id'        => $merge_target_id,
                         'content'         => $DB->escape($ticket->fields['name'] . Sanitizer::encodeHtmlSpecialChars("<br /><br />") . $ticket->fields['content']),
+                        'nup_bmn'           => $ticket->fields['nup_bmn'],
                         'users_id'        => $ticket->fields['users_id_recipient'],
                         'date_creation'   => $ticket->fields['date_creation'],
                         'date_mod'        => $ticket->fields['date_mod'],
@@ -6974,21 +6978,25 @@ JAVASCRIPT;
      * @return tickets_id
      */
 
-     public static function getIDTicketSatisfactions()
-     {
-         global $DB;
-         $result = $DB->request(
-             [
-                 'SELECT'        => 't1.tickets_id AS id',
-                 'FROM'          => 'glpi_ticketsatisfactions AS t1',
-                 'INNER JOIN'    => ['glpi_tickets_users AS t2'      => ['FKEY' => [ 't1'  => 'tickets_id',
-                                                                                     't2'  => 'tickets_id']]],
-                 'WHERE'         => ['t1.date_answered' => NULL,
-                                     't2.users_id'      => Session::getLoginUserID()],
-                 'ORDERBY'       => 't1.date_begin',
-                 'LIMIT'         => 1
-             ]
-         )->current();
-         return $result['id'];
-     }
+    public static function getIDTicketSatisfactions()
+    {
+        global $DB;
+        $result = $DB->request(
+            [
+                'SELECT'        => 't1.tickets_id AS id',
+                'FROM'          => 'glpi_ticketsatisfactions AS t1',
+                'INNER JOIN'    => ['glpi_tickets_users AS t2'      => ['FKEY' => [
+                    't1'  => 'tickets_id',
+                    't2'  => 'tickets_id'
+                ]]],
+                'WHERE'         => [
+                    't1.date_answered' => NULL,
+                    't2.users_id'      => Session::getLoginUserID()
+                ],
+                'ORDERBY'       => 't1.date_begin',
+                'LIMIT'         => 1
+            ]
+        )->current();
+        return $result['id'];
+    }
 }

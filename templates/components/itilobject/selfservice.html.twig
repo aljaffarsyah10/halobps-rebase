@@ -226,6 +226,18 @@
                         __('Urgency'),
                         right_field_options
                     ) }}
+
+                    {{ fields.field(
+                        'nup_bmn',
+                        item.dropdownBMN({
+                            'value': params['nup_bmn'],
+                            'width': '100%',
+                            'display': false
+                        }),
+                        __('No BMN'),
+                        right_field_options
+                    ) }}
+
                {% endif %}
 
                 {# By Najwa Azrai #}
