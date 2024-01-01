@@ -289,7 +289,7 @@ class Dropdown
             $p['value'] = $params['value'];
             $p['valuename'] = $name;
             if ($tambahan == 'child') {
-                $p['linkunduhpermintaan'] = $linkunduhpermintaan;
+                // $p['linkunduhpermintaan'] = $linkunduhpermintaan;
             }
         }
 

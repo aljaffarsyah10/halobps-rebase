@@ -485,3 +485,39 @@
   src\CommonDBTM.php:1339                            Log::history()
   front\tracking.injector.php:80                     CommonDBTM->add()
   {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.192\", 29.05Mio)"} 
+[2024-05-24 03:32:57] glpisqllog.ERROR: DBmysql::doQuery() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\DBmysql.php line 403
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('0', 'system', '2024-05-24 03:32:57', 'login', '3', 'glpi login from IP ::1')
+  Error: Duplicate entry '0' for key 'PRIMARY'
+  Backtrace :
+  src\DBmysql.php:1381                               DBmysql->doQuery()
+  src\CommonDBTM.php:729                             DBmysql->insert()
+  src\CommonDBTM.php:1342                            CommonDBTM->addToDB()
+  src\Event.php:115                                  CommonDBTM->add()
+  src\Auth.php:1064                                  Glpi\Event::log()
+  front\login.php:94                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-05-24 03:39:47] glpisqllog.ERROR: DBmysql::doQuery() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\DBmysql.php line 403
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('0', 'system', '2024-05-24 03:39:47', 'login', '3', 'Failed login for  from IP ::1')
+  Error: Duplicate entry '0' for key 'PRIMARY'
+  Backtrace :
+  src\DBmysql.php:1381                               DBmysql->doQuery()
+  src\CommonDBTM.php:729                             DBmysql->insert()
+  src\CommonDBTM.php:1342                            CommonDBTM->addToDB()
+  src\Event.php:115                                  CommonDBTM->add()
+  src\Auth.php:1081                                  Glpi\Event::log()
+  front\login.php:94                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-05-24 03:39:59] glpisqllog.ERROR: DBmysql::doQuery() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\DBmysql.php line 403
+  *** MySQL query error:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('0', 'system', '2024-05-24 03:39:58', 'login', '3', 'glpi login from IP ::1')
+  Error: Duplicate entry '0' for key 'PRIMARY'
+  Backtrace :
+  src\DBmysql.php:1381                               DBmysql->doQuery()
+  src\CommonDBTM.php:729                             DBmysql->insert()
+  src\CommonDBTM.php:1342                            CommonDBTM->addToDB()
+  src\Event.php:115                                  CommonDBTM->add()
+  src\Auth.php:1064                                  Glpi\Event::log()
+  front\login.php:94                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV"} 
