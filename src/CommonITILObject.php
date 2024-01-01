@@ -3006,23 +3006,38 @@ abstract class CommonITILObject extends CommonDBTM
             }
         }
 
-        if (isset($CFG_GLPI[static::URGENCY_MASK_FIELD])) {
-            // var_dump($_SESSION['glpiID']);
-            $values = [
-                'BMN 1',
-                'BMN 2',
-                'BMN 3',
-                'BMN 4',
-                'BMN 5',
+        if (!isset($_SESSION['nup_bmn'])) {
+            $authorization = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5IiwianRpIjoiNGFhMzA5OGRkYjBhNzQwNzM1YjQ3ZTY2ZjlhMjhkNDQ3NDIxNzM1NmJjOWFlYWQ3NDcyNTNjMWJiNTgwM2ViOTg0MjkzNWZjZWEzODM3MTYiLCJpYXQiOjE3MDM5ODk2OTQuMjU5NDQ3LCJuYmYiOjE3MDM5ODk2OTQuMjU5NDUyLCJleHAiOjIxNzczNzUyOTQuMTMwMDk3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hqbxWsHBOueCiJB3BmlmF_C9qbZ-kuaXHQ3Ck5_8-dL4sXu3BpdXq5TvRJ5Aup4Ag71Nw_U2-z-DLMqjaI8PtVkW3QFmxQZJLz_uIp6UTHN-cpxkNzsiKn9kMXrdBpeN2R0w9hQlRB0Ubl7SSnS93I-uza726jilcCmg-FZh-nxEUtS2QDpTrPGpDow5PAtXRhfgEJdz0CezXndB2zA30y265iBut6sO1-VR8vEukSCmUrsqWK8AacKncy6wUaF4qFu2V9KJHryWqxC3NsbB92k6S5C548dQuJWkuTwBxpLRiVgrXrzbs8F3lu6uICzi8vQbDxt2fexkipJNRjNf5-Z6BQ5k_PNH8zfFIm65-WjdNLw68ojhCUb6xuxHzj6asvki2g-9wimZOpyEDAAoCP6CrcmGNtgX2PNcCgVC0EGsIhTjXkIgykip16cwRz2b1kaRBdXX17s5fou2p51qq1UHAwHDZGLYaKDBSHkvpWsPTQVdT6JfkcMKYqZutr0gZBLhPl-OXV5x8Mn5uJuQyP--bae3YnvFu08c9E6vgUUfx4_OioK4xiiygg4bxPgjjwoCiV_QZRRqT-H17A-mkkFX1HVqozxR4OI8EAdnQ1HaDqBfAFac7GMlBaX4zIoAoU3NU-sQGnpXDIwqLWW7DsWj7GdP5LDp1tpIbGkEp-A';
+            $apiUrl = 'http://localhost:8000/api/v1/users/zulhan@git.go.id/assets-email';
+            $headers = [
+                'Authorization: ' . $authorization,
+                'Accept: application/json',
+                'Content-Type: application/json',
             ];
-        };
+            $curlOptions = [
+                CURLOPT_URL => $apiUrl,
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_HTTPHEADER => $headers,
+            ];
+            $curl = curl_init();
+            curl_setopt_array($curl, $curlOptions);
+            $response = curl_exec($curl);
+            curl_close($curl);
 
+            if ($response) {
+                $responseData = json_decode($response, true);
 
-        //     if (
-        //             ($p['showtype'] == 'search')
-        //             || ($CFG_GLPI[static::URGENCY_MASK_FIELD] & (1 << 5))
-        //         ) {
-
+                foreach ($responseData['rows'] as $item) {
+                    if (isset($item['nup_bmn']) && $item['nup_bmn'] !== null) {
+                        $nup_bmn_values[] = $item['nup_bmn'];
+                    }
+                }
+                $_SESSION['nup_bmn'] = array_values($nup_bmn_values);
+            } else {
+                echo 'Error: Unable to fetch data from the API.';
+            }
+        }
+        $values = $_SESSION['nup_bmn'];
         return Dropdown::showFromArray($p['name'], $values, $p);
     }
 
