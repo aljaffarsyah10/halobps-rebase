@@ -295,8 +295,8 @@ class __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a79
                     ";
             // line 232
             yield CoreExtension::callMacro($macros["fields"], "macro_field", ["nup_bmn", CoreExtension::getAttribute($this->env, $this->source,             // line 234
-($context["item"] ?? null), "dropdownBMN", [["value" => (($__internal_compile_11 =             // line 235
-($context["params"] ?? null)) && is_array($__internal_compile_11) || $__internal_compile_11 instanceof ArrayAccess ? ($__internal_compile_11["nup_bmn"] ?? null) : null), "width" => "100%", "display" => false]], "method", false, false, false, 234), __("No BMN"),             // line 240
+($context["item"] ?? null), "dropdownBMN", [["value" => (($__internal_compile_11 = CoreExtension::getAttribute($this->env, $this->source,             // line 235
+($context["item"] ?? null), "fields", [], "any", false, false, false, 235)) && is_array($__internal_compile_11) || $__internal_compile_11 instanceof ArrayAccess ? ($__internal_compile_11["nup_bmn"] ?? null) : null), "width" => "100%", "display" => false]], "method", false, false, false, 234), __("Keterangan BMN"),             // line 240
 ($context["right_field_options"] ?? null)], 232, $context, $this->getSourceContext());
             // line 241
             yield "

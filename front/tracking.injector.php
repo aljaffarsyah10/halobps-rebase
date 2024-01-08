@@ -73,6 +73,9 @@ if (isset($_POST['_actors']) && is_string($_POST['_actors'])) {
         $_POST['_actors'] = [];
     }
 }
+if (isset($_POST['nup_bmn'])) {
+    $_POST['nup_bmn_value'] = $_SESSION['bmn']['nup_bmn'][$_POST['nup_bmn']];
+}
 if (isset($_POST['add'])) {
     if (!$CFG_GLPI["use_anonymous_helpdesk"]) {
         $track->check(-1, CREATE, $_POST);

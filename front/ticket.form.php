@@ -57,7 +57,7 @@ $date_fields = [
 ];
 
 foreach ($date_fields as $date_field) {
-   //handle not clean dates...
+    //handle not clean dates...
     if (
         isset($_POST["_$date_field"])
         && isset($_POST[$date_field])
@@ -90,7 +90,7 @@ if (isset($_POST["add"])) {
     $track->update($_POST);
 
     if (isset($_POST['kb_linked_id'])) {
-       //if solution should be linked to selected KB entry
+        //if solution should be linked to selected KB entry
         $params = [
             'knowbaseitems_id' => $_POST['kb_linked_id'],
             'itemtype'         => $track->getType(),
@@ -117,7 +117,7 @@ if (isset($_POST["add"])) {
 
     if ($track->can($_POST["id"], READ)) {
         $toadd = '';
-       // Copy solution to KB redirect to KB
+        // Copy solution to KB redirect to KB
         if (isset($_POST['_sol_to_kb']) && $_POST['_sol_to_kb']) {
             $toadd = "&_sol_to_kb=1";
         }

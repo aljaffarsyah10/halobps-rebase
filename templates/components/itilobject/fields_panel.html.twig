@@ -221,6 +221,21 @@
                ) }}
             {% endif %}
 
+            {% if item.isField('nup_bmn') %}
+               {{ fields.field(
+                  'nup_bmn',
+                  item.dropdownBMN({
+                        'value': item.fields['nup_bmn'],
+                        'width': '100%',
+                        'display': false
+                  }),
+                  __('Keterangan BMN'),
+                  field_options|merge({
+                     maxlenght: 255,
+                  })
+               ) }}
+            {% endif %}
+
             {{ include('components/itilobject/fields/priority_matrix.html.twig') }}
 
             {% if item.isField('locations_id') %}

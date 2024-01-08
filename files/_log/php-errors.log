@@ -29953,3 +29953,832 @@ Compile css/palettes/lightblue.scss  {"user":"@LAPTOP-3QJ309BV"}
   src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
   front\tracking.injector.php:114                    Ticket->showFormHelpdesk()
   
+[2024-01-03 16:00:42] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "id" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Entity.php at line 2552
+  Backtrace :
+  ...\View\Extension\FrontEndAssetsExtension.php:168 Entity->getCustomCssTag()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...3924c997b28092f1dac6f1be475ec536625d3457.php:44 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_fb10b1bf2374cd9a08952e3e4b4d929a4e0a30be7f6e16837ba8bbd1f8c2d279->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  default.php:163                                    Glpi\Application\View\TemplateRenderer->display()
+  
+[2024-01-03 16:00:44] glpiphplog.WARNING:   *** PHP Warning (2): fopen(D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev/locales/en_US.po): Failed to open stream: No such file or directory in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\locale.php at line 94
+  Backtrace :
+  front\locale.php:94                                fopen()
+  
+[2024-01-03 16:00:44] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev/locales/en_US.po". in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\locale.php at line 97
+  Backtrace :
+  front\locale.php:97                                trigger_error()
+  
+[2024-01-03 16:01:12] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "id" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Entity.php at line 2552
+  Backtrace :
+  ...\View\Extension\FrontEndAssetsExtension.php:168 Entity->getCustomCssTag()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...7813f704bd80d73399b51f21b4eefbf60ca9ddf7.php:42 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_34eca01fe1f210dec93408121e0c27226bd54f86a8de62d63228c9ce97ef02f4->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  front\login.php:94                                 Glpi\Application\View\TemplateRenderer->display()
+  
+[2024-01-03 16:01:16] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "id" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Entity.php at line 2552
+  Backtrace :
+  ...\View\Extension\FrontEndAssetsExtension.php:168 Entity->getCustomCssTag()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...38542195fcd08b12e787a6138d82abf567f887b9.php:44 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_e1e0edaf26ad7673ad36bc828fb3e9ef9f64b07efc2acf15c6a7b4175d3f9396->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  index.php:163                                      Glpi\Application\View\TemplateRenderer->display()
+  
+[2024-01-03 16:01:20] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "id" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Entity.php at line 2552
+  Backtrace :
+  ...\View\Extension\FrontEndAssetsExtension.php:168 Entity->getCustomCssTag()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...3924c997b28092f1dac6f1be475ec536625d3457.php:44 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_fb10b1bf2374cd9a08952e3e4b4d929a4e0a30be7f6e16837ba8bbd1f8c2d279->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  default.php:163                                    Glpi\Application\View\TemplateRenderer->display()
+  
+[2024-01-03 16:01:21] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "id" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Entity.php at line 2552
+  Backtrace :
+  ...\View\Extension\FrontEndAssetsExtension.php:168 Entity->getCustomCssTag()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...3924c997b28092f1dac6f1be475ec536625d3457.php:44 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_fb10b1bf2374cd9a08952e3e4b4d929a4e0a30be7f6e16837ba8bbd1f8c2d279->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  default.php:163                                    Glpi\Application\View\TemplateRenderer->display()
+  
+[2024-01-03 16:01:24] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "id" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Entity.php at line 2552
+  Backtrace :
+  ...\View\Extension\FrontEndAssetsExtension.php:168 Entity->getCustomCssTag()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...7813f704bd80d73399b51f21b4eefbf60ca9ddf7.php:42 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_34eca01fe1f210dec93408121e0c27226bd54f86a8de62d63228c9ce97ef02f4->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  front\login.php:94                                 Glpi\Application\View\TemplateRenderer->display()
+  
+[2024-01-03 16:01:28] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "id" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Entity.php at line 2552
+  Backtrace :
+  ...\View\Extension\FrontEndAssetsExtension.php:168 Entity->getCustomCssTag()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...38542195fcd08b12e787a6138d82abf567f887b9.php:44 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_e1e0edaf26ad7673ad36bc828fb3e9ef9f64b07efc2acf15c6a7b4175d3f9396->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  index.php:163                                      Glpi\Application\View\TemplateRenderer->display()
+  
+[2024-01-03 16:01:30] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "id" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Entity.php at line 2552
+  Backtrace :
+  ...\View\Extension\FrontEndAssetsExtension.php:168 Entity->getCustomCssTag()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...3924c997b28092f1dac6f1be475ec536625d3457.php:44 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_fb10b1bf2374cd9a08952e3e4b4d929a4e0a30be7f6e16837ba8bbd1f8c2d279->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  default.php:163                                    Glpi\Application\View\TemplateRenderer->display()
+  
+[2024-01-03 16:01:35] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "id" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Entity.php at line 2552
+  Backtrace :
+  ...\View\Extension\FrontEndAssetsExtension.php:168 Entity->getCustomCssTag()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...7813f704bd80d73399b51f21b4eefbf60ca9ddf7.php:42 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_34eca01fe1f210dec93408121e0c27226bd54f86a8de62d63228c9ce97ef02f4->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  front\login.php:94                                 Glpi\Application\View\TemplateRenderer->display()
+  
+[2024-01-03 16:01:39] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "id" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Entity.php at line 2552
+  Backtrace :
+  ...\View\Extension\FrontEndAssetsExtension.php:168 Entity->getCustomCssTag()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...3924c997b28092f1dac6f1be475ec536625d3457.php:44 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_fb10b1bf2374cd9a08952e3e4b4d929a4e0a30be7f6e16837ba8bbd1f8c2d279->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  default.php:163                                    Glpi\Application\View\TemplateRenderer->display()
+  
+[2024-01-03 16:02:09] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "id" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Entity.php at line 2552
+  Backtrace :
+  ...\View\Extension\FrontEndAssetsExtension.php:168 Entity->getCustomCssTag()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...7813f704bd80d73399b51f21b4eefbf60ca9ddf7.php:42 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_34eca01fe1f210dec93408121e0c27226bd54f86a8de62d63228c9ce97ef02f4->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  front\login.php:94                                 Glpi\Application\View\TemplateRenderer->display()
+  
+[2024-01-03 16:02:12] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "id" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Entity.php at line 2552
+  Backtrace :
+  ...\View\Extension\FrontEndAssetsExtension.php:168 Entity->getCustomCssTag()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...3924c997b28092f1dac6f1be475ec536625d3457.php:44 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_fb10b1bf2374cd9a08952e3e4b4d929a4e0a30be7f6e16837ba8bbd1f8c2d279->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  default.php:163                                    Glpi\Application\View\TemplateRenderer->display()
+  
+[2024-01-03 16:02:16] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "id" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Entity.php at line 2552
+  Backtrace :
+  ...\View\Extension\FrontEndAssetsExtension.php:168 Entity->getCustomCssTag()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...7813f704bd80d73399b51f21b4eefbf60ca9ddf7.php:42 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_34eca01fe1f210dec93408121e0c27226bd54f86a8de62d63228c9ce97ef02f4->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  front\login.php:94                                 Glpi\Application\View\TemplateRenderer->display()
+  
+[2024-01-03 18:01:55] glpiphplog.WARNING: Test logger  
+[2024-01-03 18:01:56] glpiphplog.WARNING: Test logger  
+[2024-01-03 18:01:56] glpiphplog.WARNING: Test logger  
+[2024-01-03 18:01:57] glpiphplog.WARNING: Test logger  
+[2024-01-03 18:03:35] glpiphplog.WARNING: Test logger  
+[2024-01-03 18:04:01] glpiphplog.DEBUG: Html::compileScss() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Html.php line 6917
+Compile css/palettes/lightblue.scss  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 18:04:15] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\Ticket.php:1680                                NotificationEvent::raiseEvent()
+  src\CommonDBTM.php:1716                            Ticket->post_updateItem()
+  src\Ticket.php:5835                                CommonDBTM->update()
+  src\CronTask.php:1018                              Ticket::cronCloseTicket()
+  front\cron.php:64                                  CronTask::launch()
+  
+[2024-01-03 18:04:16] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\TicketSatisfaction.php:196                     NotificationEvent::raiseEvent()
+  src\CommonDBTM.php:1322                            TicketSatisfaction->post_addItem()
+  src\Ticket.php:1714                                CommonDBTM->add()
+  src\CommonDBTM.php:1716                            Ticket->post_updateItem()
+  src\Ticket.php:5835                                CommonDBTM->update()
+  src\CronTask.php:1018                              Ticket::cronCloseTicket()
+  front\cron.php:64                                  CronTask::launch()
+  
+[2024-01-03 18:04:18] glpiphplog.WARNING:   *** PHP Warning (2): fopen(D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev/locales/en_US.po): Failed to open stream: No such file or directory in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\locale.php at line 94
+  Backtrace :
+  front\locale.php:94                                fopen()
+  
+[2024-01-03 18:04:18] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to extract locales data from "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev/locales/en_US.po". in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\locale.php at line 97
+  Backtrace :
+  front\locale.php:97                                trigger_error()
+  
+[2024-01-03 18:04:19] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\User.php at line 841
+  Backtrace :
+  src\CommonDBTM.php:1590                            User->prepareInputForUpdate()
+  src\User.php:5763                                  CommonDBTM->update()
+  src\Auth.php:1034                                  User->getAuthToken()
+  front\login.php:89                                 Auth->login()
+  
+[2024-01-03 18:05:45] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\User.php at line 841
+  Backtrace :
+  src\CommonDBTM.php:1590                            User->prepareInputForUpdate()
+  ajax\itillayout.php:52                             CommonDBTM->update()
+  
+[2024-01-04 04:41:55] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\User.php at line 841
+  Backtrace :
+  src\CommonDBTM.php:1590                            User->prepareInputForUpdate()
+  ajax\itillayout.php:52                             CommonDBTM->update()
+  
+[2024-01-04 04:41:57] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\User.php at line 841
+  Backtrace :
+  src\CommonDBTM.php:1590                            User->prepareInputForUpdate()
+  ajax\itillayout.php:52                             CommonDBTM->update()
+  
+[2024-01-04 05:40:33] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\User.php at line 684
+  Backtrace :
+  src\CommonDBTM.php:1276                            User->prepareInputForAdd()
+  front\user.form.php:65                             CommonDBTM->add()
+  
+[2024-01-04 05:41:40] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\User.php at line 684
+  Backtrace :
+  src\CommonDBTM.php:1276                            User->prepareInputForAdd()
+  front\user.form.php:65                             CommonDBTM->add()
+  
+[2024-01-04 05:42:42] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\User.php at line 684
+  Backtrace :
+  src\CommonDBTM.php:1276                            User->prepareInputForAdd()
+  front\user.form.php:65                             CommonDBTM->add()
+  
+[2024-01-04 07:07:59] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\User.php at line 841
+  Backtrace :
+  src\CommonDBTM.php:1590                            User->prepareInputForUpdate()
+  src\User.php:5763                                  CommonDBTM->update()
+  src\Auth.php:1034                                  User->getAuthToken()
+  front\login.php:89                                 Auth->login()
+  
+[2024-01-04 12:54:11] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\User.php at line 841
+  Backtrace :
+  src\CommonDBTM.php:1590                            User->prepareInputForUpdate()
+  src\User.php:5763                                  CommonDBTM->update()
+  src\Auth.php:1034                                  User->getAuthToken()
+  front\login.php:89                                 Auth->login()
+  
+[2024-01-08 08:20:15] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "rows" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3030
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:20:15] glpiphplog.WARNING:   *** PHP Warning (2): foreach() argument must be of type array|object, null given in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3030
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:20:15] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $nup_bmn in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3036
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:20:15] glpiphplog.CRITICAL:   *** Uncaught Exception TypeError: array_values(): Argument #1 ($array) must be of type array, null given in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3036
+  Backtrace :
+  src\CommonITILObject.php:3036                      array_values()
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:21:00] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "rows" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3030
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:21:00] glpiphplog.WARNING:   *** PHP Warning (2): foreach() argument must be of type array|object, null given in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3030
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:21:00] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $nup_bmn in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3036
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:21:00] glpiphplog.CRITICAL:   *** Uncaught Exception TypeError: array_values(): Argument #1 ($array) must be of type array, null given in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3036
+  Backtrace :
+  src\CommonITILObject.php:3036                      array_values()
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:23:20] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "rows" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3030
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:23:20] glpiphplog.WARNING:   *** PHP Warning (2): foreach() argument must be of type array|object, null given in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3030
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:23:20] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $nup_bmn in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3036
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:23:20] glpiphplog.CRITICAL:   *** Uncaught Exception TypeError: array_values(): Argument #1 ($array) must be of type array, null given in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3036
+  Backtrace :
+  src\CommonITILObject.php:3036                      array_values()
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:32:00] glpiphplog.CRITICAL:   *** Uncaught Exception TypeError: array_values(): Argument #1 ($array) must be of type array, string given in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3035
+  Backtrace :
+  src\CommonITILObject.php:3035                      array_values()
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:32:09] glpiphplog.CRITICAL:   *** Uncaught Exception TypeError: array_values(): Argument #1 ($array) must be of type array, string given in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3035
+  Backtrace :
+  src\CommonITILObject.php:3035                      array_values()
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:33:06] glpiphplog.CRITICAL:   *** Uncaught Exception TypeError: array_values(): Argument #1 ($array) must be of type array, string given in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3035
+  Backtrace :
+  src\CommonITILObject.php:3035                      array_values()
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:33:41] glpiphplog.CRITICAL:   *** Uncaught Exception TypeError: array_values(): Argument #1 ($array) must be of type array, string given in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3035
+  Backtrace :
+  src\CommonITILObject.php:3035                      array_values()
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:34:18] glpiphplog.CRITICAL:   *** Uncaught Exception TypeError: array_values(): Argument #1 ($array) must be of type array, string given in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3035
+  Backtrace :
+  src\CommonITILObject.php:3035                      array_values()
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:34:50] glpiphplog.CRITICAL:   *** Uncaught Exception TypeError: array_values(): Argument #1 ($array) must be of type array, string given in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3040
+  Backtrace :
+  src\CommonITILObject.php:3040                      array_values()
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-01-08 08:44:32] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Using $this when not in object context in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3012
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:04:49] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php at line 3326
+  Backtrace :
+  src\Ticket.php:47                                  glpi_autoload()
+  inc\autoload.function.php:325                      include_once()
+  src\Html.php:1584                                  glpi_autoload()
+  src\Html.php:1978                                  Html::generateHelpMenu()
+  front\helpdesk.public.php:190                      Html::helpHeader()
+  
+[2024-05-24 04:04:52] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php at line 3326
+  Backtrace :
+  src\Ticket.php:47                                  glpi_autoload()
+  inc\autoload.function.php:325                      include_once()
+  src\Html.php:1584                                  glpi_autoload()
+  src\Html.php:1978                                  Html::generateHelpMenu()
+  front\helpdesk.public.php:190                      Html::helpHeader()
+  
+[2024-05-24 04:04:56] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php at line 3326
+  Backtrace :
+  src\Ticket.php:47                                  glpi_autoload()
+  inc\autoload.function.php:325                      include_once()
+  src\Html.php:1584                                  glpi_autoload()
+  src\Html.php:1978                                  Html::generateHelpMenu()
+  front\helpdesk.public.php:190                      Html::helpHeader()
+  
+[2024-05-24 04:04:58] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php at line 3326
+  Backtrace :
+  src\Ticket.php:47                                  glpi_autoload()
+  inc\autoload.function.php:325                      include_once()
+  src\Html.php:1584                                  glpi_autoload()
+  src\Html.php:1978                                  Html::generateHelpMenu()
+  front\helpdesk.public.php:190                      Html::helpHeader()
+  
+[2024-05-24 04:05:23] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "bmn" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php at line 3341
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1629 CommonITILObject::dropdownBMN()
+  ...e5a74dfd8ea1c2efc3b0d3eee2f9cd6178d8572.php:299 Twig\Extension\CoreExtension::getAttribute()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a7988915->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:05:23] glpiphplog.WARNING:   *** PHP Warning (2): Trying to access array offset on value of type null in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php at line 3341
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1629 CommonITILObject::dropdownBMN()
+  ...e5a74dfd8ea1c2efc3b0d3eee2f9cd6178d8572.php:299 Twig\Extension\CoreExtension::getAttribute()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a7988915->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:05:23] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("Dropdown::showFromArray(): Argument #2 ($elements) must be of type array, null given, called in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php on line 3342")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\templates\components\itilobject\selfservice.html.twig" at line 235
+  Backtrace :
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:06:04] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "nup_bmn" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php at line 3335
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1629 CommonITILObject::dropdownBMN()
+  ...e5a74dfd8ea1c2efc3b0d3eee2f9cd6178d8572.php:299 Twig\Extension\CoreExtension::getAttribute()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a7988915->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:06:04] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("array_values(): Argument #1 ($array) must be of type array, null given")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\templates\components\itilobject\selfservice.html.twig" at line 235
+  Backtrace :
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:07:33] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "nup_bmn" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php at line 3335
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1629 CommonITILObject::dropdownBMN()
+  ...e5a74dfd8ea1c2efc3b0d3eee2f9cd6178d8572.php:299 Twig\Extension\CoreExtension::getAttribute()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a7988915->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:07:33] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("array_values(): Argument #1 ($array) must be of type array, null given")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\templates\components\itilobject\selfservice.html.twig" at line 235
+  Backtrace :
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:09:03] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "nup_bmn" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php at line 3335
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1629 CommonITILObject::dropdownBMN()
+  ...e5a74dfd8ea1c2efc3b0d3eee2f9cd6178d8572.php:299 Twig\Extension\CoreExtension::getAttribute()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a7988915->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:09:03] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("array_values(): Argument #1 ($array) must be of type array, null given")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\templates\components\itilobject\selfservice.html.twig" at line 235
+  Backtrace :
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:10:12] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "nup_bmn" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php at line 3337
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1629 CommonITILObject::dropdownBMN()
+  ...e5a74dfd8ea1c2efc3b0d3eee2f9cd6178d8572.php:299 Twig\Extension\CoreExtension::getAttribute()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a7988915->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:10:12] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("array_values(): Argument #1 ($array) must be of type array, null given")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\templates\components\itilobject\selfservice.html.twig" at line 235
+  Backtrace :
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:12:15] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "nup_bmn" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php at line 3309
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1629 CommonITILObject::dropdownBMN()
+  ...e5a74dfd8ea1c2efc3b0d3eee2f9cd6178d8572.php:299 Twig\Extension\CoreExtension::getAttribute()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a7988915->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:12:39] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "nup_bmn" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php at line 3338
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1629 CommonITILObject::dropdownBMN()
+  ...e5a74dfd8ea1c2efc3b0d3eee2f9cd6178d8572.php:299 Twig\Extension\CoreExtension::getAttribute()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a7988915->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:12:39] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("array_values(): Argument #1 ($array) must be of type array, null given")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\templates\components\itilobject\selfservice.html.twig" at line 235
+  Backtrace :
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:13:10] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "nup_bmn" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php at line 3338
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1629 CommonITILObject::dropdownBMN()
+  ...e5a74dfd8ea1c2efc3b0d3eee2f9cd6178d8572.php:299 Twig\Extension\CoreExtension::getAttribute()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a7988915->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:13:10] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("array_values(): Argument #1 ($array) must be of type array, null given")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\templates\components\itilobject\selfservice.html.twig" at line 235
+  Backtrace :
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:13:32] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "nup_bmn" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php at line 3338
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1629 CommonITILObject::dropdownBMN()
+  ...e5a74dfd8ea1c2efc3b0d3eee2f9cd6178d8572.php:299 Twig\Extension\CoreExtension::getAttribute()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_1a658be795cb3056d2498b7c97a8dfd3674449f1c1aadc26bee58357a7988915->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:13:32] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("array_values(): Argument #1 ($array) must be of type array, null given")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\templates\components\itilobject\selfservice.html.twig" at line 235
+  Backtrace :
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4075                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:117                    Ticket->showFormHelpdesk()
+  
+[2024-05-24 04:14:00] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "nup_bmn" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php at line 3338
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1629 CommonITILObject::dropdownBMN()
+  ...257b2b75e88e21165b3356005451f453f492c51.php:339 Twig\Extension\CoreExtension::getAttribute()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_d1b2a3e6a9229242661d0ae11dea1c5a5794769d6ae5c2af0ce2a6a7d56ee3e9->doDisplay()
+  vendor\twig\twig\src\Template.php:335              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:38        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1332 Twig\TemplateWrapper->render()
+  ...d9fec9c5015ce43b492c41a9f618f637822ec7b.php:153 Twig\Extension\CoreExtension::include()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_e335ea62c0ae5b33e1f59287e8aabf45ce71f78c6d434ffbb2a0d6c1eac06bc9->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4449                                Glpi\Application\View\TemplateRenderer->display()
+  src\CommonGLPI.php:681                             Ticket->showForm()
+  ajax\common.tabs.php:120                           CommonGLPI::displayStandardTab()
+  
+[2024-05-24 04:14:00] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("array_values(): Argument #1 ($array) must be of type array, null given")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\templates\components\itilobject\fields_panel.html.twig" at line 228
+  Backtrace :
+  vendor\twig\twig\src\Template.php:335              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:38        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1332 Twig\TemplateWrapper->render()
+  ...d9fec9c5015ce43b492c41a9f618f637822ec7b.php:153 Twig\Extension\CoreExtension::include()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_e335ea62c0ae5b33e1f59287e8aabf45ce71f78c6d434ffbb2a0d6c1eac06bc9->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4449                                Glpi\Application\View\TemplateRenderer->display()
+  src\CommonGLPI.php:681                             Ticket->showForm()
+  ajax\common.tabs.php:120                           CommonGLPI::displayStandardTab()
+  
+[2024-05-24 04:15:25] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "nup_bmn" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php at line 3335
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1629 CommonITILObject::dropdownBMN()
+  ...257b2b75e88e21165b3356005451f453f492c51.php:339 Twig\Extension\CoreExtension::getAttribute()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_d1b2a3e6a9229242661d0ae11dea1c5a5794769d6ae5c2af0ce2a6a7d56ee3e9->doDisplay()
+  vendor\twig\twig\src\Template.php:335              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:38        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1332 Twig\TemplateWrapper->render()
+  ...d9fec9c5015ce43b492c41a9f618f637822ec7b.php:153 Twig\Extension\CoreExtension::include()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_e335ea62c0ae5b33e1f59287e8aabf45ce71f78c6d434ffbb2a0d6c1eac06bc9->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4449                                Glpi\Application\View\TemplateRenderer->display()
+  src\CommonGLPI.php:681                             Ticket->showForm()
+  ajax\common.tabs.php:120                           CommonGLPI::displayStandardTab()
+  
+[2024-05-24 04:15:25] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("array_values(): Argument #1 ($array) must be of type array, null given")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\templates\components\itilobject\fields_panel.html.twig" at line 228
+  Backtrace :
+  vendor\twig\twig\src\Template.php:335              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:38        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1332 Twig\TemplateWrapper->render()
+  ...d9fec9c5015ce43b492c41a9f618f637822ec7b.php:153 Twig\Extension\CoreExtension::include()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_e335ea62c0ae5b33e1f59287e8aabf45ce71f78c6d434ffbb2a0d6c1eac06bc9->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4449                                Glpi\Application\View\TemplateRenderer->display()
+  src\CommonGLPI.php:681                             Ticket->showForm()
+  ajax\common.tabs.php:120                           CommonGLPI::displayStandardTab()
+  

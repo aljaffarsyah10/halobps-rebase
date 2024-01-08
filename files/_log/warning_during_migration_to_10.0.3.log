@@ -10,5 +10,14 @@ It is recommended to run the "php bin/console glpi:database:check_schema_integri
 The database schema is not consistent with the current GLPI version.
 It is recommended to run the "php bin/console glpi:database:check_schema_integrity" command to see the differences. @ 2023-12-31 12:55:49 [@LAPTOP-3QJ309BV]
 The database schema is not consistent with the current GLPI version.
+<<<<<<< HEAD
 >>>>>>> b5f319073 (add field nup_bmn & insert to db in role user)
+=======
+It is recommended to run the "php bin/console glpi:database:check_schema_integrity" command to see the differences. @ 2024-01-03 18:02:35 [@LAPTOP-3QJ309BV]
+The database schema is not consistent with the current GLPI version.
+It is recommended to run the "php bin/console glpi:database:check_schema_integrity" command to see the differences. @ 2024-01-03 18:02:59 [@LAPTOP-3QJ309BV]
+The database schema is not consistent with the current GLPI version.
+It is recommended to run the "php bin/console glpi:database:check_schema_integrity" command to see the differences. @ 2024-01-03 18:03:52 [@LAPTOP-3QJ309BV]
+The database schema is not consistent with the current GLPI version.
+>>>>>>> 8ced08614 (field/dropdown bmn in form admin, store to db, view bmn when view ticket)
 It is recommended to run the "php bin/console glpi:database:check_schema_integrity" command to see the differences. @ 
