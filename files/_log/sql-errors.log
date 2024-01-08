@@ -485,3 +485,2290 @@
   src\CommonDBTM.php:1339                            Log::history()
   front\tracking.injector.php:80                     CommonDBTM->add()
   {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.192\", 29.05Mio)"} 
+[2024-01-01 11:17:56] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_tickets`.`id` AS id, 'glpi' AS currentuser,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_2`,   `glpi_tickets`.`name` AS `ITEM_Ticket_1`,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_1_id`,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_1_id`, `glpi_tickets`.`content` AS `ITEM_Ticket_1_content`, `glpi_tickets`.`status` AS `ITEM_Ticket_1_status`, `glpi_entities`.`completename` AS `ITEM_Ticket_80`,  `glpi_tickets`.`status` AS `ITEM_Ticket_12`,  `glpi_tickets`.`date_mod` AS `ITEM_Ticket_19`,  `glpi_tickets`.`date` AS `ITEM_Ticket_15`,  `glpi_tickets`.`priority` AS `ITEM_Ticket_3`,   GROUP_CONCAT(DISTINCT `glpi_users_af1042e23ce6565cfe58c6db91f84692`.`id` SEPARATOR '$$##$$')
+                                       AS `ITEM_Ticket_4`,
+                           GROUP_CONCAT(DISTINCT CONCAT(`glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`.`users_id`, ' ',
+                                                        `glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`.`alternative_email`)
+                                                        SEPARATOR '$$##$$') AS `ITEM_Ticket_4_2`, 
+                            GROUP_CONCAT(DISTINCT CONCAT(IFNULL(`glpi_groups_accbd4432fbbbd44d4ac65bbb91a0812`.`completename`, '__NULL__'),
+                                               '$#$',`glpi_groups_accbd4432fbbbd44d4ac65bbb91a0812`.`id`) ORDER BY `glpi_groups_accbd4432fbbbd44d4ac65bbb91a0812`.`id` SEPARATOR '$$##$$')
+                              AS `ITEM_Ticket_8`,
+                  
+                   GROUP_CONCAT(DISTINCT `glpi_users_b1b92f6be5e70531688d870931e94a65`.`id` SEPARATOR '$$##$$')
+                                       AS `ITEM_Ticket_5`,
+                           GROUP_CONCAT(DISTINCT CONCAT(`glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`.`users_id`, ' ',
+                                                        `glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`.`alternative_email`)
+                                                        SEPARATOR '$$##$$') AS `ITEM_Ticket_5_2`, 
+                           `glpi_itilcategories`.`completename` AS `ITEM_Ticket_7`,  `glpi_tickets`.`time_to_resolve` AS `ITEM_Ticket_18`,  `glpi_tickets`.`solvedate` AS `ITEM_Ticket_18_solvedate`, `glpi_tickets`.`status` AS `ITEM_Ticket_18_status`,  GROUP_CONCAT(DISTINCT CONCAT(IFNULL(`glpi_groups_5055bdb6a7e594e2674a99b70925c4be`.`completename`, '__NULL__'),
+                                               '$#$',`glpi_groups_5055bdb6a7e594e2674a99b70925c4be`.`id`) ORDER BY `glpi_groups_5055bdb6a7e594e2674a99b70925c4be`.`id` SEPARATOR '$$##$$')
+                              AS `ITEM_Ticket_222`,(select date from glpi_komentarterbaru glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id and glpi_itilfollowups2.users_id = glpi_tickets.users_id_recipient and glpi_itilfollowups2.content like '%?%') as belumbalas, (select date from glpi_komentarterbaru glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id and glpi_itilfollowups2.users_id = glpi_tickets.users_id_recipient)  as balasanrequester, (select date from glpi_komentarterbaru glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id)  as belumbalas2 FROM `glpi_tickets`LEFT JOIN `glpi_entities` 
+                                          ON (`glpi_tickets`.`entities_id` = `glpi_entities`.`id`
+                                              ) LEFT JOIN `glpi_tickets_users`  AS `glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`
+                                             ON (`glpi_tickets`.`id` = `glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`.`tickets_id`
+                                                  AND `glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`.`type` = '1' )LEFT JOIN `glpi_users`  AS `glpi_users_af1042e23ce6565cfe58c6db91f84692`
+                                          ON (`glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`.`users_id` = `glpi_users_af1042e23ce6565cfe58c6db91f84692`.`id`
+                                              ) LEFT JOIN `glpi_groups_tickets`  AS `glpi_groups_tickets_c6f7f58b9365babf7388e555e526efd5`
+                                             ON (`glpi_tickets`.`id` = `glpi_groups_tickets_c6f7f58b9365babf7388e555e526efd5`.`tickets_id`
+                                                  AND `glpi_groups_tickets_c6f7f58b9365babf7388e555e526efd5`.`type` = '2' )LEFT JOIN `glpi_groups`  AS `glpi_groups_accbd4432fbbbd44d4ac65bbb91a0812`
+                                          ON (`glpi_groups_tickets_c6f7f58b9365babf7388e555e526efd5`.`groups_id` = `glpi_groups_accbd4432fbbbd44d4ac65bbb91a0812`.`id`
+                                              ) LEFT JOIN `glpi_tickets_users`  AS `glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`
+                                             ON (`glpi_tickets`.`id` = `glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`.`tickets_id`
+                                                  AND `glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`.`type` = '2' )LEFT JOIN `glpi_users`  AS `glpi_users_b1b92f6be5e70531688d870931e94a65`
+                                          ON (`glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`.`users_id` = `glpi_users_b1b92f6be5e70531688d870931e94a65`.`id`
+                                              )LEFT JOIN `glpi_itilcategories` 
+                                          ON (`glpi_tickets`.`itilcategories_id` = `glpi_itilcategories`.`id`
+                                              ) LEFT JOIN `glpi_groups_ticketss`  AS `glpi_groups_ticketss_c6f7f58b9365babf7388e555e526efd5`
+                                             ON (`glpi_tickets`.`id` = `glpi_groups_ticketss_c6f7f58b9365babf7388e555e526efd5`.`tickets_id`
+                                                  AND `glpi_groups_ticketss_c6f7f58b9365babf7388e555e526efd5`.`type` = '2' )LEFT JOIN `glpi_groups`  AS `glpi_groups_5055bdb6a7e594e2674a99b70925c4be`
+                                          ON (`glpi_groups_ticketss_c6f7f58b9365babf7388e555e526efd5`.`groups_id` = `glpi_groups_5055bdb6a7e594e2674a99b70925c4be`.`id`
+                                              ) WHERE  `glpi_tickets`.`is_deleted` = 0  AND (    (`glpi_groups_5055bdb6a7e594e2674a99b70925c4be`.`id` IN ('109'))  ) GROUP BY `glpi_tickets`.`id` ORDER BY `ITEM_Ticket_19` DESC 
+  Error: The user specified as a definer ('halosisw'@'localhost') does not exist
+  Backtrace :
+  src\Search.php:1475                                
+  src\Search.php:477                                 Search::constructData()
+  src\Search.php:199                                 Search::getDatas()
+  src\Search.php:176                                 Search::showList()
+  front\ticket.php:58                                Search::show()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-01-01 11:18:06] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT DISTINCT `glpi_tickets`.`id` AS id, 'glpi' AS currentuser,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_2`,   `glpi_tickets`.`name` AS `ITEM_Ticket_1`,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_1_id`,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_1_id`, `glpi_tickets`.`content` AS `ITEM_Ticket_1_content`, `glpi_tickets`.`status` AS `ITEM_Ticket_1_status`, `glpi_entities`.`completename` AS `ITEM_Ticket_80`,  `glpi_tickets`.`status` AS `ITEM_Ticket_12`,  `glpi_tickets`.`date_mod` AS `ITEM_Ticket_19`,  `glpi_tickets`.`date` AS `ITEM_Ticket_15`,  `glpi_tickets`.`priority` AS `ITEM_Ticket_3`,   GROUP_CONCAT(DISTINCT `glpi_users_af1042e23ce6565cfe58c6db91f84692`.`id` SEPARATOR '$$##$$')
+                                       AS `ITEM_Ticket_4`,
+                           GROUP_CONCAT(DISTINCT CONCAT(`glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`.`users_id`, ' ',
+                                                        `glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`.`alternative_email`)
+                                                        SEPARATOR '$$##$$') AS `ITEM_Ticket_4_2`, 
+                            GROUP_CONCAT(DISTINCT CONCAT(IFNULL(`glpi_groups_accbd4432fbbbd44d4ac65bbb91a0812`.`completename`, '__NULL__'),
+                                               '$#$',`glpi_groups_accbd4432fbbbd44d4ac65bbb91a0812`.`id`) ORDER BY `glpi_groups_accbd4432fbbbd44d4ac65bbb91a0812`.`id` SEPARATOR '$$##$$')
+                              AS `ITEM_Ticket_8`,
+                  
+                   GROUP_CONCAT(DISTINCT `glpi_users_b1b92f6be5e70531688d870931e94a65`.`id` SEPARATOR '$$##$$')
+                                       AS `ITEM_Ticket_5`,
+                           GROUP_CONCAT(DISTINCT CONCAT(`glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`.`users_id`, ' ',
+                                                        `glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`.`alternative_email`)
+                                                        SEPARATOR '$$##$$') AS `ITEM_Ticket_5_2`, 
+                           `glpi_itilcategories`.`completename` AS `ITEM_Ticket_7`,  `glpi_tickets`.`time_to_resolve` AS `ITEM_Ticket_18`,  `glpi_tickets`.`solvedate` AS `ITEM_Ticket_18_solvedate`, `glpi_tickets`.`status` AS `ITEM_Ticket_18_status`,  GROUP_CONCAT(DISTINCT CONCAT(IFNULL(`glpi_groups_5055bdb6a7e594e2674a99b70925c4be`.`completename`, '__NULL__'),
+                                               '$#$',`glpi_groups_5055bdb6a7e594e2674a99b70925c4be`.`id`) ORDER BY `glpi_groups_5055bdb6a7e594e2674a99b70925c4be`.`id` SEPARATOR '$$##$$')
+                              AS `ITEM_Ticket_222`,(select date from glpi_komentarterbaru glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id and glpi_itilfollowups2.users_id = glpi_tickets.users_id_recipient and glpi_itilfollowups2.content like '%?%') as belumbalas, (select date from glpi_komentarterbaru glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id and glpi_itilfollowups2.users_id = glpi_tickets.users_id_recipient)  as balasanrequester, (select date from glpi_komentarterbaru glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id)  as belumbalas2 FROM `glpi_tickets`LEFT JOIN `glpi_entities` 
+                                          ON (`glpi_tickets`.`entities_id` = `glpi_entities`.`id`
+                                              ) LEFT JOIN `glpi_tickets_users`  AS `glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`
+                                             ON (`glpi_tickets`.`id` = `glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`.`tickets_id`
+                                                  AND `glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`.`type` = '1' )LEFT JOIN `glpi_users`  AS `glpi_users_af1042e23ce6565cfe58c6db91f84692`
+                                          ON (`glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`.`users_id` = `glpi_users_af1042e23ce6565cfe58c6db91f84692`.`id`
+                                              ) LEFT JOIN `glpi_groups_tickets`  AS `glpi_groups_tickets_c6f7f58b9365babf7388e555e526efd5`
+                                             ON (`glpi_tickets`.`id` = `glpi_groups_tickets_c6f7f58b9365babf7388e555e526efd5`.`tickets_id`
+                                                  AND `glpi_groups_tickets_c6f7f58b9365babf7388e555e526efd5`.`type` = '2' )LEFT JOIN `glpi_groups`  AS `glpi_groups_accbd4432fbbbd44d4ac65bbb91a0812`
+                                          ON (`glpi_groups_tickets_c6f7f58b9365babf7388e555e526efd5`.`groups_id` = `glpi_groups_accbd4432fbbbd44d4ac65bbb91a0812`.`id`
+                                              ) LEFT JOIN `glpi_tickets_users`  AS `glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`
+                                             ON (`glpi_tickets`.`id` = `glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`.`tickets_id`
+                                                  AND `glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`.`type` = '2' )LEFT JOIN `glpi_users`  AS `glpi_users_b1b92f6be5e70531688d870931e94a65`
+                                          ON (`glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`.`users_id` = `glpi_users_b1b92f6be5e70531688d870931e94a65`.`id`
+                                              )LEFT JOIN `glpi_itilcategories` 
+                                          ON (`glpi_tickets`.`itilcategories_id` = `glpi_itilcategories`.`id`
+                                              ) LEFT JOIN `glpi_groups_ticketss`  AS `glpi_groups_ticketss_c6f7f58b9365babf7388e555e526efd5`
+                                             ON (`glpi_tickets`.`id` = `glpi_groups_ticketss_c6f7f58b9365babf7388e555e526efd5`.`tickets_id`
+                                                  AND `glpi_groups_ticketss_c6f7f58b9365babf7388e555e526efd5`.`type` = '2' )LEFT JOIN `glpi_groups`  AS `glpi_groups_5055bdb6a7e594e2674a99b70925c4be`
+                                          ON (`glpi_groups_ticketss_c6f7f58b9365babf7388e555e526efd5`.`groups_id` = `glpi_groups_5055bdb6a7e594e2674a99b70925c4be`.`id`
+                                              ) WHERE  `glpi_tickets`.`is_deleted` = 0  AND (    (`glpi_groups_5055bdb6a7e594e2674a99b70925c4be`.`id` IN ('109'))  ) GROUP BY `glpi_tickets`.`id` ORDER BY `ITEM_Ticket_19` DESC 
+  Error: The user specified as a definer ('halosisw'@'localhost') does not exist
+  Backtrace :
+  src\Search.php:1475                                
+  src\Search.php:477                                 Search::constructData()
+  src\Search.php:199                                 Search::getDatas()
+  src\Search.php:176                                 Search::showList()
+  front\ticket.php:58                                Search::show()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:00:41] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  default.php:89                                     include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:00:41] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  default.php:89                                     include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.101\", 14.23Mio)"} 
+[2024-01-03 16:00:41] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT COUNT(*) AS cpt FROM `glpi_notifications` WHERE `itemtype` = 'User' AND `event` = 'passwordforget' AND `is_active` = '1'
+  Error: Table 'dev-halobps.glpi_notifications' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\DbUtils.php:486                                DBmysql->request()
+  inc\db.function.php:192                            DbUtils->countElementsInTable()
+  default.php:148                                    countElementsInTable()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.335\", 17.22Mio)"} 
+[2024-01-03 16:00:42] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_entities` WHERE `glpi_entities`.`id` = '0' LIMIT 1
+  Error: Table 'dev-halobps.glpi_entities' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:306                             DBmysql->request()
+  ...\View\Extension\FrontEndAssetsExtension.php:166 CommonDBTM->getFromDB()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...3924c997b28092f1dac6f1be475ec536625d3457.php:44 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_fb10b1bf2374cd9a08952e3e4b4d929a4e0a30be7f6e16837ba8bbd1f8c2d279->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  default.php:163                                    Glpi\Application\View\TemplateRenderer->display()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.328\", 17.47Mio)"} 
+[2024-01-03 16:00:43] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  front\cron.php:41                                  include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:00:43] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  front\cron.php:41                                  include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.002\", 14.22Mio)"} 
+[2024-01-03 16:00:43] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-01-03 16:00:43', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.558\", 18.12Mio)"} 
+[2024-01-03 16:00:44] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT `id` FROM `glpi_entities`
+  Error: Table 'dev-halobps.glpi_entities' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\Ticket.php:5792                                DBmysql->request()
+  src\CronTask.php:1018                              Ticket::cronCloseTicket()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.544\", 18.33Mio)"} 
+[2024-01-03 16:00:44] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-01-03 16:00:43', 'Action completed, no processing required', '0', '2', '0', '0.86148595809937')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.104\", 18.33Mio)"} 
+[2024-01-03 16:00:44] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  front\locale.php:41                                include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:00:44] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  front\locale.php:41                                include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.003\", 14.12Mio)"} 
+[2024-01-03 16:01:11] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  front\login.php:43                                 include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:01:11] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  front\login.php:43                                 include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.002\", 14.23Mio)"} 
+[2024-01-03 16:01:11] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT `id`, `password`, ADDDATE(`password_last_update`, INTERVAL -1 DAY) AS `password_expiration_date`, ADDDATE(`password_last_update`, INTERVAL -2 DAY) AS `lock_date` FROM `glpi_users` WHERE `name` = 'GLPI' AND `authtype` = '1' AND `auths_id` = '0'
+  Error: Table 'dev-halobps.glpi_users' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\Auth.php:407                                   DBmysql->request()
+  src\Auth.php:889                                   Auth->connection_db()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.204\", 14.43Mio)"} 
+[2024-01-03 16:01:11] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SHOW COLUMNS FROM `glpi_events`
+  Error: Table 'dev-halobps.glpi_events' doesn't exist
+  Backtrace :
+  src\DBmysql.php:881                                
+  src\CommonDBTM.php:608                             DBmysql->listFields()
+  src\CommonDBTM.php:3402                            CommonDBTM->getEmpty()
+  src\CommonDBTM.php:3812                            CommonDBTM->isField()
+  src\CommonDBTM.php:3751                            CommonDBTM->rawSearchOptions()
+  src\CommonDBTM.php:4074                            CommonDBTM->searchOptions()
+  src\CommonDBTM.php:4152                            CommonDBTM->getSearchOptionByField()
+  src\CommonDBTM.php:1287                            CommonDBTM->filterValues()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1021                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.051\", 16.11Mio)"} 
+[2024-01-03 16:01:11] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SHOW COLUMNS FROM `glpi_events`
+  Error: Table 'dev-halobps.glpi_events' doesn't exist
+  Backtrace :
+  src\DBmysql.php:881                                
+  src\CommonDBTM.php:608                             DBmysql->listFields()
+  src\CommonDBTM.php:3402                            CommonDBTM->getEmpty()
+  src\CommonDBTM.php:3823                            CommonDBTM->isField()
+  src\CommonDBTM.php:3751                            CommonDBTM->rawSearchOptions()
+  src\CommonDBTM.php:4074                            CommonDBTM->searchOptions()
+  src\CommonDBTM.php:4152                            CommonDBTM->getSearchOptionByField()
+  src\CommonDBTM.php:1287                            CommonDBTM->filterValues()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1021                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.005\", 16.11Mio)"} 
+[2024-01-03 16:01:11] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SHOW COLUMNS FROM `glpi_events`
+  Error: Table 'dev-halobps.glpi_events' doesn't exist
+  Backtrace :
+  src\DBmysql.php:881                                
+  src\CommonDBTM.php:1295                            DBmysql->listFields()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1021                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.015\", 16.67Mio)"} 
+[2024-01-03 16:01:12] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_entities` WHERE `glpi_entities`.`id` = '0' LIMIT 1
+  Error: Table 'dev-halobps.glpi_entities' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:306                             DBmysql->request()
+  ...\View\Extension\FrontEndAssetsExtension.php:166 CommonDBTM->getFromDB()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...7813f704bd80d73399b51f21b4eefbf60ca9ddf7.php:42 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_34eca01fe1f210dec93408121e0c27226bd54f86a8de62d63228c9ce97ef02f4->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  front\login.php:94                                 Glpi\Application\View\TemplateRenderer->display()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.086\", 17.52Mio)"} 
+[2024-01-03 16:01:16] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  front\logout.php:40                                include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:01:16] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  front\logout.php:40                                include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.004\", 14.22Mio)"} 
+[2024-01-03 16:01:16] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  index.php:89                                       include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:01:16] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  index.php:89                                       include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.002\", 14.23Mio)"} 
+[2024-01-03 16:01:16] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT COUNT(*) AS cpt FROM `glpi_notifications` WHERE `itemtype` = 'User' AND `event` = 'passwordforget' AND `is_active` = '1'
+  Error: Table 'dev-halobps.glpi_notifications' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\DbUtils.php:486                                DBmysql->request()
+  inc\db.function.php:192                            DbUtils->countElementsInTable()
+  index.php:148                                      countElementsInTable()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.039\", 16.65Mio)"} 
+[2024-01-03 16:01:16] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_entities` WHERE `glpi_entities`.`id` = '0' LIMIT 1
+  Error: Table 'dev-halobps.glpi_entities' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:306                             DBmysql->request()
+  ...\View\Extension\FrontEndAssetsExtension.php:166 CommonDBTM->getFromDB()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...38542195fcd08b12e787a6138d82abf567f887b9.php:44 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_e1e0edaf26ad7673ad36bc828fb3e9ef9f64b07efc2acf15c6a7b4175d3f9396->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  index.php:163                                      Glpi\Application\View\TemplateRenderer->display()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.043\", 17.32Mio)"} 
+[2024-01-03 16:01:17] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  front\cron.php:41                                  include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:01:17] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  front\cron.php:41                                  include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.003\", 14.22Mio)"} 
+[2024-01-03 16:01:20] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  default.php:89                                     include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:01:20] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  default.php:89                                     include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.017\", 14.24Mio)"} 
+[2024-01-03 16:01:20] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT COUNT(*) AS cpt FROM `glpi_notifications` WHERE `itemtype` = 'User' AND `event` = 'passwordforget' AND `is_active` = '1'
+  Error: Table 'dev-halobps.glpi_notifications' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\DbUtils.php:486                                DBmysql->request()
+  inc\db.function.php:192                            DbUtils->countElementsInTable()
+  default.php:148                                    countElementsInTable()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.044\", 17.23Mio)"} 
+[2024-01-03 16:01:20] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_entities` WHERE `glpi_entities`.`id` = '0' LIMIT 1
+  Error: Table 'dev-halobps.glpi_entities' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:306                             DBmysql->request()
+  ...\View\Extension\FrontEndAssetsExtension.php:166 CommonDBTM->getFromDB()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...3924c997b28092f1dac6f1be475ec536625d3457.php:44 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_fb10b1bf2374cd9a08952e3e4b4d929a4e0a30be7f6e16837ba8bbd1f8c2d279->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  default.php:163                                    Glpi\Application\View\TemplateRenderer->display()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.032\", 17.47Mio)"} 
+[2024-01-03 16:01:20] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  front\cron.php:41                                  include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:01:20] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  front\cron.php:41                                  include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.003\", 14.22Mio)"} 
+[2024-01-03 16:01:21] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  default.php:89                                     include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:01:21] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  default.php:89                                     include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.003\", 14.24Mio)"} 
+[2024-01-03 16:01:21] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT COUNT(*) AS cpt FROM `glpi_notifications` WHERE `itemtype` = 'User' AND `event` = 'passwordforget' AND `is_active` = '1'
+  Error: Table 'dev-halobps.glpi_notifications' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\DbUtils.php:486                                DBmysql->request()
+  inc\db.function.php:192                            DbUtils->countElementsInTable()
+  default.php:148                                    countElementsInTable()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.046\", 17.23Mio)"} 
+[2024-01-03 16:01:21] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_entities` WHERE `glpi_entities`.`id` = '0' LIMIT 1
+  Error: Table 'dev-halobps.glpi_entities' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:306                             DBmysql->request()
+  ...\View\Extension\FrontEndAssetsExtension.php:166 CommonDBTM->getFromDB()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...3924c997b28092f1dac6f1be475ec536625d3457.php:44 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_fb10b1bf2374cd9a08952e3e4b4d929a4e0a30be7f6e16837ba8bbd1f8c2d279->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  default.php:163                                    Glpi\Application\View\TemplateRenderer->display()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.037\", 17.47Mio)"} 
+[2024-01-03 16:01:21] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  front\cron.php:41                                  include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:01:21] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  front\cron.php:41                                  include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.002\", 14.22Mio)"} 
+[2024-01-03 16:01:24] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  front\login.php:43                                 include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:01:24] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  front\login.php:43                                 include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.003\", 14.23Mio)"} 
+[2024-01-03 16:01:24] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT `id`, `password`, ADDDATE(`password_last_update`, INTERVAL -1 DAY) AS `password_expiration_date`, ADDDATE(`password_last_update`, INTERVAL -2 DAY) AS `lock_date` FROM `glpi_users` WHERE `name` = 'glpi' AND `authtype` = '1' AND `auths_id` = '0'
+  Error: Table 'dev-halobps.glpi_users' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\Auth.php:407                                   DBmysql->request()
+  src\Auth.php:889                                   Auth->connection_db()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.009\", 14.43Mio)"} 
+[2024-01-03 16:01:24] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SHOW COLUMNS FROM `glpi_events`
+  Error: Table 'dev-halobps.glpi_events' doesn't exist
+  Backtrace :
+  src\DBmysql.php:881                                
+  src\CommonDBTM.php:608                             DBmysql->listFields()
+  src\CommonDBTM.php:3402                            CommonDBTM->getEmpty()
+  src\CommonDBTM.php:3812                            CommonDBTM->isField()
+  src\CommonDBTM.php:3751                            CommonDBTM->rawSearchOptions()
+  src\CommonDBTM.php:4074                            CommonDBTM->searchOptions()
+  src\CommonDBTM.php:4152                            CommonDBTM->getSearchOptionByField()
+  src\CommonDBTM.php:1287                            CommonDBTM->filterValues()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1021                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.013\", 16.11Mio)"} 
+[2024-01-03 16:01:24] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SHOW COLUMNS FROM `glpi_events`
+  Error: Table 'dev-halobps.glpi_events' doesn't exist
+  Backtrace :
+  src\DBmysql.php:881                                
+  src\CommonDBTM.php:608                             DBmysql->listFields()
+  src\CommonDBTM.php:3402                            CommonDBTM->getEmpty()
+  src\CommonDBTM.php:3823                            CommonDBTM->isField()
+  src\CommonDBTM.php:3751                            CommonDBTM->rawSearchOptions()
+  src\CommonDBTM.php:4074                            CommonDBTM->searchOptions()
+  src\CommonDBTM.php:4152                            CommonDBTM->getSearchOptionByField()
+  src\CommonDBTM.php:1287                            CommonDBTM->filterValues()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1021                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.005\", 16.11Mio)"} 
+[2024-01-03 16:01:24] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SHOW COLUMNS FROM `glpi_events`
+  Error: Table 'dev-halobps.glpi_events' doesn't exist
+  Backtrace :
+  src\DBmysql.php:881                                
+  src\CommonDBTM.php:1295                            DBmysql->listFields()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1021                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.016\", 16.67Mio)"} 
+[2024-01-03 16:01:24] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_entities` WHERE `glpi_entities`.`id` = '0' LIMIT 1
+  Error: Table 'dev-halobps.glpi_entities' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:306                             DBmysql->request()
+  ...\View\Extension\FrontEndAssetsExtension.php:166 CommonDBTM->getFromDB()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...7813f704bd80d73399b51f21b4eefbf60ca9ddf7.php:42 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_34eca01fe1f210dec93408121e0c27226bd54f86a8de62d63228c9ce97ef02f4->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  front\login.php:94                                 Glpi\Application\View\TemplateRenderer->display()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.041\", 17.52Mio)"} 
+[2024-01-03 16:01:27] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  front\logout.php:40                                include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:01:27] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  front\logout.php:40                                include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.003\", 14.22Mio)"} 
+[2024-01-03 16:01:28] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  index.php:89                                       include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:01:28] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  index.php:89                                       include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.002\", 14.23Mio)"} 
+[2024-01-03 16:01:28] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT COUNT(*) AS cpt FROM `glpi_notifications` WHERE `itemtype` = 'User' AND `event` = 'passwordforget' AND `is_active` = '1'
+  Error: Table 'dev-halobps.glpi_notifications' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\DbUtils.php:486                                DBmysql->request()
+  inc\db.function.php:192                            DbUtils->countElementsInTable()
+  index.php:148                                      countElementsInTable()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.031\", 16.65Mio)"} 
+[2024-01-03 16:01:28] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_entities` WHERE `glpi_entities`.`id` = '0' LIMIT 1
+  Error: Table 'dev-halobps.glpi_entities' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:306                             DBmysql->request()
+  ...\View\Extension\FrontEndAssetsExtension.php:166 CommonDBTM->getFromDB()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...38542195fcd08b12e787a6138d82abf567f887b9.php:44 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_e1e0edaf26ad7673ad36bc828fb3e9ef9f64b07efc2acf15c6a7b4175d3f9396->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  index.php:163                                      Glpi\Application\View\TemplateRenderer->display()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.035\", 17.32Mio)"} 
+[2024-01-03 16:01:28] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  front\cron.php:41                                  include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:01:28] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  front\cron.php:41                                  include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.003\", 14.22Mio)"} 
+[2024-01-03 16:01:30] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  default.php:89                                     include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:01:30] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  default.php:89                                     include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.002\", 14.24Mio)"} 
+[2024-01-03 16:01:30] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT COUNT(*) AS cpt FROM `glpi_notifications` WHERE `itemtype` = 'User' AND `event` = 'passwordforget' AND `is_active` = '1'
+  Error: Table 'dev-halobps.glpi_notifications' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\DbUtils.php:486                                DBmysql->request()
+  inc\db.function.php:192                            DbUtils->countElementsInTable()
+  default.php:148                                    countElementsInTable()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.038\", 17.23Mio)"} 
+[2024-01-03 16:01:30] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_entities` WHERE `glpi_entities`.`id` = '0' LIMIT 1
+  Error: Table 'dev-halobps.glpi_entities' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:306                             DBmysql->request()
+  ...\View\Extension\FrontEndAssetsExtension.php:166 CommonDBTM->getFromDB()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...3924c997b28092f1dac6f1be475ec536625d3457.php:44 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_fb10b1bf2374cd9a08952e3e4b4d929a4e0a30be7f6e16837ba8bbd1f8c2d279->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  default.php:163                                    Glpi\Application\View\TemplateRenderer->display()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.028\", 17.47Mio)"} 
+[2024-01-03 16:01:31] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  front\cron.php:41                                  include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:01:31] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  front\cron.php:41                                  include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.004\", 14.22Mio)"} 
+[2024-01-03 16:01:35] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  front\login.php:43                                 include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:01:35] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  front\login.php:43                                 include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.002\", 14.23Mio)"} 
+[2024-01-03 16:01:35] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT `id`, `password`, ADDDATE(`password_last_update`, INTERVAL -1 DAY) AS `password_expiration_date`, ADDDATE(`password_last_update`, INTERVAL -2 DAY) AS `lock_date` FROM `glpi_users` WHERE `name` = 'glpi' AND `authtype` = '1' AND `auths_id` = '0'
+  Error: Table 'dev-halobps.glpi_users' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\Auth.php:407                                   DBmysql->request()
+  src\Auth.php:889                                   Auth->connection_db()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.007\", 14.43Mio)"} 
+[2024-01-03 16:01:35] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SHOW COLUMNS FROM `glpi_events`
+  Error: Table 'dev-halobps.glpi_events' doesn't exist
+  Backtrace :
+  src\DBmysql.php:881                                
+  src\CommonDBTM.php:608                             DBmysql->listFields()
+  src\CommonDBTM.php:3402                            CommonDBTM->getEmpty()
+  src\CommonDBTM.php:3812                            CommonDBTM->isField()
+  src\CommonDBTM.php:3751                            CommonDBTM->rawSearchOptions()
+  src\CommonDBTM.php:4074                            CommonDBTM->searchOptions()
+  src\CommonDBTM.php:4152                            CommonDBTM->getSearchOptionByField()
+  src\CommonDBTM.php:1287                            CommonDBTM->filterValues()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1021                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.012\", 16.11Mio)"} 
+[2024-01-03 16:01:35] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SHOW COLUMNS FROM `glpi_events`
+  Error: Table 'dev-halobps.glpi_events' doesn't exist
+  Backtrace :
+  src\DBmysql.php:881                                
+  src\CommonDBTM.php:608                             DBmysql->listFields()
+  src\CommonDBTM.php:3402                            CommonDBTM->getEmpty()
+  src\CommonDBTM.php:3823                            CommonDBTM->isField()
+  src\CommonDBTM.php:3751                            CommonDBTM->rawSearchOptions()
+  src\CommonDBTM.php:4074                            CommonDBTM->searchOptions()
+  src\CommonDBTM.php:4152                            CommonDBTM->getSearchOptionByField()
+  src\CommonDBTM.php:1287                            CommonDBTM->filterValues()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1021                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.005\", 16.11Mio)"} 
+[2024-01-03 16:01:35] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SHOW COLUMNS FROM `glpi_events`
+  Error: Table 'dev-halobps.glpi_events' doesn't exist
+  Backtrace :
+  src\DBmysql.php:881                                
+  src\CommonDBTM.php:1295                            DBmysql->listFields()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1021                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.014\", 16.67Mio)"} 
+[2024-01-03 16:01:35] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_entities` WHERE `glpi_entities`.`id` = '0' LIMIT 1
+  Error: Table 'dev-halobps.glpi_entities' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:306                             DBmysql->request()
+  ...\View\Extension\FrontEndAssetsExtension.php:166 CommonDBTM->getFromDB()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...7813f704bd80d73399b51f21b4eefbf60ca9ddf7.php:42 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_34eca01fe1f210dec93408121e0c27226bd54f86a8de62d63228c9ce97ef02f4->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  front\login.php:94                                 Glpi\Application\View\TemplateRenderer->display()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.044\", 17.52Mio)"} 
+[2024-01-03 16:01:39] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  default.php:89                                     include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:01:39] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  default.php:89                                     include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.003\", 14.24Mio)"} 
+[2024-01-03 16:01:39] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT COUNT(*) AS cpt FROM `glpi_notifications` WHERE `itemtype` = 'User' AND `event` = 'passwordforget' AND `is_active` = '1'
+  Error: Table 'dev-halobps.glpi_notifications' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\DbUtils.php:486                                DBmysql->request()
+  inc\db.function.php:192                            DbUtils->countElementsInTable()
+  default.php:148                                    countElementsInTable()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.039\", 17.23Mio)"} 
+[2024-01-03 16:01:39] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_entities` WHERE `glpi_entities`.`id` = '0' LIMIT 1
+  Error: Table 'dev-halobps.glpi_entities' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:306                             DBmysql->request()
+  ...\View\Extension\FrontEndAssetsExtension.php:166 CommonDBTM->getFromDB()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...3924c997b28092f1dac6f1be475ec536625d3457.php:44 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_fb10b1bf2374cd9a08952e3e4b4d929a4e0a30be7f6e16837ba8bbd1f8c2d279->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  default.php:163                                    Glpi\Application\View\TemplateRenderer->display()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.034\", 17.47Mio)"} 
+[2024-01-03 16:02:09] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  front\login.php:43                                 include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:02:09] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  front\login.php:43                                 include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.002\", 14.23Mio)"} 
+[2024-01-03 16:02:09] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT `id`, `password`, ADDDATE(`password_last_update`, INTERVAL -1 DAY) AS `password_expiration_date`, ADDDATE(`password_last_update`, INTERVAL -2 DAY) AS `lock_date` FROM `glpi_users` WHERE `name` = 'glpi' AND `authtype` = '1' AND `auths_id` = '0'
+  Error: Table 'dev-halobps.glpi_users' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\Auth.php:407                                   DBmysql->request()
+  src\Auth.php:889                                   Auth->connection_db()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.007\", 14.43Mio)"} 
+[2024-01-03 16:02:09] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SHOW COLUMNS FROM `glpi_events`
+  Error: Table 'dev-halobps.glpi_events' doesn't exist
+  Backtrace :
+  src\DBmysql.php:881                                
+  src\CommonDBTM.php:608                             DBmysql->listFields()
+  src\CommonDBTM.php:3402                            CommonDBTM->getEmpty()
+  src\CommonDBTM.php:3812                            CommonDBTM->isField()
+  src\CommonDBTM.php:3751                            CommonDBTM->rawSearchOptions()
+  src\CommonDBTM.php:4074                            CommonDBTM->searchOptions()
+  src\CommonDBTM.php:4152                            CommonDBTM->getSearchOptionByField()
+  src\CommonDBTM.php:1287                            CommonDBTM->filterValues()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1021                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.012\", 16.11Mio)"} 
+[2024-01-03 16:02:09] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SHOW COLUMNS FROM `glpi_events`
+  Error: Table 'dev-halobps.glpi_events' doesn't exist
+  Backtrace :
+  src\DBmysql.php:881                                
+  src\CommonDBTM.php:608                             DBmysql->listFields()
+  src\CommonDBTM.php:3402                            CommonDBTM->getEmpty()
+  src\CommonDBTM.php:3823                            CommonDBTM->isField()
+  src\CommonDBTM.php:3751                            CommonDBTM->rawSearchOptions()
+  src\CommonDBTM.php:4074                            CommonDBTM->searchOptions()
+  src\CommonDBTM.php:4152                            CommonDBTM->getSearchOptionByField()
+  src\CommonDBTM.php:1287                            CommonDBTM->filterValues()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1021                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.007\", 16.11Mio)"} 
+[2024-01-03 16:02:09] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SHOW COLUMNS FROM `glpi_events`
+  Error: Table 'dev-halobps.glpi_events' doesn't exist
+  Backtrace :
+  src\DBmysql.php:881                                
+  src\CommonDBTM.php:1295                            DBmysql->listFields()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1021                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.017\", 16.67Mio)"} 
+[2024-01-03 16:02:09] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_entities` WHERE `glpi_entities`.`id` = '0' LIMIT 1
+  Error: Table 'dev-halobps.glpi_entities' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:306                             DBmysql->request()
+  ...\View\Extension\FrontEndAssetsExtension.php:166 CommonDBTM->getFromDB()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...7813f704bd80d73399b51f21b4eefbf60ca9ddf7.php:42 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_34eca01fe1f210dec93408121e0c27226bd54f86a8de62d63228c9ce97ef02f4->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  front\login.php:94                                 Glpi\Application\View\TemplateRenderer->display()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.043\", 17.52Mio)"} 
+[2024-01-03 16:02:12] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  default.php:89                                     include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:02:12] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  default.php:89                                     include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.004\", 14.24Mio)"} 
+[2024-01-03 16:02:12] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT COUNT(*) AS cpt FROM `glpi_notifications` WHERE `itemtype` = 'User' AND `event` = 'passwordforget' AND `is_active` = '1'
+  Error: Table 'dev-halobps.glpi_notifications' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\DbUtils.php:486                                DBmysql->request()
+  inc\db.function.php:192                            DbUtils->countElementsInTable()
+  default.php:148                                    countElementsInTable()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.039\", 17.23Mio)"} 
+[2024-01-03 16:02:12] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_entities` WHERE `glpi_entities`.`id` = '0' LIMIT 1
+  Error: Table 'dev-halobps.glpi_entities' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:306                             DBmysql->request()
+  ...\View\Extension\FrontEndAssetsExtension.php:166 CommonDBTM->getFromDB()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...3924c997b28092f1dac6f1be475ec536625d3457.php:44 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_fb10b1bf2374cd9a08952e3e4b4d929a4e0a30be7f6e16837ba8bbd1f8c2d279->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  default.php:163                                    Glpi\Application\View\TemplateRenderer->display()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.031\", 17.47Mio)"} 
+[2024-01-03 16:02:12] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  front\cron.php:41                                  include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:02:12] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  front\cron.php:41                                  include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.003\", 14.22Mio)"} 
+[2024-01-03 16:02:16] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` = '1'
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:441                                 CommonDBTM->find()
+  src\Plugin.php:223                                 Plugin->checkStates()
+  inc\includes.php:86                                Plugin->init()
+  front\login.php:43                                 include()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 16:02:16] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_plugins` WHERE `state` IN ('1', '3')
+  Error: Table 'dev-halobps.glpi_plugins' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\Plugin.php:225                                 CommonDBTM->find()
+  inc\includes.php:86                                Plugin->init()
+  front\login.php:43                                 include()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.003\", 14.23Mio)"} 
+[2024-01-03 16:02:16] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT `id`, `password`, ADDDATE(`password_last_update`, INTERVAL -1 DAY) AS `password_expiration_date`, ADDDATE(`password_last_update`, INTERVAL -2 DAY) AS `lock_date` FROM `glpi_users` WHERE `name` = 'normal' AND `authtype` = '1' AND `auths_id` = '0'
+  Error: Table 'dev-halobps.glpi_users' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\Auth.php:407                                   DBmysql->request()
+  src\Auth.php:889                                   Auth->connection_db()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.009\", 14.43Mio)"} 
+[2024-01-03 16:02:16] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SHOW COLUMNS FROM `glpi_events`
+  Error: Table 'dev-halobps.glpi_events' doesn't exist
+  Backtrace :
+  src\DBmysql.php:881                                
+  src\CommonDBTM.php:608                             DBmysql->listFields()
+  src\CommonDBTM.php:3402                            CommonDBTM->getEmpty()
+  src\CommonDBTM.php:3812                            CommonDBTM->isField()
+  src\CommonDBTM.php:3751                            CommonDBTM->rawSearchOptions()
+  src\CommonDBTM.php:4074                            CommonDBTM->searchOptions()
+  src\CommonDBTM.php:4152                            CommonDBTM->getSearchOptionByField()
+  src\CommonDBTM.php:1287                            CommonDBTM->filterValues()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1021                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.015\", 16.11Mio)"} 
+[2024-01-03 16:02:16] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SHOW COLUMNS FROM `glpi_events`
+  Error: Table 'dev-halobps.glpi_events' doesn't exist
+  Backtrace :
+  src\DBmysql.php:881                                
+  src\CommonDBTM.php:608                             DBmysql->listFields()
+  src\CommonDBTM.php:3402                            CommonDBTM->getEmpty()
+  src\CommonDBTM.php:3823                            CommonDBTM->isField()
+  src\CommonDBTM.php:3751                            CommonDBTM->rawSearchOptions()
+  src\CommonDBTM.php:4074                            CommonDBTM->searchOptions()
+  src\CommonDBTM.php:4152                            CommonDBTM->getSearchOptionByField()
+  src\CommonDBTM.php:1287                            CommonDBTM->filterValues()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1021                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.005\", 16.11Mio)"} 
+[2024-01-03 16:02:16] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SHOW COLUMNS FROM `glpi_events`
+  Error: Table 'dev-halobps.glpi_events' doesn't exist
+  Backtrace :
+  src\DBmysql.php:881                                
+  src\CommonDBTM.php:1295                            DBmysql->listFields()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1021                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.014\", 16.67Mio)"} 
+[2024-01-03 16:02:16] glpisqllog.ERROR: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 370
+  *** MySQL query error:
+  SQL: SELECT * FROM `glpi_entities` WHERE `glpi_entities`.`id` = '0' LIMIT 1
+  Error: Table 'dev-halobps.glpi_entities' doesn't exist
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:306                             DBmysql->request()
+  ...\View\Extension\FrontEndAssetsExtension.php:166 CommonDBTM->getFromDB()
+  ...0a9bfb407a49ecab8c0f773e588d74ce18bac05f.php:86 Glpi\Application\View\Extension\FrontEndAssetsExtension->customCss()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d436047e3d9f8682bfd9ea172e28117aa06c3b916bf831f18b539d67b5da489d->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...14e7b98bad1711b94220f693d511db0a249dcda8.php:63 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_da4bd323f4b3c2718b3733936456cff9738acb169b3942fa36ade15d37847444->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...7813f704bd80d73399b51f21b4eefbf60ca9ddf7.php:42 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_34eca01fe1f210dec93408121e0c27226bd54f86a8de62d63228c9ce97ef02f4->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  front\login.php:94                                 Glpi\Application\View\TemplateRenderer->display()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.045\", 17.52Mio)"} 
+[2024-01-03 18:02:26] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('1', 'Config', '', '0', '', '2024-01-03 18:02:03', '1', 'dbversion 10.0.3@a130db99c7d9b131c2e2ea59fe0d6260fe93d831', '10.0.3@a045be5eafdc91aa832177c031b23ef6678fdcef')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\Log.php:199                                    Log::history()
+  src\Config.php:3793                                Log::constructHistory()
+  src\Config.php:3763                                Config->logConfigChange()
+  src\CommonDBTM.php:1716                            Config->post_updateItem()
+  src\Config.php:3108                                CommonDBTM->update()
+  src\Update.php:308                                 Config::setConfigurationValues()
+  install\update.php:139                             Update->doUpdates()
+  install\update.php:248                             doUpdateDb()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 18:04:12] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-01-03 18:04:12', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 18:04:14] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('58', 'Ticket', '', '0', 'cron_closeticket', '2024-01-03 18:04:12', '12', '5', '6')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\Log.php:199                                    Log::history()
+  src\CommonDBTM.php:688                             Log::constructHistory()
+  src\CommonDBTM.php:1675                            CommonDBTM->updateInDB()
+  src\Ticket.php:5835                                CommonDBTM->update()
+  src\CronTask.php:1018                              Ticket::cronCloseTicket()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"2.061\", 23.38Mio)"} 
+[2024-01-03 18:04:14] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('58', 'Ticket', '', '0', 'cron_closeticket', '2024-01-03 18:04:12', '16', '', '2024-01-03 18:04:12')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\Log.php:199                                    Log::history()
+  src\CommonDBTM.php:688                             Log::constructHistory()
+  src\CommonDBTM.php:1675                            CommonDBTM->updateInDB()
+  src\Ticket.php:5835                                CommonDBTM->update()
+  src\CronTask.php:1018                              Ticket::cronCloseTicket()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.069\", 23.38Mio)"} 
+[2024-01-03 18:04:15] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_queuednotifications` (`itemtype`, `items_id`, `notificationtemplates_id`, `entities_id`, `headers`, `sender`, `sendername`, `replyto`, `replytoname`, `name`, `body_text`, `recipient`, `recipientname`, `messageid`, `mode`, `create_time`, `send_time`, `sent_try`, `documents`) VALUES ('Ticket', '58', '32', '0', '{"Auto-Submitted":"auto-generated","X-Auto-Response-Suppress":"OOF, DR, NDR, RN, NRN"}', 'halobps@bps.go.id', 'Pusat Layanan Terpadu BPS', 'halobps@bps.go.id', 'Pusat Layanan Terpadu BPS', '[HALOBPS #0000058] Tiket Telah Ditutup', 'Yth. Bapak/Ibu post-only,\r\n\r\n\r\nTiket Anda dengan nomor tiket 0000058 telah ditutup.\r\n\r\nSilahkan membuka tiket baru jika Anda memiliki permasalahan lagi. Kami akan dengan senang hati membantu Anda.\r\n\r\nTerima kasih,\r\nTim Pusat Layanan Terpadu Badan Pusat Statistik\r\n\r\n------------------------------------------------------------------\r\nJangan membalas email ini. Untuk melihat atau merespon tiket, silahkan login ke https://halo.web.bps.go.id.\r\n\n\n-- \n\nSalam, HALOBPS :)\n\n', 'poshnymph@gmail.com', 'post-only', 'GLPI_6PyJHMjSXTpbHNT64rUxyVGh9PyvOCNlOza0xzNH-Ticket-58.1704301455.792454463@LAPTOP-3QJ309BV', 'mailing', '2024-01-03 18:04:14', '2024-01-03 18:04:14', '0', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\NotificationMailing.php:179                    CommonDBTM->add()
+  src\Notification.php:610                           NotificationMailing->sendNotification()
+  src\NotificationEventAbstract.php:150              Notification::send()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\Ticket.php:1680                                NotificationEvent::raiseEvent()
+  src\CommonDBTM.php:1716                            Ticket->post_updateItem()
+  src\Ticket.php:5835                                CommonDBTM->update()
+  src\CronTask.php:1018                              Ticket::cronCloseTicket()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"1.244\", 28.05Mio)"} 
+[2024-01-03 18:04:15] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_ticketsatisfactions` (`tickets_id`, `date_begin`, `type`) VALUES ('58', '2024-01-03 18:04:14', '1')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Ticket.php:1714                                CommonDBTM->add()
+  src\CommonDBTM.php:1716                            Ticket->post_updateItem()
+  src\Ticket.php:5835                                CommonDBTM->update()
+  src\CronTask.php:1018                              Ticket::cronCloseTicket()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.124\", 27.59Mio)"} 
+[2024-01-03 18:04:16] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_queuednotifications` (`itemtype`, `items_id`, `notificationtemplates_id`, `entities_id`, `headers`, `sender`, `sendername`, `replyto`, `replytoname`, `name`, `body_text`, `recipient`, `recipientname`, `messageid`, `mode`, `create_time`, `send_time`, `sent_try`, `documents`) VALUES ('Ticket', '58', '14', '0', '{"Auto-Submitted":"auto-generated","X-Auto-Response-Suppress":"OOF, DR, NDR, RN, NRN"}', 'halobps@bps.go.id', 'Pusat Layanan Terpadu BPS', 'halobps@bps.go.id', 'Pusat Layanan Terpadu BPS', '[HALOBPS #0000058] Mohon Isi Survei Kepuasan', 'Yth. Bapak/Ibu post-only,\r\n\r\nBerikan penilaian Anda terhadap layanan yang telah diberikan oleh HaloBPS terkait tiket dengan judul test.\r\n\r\nAnda dapat memberikan penilaian melalui link berikut\r\nhttps://halosis.web.bps.go.id/index.php?redirect=ticket_58_Ticket%243&#38;noAUTO=1\r\n\r\nPenilaian Anda sangat berarti bagi perbaikan dan peningkatan layanan kami. \r\nTerima kasih  telah menggunakan layanan HaloBPS.\r\n\r\nTerima kasih,\r\nTim Pusat Layanan Terpadu Badan Pusat Statistik\r\n\r\n------------------------------------------------------------------\r\nJangan membalas email ini. Untuk melihat atau merespon tiket, silahkan login ke https://halo.web.bps.go.id.\n\n-- \n\nSalam, HALOBPS :)\n\n', 'poshnymph@gmail.com', 'post-only', 'GLPI_6PyJHMjSXTpbHNT64rUxyVGh9PyvOCNlOza0xzNH-Ticket-58.1704301456.1277650265@LAPTOP-3QJ309BV', 'mailing', '2024-01-03 18:04:16', '2024-01-03 18:04:16', '0', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\NotificationMailing.php:179                    CommonDBTM->add()
+  src\Notification.php:610                           NotificationMailing->sendNotification()
+  src\NotificationEventAbstract.php:150              Notification::send()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\TicketSatisfaction.php:196                     NotificationEvent::raiseEvent()
+  src\CommonDBTM.php:1322                            TicketSatisfaction->post_addItem()
+  src\Ticket.php:1714                                CommonDBTM->add()
+  src\CommonDBTM.php:1716                            Ticket->post_updateItem()
+  src\Ticket.php:5835                                CommonDBTM->update()
+  src\CronTask.php:1018                              Ticket::cronCloseTicket()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.292\", 28.13Mio)"} 
+[2024-01-03 18:04:16] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('0', 'TicketSatisfaction', '0', '20', 'cron_closeticket', '2024-01-03 18:04:16', '0', '', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\CommonDBTM.php:1339                            Log::history()
+  src\Ticket.php:1714                                CommonDBTM->add()
+  src\CommonDBTM.php:1716                            Ticket->post_updateItem()
+  src\Ticket.php:5835                                CommonDBTM->update()
+  src\CronTask.php:1018                              Ticket::cronCloseTicket()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.069\", 27.65Mio)"} 
+[2024-01-03 18:04:16] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-01-03 18:04:16', 'Layanan BPS : 1', '0', '1', '1', '3.995285987854')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:375                               CommonDBTM->add()
+  src\Ticket.php:5845                                CronTask->log()
+  src\CronTask.php:1018                              Ticket::cronCloseTicket()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"0.116\", 27.65Mio)"} 
+[2024-01-03 18:04:17] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-01-03 18:04:16', 'Action completed, fully processed', '0', '2', '1', '5.2269461154938')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"1.209\", 27.67Mio)"} 
+[2024-01-03 18:04:19] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('0', 'system', '2024-01-03 18:04:18', 'login', '3', 'glpi log in from IP ::1')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1003                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-03 18:07:28] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: SELECT * FROM `glpi_pendingreasons_items` WHERE `itemtype` = 'ITILFollowup' AND `items_id` = ''
+  Warnings: 
+1292: Truncated incorrect DECIMAL value: ''
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\PendingReason_Item.php:56                      CommonDBTM->find()
+  :                                                  PendingReason_Item::getForItem()
+  src\Application\View\Extension\PhpExtension.php:88 call_user_func_array()
+  ...4cfe7a1545f23227bcafd0af44c6ea14ab078ea6.php:45 Glpi\Application\View\Extension\PhpExtension->call()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_68eb62889872d9ff62a6894b11198adee3fa40a22fce5ea22bcdba1a4638e056->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...aa491aead1e30267f84074ce44c2df1d90e6721.php:370 twig_include()
+  vendor\twig\twig\src\Template.php:171              __TwigTemplate_0eaa1f0a9d85311fb1b3464b535ef9cd175f1ceb0f4c803a9c088ea1d040a824->block_timeline_card()
+  ...f15bd37872dd500add88b04291db11f5696ce0c5.php:48 Twig\Template->displayBlock()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_11733d94ea45fbc1db5593086575e0c01ca53645acc643990e7d88ab35dee464->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...2aa491aead1e30267f84074ce44c2df1d90e6721.php:57 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_0eaa1f0a9d85311fb1b3464b535ef9cd175f1ceb0f4c803a9c088ea1d040a824->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...eef6107be779cb6b09d860c494776cb4612b4802.php:96 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d1af22547406b8629905b72e302acea45908a1754e13ec26e4ec1c7ca0bd7b14->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...5ae3bc64b7fd24d4f75bc0eaea3924f9d33ec94.php:510 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_09c667ec2a5eb27a0e7c6bcc607f9650a28d3cbe3e7ee490af02a40235a08788->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...af5a0b04393c61f70f1151a6c5c0340c7c6229e.php:131 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_866c16e82b92f8758cc3499a3a8e927dd0d08ffa4e406af8d0801235d42077a0->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:4361                                Glpi\Application\View\TemplateRenderer->display()
+  src\CommonGLPI.php:677                             Ticket->showForm()
+  ajax\common.tabs.php:113                           CommonGLPI::displayStandardTab()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-01-04 04:43:58] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: SELECT * FROM `glpi_pendingreasons_items` WHERE `itemtype` = 'ITILFollowup' AND `items_id` = ''
+  Warnings: 
+1292: Truncated incorrect DECIMAL value: ''
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\PendingReason_Item.php:56                      CommonDBTM->find()
+  :                                                  PendingReason_Item::getForItem()
+  src\Application\View\Extension\PhpExtension.php:88 call_user_func_array()
+  ...4cfe7a1545f23227bcafd0af44c6ea14ab078ea6.php:45 Glpi\Application\View\Extension\PhpExtension->call()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_68eb62889872d9ff62a6894b11198adee3fa40a22fce5ea22bcdba1a4638e056->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...aa491aead1e30267f84074ce44c2df1d90e6721.php:370 twig_include()
+  vendor\twig\twig\src\Template.php:171              __TwigTemplate_0eaa1f0a9d85311fb1b3464b535ef9cd175f1ceb0f4c803a9c088ea1d040a824->block_timeline_card()
+  ...f15bd37872dd500add88b04291db11f5696ce0c5.php:48 Twig\Template->displayBlock()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_11733d94ea45fbc1db5593086575e0c01ca53645acc643990e7d88ab35dee464->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...2aa491aead1e30267f84074ce44c2df1d90e6721.php:57 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_0eaa1f0a9d85311fb1b3464b535ef9cd175f1ceb0f4c803a9c088ea1d040a824->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...eef6107be779cb6b09d860c494776cb4612b4802.php:96 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d1af22547406b8629905b72e302acea45908a1754e13ec26e4ec1c7ca0bd7b14->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...5ae3bc64b7fd24d4f75bc0eaea3924f9d33ec94.php:510 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_09c667ec2a5eb27a0e7c6bcc607f9650a28d3cbe3e7ee490af02a40235a08788->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...af5a0b04393c61f70f1151a6c5c0340c7c6229e.php:131 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_866c16e82b92f8758cc3499a3a8e927dd0d08ffa4e406af8d0801235d42077a0->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:4361                                Glpi\Application\View\TemplateRenderer->display()
+  src\CommonGLPI.php:677                             Ticket->showForm()
+  ajax\common.tabs.php:113                           CommonGLPI::displayStandardTab()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-01-04 04:44:26] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_ticketvalidations` (`tickets_id`, `comment_submission`, `entities_id`, `users_id_validate`, `users_id`, `submission_date`, `status`, `timeline_position`) VALUES ('202', 'asasa', '0', '2', '2', '2024-01-04 10:44:26', '2', '1')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CommonITILValidation.php:809                   CommonDBTM->add()
+  src\MassiveAction.php:1404                         CommonITILValidation::processMassiveActionsForOneItemtype()
+  src\MassiveAction.php:1382                         MassiveAction->processForSeveralItemtypes()
+  front\massiveaction.php:59                         MassiveAction->process()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-01-04 04:44:27] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('202', 'Ticket', '', '0', 'glpi = 2', '2024-01-04 10:44:26', '52', '1', '2')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\Log.php:199                                    Log::history()
+  src\CommonDBTM.php:688                             Log::constructHistory()
+  src\CommonDBTM.php:1675                            CommonDBTM->updateInDB()
+  src\CommonITILValidation.php:334                   CommonDBTM->update()
+  src\CommonDBTM.php:1322                            CommonITILValidation->post_addItem()
+  src\CommonITILValidation.php:809                   CommonDBTM->add()
+  src\MassiveAction.php:1404                         CommonITILValidation::processMassiveActionsForOneItemtype()
+  src\MassiveAction.php:1382                         MassiveAction->processForSeveralItemtypes()
+  front\massiveaction.php:59                         MassiveAction->process()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.973\", 24.65Mio)"} 
+[2024-01-04 04:44:28] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_queuednotifications` (`itemtype`, `items_id`, `notificationtemplates_id`, `entities_id`, `headers`, `sender`, `sendername`, `replyto`, `replytoname`, `name`, `body_text`, `body_html`, `recipient`, `recipientname`, `messageid`, `mode`, `create_time`, `send_time`, `sent_try`, `documents`) VALUES ('Ticket', '202', '7', '0', '{"Auto-Submitted":"auto-generated","X-Auto-Response-Suppress":"OOF, DR, NDR, RN, NRN"}', 'halobps@bps.go.id', 'Pusat Layanan Terpadu BPS', 'halobps@bps.go.id', 'Pusat Layanan Terpadu BPS', '[HALOBPS #0000202] Umum - Waiting for approval cek gangguan baru22', '\r\n\r\n\r\nAn approval request has been submitted by glpi\r\nPermintaan: Komentar : asasa\r\n\r\n\r\n\r\nURL : https://halosis.web.bps.go.id/index.php?redirect=ticket_202_TicketValidation%241&#38;noAUTO=1\r\n\r\n Status of the approval request : Waiting for approval \r\n\r\n\n\n-- \nSalam, Pusat Layanan Terpadu BPS\nSalam, HALOBPS :)\n\n', '&#60;!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\r\n                        \'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\'&#62;&#60;html&#62;\r\n                        &#60;head&#62;\r\n                         &#60;META http-equiv=\'Content-Type\' content=\'text/html; charset=utf-8\'&#62;\r\n                         &#60;title&#62;[HALOBPS #0000202] Umum - Waiting for approval cek gangguan baru22&#60;/title&#62;\r\n                         &#60;style type=\'text/css\'&#62;\r\n                           \r\n                         &#60;/style&#62;\r\n                        &#60;/head&#62;\r\n                        &#60;body&#62;\n&#60;div&#62;&#60;/div&#62;\r\n&#60;p&#62;&#60;/p&#62;\r\n&#60;div&#62;An approval request has been submitted by glpi&#60;/div&#62;\r\n&#60;div&#62;Permintaan: Komentar : asasa&#60;/div&#62;\r\n&#60;div&#62;&#60;/div&#62;\r\n&#60;div&#62;&#60;/div&#62;\r\n&#60;div&#62;&#60;/div&#62;\r\n&#60;div&#62;\r\n&#60;div&#62;URL : &#60;a href=\"https://halosis.web.bps.go.id/index.php?redirect=ticket_202_TicketValidation%241&#38;amp;noAUTO=1\"&#62; https://halosis.web.bps.go.id/index.php?redirect=ticket_202_TicketValidation%241&#38;amp;noAUTO=1 &#60;/a&#62;&#60;/div&#62;\r\n&#60;/div&#62;\r\n&#60;p&#62; Status of the approval request : Waiting for approval \r\n&#60;br /&#62; \r\n&#60;br /&#62;&#60;/p&#62;&#60;br&#62;&#60;br&#62;-- \n&#60;br&#62;&#60;p&#62;Salam, &#60;br /&#62;\r\nPusat Layanan Terpadu BPS&#60;/p&#62;&#60;br&#62;Salam, HALOBPS :)&#60;br&#62;&#60;br&#62;\n\n&#60;/body&#62;&#60;/html&#62;', 'nila_n@bps.go.id', 'glpi', 'GLPI_6PyJHMjSXTpbHNT64rUxyVGh9PyvOCNlOza0xzNH-Ticket-202.1704339868.2111978320@LAPTOP-3QJ309BV', 'mailing', '2024-01-04 10:44:27', '2024-01-04 10:44:27', '0', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\NotificationMailing.php:179                    CommonDBTM->add()
+  src\Notification.php:610                           NotificationMailing->sendNotification()
+  src\NotificationEventAbstract.php:150              Notification::send()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILValidation.php:341                   NotificationEvent::raiseEvent()
+  src\CommonDBTM.php:1322                            CommonITILValidation->post_addItem()
+  src\CommonITILValidation.php:809                   CommonDBTM->add()
+  src\MassiveAction.php:1404                         CommonITILValidation::processMassiveActionsForOneItemtype()
+  src\MassiveAction.php:1382                         MassiveAction->processForSeveralItemtypes()
+  front\massiveaction.php:59                         MassiveAction->process()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"1.081\", 28.54Mio)"} 
+[2024-01-04 04:44:28] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('202', 'Ticket', 'TicketValidation', '12', 'glpi = 2', '2024-01-04 10:44:27', '0', '', 'Approval request sent to glpi')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\CommonDBChild.php:525                          Log::history()
+  src\CommonITILValidation.php:361                   CommonDBChild->post_addItem()
+  src\CommonDBTM.php:1322                            CommonITILValidation->post_addItem()
+  src\CommonITILValidation.php:809                   CommonDBTM->add()
+  src\MassiveAction.php:1404                         CommonITILValidation::processMassiveActionsForOneItemtype()
+  src\MassiveAction.php:1382                         MassiveAction->processForSeveralItemtypes()
+  front\massiveaction.php:59                         MassiveAction->process()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.118\", 28.09Mio)"} 
+[2024-01-04 04:44:30] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: SELECT * FROM `glpi_pendingreasons_items` WHERE `itemtype` = 'ITILFollowup' AND `items_id` = ''
+  Warnings: 
+1292: Truncated incorrect DECIMAL value: ''
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\PendingReason_Item.php:56                      CommonDBTM->find()
+  :                                                  PendingReason_Item::getForItem()
+  src\Application\View\Extension\PhpExtension.php:88 call_user_func_array()
+  ...4cfe7a1545f23227bcafd0af44c6ea14ab078ea6.php:45 Glpi\Application\View\Extension\PhpExtension->call()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_68eb62889872d9ff62a6894b11198adee3fa40a22fce5ea22bcdba1a4638e056->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...aa491aead1e30267f84074ce44c2df1d90e6721.php:370 twig_include()
+  vendor\twig\twig\src\Template.php:171              __TwigTemplate_0eaa1f0a9d85311fb1b3464b535ef9cd175f1ceb0f4c803a9c088ea1d040a824->block_timeline_card()
+  ...f15bd37872dd500add88b04291db11f5696ce0c5.php:48 Twig\Template->displayBlock()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_11733d94ea45fbc1db5593086575e0c01ca53645acc643990e7d88ab35dee464->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...2aa491aead1e30267f84074ce44c2df1d90e6721.php:57 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_0eaa1f0a9d85311fb1b3464b535ef9cd175f1ceb0f4c803a9c088ea1d040a824->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...eef6107be779cb6b09d860c494776cb4612b4802.php:96 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d1af22547406b8629905b72e302acea45908a1754e13ec26e4ec1c7ca0bd7b14->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...5ae3bc64b7fd24d4f75bc0eaea3924f9d33ec94.php:510 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_09c667ec2a5eb27a0e7c6bcc607f9650a28d3cbe3e7ee490af02a40235a08788->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...af5a0b04393c61f70f1151a6c5c0340c7c6229e.php:131 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_866c16e82b92f8758cc3499a3a8e927dd0d08ffa4e406af8d0801235d42077a0->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:4361                                Glpi\Application\View\TemplateRenderer->display()
+  src\CommonGLPI.php:677                             Ticket->showForm()
+  ajax\common.tabs.php:113                           CommonGLPI::displayStandardTab()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-01-04 04:45:03] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: SELECT * FROM `glpi_pendingreasons_items` WHERE `itemtype` = 'ITILFollowup' AND `items_id` = ''
+  Warnings: 
+1292: Truncated incorrect DECIMAL value: ''
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\PendingReason_Item.php:56                      CommonDBTM->find()
+  :                                                  PendingReason_Item::getForItem()
+  src\Application\View\Extension\PhpExtension.php:88 call_user_func_array()
+  ...4cfe7a1545f23227bcafd0af44c6ea14ab078ea6.php:45 Glpi\Application\View\Extension\PhpExtension->call()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_68eb62889872d9ff62a6894b11198adee3fa40a22fce5ea22bcdba1a4638e056->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...aa491aead1e30267f84074ce44c2df1d90e6721.php:370 twig_include()
+  vendor\twig\twig\src\Template.php:171              __TwigTemplate_0eaa1f0a9d85311fb1b3464b535ef9cd175f1ceb0f4c803a9c088ea1d040a824->block_timeline_card()
+  ...f15bd37872dd500add88b04291db11f5696ce0c5.php:48 Twig\Template->displayBlock()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_11733d94ea45fbc1db5593086575e0c01ca53645acc643990e7d88ab35dee464->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...2aa491aead1e30267f84074ce44c2df1d90e6721.php:57 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_0eaa1f0a9d85311fb1b3464b535ef9cd175f1ceb0f4c803a9c088ea1d040a824->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...eef6107be779cb6b09d860c494776cb4612b4802.php:96 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d1af22547406b8629905b72e302acea45908a1754e13ec26e4ec1c7ca0bd7b14->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...5ae3bc64b7fd24d4f75bc0eaea3924f9d33ec94.php:510 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_09c667ec2a5eb27a0e7c6bcc607f9650a28d3cbe3e7ee490af02a40235a08788->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...af5a0b04393c61f70f1151a6c5c0340c7c6229e.php:131 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_866c16e82b92f8758cc3499a3a8e927dd0d08ffa4e406af8d0801235d42077a0->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:4361                                Glpi\Application\View\TemplateRenderer->display()
+  src\CommonGLPI.php:677                             Ticket->showForm()
+  ajax\common.tabs.php:113                           CommonGLPI::displayStandardTab()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-01-04 04:55:32] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_groups_users` (`users_id`, `groups_id`) VALUES ('5', '7')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CommonDBRelation.php:1688                      CommonDBTM->add()
+  src\MassiveAction.php:1404                         CommonDBRelation::processMassiveActionsForOneItemtype()
+  src\MassiveAction.php:1382                         MassiveAction->processForSeveralItemtypes()
+  front\massiveaction.php:59                         MassiveAction->process()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-01-04 05:40:33] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_users` (`entities_id`, `name`, `realname`, `firstname`, `password`, `timezone`, `is_active`, `begin_date`, `end_date`, `phone`, `authtype`, `mobile`, `usercategories_id`, `phone2`, `comment`, `registration_number`, `usertitles_id`, `auths_id`, `password_last_update`, `is_deleted`, `profiles_id`, `date_creation`, `date_mod`) VALUES ('0', 'test', 'test', 'testte', '$2y$10$aA7Kp6p4SPhpoEVlH5ncTOhUFzudT5NV6SrWl4JhHquNlTZaVS..y', '0', '1', NULL, NULL, '', '1', '', '0', '', '', '', '0', '0', '2024-01-04 11:40:33', '0', '0', '2024-01-04 11:40:33', '2024-01-04 11:40:33')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  front\user.form.php:65                             CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-01-04 05:40:33] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_profiles_users` (`is_dynamic`, `entities_id`, `is_recursive`, `profiles_id`, `users_id`) VALUES ('0', '0', '0', '1', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\User.php:830                                   CommonDBTM->add()
+  src\CommonDBTM.php:1322                            User->post_addItem()
+  front\user.form.php:65                             CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.130\", 17.29Mio)"} 
+[2024-01-04 05:40:33] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('0', 'User', 'Profile', '17', 'glpi = 2', '2024-01-04 11:40:33', '0', '', 'Tiket #1 | Self Service')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\CommonDBRelation.php:856                       Log::history()
+  src\CommonDBTM.php:1322                            CommonDBRelation->post_addItem()
+  src\User.php:830                                   CommonDBTM->add()
+  src\CommonDBTM.php:1322                            User->post_addItem()
+  front\user.form.php:65                             CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.183\", 17.46Mio)"} 
+[2024-01-04 05:40:33] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('0', 'User', '0', '20', 'glpi = 2', '2024-01-04 11:40:33', '0', '', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\CommonDBTM.php:1339                            Log::history()
+  front\user.form.php:65                             CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.058\", 17.62Mio)"} 
+[2024-01-04 05:42:43] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_users` (`entities_id`, `name`, `realname`, `firstname`, `password`, `timezone`, `is_active`, `begin_date`, `end_date`, `phone`, `authtype`, `mobile`, `usercategories_id`, `phone2`, `comment`, `registration_number`, `usertitles_id`, `auths_id`, `password_last_update`, `is_deleted`, `profiles_id`, `date_creation`, `date_mod`) VALUES ('0', 'sadasda', 'test', 'test', '$2y$10$78bxO7ThjUqjbESSRBRHXemh3PnrDhkIv4Wd3sqf.mDxBpI0nuil2', '0', '1', '2024-01-04 11:42:13', NULL, '089786349234', '1', '2940230749703', '1', '9217041231', '', '2932707302', '0', '0', '2024-01-04 11:42:42', '0', '0', '2024-01-04 11:42:42', '2024-01-04 11:42:42')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  front\user.form.php:65                             CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-01-04 05:42:43] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_useremails` (`email`, `users_id`, `is_default`) VALUES ('aljaffarsyah10@gmail.com', '0', '1')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\User.php:1465                                  CommonDBTM->add()
+  src\User.php:778                                   User->updateUserEmails()
+  src\CommonDBTM.php:1322                            User->post_addItem()
+  front\user.form.php:65                             CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.113\", 17.16Mio)"} 
+[2024-01-04 05:42:43] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('0', 'User', 'UserEmail', '17', 'glpi = 2', '2024-01-04 11:42:42', '0', '', 'Tiket #0 | aljaffarsyah10@gmail.com')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\CommonDBChild.php:525                          Log::history()
+  src\UserEmail.php:316                              CommonDBChild->post_addItem()
+  src\CommonDBTM.php:1322                            UserEmail->post_addItem()
+  src\User.php:1465                                  CommonDBTM->add()
+  src\User.php:778                                   User->updateUserEmails()
+  src\CommonDBTM.php:1322                            User->post_addItem()
+  front\user.form.php:65                             CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.163\", 17.17Mio)"} 
+[2024-01-04 05:42:43] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('0', 'UserEmail', '0', '20', 'glpi = 2', '2024-01-04 11:42:42', '0', '', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\CommonDBTM.php:1339                            Log::history()
+  src\User.php:1465                                  CommonDBTM->add()
+  src\User.php:778                                   User->updateUserEmails()
+  src\CommonDBTM.php:1322                            User->post_addItem()
+  front\user.form.php:65                             CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.165\", 17.18Mio)"} 
+[2024-01-04 05:42:43] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_profiles_users` (`is_dynamic`, `entities_id`, `is_recursive`, `profiles_id`, `users_id`) VALUES ('0', '0', '0', '1', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\User.php:830                                   CommonDBTM->add()
+  src\CommonDBTM.php:1322                            User->post_addItem()
+  front\user.form.php:65                             CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.092\", 17.57Mio)"} 
+[2024-01-04 05:42:43] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('0', 'User', 'Profile', '17', 'glpi = 2', '2024-01-04 11:42:42', '0', '', 'Tiket #1 | Self Service')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\CommonDBRelation.php:856                       Log::history()
+  src\CommonDBTM.php:1322                            CommonDBRelation->post_addItem()
+  src\User.php:830                                   CommonDBTM->add()
+  src\CommonDBTM.php:1322                            User->post_addItem()
+  front\user.form.php:65                             CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.125\", 17.68Mio)"} 
+[2024-01-04 05:42:44] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('0', 'User', '0', '20', 'glpi = 2', '2024-01-04 11:42:42', '0', '', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\CommonDBTM.php:1339                            Log::history()
+  front\user.form.php:65                             CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.091\", 17.66Mio)"} 
+[2024-01-04 07:07:44] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-01-04 07:07:43', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-04 07:07:45] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-01-04 07:07:43', 'Action completed, no processing required', '0', '2', '0', '1.7504689693451')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"1.502\", 18.43Mio)"} 
+[2024-01-04 07:07:59] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('0', 'system', '2024-01-04 07:07:58', 'login', '3', 'tech log in from IP ::1')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1003                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-04 07:08:33] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: SELECT DISTINCT `glpi_tickets`.`id` AS id, 'tech' AS currentuser,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_2`,   `glpi_tickets`.`name` AS `ITEM_Ticket_1`,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_1_id`,
+                        `glpi_tickets`.`id` AS `ITEM_Ticket_1_id`, `glpi_tickets`.`content` AS `ITEM_Ticket_1_content`, `glpi_tickets`.`status` AS `ITEM_Ticket_1_status`, `glpi_entities`.`completename` AS `ITEM_Ticket_80`,  `glpi_tickets`.`status` AS `ITEM_Ticket_12`,  `glpi_tickets`.`date_mod` AS `ITEM_Ticket_19`,  `glpi_tickets`.`date` AS `ITEM_Ticket_15`,  `glpi_tickets`.`priority` AS `ITEM_Ticket_3`,   GROUP_CONCAT(DISTINCT `glpi_users_af1042e23ce6565cfe58c6db91f84692`.`id` SEPARATOR '$$##$$')
+                                       AS `ITEM_Ticket_4`,
+                           GROUP_CONCAT(DISTINCT CONCAT(`glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`.`users_id`, ' ',
+                                                        `glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`.`alternative_email`)
+                                                        SEPARATOR '$$##$$') AS `ITEM_Ticket_4_2`, 
+                            GROUP_CONCAT(DISTINCT CONCAT(IFNULL(`glpi_groups_accbd4432fbbbd44d4ac65bbb91a0812`.`completename`, '__NULL__'),
+                                               '$#$',`glpi_groups_accbd4432fbbbd44d4ac65bbb91a0812`.`id`) ORDER BY `glpi_groups_accbd4432fbbbd44d4ac65bbb91a0812`.`id` SEPARATOR '$$##$$')
+                              AS `ITEM_Ticket_8`,
+                  
+                   GROUP_CONCAT(DISTINCT `glpi_users_b1b92f6be5e70531688d870931e94a65`.`id` SEPARATOR '$$##$$')
+                                       AS `ITEM_Ticket_5`,
+                           GROUP_CONCAT(DISTINCT CONCAT(`glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`.`users_id`, ' ',
+                                                        `glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`.`alternative_email`)
+                                                        SEPARATOR '$$##$$') AS `ITEM_Ticket_5_2`, 
+                           `glpi_itilcategories`.`completename` AS `ITEM_Ticket_7`,  `glpi_tickets`.`time_to_resolve` AS `ITEM_Ticket_18`,  `glpi_tickets`.`solvedate` AS `ITEM_Ticket_18_solvedate`, `glpi_tickets`.`status` AS `ITEM_Ticket_18_status`,  GROUP_CONCAT(DISTINCT CONCAT(IFNULL(`glpi_groups_5055bdb6a7e594e2674a99b70925c4be`.`completename`, '__NULL__'),
+                                               '$#$',`glpi_groups_5055bdb6a7e594e2674a99b70925c4be`.`id`) ORDER BY `glpi_groups_5055bdb6a7e594e2674a99b70925c4be`.`id` SEPARATOR '$$##$$')
+                              AS `ITEM_Ticket_222`,(select date from glpi_komentarterbaru glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id and glpi_itilfollowups2.users_id = glpi_tickets.users_id_recipient and glpi_itilfollowups2.content like '%?%') as belumbalas, (select date from glpi_komentarterbaru glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id and glpi_itilfollowups2.users_id = glpi_tickets.users_id_recipient)  as balasanrequester, (select date from glpi_komentarterbaru glpi_itilfollowups2 where glpi_itilfollowups2.items_id=`glpi_tickets`.id)  as belumbalas2 FROM `glpi_tickets` LEFT JOIN `glpi_tickets_users`  AS `glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`
+                                             ON (`glpi_tickets`.`id` = `glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`.`tickets_id`
+                                                  AND `glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`.`type` = '1' ) LEFT JOIN `glpi_tickets_users`  AS `glpi_tickets_users_9c6b5b644d74a9e8013c7c2ea051dffd`
+                                             ON (`glpi_tickets`.`id` = `glpi_tickets_users_9c6b5b644d74a9e8013c7c2ea051dffd`.`tickets_id`
+                                                  AND `glpi_tickets_users_9c6b5b644d74a9e8013c7c2ea051dffd`.`type` = '3' ) LEFT JOIN `glpi_tickets_users`  AS `glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`
+                                             ON (`glpi_tickets`.`id` = `glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`.`tickets_id`
+                                                  AND `glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`.`type` = '2' )LEFT JOIN `glpi_entities` 
+                                          ON (`glpi_tickets`.`entities_id` = `glpi_entities`.`id`
+                                              )LEFT JOIN `glpi_users`  AS `glpi_users_af1042e23ce6565cfe58c6db91f84692`
+                                          ON (`glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`.`users_id` = `glpi_users_af1042e23ce6565cfe58c6db91f84692`.`id`
+                                              ) LEFT JOIN `glpi_groups_tickets`  AS `glpi_groups_tickets_c6f7f58b9365babf7388e555e526efd5`
+                                             ON (`glpi_tickets`.`id` = `glpi_groups_tickets_c6f7f58b9365babf7388e555e526efd5`.`tickets_id`
+                                                  AND `glpi_groups_tickets_c6f7f58b9365babf7388e555e526efd5`.`type` = '2' )LEFT JOIN `glpi_groups`  AS `glpi_groups_accbd4432fbbbd44d4ac65bbb91a0812`
+                                          ON (`glpi_groups_tickets_c6f7f58b9365babf7388e555e526efd5`.`groups_id` = `glpi_groups_accbd4432fbbbd44d4ac65bbb91a0812`.`id`
+                                              )LEFT JOIN `glpi_users`  AS `glpi_users_b1b92f6be5e70531688d870931e94a65`
+                                          ON (`glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`.`users_id` = `glpi_users_b1b92f6be5e70531688d870931e94a65`.`id`
+                                              )LEFT JOIN `glpi_itilcategories` 
+                                          ON (`glpi_tickets`.`itilcategories_id` = `glpi_itilcategories`.`id`
+                                              ) LEFT JOIN `glpi_groups_ticketss`  AS `glpi_groups_ticketss_c6f7f58b9365babf7388e555e526efd5`
+                                             ON (`glpi_tickets`.`id` = `glpi_groups_ticketss_c6f7f58b9365babf7388e555e526efd5`.`tickets_id`
+                                                  AND `glpi_groups_ticketss_c6f7f58b9365babf7388e555e526efd5`.`type` = '2' )LEFT JOIN `glpi_groups`  AS `glpi_groups_5055bdb6a7e594e2674a99b70925c4be`
+                                          ON (`glpi_groups_ticketss_c6f7f58b9365babf7388e555e526efd5`.`groups_id` = `glpi_groups_5055bdb6a7e594e2674a99b70925c4be`.`id`
+                                              ) WHERE ( `glpi_tickets_users_019878060c6d5f06cbe3c4d7c31dec24`.users_id = '4'
+                                    OR `glpi_tickets_users_9c6b5b644d74a9e8013c7c2ea051dffd`.users_id = '4'
+                                    OR `glpi_tickets`.`users_id_recipient` = '4' OR `glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`.users_id = '4'  OR `glpi_tickets_users_c6f7f58b9365babf7388e555e526efd5`.`users_id` = '4' OR `glpi_tickets`.`status`='1')  AND `glpi_tickets`.`is_deleted` = 0  AND (    (`glpi_groups_5055bdb6a7e594e2674a99b70925c4be`.`id` IN (''))  ) GROUP BY `glpi_tickets`.`id` ORDER BY `ITEM_Ticket_19` DESC 
+  Warnings: 
+1292: Truncated incorrect DECIMAL value: ''
+  Backtrace :
+  src\Search.php:1475                                
+  src\Search.php:477                                 Search::constructData()
+  src\Search.php:199                                 Search::getDatas()
+  src\Search.php:176                                 Search::showList()
+  front\ticket.php:58                                Search::show()
+  {"user":"4@LAPTOP-3QJ309BV"} 
+[2024-01-04 07:08:47] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: SELECT * FROM `glpi_pendingreasons_items` WHERE `itemtype` = 'ITILFollowup' AND `items_id` = ''
+  Warnings: 
+1292: Truncated incorrect DECIMAL value: ''
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\PendingReason_Item.php:56                      CommonDBTM->find()
+  :                                                  PendingReason_Item::getForItem()
+  src\Application\View\Extension\PhpExtension.php:88 call_user_func_array()
+  ...4cfe7a1545f23227bcafd0af44c6ea14ab078ea6.php:45 Glpi\Application\View\Extension\PhpExtension->call()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_68eb62889872d9ff62a6894b11198adee3fa40a22fce5ea22bcdba1a4638e056->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...aa491aead1e30267f84074ce44c2df1d90e6721.php:370 twig_include()
+  vendor\twig\twig\src\Template.php:171              __TwigTemplate_0eaa1f0a9d85311fb1b3464b535ef9cd175f1ceb0f4c803a9c088ea1d040a824->block_timeline_card()
+  ...f15bd37872dd500add88b04291db11f5696ce0c5.php:48 Twig\Template->displayBlock()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_11733d94ea45fbc1db5593086575e0c01ca53645acc643990e7d88ab35dee464->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...2aa491aead1e30267f84074ce44c2df1d90e6721.php:57 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_0eaa1f0a9d85311fb1b3464b535ef9cd175f1ceb0f4c803a9c088ea1d040a824->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...eef6107be779cb6b09d860c494776cb4612b4802.php:96 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d1af22547406b8629905b72e302acea45908a1754e13ec26e4ec1c7ca0bd7b14->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...5ae3bc64b7fd24d4f75bc0eaea3924f9d33ec94.php:510 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_09c667ec2a5eb27a0e7c6bcc607f9650a28d3cbe3e7ee490af02a40235a08788->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...af5a0b04393c61f70f1151a6c5c0340c7c6229e.php:131 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_866c16e82b92f8758cc3499a3a8e927dd0d08ffa4e406af8d0801235d42077a0->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:4361                                Glpi\Application\View\TemplateRenderer->display()
+  src\CommonGLPI.php:677                             Ticket->showForm()
+  ajax\common.tabs.php:113                           CommonGLPI::displayStandardTab()
+  {"user":"4@LAPTOP-3QJ309BV"} 
+[2024-01-04 12:54:11] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('0', 'system', '2024-01-04 12:54:10', 'login', '3', 'glpi log in from IP ::1')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1003                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-05 09:59:39] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-01-05 15:59:38', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-01-05 09:59:40] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-01-05 15:59:38', 'Action completed, no processing required', '0', '2', '0', '1.5756850242615')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"1.411\", 17.70Mio)"} 
+[2024-01-08 08:19:50] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-01-08 14:19:49', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-01-08 08:19:52] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-01-08 14:19:49', 'Action completed, no processing required', '0', '2', '0', '2.1822249889374')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"1.849\", 17.70Mio)"} 
+[2024-01-08 09:12:17] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('0', 'ticket', '2024-01-08 15:12:15', 'tracking', '4', 'glpi menambahkan item 0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Ticket.php:1969                                Glpi\Event::log()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:83                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-01-08 09:12:17] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_groups_tickets` (`type`, `tickets_id`, `groups_id`) VALUES ('2', '0', '108')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CommonITILObject.php:8331                      CommonDBTM->add()
+  src\CommonITILObject.php:2606                      CommonITILObject->updateActors()
+  src\Ticket.php:2126                                CommonITILObject->post_addItem()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:83                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.202\", 25.78Mio)"} 
+[2024-01-08 09:12:18] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('0', 'Ticket', '', '0', 'glpi = 2', '2024-01-08 15:12:15', '150', '0', '1')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\Log.php:199                                    Log::history()
+  src\CommonDBTM.php:688                             Log::constructHistory()
+  src\CommonDBTM.php:1675                            CommonDBTM->updateInDB()
+  src\Ticket.php:2339                                CommonDBTM->update()
+  src\CommonITILActor.php:419                        Ticket->updateDateMod()
+  src\Group_Ticket.php:66                            CommonITILActor->post_addItem()
+  src\CommonDBTM.php:1322                            Group_Ticket->post_addItem()
+  src\CommonITILObject.php:8331                      CommonDBTM->add()
+  src\CommonITILObject.php:2606                      CommonITILObject->updateActors()
+  src\Ticket.php:2126                                CommonITILObject->post_addItem()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:83                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.820\", 25.66Mio)"} 
+[2024-01-08 09:12:18] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('0', 'Ticket', 'Group', '15', 'glpi = 2', '2024-01-08 15:12:15', '8', '', 'Tiket #108 | Operator')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\CommonDBRelation.php:856                       Log::history()
+  src\CommonITILActor.php:455                        CommonDBRelation->post_addItem()
+  src\Group_Ticket.php:66                            CommonITILActor->post_addItem()
+  src\CommonDBTM.php:1322                            Group_Ticket->post_addItem()
+  src\CommonITILObject.php:8331                      CommonDBTM->add()
+  src\CommonITILObject.php:2606                      CommonITILObject->updateActors()
+  src\Ticket.php:2126                                CommonITILObject->post_addItem()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:83                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.380\", 26.50Mio)"} 
+[2024-01-08 09:12:18] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('0', 'Ticket', '0', '20', 'glpi = 2', '2024-01-08 15:12:15', '0', '', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\CommonDBTM.php:1339                            Log::history()
+  front\tracking.injector.php:83                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.213\", 26.75Mio)"} 

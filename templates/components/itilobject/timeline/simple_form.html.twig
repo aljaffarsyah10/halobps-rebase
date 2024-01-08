@@ -72,6 +72,19 @@
          })
       ) }}
 
+      {{ fields.field(
+         'nup_bmn',
+         item.dropdownBMN({
+               'value': params['nup_bmn'],
+               'width': '100%',
+               'display': false
+         }),
+         __('Keterangan BMN'),
+         field_options|merge({
+             maxlenght: 255,
+         })
+      ) }}
+
       {% set uploads = [] %}
       {% if item.input._content is defined %}
          {% set uploads = uploads|merge({'_content': item.input._content, '_tag_content': item.input._tag_content}) %}

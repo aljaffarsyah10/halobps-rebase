@@ -65,6 +65,9 @@ if (isset($_POST['_actors']) && is_string($_POST['_actors'])) {
         $_POST['_actors'] = [];
     }
 }
+if (isset($_POST['nup_bmn'])) {
+    $_POST['nup_bmn_value'] = $_SESSION['bmn']['nup_bmn'][$_POST['nup_bmn']];
+}
 if (isset($_POST['add'])) {
     if (!$CFG_GLPI["use_anonymous_helpdesk"]) {
         $track->check(-1, CREATE, $_POST);
@@ -74,7 +77,7 @@ if (isset($_POST['add'])) {
     $_POST['check_delegatee'] = true;
     if (isset($_UPOST['_actors'])) {
         $_POST['_actors'] = json_decode($_UPOST['_actors'], true);
-       // with self-service, we only have observers
+        // with self-service, we only have observers
         unset($_POST['_actors']['requester'], $_POST['_actors']['assign']);
     }
     if ($track->add($_POST)) {
@@ -87,7 +90,7 @@ if (isset($_POST['add'])) {
             Html::displayBackLink();
             echo "</div>";
         } else {
-          // echo "<div class='center b spaced'>";
+            // echo "<div class='center b spaced'>";
             // echo "<img src='" . $CFG_GLPI["root_doc"] . "/pics/ok.png' alt='" . __s('OK') . "'>";
             Session::addMessageAfterRedirect(__('Thank you for using our automatic helpdesk system.'));
             // Html::displayMessageAfterRedirect(); 
