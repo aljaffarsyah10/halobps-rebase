@@ -85,6 +85,8 @@
          })
       ) }}
 
+      <input type="hidden" id="nup_bmn_value" name="nup_bmn_value" value="" />
+
       {% set uploads = [] %}
       {% if item.input._content is defined %}
          {% set uploads = uploads|merge({'_content': item.input._content, '_tag_content': item.input._tag_content}) %}
@@ -120,3 +122,18 @@
       <input type="hidden" name="_glpi_csrf_token" value="{{ csrf_token() }}" />
    </form>
    {% endif %}
+
+<script type="text/javascript">
+// Fungsi untuk get nilai indeks dropdown nup_bmn dan memperbarui input hidden
+$nup_bmn = {{ session('bmn').nup_bmn | json_encode | raw }};
+function updateHiddenInput() {
+    var selectedValue = $nup_bmn[$('[name="nup_bmn"]').val()];
+    $('[name="nup_bmn_value"]').val(selectedValue);
+}
+$('[name="nup_bmn"]').on('change', function () {
+    updateHiddenInput();
+});
+$(document).ready(function () {
+    updateHiddenInput();
+});
+</script>

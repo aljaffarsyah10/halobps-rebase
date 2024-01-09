@@ -158,7 +158,8 @@ if (
     if (
         Session::haveRight('followup', ITILFollowup::SEEPUBLIC)
         || Session::haveRight('task', TicketTask::SEEPUBLIC)
-        || Session::haveRightsOr('ticketvalidation', [TicketValidation::VALIDATEREQUEST,
+        || Session::haveRightsOr('ticketvalidation', [
+            TicketValidation::VALIDATEREQUEST,
             TicketValidation::VALIDATEINCIDENT
         ])
     ) {
@@ -180,9 +181,9 @@ if (isset($_GET['create_ticket'])) {
 
         //redirect to satisfaction survey form
         $ticket_satisfactions_id = Ticket::getIDTicketSatisfactions();
-        Html::redirect($CFG_GLPI['root_doc'] . "/front/ticket.form.php?id=".$ticket_satisfactions_id."&forcetab=Ticket$3");
+        Html::redirect($CFG_GLPI['root_doc'] . "/front/ticket.form.php?id=" . $ticket_satisfactions_id . "&forcetab=Ticket$3");
     }
-    
+
     Html::helpHeader(__('New ticket'), "create_ticket");
     $ticket = new Ticket();
     $ticket->showFormHelpdesk(Session::getLoginUserID());
@@ -219,7 +220,7 @@ if (isset($_GET['create_ticket'])) {
     // banner beranda
     echo "<div class='d-flex mb-3'> <img class='d-flex flex-wrap align-items-center' alt='HaloSIS Quote' src='../pics/layout/global_layout_quote.png'/></div>";
     //search bar
-    echo "<div style='  background-color:transparent;padding-top:10px;'>";    
+    echo "<div style='  background-color:transparent;padding-top:10px;'>";
     $ki = new KnowbaseItem();
     $ki->searchForm($_GET);
     echo "</div>";
@@ -254,8 +255,6 @@ if (isset($_GET['create_ticket'])) {
         // 'kb_recent'      => $kb_recent,
         // 'kb_lastupdate'  => $kb_lastupdate,
     ]);
-
-
 }
 
 Html::helpFooter();

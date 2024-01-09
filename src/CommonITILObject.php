@@ -3006,9 +3006,9 @@ abstract class CommonITILObject extends CommonDBTM
             }
         }
 
-        $email = "zulhan@bps.go.id";
+        $email = UserEmail::getDefaultForUser(Session::getLoginUserID());
 
-        if (!isset($_SESSION['nup_bmn'])) {
+        if (!isset($_SESSION['bmn']['nup_bmn'])) {
             $authorization = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5IiwianRpIjoiNGFhMzA5OGRkYjBhNzQwNzM1YjQ3ZTY2ZjlhMjhkNDQ3NDIxNzM1NmJjOWFlYWQ3NDcyNTNjMWJiNTgwM2ViOTg0MjkzNWZjZWEzODM3MTYiLCJpYXQiOjE3MDM5ODk2OTQuMjU5NDQ3LCJuYmYiOjE3MDM5ODk2OTQuMjU5NDUyLCJleHAiOjIxNzczNzUyOTQuMTMwMDk3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hqbxWsHBOueCiJB3BmlmF_C9qbZ-kuaXHQ3Ck5_8-dL4sXu3BpdXq5TvRJ5Aup4Ag71Nw_U2-z-DLMqjaI8PtVkW3QFmxQZJLz_uIp6UTHN-cpxkNzsiKn9kMXrdBpeN2R0w9hQlRB0Ubl7SSnS93I-uza726jilcCmg-FZh-nxEUtS2QDpTrPGpDow5PAtXRhfgEJdz0CezXndB2zA30y265iBut6sO1-VR8vEukSCmUrsqWK8AacKncy6wUaF4qFu2V9KJHryWqxC3NsbB92k6S5C548dQuJWkuTwBxpLRiVgrXrzbs8F3lu6uICzi8vQbDxt2fexkipJNRjNf5-Z6BQ5k_PNH8zfFIm65-WjdNLw68ojhCUb6xuxHzj6asvki2g-9wimZOpyEDAAoCP6CrcmGNtgX2PNcCgVC0EGsIhTjXkIgykip16cwRz2b1kaRBdXX17s5fou2p51qq1UHAwHDZGLYaKDBSHkvpWsPTQVdT6JfkcMKYqZutr0gZBLhPl-OXV5x8Mn5uJuQyP--bae3YnvFu08c9E6vgUUfx4_OioK4xiiygg4bxPgjjwoCiV_QZRRqT-H17A-mkkFX1HVqozxR4OI8EAdnQ1HaDqBfAFac7GMlBaX4zIoAoU3NU-sQGnpXDIwqLWW7DsWj7GdP5LDp1tpIbGkEp-A';
             $apiUrl = 'http://localhost:8000/api/v1/users/' . $email . '/assets-email';
             $headers = [
@@ -3034,7 +3034,7 @@ abstract class CommonITILObject extends CommonDBTM
                         $bmn['dropdown_value'][] = $item['nama_barang'] . ' - ' . $item['nup_bmn'];
                     }
                 }
-                $_SESSION['bmn']['nup_bmn'] = array_values($bmn['nup_bmn']);
+                $_SESSION['bmn']['nup_bmn'] = array_values($bmn['nup_bmn_value']);
                 $_SESSION['bmn']['dropdown_value'] = array_values($bmn['dropdown_value']);
             } else {
                 echo 'Error: Unable to fetch data from the API.';
