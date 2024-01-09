@@ -30514,6 +30514,7 @@ Compile css/palettes/lightblue.scss  {"user":"@LAPTOP-3QJ309BV"}
   src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
   front\tracking.injector.php:106                    Ticket->showFormHelpdesk()
   
+<<<<<<< HEAD
 [2024-05-24 04:04:49] glpiphplog.CRITICAL:   *** Uncaught Exception ParseError: syntax error, unexpected token "<<" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\CommonITILObject.php at line 3326
   Backtrace :
   src\Ticket.php:47                                  glpi_autoload()
@@ -30781,4 +30782,349 @@ Compile css/palettes/lightblue.scss  {"user":"@LAPTOP-3QJ309BV"}
   src\Ticket.php:4449                                Glpi\Application\View\TemplateRenderer->display()
   src\CommonGLPI.php:681                             Ticket->showForm()
   ajax\common.tabs.php:120                           CommonGLPI::displayStandardTab()
+=======
+[2024-01-08 17:16:11] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\ticket.form.php:74                           CommonDBTM->add()
+  
+[2024-01-09 03:57:24] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:83                     CommonDBTM->add()
+  
+[2024-01-09 04:02:27] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:83                     CommonDBTM->add()
+  
+[2024-01-09 04:03:58] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:83                     CommonDBTM->add()
+  
+[2024-01-09 04:08:12] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:83                     CommonDBTM->add()
+  
+[2024-01-09 05:09:38] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:83                     CommonDBTM->add()
+  
+[2024-01-09 05:27:10] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:83                     CommonDBTM->add()
+  
+[2024-01-09 13:09:48] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:83                     CommonDBTM->add()
+  
+[2024-01-09 13:10:39] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:83                     CommonDBTM->add()
+  
+[2024-01-09 13:51:41] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\SyntaxError): "Unexpected character "$"." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\templates\components\itilobject\selfservice.html.twig" at line 425
+  Backtrace :
+  vendor\twig\twig\src\Lexer.php:290                 Twig\Lexer->lexExpression()
+  vendor\twig\twig\src\Lexer.php:184                 Twig\Lexer->lexVar()
+  vendor\twig\twig\src\Environment.php:472           Twig\Lexer->tokenize()
+  vendor\twig\twig\src\Environment.php:519           Twig\Environment->tokenize()
+  vendor\twig\twig\src\Environment.php:351           Twig\Environment->compileSource()
+  vendor\twig\twig\src\Environment.php:312           Twig\Environment->loadTemplate()
+  src\Application\View\TemplateRenderer.php:179      Twig\Environment->load()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 13:51:42] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\SyntaxError): "Unexpected character "$"." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\templates\components\itilobject\selfservice.html.twig" at line 425
+  Backtrace :
+  vendor\twig\twig\src\Lexer.php:290                 Twig\Lexer->lexExpression()
+  vendor\twig\twig\src\Lexer.php:184                 Twig\Lexer->lexVar()
+  vendor\twig\twig\src\Environment.php:472           Twig\Lexer->tokenize()
+  vendor\twig\twig\src\Environment.php:519           Twig\Environment->tokenize()
+  vendor\twig\twig\src\Environment.php:351           Twig\Environment->compileSource()
+  vendor\twig\twig\src\Environment.php:312           Twig\Environment->loadTemplate()
+  src\Application\View\TemplateRenderer.php:179      Twig\Environment->load()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 13:51:45] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\SyntaxError): "Unexpected character "$"." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\templates\components\itilobject\selfservice.html.twig" at line 425
+  Backtrace :
+  vendor\twig\twig\src\Lexer.php:290                 Twig\Lexer->lexExpression()
+  vendor\twig\twig\src\Lexer.php:184                 Twig\Lexer->lexVar()
+  vendor\twig\twig\src\Environment.php:472           Twig\Lexer->tokenize()
+  vendor\twig\twig\src\Environment.php:519           Twig\Environment->tokenize()
+  vendor\twig\twig\src\Environment.php:351           Twig\Environment->compileSource()
+  vendor\twig\twig\src\Environment.php:312           Twig\Environment->loadTemplate()
+  src\Application\View\TemplateRenderer.php:179      Twig\Environment->load()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 13:51:58] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\SyntaxError): "Unexpected character "$"." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\templates\components\itilobject\selfservice.html.twig" at line 424
+  Backtrace :
+  vendor\twig\twig\src\Lexer.php:290                 Twig\Lexer->lexExpression()
+  vendor\twig\twig\src\Lexer.php:184                 Twig\Lexer->lexVar()
+  vendor\twig\twig\src\Environment.php:472           Twig\Lexer->tokenize()
+  vendor\twig\twig\src\Environment.php:519           Twig\Environment->tokenize()
+  vendor\twig\twig\src\Environment.php:351           Twig\Environment->compileSource()
+  vendor\twig\twig\src\Environment.php:312           Twig\Environment->loadTemplate()
+  src\Application\View\TemplateRenderer.php:179      Twig\Environment->load()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 13:52:15] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\SyntaxError): "Unexpected character "$"." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\templates\components\itilobject\selfservice.html.twig" at line 424
+  Backtrace :
+  vendor\twig\twig\src\Lexer.php:290                 Twig\Lexer->lexExpression()
+  vendor\twig\twig\src\Lexer.php:184                 Twig\Lexer->lexVar()
+  vendor\twig\twig\src\Environment.php:472           Twig\Lexer->tokenize()
+  vendor\twig\twig\src\Environment.php:519           Twig\Environment->tokenize()
+  vendor\twig\twig\src\Environment.php:351           Twig\Environment->compileSource()
+  vendor\twig\twig\src\Environment.php:312           Twig\Environment->loadTemplate()
+  src\Application\View\TemplateRenderer.php:179      Twig\Environment->load()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 13:57:56] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\SyntaxError): "Unexpected character "$"." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\templates\components\itilobject\selfservice.html.twig" at line 425
+  Backtrace :
+  vendor\twig\twig\src\Lexer.php:290                 Twig\Lexer->lexExpression()
+  vendor\twig\twig\src\Lexer.php:184                 Twig\Lexer->lexVar()
+  vendor\twig\twig\src\Environment.php:472           Twig\Lexer->tokenize()
+  vendor\twig\twig\src\Environment.php:519           Twig\Environment->tokenize()
+  vendor\twig\twig\src\Environment.php:351           Twig\Environment->compileSource()
+  vendor\twig\twig\src\Environment.php:312           Twig\Environment->loadTemplate()
+  src\Application\View\TemplateRenderer.php:179      Twig\Environment->load()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 13:59:00] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\SyntaxError): "Unexpected character "$"." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\templates\components\itilobject\selfservice.html.twig" at line 424
+  Backtrace :
+  vendor\twig\twig\src\Lexer.php:290                 Twig\Lexer->lexExpression()
+  vendor\twig\twig\src\Lexer.php:184                 Twig\Lexer->lexVar()
+  vendor\twig\twig\src\Environment.php:472           Twig\Lexer->tokenize()
+  vendor\twig\twig\src\Environment.php:519           Twig\Environment->tokenize()
+  vendor\twig\twig\src\Environment.php:351           Twig\Environment->compileSource()
+  vendor\twig\twig\src\Environment.php:312           Twig\Environment->loadTemplate()
+  src\Application\View\TemplateRenderer.php:179      Twig\Environment->load()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 13:59:17] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\SyntaxError): "Unexpected character "$"." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\templates\components\itilobject\selfservice.html.twig" at line 424
+  Backtrace :
+  vendor\twig\twig\src\Lexer.php:290                 Twig\Lexer->lexExpression()
+  vendor\twig\twig\src\Lexer.php:184                 Twig\Lexer->lexVar()
+  vendor\twig\twig\src\Environment.php:472           Twig\Lexer->tokenize()
+  vendor\twig\twig\src\Environment.php:519           Twig\Environment->tokenize()
+  vendor\twig\twig\src\Environment.php:351           Twig\Environment->compileSource()
+  vendor\twig\twig\src\Environment.php:312           Twig\Environment->loadTemplate()
+  src\Application\View\TemplateRenderer.php:179      Twig\Environment->load()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 14:10:13] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "nup_bmn" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3037
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:112                    Ticket->showFormHelpdesk()
+  
+[2024-01-09 14:10:13] glpiphplog.CRITICAL:   *** Uncaught Exception TypeError: array_values(): Argument #1 ($array) must be of type array, null given in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3037
+  Backtrace :
+  src\CommonITILObject.php:3037                      array_values()
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:112                    Ticket->showFormHelpdesk()
+  
+[2024-01-09 14:10:53] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "nup_bmn" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3037
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:112                    Ticket->showFormHelpdesk()
+  
+[2024-01-09 14:10:53] glpiphplog.CRITICAL:   *** Uncaught Exception TypeError: array_values(): Argument #1 ($array) must be of type array, null given in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3037
+  Backtrace :
+  src\CommonITILObject.php:3037                      array_values()
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...5db14fd80ce3093d9f28963a6424870b6a5e885.php:293 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\tracking.injector.php:112                    Ticket->showFormHelpdesk()
+  
+[2024-01-09 14:17:04] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\SyntaxError): "Unexpected character "\"." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\templates\components\itilobject\selfservice.html.twig" at line 365
+  Backtrace :
+  vendor\twig\twig\src\Lexer.php:290                 Twig\Lexer->lexExpression()
+  vendor\twig\twig\src\Lexer.php:184                 Twig\Lexer->lexVar()
+  vendor\twig\twig\src\Environment.php:472           Twig\Lexer->tokenize()
+  vendor\twig\twig\src\Environment.php:519           Twig\Environment->tokenize()
+  vendor\twig\twig\src\Environment.php:351           Twig\Environment->compileSource()
+  vendor\twig\twig\src\Environment.php:312           Twig\Environment->loadTemplate()
+  src\Application\View\TemplateRenderer.php:179      Twig\Environment->load()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 14:17:07] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\SyntaxError): "Unexpected character "\"." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\templates\components\itilobject\selfservice.html.twig" at line 365
+  Backtrace :
+  vendor\twig\twig\src\Lexer.php:290                 Twig\Lexer->lexExpression()
+  vendor\twig\twig\src\Lexer.php:184                 Twig\Lexer->lexVar()
+  vendor\twig\twig\src\Environment.php:472           Twig\Lexer->tokenize()
+  vendor\twig\twig\src\Environment.php:519           Twig\Environment->tokenize()
+  vendor\twig\twig\src\Environment.php:351           Twig\Environment->compileSource()
+  vendor\twig\twig\src\Environment.php:312           Twig\Environment->loadTemplate()
+  src\Application\View\TemplateRenderer.php:179      Twig\Environment->load()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 14:17:09] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\SyntaxError): "Unexpected character "\"." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\templates\components\itilobject\selfservice.html.twig" at line 365
+  Backtrace :
+  vendor\twig\twig\src\Lexer.php:290                 Twig\Lexer->lexExpression()
+  vendor\twig\twig\src\Lexer.php:184                 Twig\Lexer->lexVar()
+  vendor\twig\twig\src\Environment.php:472           Twig\Lexer->tokenize()
+  vendor\twig\twig\src\Environment.php:519           Twig\Environment->tokenize()
+  vendor\twig\twig\src\Environment.php:351           Twig\Environment->compileSource()
+  vendor\twig\twig\src\Environment.php:312           Twig\Environment->loadTemplate()
+  src\Application\View\TemplateRenderer.php:179      Twig\Environment->load()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 14:29:01] glpiphplog.WARNING:   *** PHP Warning (2): Array to string conversion in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\files\_cache\templates\93\93d021e053c8f0def948925f45db14fd80ce3093d9f28963a6424870b6a5e885.php at line 496
+  Backtrace :
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 14:31:19] glpiphplog.WARNING:   *** PHP Warning (2): Array to string conversion in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\files\_cache\templates\93\93d021e053c8f0def948925f45db14fd80ce3093d9f28963a6424870b6a5e885.php at line 494
+  Backtrace :
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 14:31:20] glpiphplog.WARNING:   *** PHP Warning (2): Array to string conversion in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\files\_cache\templates\93\93d021e053c8f0def948925f45db14fd80ce3093d9f28963a6424870b6a5e885.php at line 494
+  Backtrace :
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 14:31:32] glpiphplog.WARNING:   *** PHP Warning (2): Array to string conversion in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\files\_cache\templates\93\93d021e053c8f0def948925f45db14fd80ce3093d9f28963a6424870b6a5e885.php at line 494
+  Backtrace :
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 14:31:59] glpiphplog.WARNING:   *** PHP Warning (2): Array to string conversion in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\files\_cache\templates\93\93d021e053c8f0def948925f45db14fd80ce3093d9f28963a6424870b6a5e885.php at line 494
+  Backtrace :
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 14:32:00] glpiphplog.WARNING:   *** PHP Warning (2): Array to string conversion in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\files\_cache\templates\93\93d021e053c8f0def948925f45db14fd80ce3093d9f28963a6424870b6a5e885.php at line 494
+  Backtrace :
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 14:34:26] glpiphplog.WARNING:   *** PHP Warning (2): Array to string conversion in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\files\_cache\templates\93\93d021e053c8f0def948925f45db14fd80ce3093d9f28963a6424870b6a5e885.php at line 494
+  Backtrace :
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 14:34:41] glpiphplog.WARNING:   *** PHP Warning (2): Array to string conversion in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\files\_cache\templates\93\93d021e053c8f0def948925f45db14fd80ce3093d9f28963a6424870b6a5e885.php at line 494
+  Backtrace :
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_976f70e70b93a7f44edb19dfc7d9201c3ee129272be9dd667c5402e2ac089499->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:3976                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:188                      Ticket->showFormHelpdesk()
+  
+[2024-01-09 14:49:51] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $user in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\helpdesk.public.php at line 186  
+[2024-01-09 14:49:51] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to a member function getFromDB() on null in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\helpdesk.public.php at line 186  
+[2024-01-09 14:52:22] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $row in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\helpdesk.public.php at line 187  
+[2024-01-09 14:52:22] glpiphplog.WARNING:   *** PHP Warning (2): Trying to access array offset on value of type null in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\helpdesk.public.php at line 187  
+[2024-01-09 14:58:17] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:83                     CommonDBTM->add()
+>>>>>>> 429933fc5 (add field hidden bmn_value,js,used current email)
   

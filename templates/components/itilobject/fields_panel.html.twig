@@ -236,6 +236,8 @@
                ) }}
             {% endif %}
 
+            <input type="hidden" id="nup_bmn_value" name="nup_bmn_value" value="" />
+
             {{ include('components/itilobject/fields/priority_matrix.html.twig') }}
 
             {% if item.isField('locations_id') %}
@@ -588,4 +590,18 @@ var reloadCategory = function() {
         }
     );
 };
+
+// Fungsi untuk get nilai indeks dropdown nup_bmn dan memperbarui input hidden
+$nup_bmn = {{ session('bmn').nup_bmn | json_encode | raw }};
+function updateHiddenInput() {
+    var selectedValue = $nup_bmn[$('[name="nup_bmn"]').val()];
+    $('[name="nup_bmn_value"]').val(selectedValue);
+}
+$('[name="nup_bmn"]').on('change', function () {
+    updateHiddenInput();
+});
+$(document).ready(function () {
+    updateHiddenInput();
+});
+
 </script>

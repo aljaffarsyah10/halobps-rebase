@@ -234,11 +234,15 @@
                         item.dropdownBMN({
                             'value': item.fields['nup_bmn'],
                             'width': '100%',
-                            'display': false
+                            'display': false,
+                            'on_change': 'updateHiddenInput()',
                         }),
                         __('Keterangan BMN'),
                         right_field_options
                     ) }}
+
+                <input type="hidden" id="nup_bmn_value" name="nup_bmn_value" value="" />
+
 
                {% endif %}
 
@@ -423,5 +427,18 @@ $(function () {
     })
 
     saveActorsToDom();
+});
+
+// Fungsi untuk get nilai indeks dropdown nup_bmn dan memperbarui input hidden
+$nup_bmn = {{ session('bmn').nup_bmn | json_encode | raw }};
+function updateHiddenInput() {
+    var selectedValue = $nup_bmn[$('[name="nup_bmn"]').val()];
+    $('[name="nup_bmn_value"]').val(selectedValue);
+}
+$('[name="nup_bmn"]').on('change', function () {
+    updateHiddenInput();
+});
+$(document).ready(function () {
+    updateHiddenInput();
 });
 </script>
