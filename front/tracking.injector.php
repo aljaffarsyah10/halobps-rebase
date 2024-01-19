@@ -34,6 +34,7 @@
  */
 
 include('../inc/includes.php');
+include('../src/CommonITILObject.php');
 
 if (
     empty($_POST["_type"])
@@ -87,6 +88,15 @@ if (isset($_POST['add'])) {
             Html::displayBackLink();
             echo "</div>";
         } else {
+            // update status BMN in MANIA
+            if ($track->fields['type'] == 2) {
+
+                $nup_bmn = $track->fields['nup_bmn_value'];
+                $id_status = 1;
+                $id_tiket = $track->fields['id'];
+                $apiUrl = 'http://localhost:8000/api/v1/hardware/updatebybmn/' . $nup_bmn . '/' . $id_status . '/' . $id_tiket;
+                $response = Ticket::getApiMania($apiUrl);
+            }
             // echo "<div class='center b spaced'>";
             // echo "<img src='" . $CFG_GLPI["root_doc"] . "/pics/ok.png' alt='" . __s('OK') . "'>";
             Session::addMessageAfterRedirect(__('Thank you for using our automatic helpdesk system.'));
