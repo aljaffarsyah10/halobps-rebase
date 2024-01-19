@@ -31128,3 +31128,320 @@ Compile css/palettes/lightblue.scss  {"user":"@LAPTOP-3QJ309BV"}
   front\tracking.injector.php:83                     CommonDBTM->add()
 >>>>>>> 429933fc5 (add field hidden bmn_value,js,used current email)
   
+[2024-01-09 15:09:11] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:80                     CommonDBTM->add()
+  
+[2024-01-09 17:59:43] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\ticket.form.php:74                           CommonDBTM->add()
+  
+[2024-01-15 14:58:13] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\User.php at line 841
+  Backtrace :
+  src\CommonDBTM.php:1590                            User->prepareInputForUpdate()
+  src\User.php:5763                                  CommonDBTM->update()
+  src\Auth.php:1034                                  User->getAuthToken()
+  front\login.php:89                                 Auth->login()
+  
+[2024-01-17 05:41:39] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:80                     CommonDBTM->add()
+  
+[2024-01-17 05:51:18] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:80                     CommonDBTM->add()
+  
+[2024-01-17 05:51:18] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $ticket in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 99  
+[2024-01-17 05:51:18] glpiphplog.WARNING:   *** PHP Warning (2): Trying to access array offset on value of type null in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 99  
+[2024-01-17 05:51:18] glpiphplog.WARNING:   *** PHP Warning (2): Trying to access array offset on value of type null in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 99  
+[2024-01-17 05:59:30] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:80                     CommonDBTM->add()
+  
+[2024-01-17 05:59:31] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $ticket in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 99  
+[2024-01-17 05:59:31] glpiphplog.WARNING:   *** PHP Warning (2): Trying to access array offset on value of type null in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 99  
+[2024-01-17 05:59:31] glpiphplog.WARNING:   *** PHP Warning (2): Trying to access array offset on value of type null in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 99  
+[2024-01-17 06:00:10] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:80                     CommonDBTM->add()
+  
+[2024-01-17 06:00:11] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $ticket in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 99  
+[2024-01-17 06:00:11] glpiphplog.WARNING:   *** PHP Warning (2): Trying to access array offset on value of type null in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 99  
+[2024-01-17 06:00:11] glpiphplog.WARNING:   *** PHP Warning (2): Trying to access array offset on value of type null in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 99  
+[2024-01-17 06:02:19] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:80                     CommonDBTM->add()
+  
+[2024-01-17 06:03:13] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:80                     CommonDBTM->add()
+  
+[2024-01-17 06:03:13] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $ticket in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 92  
+[2024-01-17 06:03:13] glpiphplog.WARNING:   *** PHP Warning (2): Attempt to read property "fields" on null in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 92  
+[2024-01-17 06:03:13] glpiphplog.WARNING:   *** PHP Warning (2): Trying to access array offset on value of type null in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 92  
+[2024-01-17 06:04:18] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:80                     CommonDBTM->add()
+  
+[2024-01-17 06:04:19] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $ticket in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 92  
+[2024-01-17 06:04:19] glpiphplog.WARNING:   *** PHP Warning (2): Attempt to read property "fields" on null in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 92  
+[2024-01-17 06:04:19] glpiphplog.WARNING:   *** PHP Warning (2): Trying to access array offset on value of type null in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 92  
+[2024-01-17 06:05:11] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:80                     CommonDBTM->add()
+  
+[2024-01-17 06:07:15] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7849                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:80                     CommonDBTM->add()
+  
+[2024-01-17 09:03:12] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7868                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:80                     CommonDBTM->add()
+  
+[2024-01-17 09:03:13] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Cannot access "static" when no class scope is active in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 95  
+[2024-01-17 09:04:10] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7868                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:80                     CommonDBTM->add()
+  
+[2024-01-17 09:04:10] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Cannot access "static" when no class scope is active in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 95  
+[2024-01-17 09:04:56] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7868                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:80                     CommonDBTM->add()
+  
+[2024-01-17 09:07:16] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7868                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:80                     CommonDBTM->add()
+  
+[2024-01-17 09:07:16] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Cannot access "static" when no class scope is active in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 95  
+[2024-01-17 09:08:31] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7868                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:80                     CommonDBTM->add()
+  
+[2024-01-17 09:08:32] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Cannot access "static" when no class scope is active in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 95  
+[2024-01-17 09:10:06] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7868                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  
+[2024-01-17 09:10:07] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Cannot access "static" when no class scope is active in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\front\tracking.injector.php at line 96  
+[2024-01-17 09:12:11] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7868                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  
+[2024-01-17 09:17:25] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7868                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  
+[2024-01-17 09:19:31] glpiphplog.WARNING:   *** PHP Warning (2): Undefined variable $signature_text in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\NotificationTemplate.php at line 325
+  Backtrace :
+  src\NotificationEventAbstract.php:127              NotificationTemplate->getTemplateByLanguage()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7868                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  
+[2024-01-17 13:05:07] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "bmn" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3029
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...adf52103b0e6e79007949fb480259d75b042b71.php:339 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_f64cb88218142fea4ef3110f6d56c3db5ac35b0aa4dd0d62abb2fa5bbc9c58ac->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...af5a0b04393c61f70f1151a6c5c0340c7c6229e.php:152 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_866c16e82b92f8758cc3499a3a8e927dd0d08ffa4e406af8d0801235d42077a0->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:4361                                Glpi\Application\View\TemplateRenderer->display()
+  src\CommonGLPI.php:677                             Ticket->showForm()
+  ajax\common.tabs.php:113                           CommonGLPI::displayStandardTab()
+  
+[2024-01-17 13:05:07] glpiphplog.WARNING:   *** PHP Warning (2): Trying to access array offset on value of type null in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3029
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...adf52103b0e6e79007949fb480259d75b042b71.php:339 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_f64cb88218142fea4ef3110f6d56c3db5ac35b0aa4dd0d62abb2fa5bbc9c58ac->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...af5a0b04393c61f70f1151a6c5c0340c7c6229e.php:152 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_866c16e82b92f8758cc3499a3a8e927dd0d08ffa4e406af8d0801235d42077a0->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:4361                                Glpi\Application\View\TemplateRenderer->display()
+  src\CommonGLPI.php:677                             Ticket->showForm()
+  ajax\common.tabs.php:113                           CommonGLPI::displayStandardTab()
+  
+[2024-01-17 13:05:07] glpiphplog.CRITICAL:   *** Uncaught Exception TypeError: Dropdown::showFromArray(): Argument #2 ($elements) must be of type array, null given, called in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php on line 3030 in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Dropdown.php at line 2074
+  Backtrace :
+  src\CommonITILObject.php:3030                      Dropdown::showFromArray()
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...adf52103b0e6e79007949fb480259d75b042b71.php:339 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_f64cb88218142fea4ef3110f6d56c3db5ac35b0aa4dd0d62abb2fa5bbc9c58ac->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...af5a0b04393c61f70f1151a6c5c0340c7c6229e.php:152 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_866c16e82b92f8758cc3499a3a8e927dd0d08ffa4e406af8d0801235d42077a0->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:4361                                Glpi\Application\View\TemplateRenderer->display()
+  src\CommonGLPI.php:677                             Ticket->showForm()
+  ajax\common.tabs.php:113                           CommonGLPI::displayStandardTab()
+  
+[2024-01-17 13:05:20] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "bmn" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3029
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...adf52103b0e6e79007949fb480259d75b042b71.php:339 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_f64cb88218142fea4ef3110f6d56c3db5ac35b0aa4dd0d62abb2fa5bbc9c58ac->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...af5a0b04393c61f70f1151a6c5c0340c7c6229e.php:152 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_866c16e82b92f8758cc3499a3a8e927dd0d08ffa4e406af8d0801235d42077a0->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:4361                                Glpi\Application\View\TemplateRenderer->display()
+  src\CommonGLPI.php:677                             Ticket->showForm()
+  ajax\common.tabs.php:113                           CommonGLPI::displayStandardTab()
+  
+[2024-01-17 13:05:20] glpiphplog.WARNING:   *** PHP Warning (2): Trying to access array offset on value of type null in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php at line 3029
+  Backtrace :
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...adf52103b0e6e79007949fb480259d75b042b71.php:339 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_f64cb88218142fea4ef3110f6d56c3db5ac35b0aa4dd0d62abb2fa5bbc9c58ac->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...af5a0b04393c61f70f1151a6c5c0340c7c6229e.php:152 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_866c16e82b92f8758cc3499a3a8e927dd0d08ffa4e406af8d0801235d42077a0->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:4361                                Glpi\Application\View\TemplateRenderer->display()
+  src\CommonGLPI.php:677                             Ticket->showForm()
+  ajax\common.tabs.php:113                           CommonGLPI::displayStandardTab()
+  
+[2024-01-17 13:05:20] glpiphplog.CRITICAL:   *** Uncaught Exception TypeError: Dropdown::showFromArray(): Argument #2 ($elements) must be of type array, null given, called in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\CommonITILObject.php on line 3030 in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\Dropdown.php at line 2074
+  Backtrace :
+  src\CommonITILObject.php:3030                      Dropdown::showFromArray()
+  ...\twig\twig\src\Extension\CoreExtension.php:1635 CommonITILObject::dropdownBMN()
+  ...adf52103b0e6e79007949fb480259d75b042b71.php:339 twig_get_attribute()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_f64cb88218142fea4ef3110f6d56c3db5ac35b0aa4dd0d62abb2fa5bbc9c58ac->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...af5a0b04393c61f70f1151a6c5c0340c7c6229e.php:152 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_866c16e82b92f8758cc3499a3a8e927dd0d08ffa4e406af8d0801235d42077a0->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:4361                                Glpi\Application\View\TemplateRenderer->display()
+  src\CommonGLPI.php:677                             Ticket->showForm()
+  ajax\common.tabs.php:113                           CommonGLPI::displayStandardTab()
+  
