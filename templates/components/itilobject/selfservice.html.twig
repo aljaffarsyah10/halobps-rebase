@@ -185,8 +185,23 @@
              <input type="hidden" name="itilcategories_idx"  />
 
                 {% endif %}
+                {% if params['type'] == constant('Ticket::INCIDENT_TYPE') %}
+                    {{ fields.field(
+                        'nup_bmn',
+                        item.dropdownBMN({
+                            'value': item.fields['nup_bmn'],
+                            'width': '100%',
+                            'display': false,
+                            'on_change': 'updateHiddenInput()',
+                        }),
+                        __('Keterangan BMN'),
+                        right_field_options
+                    ) }}
+
+                <input type="hidden" id="nup_bmn_value" name="nup_bmn_value" value="" />
 
 
+               {% endif %}
 
                 {% if params['type'] == constant('Ticket::DEMAND_TYPE') %}
 
@@ -228,21 +243,6 @@
                         __('Urgency'),
                         right_field_options
                     ) }}
-
-                    {{ fields.field(
-                        'nup_bmn',
-                        item.dropdownBMN({
-                            'value': item.fields['nup_bmn'],
-                            'width': '100%',
-                            'display': false,
-                            'on_change': 'updateHiddenInput()',
-                        }),
-                        __('Keterangan BMN'),
-                        right_field_options
-                    ) }}
-
-                <input type="hidden" id="nup_bmn_value" name="nup_bmn_value" value="" />
-
 
                {% endif %}
 

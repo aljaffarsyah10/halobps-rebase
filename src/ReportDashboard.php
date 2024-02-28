@@ -7,7 +7,7 @@
  *
  * http://glpi-project.org
  *
- * @copyright 2015-2024 Teclib' and contributors.
+ * @copyright 2015-2022 Teclib' and contributors.
  * @copyright 2003-2014 by the INDEPNET Development Team.
  * @licence   https://www.gnu.org/licenses/gpl-3.0.html
  *
@@ -33,31 +33,28 @@
  * ---------------------------------------------------------------------
  */
 
-include('../inc/includes.php');
-
-Session::checkCentralAccess();
-
-if (isset($_GET["itemtype"])) {
-    $itemtype = $_GET['itemtype'];
-    $link     = $itemtype::getFormURL();
-
-    // Get right sector
-    $sector   = 'assets';
-
-    //Get sectors from the menu
-    $menu     = Html::getMenuInfos();
-
-    //Try to find to which sector the itemtype belongs
-    foreach ($menu as $menusector => $infos) {
-        if (isset($infos['types']) && in_array($itemtype, $infos['types'])) {
-            $sector = $menusector;
-            break;
-        }
+// class Preference for the current connected User
+class ReportDashboard extends CommonGLPI
+{
+    public static function getTypeName($nb = 0)
+    {
+        // Always plural
+        return __('Settings');
     }
 
-    Html::header(__('Manage templates...'), $_SERVER['PHP_SELF'], $sector, $itemtype);
 
-    CommonDBTM::listTemplates($itemtype, $link, $_GET["add"]);
+    public function defineTabs($options = [])
+    {
 
-    Html::footer();
+        $ong = [];
+        $this->addStandardTab('Usdjfnksdjfsder', $ong, $options);
+        if (Session::haveRightsOr('personalization', [READ, UPDATE])) {
+            $this->addStandardTab('Config', $ong, $options);
+        }
+        $this->addStandardTab('DisplayPreference', $ong, $options);
+
+        $ong['no_all_tab'] = true;
+
+        return $ong;
+    }
 }

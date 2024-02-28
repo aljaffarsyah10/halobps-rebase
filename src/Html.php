@@ -1388,6 +1388,11 @@ HTML;
                 'default' => '/front/knowbaseitem.php',
                 'icon'    => 'ti ti-lifebuoy',
             ],
+            'report' => [
+                'title' => __('Dashboard Report'),
+                'default' => '/front/reportdashboard.php',
+                'icon'    => 'fa-solid fa-chart-area',
+            ],
             'tools' => [
                 'title' => __('Tools'),
                 'types' => [
