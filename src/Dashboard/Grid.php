@@ -153,11 +153,11 @@ HTML;
                 $card_html = $this->getCardHtml($card_id, ['args' => $card_options]);
             }
 
-           // manage cache
+            // manage cache
             $dashboard_key = $this->current;
             $footprint = sha1(serialize($card_options) .
-            ($_SESSION['glpiactiveentities_string'] ?? "") .
-            ($_SESSION['glpilanguage']));
+                ($_SESSION['glpiactiveentities_string'] ?? "") .
+                ($_SESSION['glpilanguage']));
             $cache_key    = "dashboard_card_{$dashboard_key}_{$footprint}";
             $card_options['cache_key'] = $cache_key;
 
@@ -181,7 +181,7 @@ HTML;
      */
     public function canViewCurrent(): bool
     {
-       // check global (admin) right
+        // check global (admin) right
         if (Dashboard::canView()) {
             return true;
         }
@@ -198,7 +198,7 @@ HTML;
      */
     public static function canViewOneDashboard($context = null): bool
     {
-       // check global (admin) right
+        // check global (admin) right
         if (Dashboard::canView()) {
             return true;
         }
@@ -229,7 +229,7 @@ HTML;
 
         $dashboard = new Dashboard($key);
         $dashboard->load();
-       // check global (admin) right
+        // check global (admin) right
         if (Dashboard::canView() && !$dashboard->isPrivate()) {
             return true;
         }
@@ -271,7 +271,7 @@ HTML;
         $can_purge     = Session::haveRight('dashboard', PURGE) && $nb_dashboards;
         $can_clone     = $can_create && $nb_dashboards;
 
-       // prepare html for add controls
+        // prepare html for add controls
         $add_controls = "";
         for ($y = 0; $y < $this->grid_rows; $y++) {
             for ($x = 0; $x < $this->grid_cols; $x++) {
@@ -279,15 +279,15 @@ HTML;
             }
         }
 
-       // prepare all available cards
+        // prepare all available cards
         $cards = $this->getAllDasboardCards();
         $cards_json = json_encode($cards);
 
-       // prepare all available widgets
+        // prepare all available widgets
         $all_widgets = Widget::getAllTypes();
         $all_widgets_json = json_encode($all_widgets);
 
-       // prepare labels
+        // prepare labels
         $embed_label      = __("Share or embed this dashboard");
         $delete_label     = __("Delete this dashboard");
         $history_label    = __("Toggle auto-refresh");
@@ -389,7 +389,7 @@ HTML;
 HTML;
         }
 
-       // display the grid
+        // display the grid
         $html = <<<HTML
       <div class="dashboard {$embed_class} {$mini_class}" id="dashboard-{$rand}">
          <span class='glpi_logo'></span>
@@ -477,7 +477,7 @@ JAVASCRIPT;
 
         self::$embed = true;
 
-       // load minimal session
+        // load minimal session
         $_SESSION["glpiactive_entity"]           = $params['entities_id'];
         $_SESSION["glpiactive_entity_recursive"] = $params['is_recursive'];
         $_SESSION["glpiname"]                    = 'embed_dashboard';
@@ -490,7 +490,7 @@ JAVASCRIPT;
         $_SESSION['glpiactiveentities']        = $entities;
         $_SESSION['glpiactiveentities_string'] = "'" . implode("', '", $entities) . "'";
 
-       // show embeded dashboard
+        // show embeded dashboard
         $this->show(true);
     }
 
@@ -567,7 +567,7 @@ JAVASCRIPT;
 HTML;
         }
 
-       // append all elements to insert them in html
+        // append all elements to insert them in html
         return implode("", $this->items);
     }
 
@@ -595,7 +595,7 @@ HTML;
         array $data_option = []
     ) {
 
-       // let grid-stack to autoposition item
+        // let grid-stack to autoposition item
         $autoposition = 'gs-auto-position="true"';
         $coordinates  = '';
         if ((int) $x >= 0 && (int) $y >= 0) {
@@ -606,7 +606,7 @@ HTML;
         $color    = $data_option['color'] ?? "#FFFFFF";
         $fg_color = Toolbox::getFgColor($color, 100, true);
 
-       // add card options in data attribute
+        // add card options in data attribute
         $data_option_attr = "";
         if (count($data_option)) {
             $data_option_attr = "data-card-options='" . json_encode($data_option, JSON_HEX_APOS) . "'";
@@ -700,7 +700,7 @@ HTML;
         $edit         = $params['action'] === "display_edit_widget";
         $cards        = $this->getAllDasboardCards();
         $card         = $cards[$card_id] ?? [];
-       // append card id to options
+        // append card id to options
         if (!isset($cardopt['card_id'])) {
             $cardopt['card_id'] = $card_id;
         }
@@ -711,7 +711,7 @@ HTML;
             $list_cards[$group][$index] = $data['label'] ?? $data['itemtype']::getTypeName();
         });
 
-       // manage autoescaping
+        // manage autoescaping
         if (isset($cardopt['markdown_content'])) {
             $cardopt['markdown_content'] = Html::cleanPostForTextArea($cardopt['markdown_content']);
         }
@@ -792,10 +792,10 @@ HTML;
         $token        = self::getToken($this->current, $entities_id, $is_recursive);
 
         $embed_url    = $CFG_GLPI['url_base'] .
-         "/front/central.php?embed&dashboard=" . $this->current .
-         "&entities_id=$entities_id" .
-         "&is_recursive=$is_recursive" .
-         "&token=$token";
+            "/front/central.php?embed&dashboard=" . $this->current .
+            "&entities_id=$entities_id" .
+            "&is_recursive=$is_recursive" .
+            "&token=$token";
 
         echo "<label>" . __("Embed in another application") . "</label><br>";
         echo "<fieldset class='embed_block'>";
@@ -833,8 +833,8 @@ HTML;
         echo "<form class='no-shadow display-rights-form'>";
 
         echo "<label for='dropdown_rights_id$rand'>" .
-           __("Or share the dashboard to these target objects:") .
-           "</label><br>";
+            __("Or share the dashboard to these target objects:") .
+            "</label><br>";
 
         $values = [
             'profiles_id' => self::$all_dashboards[$this->current]['rights']['profiles_id'] ?? [],
@@ -889,14 +889,14 @@ HTML;
 
         $force = ($card_options['args']['force'] ?? $card_options['force'] ?? false);
 
-       // retrieve card
+        // retrieve card
         $notfound_html = "<div class='empty-card card-warning '>
          <i class='fas fa-exclamation-triangle'></i>" .
-         __('empty card!') . "
+            __('empty card!') . "
       </div>";
         $render_error_html = "<div class='empty-card card-error '>
          <i class='fas fa-exclamation-triangle'></i>" .
-         __('Error rendering card!') .
+            __('Error rendering card!') .
             "</br>" .
             $card_id .
             "</div>";
@@ -1074,7 +1074,7 @@ HTML;
         array_walk($menu, static function ($firstlvl) use (&$menu_itemtypes) {
             $key = $firstlvl['title'];
             if (isset($firstlvl['types'])) {
-                  $menu_itemtypes[$key] = array_merge($menu_itemtypes[$key] ?? [], $firstlvl['types']);
+                $menu_itemtypes[$key] = array_merge($menu_itemtypes[$key] ?? [], $firstlvl['types']);
             }
         });
 
@@ -1084,7 +1084,7 @@ HTML;
                     in_array($itemtype, $exclude)
                     || !is_subclass_of($itemtype, 'CommonDBTM')
                 ) {
-                      return false;
+                    return false;
                 }
 
                 $testClass = new \ReflectionClass($itemtype);
@@ -1106,16 +1106,16 @@ HTML;
     {
         global $CFG_GLPI;
 
-       // anonymous fct for adding relevant filters to cards
+        // anonymous fct for adding relevant filters to cards
         $add_filters_fct = static function ($itemtable) {
             $DB = DBConnection::getReadConnection();
 
             $add_filters = [];
             if ($DB->fieldExists($itemtable, "ititlcategories_id")) {
-                  $add_filters[] = "itilcategory";
+                $add_filters[] = "itilcategory";
             }
             if ($DB->fieldExists($itemtable, "requesttypes_id")) {
-                 $add_filters[] = "requesttype";
+                $add_filters[] = "requesttype";
             }
             if ($DB->fieldExists($itemtable, "locations_id")) {
                 $add_filters[] = "location";
@@ -1205,7 +1205,7 @@ HTML;
                 ];
             }
 
-           // add multiple width for Assets itemtypes grouped by their foreign keys
+            // add multiple width for Assets itemtypes grouped by their foreign keys
             $assets = array_merge($CFG_GLPI['asset_types'], ['Software']);
             foreach ($assets as $itemtype) {
                 $fk_itemtypes = [
@@ -1293,7 +1293,7 @@ HTML;
                 ];
             }
 
-           // add specific ticket's cases
+            // add specific ticket's cases
             $cards["nb_opened_ticket"] = [
                 'widgettype' => ['line', 'area', 'bar'],
                 'itemtype'   => "\\Ticket",
@@ -1379,14 +1379,12 @@ HTML;
                 ]
             ];
 
-            foreach (
-                [
+            foreach ([
                     'ITILCategory' => __("Top ticket's categories"),
                     'Entity'       => __("Top ticket's entities"),
                     'RequestType'  => __("Top ticket's request types"),
                     'Location'     => __("Top ticket's locations"),
-                ] as $itemtype => $label
-            ) {
+                ] as $itemtype => $label) {
                 $cards["top_ticket_$itemtype"] = [
                     'widgettype' => ['summaryNumbers', 'pie', 'donut', 'halfpie', 'halfdonut', 'multipleNumber', 'bar', 'hbar'],
                     'itemtype'   => "\\Ticket",
@@ -1400,16 +1398,14 @@ HTML;
                 ];
             }
 
-            foreach (
-                [
+            foreach ([
                     'user_requester'  => __("Top ticket's requesters"),
                     'group_requester' => __("Top ticket's requester groups"),
                     'user_observer'   => __("Top ticket's observers"),
                     'group_observer'  => __("Top ticket's observer groups"),
                     'user_assign'     => __("Top ticket's assignees"),
                     'group_assign'    => __("Top ticket's assignee groups"),
-                ] as $type => $label
-            ) {
+                ] as $type => $label) {
                 $cards["top_ticket_$type"] = [
                     'widgettype' => ['pie', 'donut', 'halfpie', 'halfdonut', 'summaryNumbers', 'multipleNumber', 'bar', 'hbar'],
                     'itemtype'   => "\\Ticket",
@@ -1542,7 +1538,7 @@ HTML;
             }
         }
 
-       // if default not found, return first dashboards
+        // if default not found, return first dashboards
         if (!$strict) {
             self::loadAllDashboards();
             $first_dashboard = array_shift(self::$all_dashboards);

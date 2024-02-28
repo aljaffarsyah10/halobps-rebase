@@ -5349,3 +5349,1034 @@
   src\Auth.php:1003                                  Glpi\Event::log()
   front\login.php:89                                 Auth->login()
   {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-19 07:41:43] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-01-19 13:41:42', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-01-19 07:41:44] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-01-19 13:41:42', 'Action completed, no processing required', '0', '2', '0', '1.3585689067841')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"1.304\", 17.70Mio)"} 
+[2024-01-31 14:07:11] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-01-31 14:07:11', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-01-31 14:07:12] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-01-31 14:07:11', 'Action completed, no processing required', '0', '2', '0', '1.3897120952606')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"1.252\", 18.44Mio)"} 
+[2024-02-01 04:10:59] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-01 04:10:59', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-02-01 04:11:02] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-01 04:10:59', 'Action completed, no processing required', '0', '2', '0', '2.9214210510254')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"2.855\", 18.44Mio)"} 
+[2024-02-01 04:11:40] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('0', 'system', '2024-02-01 04:11:38', 'login', '3', 'glpi log in from IP ::1')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1003                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-02-01 04:14:32] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('440', 'ticket', '2024-02-01 10:14:29', 'tracking', '4', 'glpi menambahkan item 440')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Ticket.php:1969                                Glpi\Event::log()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-01 04:14:32] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_tickets_users` (`type`, `tickets_id`, `users_id`, `alternative_email`) VALUES ('1', '440', '2', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CommonITILObject.php:8350                      CommonDBTM->add()
+  src\CommonITILObject.php:2606                      CommonITILObject->updateActors()
+  src\Ticket.php:2126                                CommonITILObject->post_addItem()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.233\", 25.59Mio)"} 
+[2024-02-01 04:14:32] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_groups_tickets` (`type`, `tickets_id`, `groups_id`) VALUES ('2', '440', '108')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CommonITILObject.php:8350                      CommonDBTM->add()
+  src\CommonITILObject.php:2606                      CommonITILObject->updateActors()
+  src\Ticket.php:2126                                CommonITILObject->post_addItem()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.130\", 25.60Mio)"} 
+[2024-02-01 04:14:34] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_queuednotifications` (`itemtype`, `items_id`, `notificationtemplates_id`, `entities_id`, `headers`, `sender`, `sendername`, `replyto`, `replytoname`, `name`, `body_text`, `recipient`, `recipientname`, `messageid`, `mode`, `create_time`, `send_time`, `sent_try`, `documents`) VALUES ('Ticket', '440', '29', '0', '{"Auto-Submitted":"auto-generated","X-Auto-Response-Suppress":"OOF, DR, NDR, RN, NRN"}', 'halobps@bps.go.id', 'Pusat Layanan Terpadu BPS', 'halobps@bps.go.id', 'Pusat Layanan Terpadu BPS', '[HALOBPS #0000440] Tiket Baru Telah Dibuka ', 'Yth. Bapak/Ibu glpi,\r\n\r\nTerima kasih telah menghubungi HaloBPS.\r\n\r\nTim kami akan segera menangani permasalahan Anda dengan ringkasan sebagai berikut:\r\nNo. tiket : 0000440 \r\nSubject : pengajuan perbaikan laptop\r\n\r\nSilahkan menghubungi kami jika memiliki pertanyaan lagi. Kami akan dengan senang hati membantu Anda.\r\n\r\nTerima kasih,\r\nTim Pusat Layanan Terpadu Badan Pusat Statistik\r\n\r\n------------------------------------------------------------------\r\nJangan membalas email ini. Untuk melihat atau merespon tiket, silahkan login ke https://halo.web.bps.go.id.\r\n\n\n-- \n\nSalam, HALOBPS :)\n\n', 'nila_n@bps.go.id', 'glpi', 'GLPI_6PyJHMjSXTpbHNT64rUxyVGh9PyvOCNlOza0xzNH-Ticket-440.1706757274.1975195348@LAPTOP-3QJ309BV', 'mailing', '2024-02-01 10:14:33', '2024-02-01 10:14:33', '0', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\NotificationMailing.php:179                    CommonDBTM->add()
+  src\Notification.php:610                           NotificationMailing->sendNotification()
+  src\NotificationEventAbstract.php:150              Notification::send()
+  src\NotificationEvent.php:187                      NotificationEventAbstract::raise()
+  src\CommonITILObject.php:7868                      NotificationEvent::raiseEvent()
+  src\Ticket.php:2128                                CommonITILObject->handleNewItemNotifications()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"1.869\", 29.41Mio)"} 
+[2024-02-01 04:14:34] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('440', 'Ticket', '0', '20', 'glpi = 2', '2024-02-01 10:14:33', '0', '', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\CommonDBTM.php:1339                            Log::history()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.235\", 28.98Mio)"} 
+[2024-02-07 03:50:53] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('0', 'system', '2024-02-07 03:50:53', 'login', '3', 'glpi log in from IP ::1')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1003                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-02-08 18:38:20] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-08 18:38:17', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-02-08 18:38:27] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-08 18:38:17', 'Action completed, no processing required', '0', '2', '0', '7.9830410480499')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"7.077\", 18.43Mio)"} 
+[2024-02-08 18:38:49] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('0', 'system', '2024-02-08 18:38:31', 'login', '3', 'glpi log in from IP ::1')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1003                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-02-08 18:39:15] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('0', 'system', '2024-02-08 18:39:15', 'login', '3', 'glpi log in from IP ::1')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1003                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-02-13 01:36:43] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('0', 'system', '2024-02-13 01:36:42', 'login', '3', 'glpi log in from IP ::1')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1003                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-02-13 05:32:08] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-13 11:32:07', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-13 05:32:10] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-13 11:32:07', 'Action completed, no processing required', '0', '2', '0', '2.669341802597')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"2.463\", 17.96Mio)"} 
+[2024-02-13 05:37:21] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('2', 'User', '', '0', 'glpi = 2', '2024-02-13 11:37:20', '17', '', 'en_GB')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\Log.php:199                                    Log::history()
+  src\CommonDBTM.php:688                             Log::constructHistory()
+  src\CommonDBTM.php:1675                            CommonDBTM->updateInDB()
+  front\user.form.php:179                            CommonDBTM->update()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-13 05:45:11] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_dashboards_dashboards` (`key`, `name`, `context`) VALUES ('nok_XuZUzEhI1b', '', 'core')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1332                               
+  src\DBmysql.php:1489                               DBmysql->insertOrDie()
+  src\Dashboard\Dashboard.php:203                    DBmysql->updateOrInsert()
+  src\Dashboard\Dashboard.php:181                    Glpi\Dashboard\Dashboard->save()
+  ajax\dashboard.php:66                              Glpi\Dashboard\Dashboard->saveNew()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-13 05:45:23] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_dashboards_filters` (`dashboards_dashboards_id`, `users_id`, `filter`) VALUES ('0', '2', '{\"user_tech\":[]}')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1332                               
+  src\DBmysql.php:1489                               DBmysql->insertOrDie()
+  src\Dashboard\Filter.php:316                       DBmysql->updateOrInsert()
+  src\Dashboard\Dashboard.php:314                    Glpi\Dashboard\Filter::addForDashboard()
+  ajax\dashboard.php:81                              Glpi\Dashboard\Dashboard->saveFilter()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-13 05:59:16] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: SELECT * FROM `glpi_pendingreasons_items` WHERE `itemtype` = 'ITILFollowup' AND `items_id` = ''
+  Warnings: 
+1292: Truncated incorrect DECIMAL value: ''
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\PendingReason_Item.php:56                      CommonDBTM->find()
+  :                                                  PendingReason_Item::getForItem()
+  src\Application\View\Extension\PhpExtension.php:88 call_user_func_array()
+  ...4cfe7a1545f23227bcafd0af44c6ea14ab078ea6.php:45 Glpi\Application\View\Extension\PhpExtension->call()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_68eb62889872d9ff62a6894b11198adee3fa40a22fce5ea22bcdba1a4638e056->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...aa491aead1e30267f84074ce44c2df1d90e6721.php:370 twig_include()
+  vendor\twig\twig\src\Template.php:171              __TwigTemplate_0eaa1f0a9d85311fb1b3464b535ef9cd175f1ceb0f4c803a9c088ea1d040a824->block_timeline_card()
+  ...f15bd37872dd500add88b04291db11f5696ce0c5.php:48 Twig\Template->displayBlock()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_11733d94ea45fbc1db5593086575e0c01ca53645acc643990e7d88ab35dee464->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...2aa491aead1e30267f84074ce44c2df1d90e6721.php:57 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_0eaa1f0a9d85311fb1b3464b535ef9cd175f1ceb0f4c803a9c088ea1d040a824->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...eef6107be779cb6b09d860c494776cb4612b4802.php:96 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d1af22547406b8629905b72e302acea45908a1754e13ec26e4ec1c7ca0bd7b14->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...5ae3bc64b7fd24d4f75bc0eaea3924f9d33ec94.php:510 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_09c667ec2a5eb27a0e7c6bcc607f9650a28d3cbe3e7ee490af02a40235a08788->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...af5a0b04393c61f70f1151a6c5c0340c7c6229e.php:131 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_866c16e82b92f8758cc3499a3a8e927dd0d08ffa4e406af8d0801235d42077a0->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:4361                                Glpi\Application\View\TemplateRenderer->display()
+  src\CommonGLPI.php:677                             Ticket->showForm()
+  ajax\common.tabs.php:113                           CommonGLPI::displayStandardTab()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-13 13:30:44] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: SELECT * FROM `glpi_pendingreasons_items` WHERE `itemtype` = 'ITILFollowup' AND `items_id` = ''
+  Warnings: 
+1292: Truncated incorrect DECIMAL value: ''
+  Backtrace :
+  src\DBmysqlIterator.php:110                        
+  src\DBmysql.php:1048                               DBmysqlIterator->execute()
+  src\CommonDBTM.php:574                             DBmysql->request()
+  src\PendingReason_Item.php:56                      CommonDBTM->find()
+  :                                                  PendingReason_Item::getForItem()
+  src\Application\View\Extension\PhpExtension.php:88 call_user_func_array()
+  ...4cfe7a1545f23227bcafd0af44c6ea14ab078ea6.php:45 Glpi\Application\View\Extension\PhpExtension->call()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_68eb62889872d9ff62a6894b11198adee3fa40a22fce5ea22bcdba1a4638e056->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...aa491aead1e30267f84074ce44c2df1d90e6721.php:370 twig_include()
+  vendor\twig\twig\src\Template.php:171              __TwigTemplate_0eaa1f0a9d85311fb1b3464b535ef9cd175f1ceb0f4c803a9c088ea1d040a824->block_timeline_card()
+  ...f15bd37872dd500add88b04291db11f5696ce0c5.php:48 Twig\Template->displayBlock()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_11733d94ea45fbc1db5593086575e0c01ca53645acc643990e7d88ab35dee464->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  ...2aa491aead1e30267f84074ce44c2df1d90e6721.php:57 Twig\Template->display()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_0eaa1f0a9d85311fb1b3464b535ef9cd175f1ceb0f4c803a9c088ea1d040a824->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...eef6107be779cb6b09d860c494776cb4612b4802.php:96 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_d1af22547406b8629905b72e302acea45908a1754e13ec26e4ec1c7ca0bd7b14->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...5ae3bc64b7fd24d4f75bc0eaea3924f9d33ec94.php:510 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_09c667ec2a5eb27a0e7c6bcc607f9650a28d3cbe3e7ee490af02a40235a08788->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\Template.php:379              Twig\Template->display()
+  vendor\twig\twig\src\TemplateWrapper.php:40        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1347 Twig\TemplateWrapper->render()
+  ...af5a0b04393c61f70f1151a6c5c0340c7c6229e.php:131 twig_include()
+  vendor\twig\twig\src\Template.php:394              __TwigTemplate_866c16e82b92f8758cc3499a3a8e927dd0d08ffa4e406af8d0801235d42077a0->doDisplay()
+  vendor\twig\twig\src\Template.php:367              Twig\Template->displayWithErrorHandling()
+  vendor\twig\twig\src\TemplateWrapper.php:47        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:179      Twig\TemplateWrapper->display()
+  src\Ticket.php:4361                                Glpi\Application\View\TemplateRenderer->display()
+  src\CommonGLPI.php:677                             Ticket->showForm()
+  ajax\common.tabs.php:113                           CommonGLPI::displayStandardTab()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-13 13:41:22] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('0', 'system', '2024-02-13 13:41:22', 'login', '3', 'glpi log in from IP ::1')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1003                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-02-14 11:40:32] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-14 17:40:31', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-14 11:40:34] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-14 17:40:31', 'Action completed, no processing required', '0', '2', '0', '2.5932741165161')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"2.229\", 18.77Mio)"} 
+[2024-02-15 01:39:45] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-15 07:39:44', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-15 01:39:48] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-15 07:39:44', 'Action completed, no processing required', '0', '2', '0', '3.2425260543823')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"2.998\", 18.61Mio)"} 
+[2024-02-15 02:31:52] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('0', 'system', '2024-02-15 02:31:52', 'login', '3', 'glpi log in from IP ::1')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1003                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-02-16 00:48:04] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-16 00:48:03', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-02-16 00:48:06] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-16 00:48:03', 'Action completed, no processing required', '0', '2', '0', '1.7840940952301')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"1.589\", 18.43Mio)"} 
+[2024-02-16 00:55:37] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('0', 'system', '2024-02-16 00:55:34', 'login', '3', 'glpi log in from IP ::1')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1003                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-02-17 03:06:21] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-17 09:06:18', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-17 03:06:23] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-17 09:06:18', 'Action completed, no processing required', '0', '2', '0', '2.9280021190643')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"1.894\", 18.70Mio)"} 
+[2024-02-18 18:33:39] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-19 00:33:38', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-18 18:33:41] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-19 00:33:38', 'Action completed, no processing required', '0', '2', '0', '2.4267880916595')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"1.731\", 18.70Mio)"} 
+[2024-02-19 08:18:28] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-19 14:18:25', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-19 08:18:34] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-19 14:18:25', 'Action completed, no processing required', '0', '2', '0', '5.6894829273224')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"6.046\", 18.70Mio)"} 
+[2024-02-20 06:10:35] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-20 12:10:35', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-20 06:10:37] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-20 12:10:35', 'Action completed, no processing required', '0', '2', '0', '1.9737980365753')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"1.907\", 18.71Mio)"} 
+[2024-02-21 04:40:53] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-21 10:40:47', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-21 04:41:10] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-21 10:40:47', 'Action completed, no processing required', '0', '2', '0', '21.446290969849')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"17.479\", 18.73Mio)"} 
+[2024-02-21 07:59:56] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('0', 'system', '2024-02-21 07:59:55', 'login', '3', 'glpi log in from IP ::1')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1003                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-02-21 17:46:36] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-21 17:46:35', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-02-21 17:46:38] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-21 17:46:35', 'Action completed, no processing required', '0', '2', '0', '1.6187970638275')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"1.463\", 18.42Mio)"} 
+[2024-02-22 09:52:32] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-22 15:52:32', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-22 09:52:35] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-22 15:52:32', 'Action completed, no processing required', '0', '2', '0', '2.9946200847626')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"2.695\", 18.71Mio)"} 
+[2024-02-28 09:03:25] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-28 09:03:23', 'Run mode: GLPI', '0', '0', '0', '0')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:259                               CommonDBTM->add()
+  src\CronTask.php:1006                              CronTask->start()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-02-28 09:03:28] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_crontasklogs` (`crontasks_id`, `date`, `content`, `crontasklogs_id`, `state`, `volume`, `elapsed`) VALUES ('15', '2024-02-28 09:03:23', 'Action completed, no processing required', '0', '2', '0', '3.7211580276489')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CronTask.php:348                               CommonDBTM->add()
+  src\CronTask.php:1039                              CronTask->end()
+  front\cron.php:64                                  CronTask::launch()
+  {"user":"@LAPTOP-3QJ309BV","mem_usage":"3.197\", 18.43Mio)"} 
+[2024-02-28 09:04:11] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('0', 'system', '2024-02-28 09:04:06', 'login', '3', 'glpi log in from IP ::1')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Auth.php:1003                                  Glpi\Event::log()
+  front\login.php:89                                 Auth->login()
+  {"user":"@LAPTOP-3QJ309BV"} 
+[2024-02-28 09:19:32] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('441', 'ticket', '2024-02-28 15:19:30', 'tracking', '4', 'glpi adds the item 441')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Ticket.php:1969                                Glpi\Event::log()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-28 09:19:32] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_tickets_users` (`type`, `tickets_id`, `users_id`, `alternative_email`) VALUES ('1', '441', '2', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CommonITILObject.php:8352                      CommonDBTM->add()
+  src\CommonITILObject.php:2606                      CommonITILObject->updateActors()
+  src\Ticket.php:2126                                CommonITILObject->post_addItem()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.248\", 26.35Mio)"} 
+[2024-02-28 09:19:32] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_groups_tickets` (`type`, `tickets_id`, `groups_id`) VALUES ('2', '441', '108')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CommonITILObject.php:8352                      CommonDBTM->add()
+  src\CommonITILObject.php:2606                      CommonITILObject->updateActors()
+  src\Ticket.php:2126                                CommonITILObject->post_addItem()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.113\", 26.35Mio)"} 
+[2024-02-28 09:19:34] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('441', 'Ticket', '0', '20', 'glpi (2)', '2024-02-28 15:19:33', '0', '', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\CommonDBTM.php:1339                            Log::history()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"1.250\", 29.51Mio)"} 
+[2024-02-28 09:27:26] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('442', 'ticket', '2024-02-28 15:27:25', 'tracking', '4', 'glpi adds the item 442')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Ticket.php:1969                                Glpi\Event::log()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-28 09:27:26] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_tickets_users` (`type`, `tickets_id`, `users_id`, `alternative_email`) VALUES ('1', '442', '2', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CommonITILObject.php:8352                      CommonDBTM->add()
+  src\CommonITILObject.php:2606                      CommonITILObject->updateActors()
+  src\Ticket.php:2126                                CommonITILObject->post_addItem()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.125\", 26.38Mio)"} 
+[2024-02-28 09:27:26] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_groups_tickets` (`type`, `tickets_id`, `groups_id`) VALUES ('2', '442', '108')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CommonITILObject.php:8352                      CommonDBTM->add()
+  src\CommonITILObject.php:2606                      CommonITILObject->updateActors()
+  src\Ticket.php:2126                                CommonITILObject->post_addItem()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.132\", 26.39Mio)"} 
+[2024-02-28 09:27:26] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('442', 'Ticket', '0', '20', 'glpi (2)', '2024-02-28 15:27:26', '0', '', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\CommonDBTM.php:1339                            Log::history()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.525\", 29.54Mio)"} 
+[2024-02-28 09:30:03] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('443', 'ticket', '2024-02-28 15:30:02', 'tracking', '4', 'glpi adds the item 443')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Ticket.php:1969                                Glpi\Event::log()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-28 09:30:03] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_tickets_users` (`type`, `tickets_id`, `users_id`, `alternative_email`) VALUES ('1', '443', '2', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CommonITILObject.php:8352                      CommonDBTM->add()
+  src\CommonITILObject.php:2606                      CommonITILObject->updateActors()
+  src\Ticket.php:2126                                CommonITILObject->post_addItem()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.103\", 26.39Mio)"} 
+[2024-02-28 09:30:03] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_groups_tickets` (`type`, `tickets_id`, `groups_id`) VALUES ('2', '443', '108')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CommonITILObject.php:8352                      CommonDBTM->add()
+  src\CommonITILObject.php:2606                      CommonITILObject->updateActors()
+  src\Ticket.php:2126                                CommonITILObject->post_addItem()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.057\", 26.40Mio)"} 
+[2024-02-28 09:30:04] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('443', 'Ticket', '0', '20', 'glpi (2)', '2024-02-28 15:30:03', '0', '', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\CommonDBTM.php:1339                            Log::history()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.347\", 29.55Mio)"} 
+[2024-02-28 09:32:26] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('444', 'ticket', '2024-02-28 15:32:25', 'tracking', '4', 'glpi adds the item 444')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Ticket.php:1969                                Glpi\Event::log()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-28 09:32:26] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_tickets_users` (`type`, `tickets_id`, `users_id`, `alternative_email`) VALUES ('1', '444', '2', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CommonITILObject.php:8352                      CommonDBTM->add()
+  src\CommonITILObject.php:2606                      CommonITILObject->updateActors()
+  src\Ticket.php:2126                                CommonITILObject->post_addItem()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.136\", 26.43Mio)"} 
+[2024-02-28 09:32:26] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_groups_tickets` (`type`, `tickets_id`, `groups_id`) VALUES ('2', '444', '108')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CommonITILObject.php:8352                      CommonDBTM->add()
+  src\CommonITILObject.php:2606                      CommonITILObject->updateActors()
+  src\Ticket.php:2126                                CommonITILObject->post_addItem()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.057\", 26.43Mio)"} 
+[2024-02-28 09:32:27] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('444', 'Ticket', '0', '20', 'glpi (2)', '2024-02-28 15:32:26', '0', '', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\CommonDBTM.php:1339                            Log::history()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.559\", 29.58Mio)"} 
+[2024-02-28 09:33:45] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_events` (`items_id`, `type`, `date`, `service`, `level`, `message`) VALUES ('445', 'ticket', '2024-02-28 15:33:44', 'tracking', '4', 'glpi adds the item 445')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\Event.php:117                                  CommonDBTM->add()
+  src\Ticket.php:1969                                Glpi\Event::log()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV"} 
+[2024-02-28 09:33:45] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_tickets_users` (`type`, `tickets_id`, `users_id`, `alternative_email`) VALUES ('1', '445', '2', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CommonITILObject.php:8352                      CommonDBTM->add()
+  src\CommonITILObject.php:2606                      CommonITILObject->updateActors()
+  src\Ticket.php:2126                                CommonITILObject->post_addItem()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.091\", 26.43Mio)"} 
+[2024-02-28 09:33:45] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_groups_tickets` (`type`, `tickets_id`, `groups_id`) VALUES ('2', '445', '108')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\CommonDBTM.php:716                             DBmysql->insert()
+  src\CommonDBTM.php:1321                            CommonDBTM->addToDB()
+  src\CommonITILObject.php:8352                      CommonDBTM->add()
+  src\CommonITILObject.php:2606                      CommonITILObject->updateActors()
+  src\Ticket.php:2126                                CommonITILObject->post_addItem()
+  src\CommonDBTM.php:1322                            Ticket->post_addItem()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.069\", 26.44Mio)"} 
+[2024-02-28 09:33:45] glpisqllog.WARNING: DBmysql::query() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\halobps-dev\src\DBmysql.php line 404
+  *** MySQL query warnings:
+  SQL: INSERT INTO `glpi_logs` (`items_id`, `itemtype`, `itemtype_link`, `linked_action`, `user_name`, `date_mod`, `id_search_option`, `old_value`, `new_value`) VALUES ('445', 'Ticket', '0', '20', 'glpi (2)', '2024-02-28 15:33:45', '0', '', '')
+  Warnings: 
+1364: Field 'id' doesn't have a default value
+  Backtrace :
+  src\DBmysql.php:1312                               
+  src\Log.php:279                                    DBmysql->insert()
+  src\CommonDBTM.php:1339                            Log::history()
+  front\tracking.injector.php:81                     CommonDBTM->add()
+  {"user":"2@LAPTOP-3QJ309BV","mem_usage":"0.679\", 29.59Mio)"} 
