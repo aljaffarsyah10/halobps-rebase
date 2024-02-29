@@ -4338,6 +4338,11 @@ JAVASCRIPT;
             $item_ticket = new Item_Ticket();
         }
 
+        $nup_bmn = $this->fields['nup_bmn_value'];
+        $apiUrl = 'http://localhost:8000/api/v1/hardware/bybmn/' . $nup_bmn;
+        $response = static::getApiMania($apiUrl);
+        $responseMania = json_decode($response, true);
+
         TemplateRenderer::getInstance()->display('components/itilobject/layout.html.twig', [
             'item'               => $this,
             'timeline_itemtypes' => $this->getTimelineItemtypes(),
@@ -4359,6 +4364,7 @@ JAVASCRIPT;
             'canassigntome'      => $canassigntome,
             'load_kb_sol'        => $options['load_kb_sol'] ?? 0,
             'userentities'       => $userentities,
+            'api_mania_data'     => $responseMania,
         ]);
 
         return true;
