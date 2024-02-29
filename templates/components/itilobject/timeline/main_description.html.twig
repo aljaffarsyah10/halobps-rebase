@@ -87,12 +87,61 @@
                         }) }}
                      </div>
                   {% endif %}
-                  {% if item.fields['type']== 1 %}
-                     <div class="rich_text_container">Keterangan BMN : 
-                        <a href="http://localhost:8000/hardware/{{ item.fields['nup_bmn_value'] }}/view_bmn" target="_blank">
-                           {{ item.fields['nup_bmn_value'] }}
-                        </a>
-                     </div>                     
+                  {% if item.fields['type']== 1 %}                    
+                        <div class="card border-primary mb-3">
+                           <div class="card-header">
+                                 <h4 class="card-title">Spesifikasi BMN</h4>
+                           </div>
+                           <div class="card-body">
+                                 <div class="row">
+                                    <div class="col-md-5">Nama BMN</div>:
+                                    <div class="col-md-6">{{ api_mania_data.name }}</div>
+                                 </div>
+
+                                 <div class="row">
+                                    <div class="col-md-5">NUP BMN</div>:
+                                    <div class="col-md-6">{{ item.fields['nup_bmn_value'] }}</div>
+                                 </div>
+
+                                 <div class="row">
+                                    <div class="col-md-5">Serial</div>:
+                                    <div class="col-md-6">{{ api_mania_data.serial }}</div>
+                                 </div>
+
+                                 <div class="row">
+                                    <div class="col-md-5">Model</div>:
+                                    <div class="col-md-6">{{ api_mania_data.model.name }}</div>
+                                 </div>
+
+                                 <div class="row">
+                                    <div class="col-md-5">Garansi</div>:
+                                    <div class="col-md-6">
+                                       {{ api_mania_data.status_label.warranty_months }} - {{ api_mania_data.status_label.warranty_expires }}
+                                    </div>
+                                 </div>
+
+                                 <div class="row">
+                                    <div class="col-md-5">Nama BMN</div>:
+                                    <div class="col-md-6">{{ api_mania_data.status_label.name }}</div>
+                                 </div>
+
+                                 <div class="row">
+                                    <div class="col-md-5">Tanggal Beli</div>:
+                                    <div class="col-md-6">{{ api_mania_data.purchase_date.date }}</div>
+                                 </div>
+
+                                 <div class="row">
+                                    <div class="col-md-5">Last Notes</div>:
+                                    <div class="col-md-6">{{ api_mania_data.notes }}</div>
+                                 </div>
+                              <div class="card-footer p-1 mt-2">
+                                 <a class="btn btn-primary" href="http://localhost:8000/hardware/{{ item.fields['nup_bmn_value'] }}/view_bmn" target="_blank">
+                                    <small class="text-muted">Lihat Detail BMN</small>
+                                 </a>             
+                              </div>
+                           </div>
+                        </div>
+
                   {% endif %}
                </div>
                <div class="edit-content collapse">
