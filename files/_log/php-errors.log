@@ -8,3 +8,23 @@
 Compile css/palettes/auror.scss  {"user":"@yosrals-MacBook-Pro.local"} 
 [2022-12-04 13:58:57] glpiphplog.CRITICAL:   *** PHP Error (1): Maximum execution time of 30 seconds exceeded in /Applications/MAMP/htdocs/halobps/vendor/scssphp/scssphp/src/SourceMap/Base64VLQ.php at line 60  
 [2022-12-04 14:18:19] glpiphplog.WARNING: Test logger  
+[2024-05-12 21:33:33] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/2002): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond in D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\src\DBmysql.php at line 250
+  Backtrace :
+  src\DBmysql.php:250                                mysqli->real_connect()
+  src\DBmysql.php:209                                DBmysql->connect()
+  src\DBConnection.php:416                           DBmysql->__construct()
+  src\DBConnection.php:510                           DBConnection::switchToMaster()
+  inc\config.php:129                                 DBConnection::establishDBConnection()
+  inc\includes.php:58                                include_once()
+  front\helpdesk.public.php:41                       include()
+  
+[2024-05-12 21:34:00] glpiphplog.WARNING:   *** PHP Warning (2): mysqli::real_connect(): (HY000/2002): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond in D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\src\DBmysql.php at line 250
+  Backtrace :
+  src\DBmysql.php:250                                mysqli->real_connect()
+  src\DBmysql.php:209                                DBmysql->connect()
+  src\DBConnection.php:416                           DBmysql->__construct()
+  src\DBConnection.php:510                           DBConnection::switchToMaster()
+  inc\config.php:129                                 DBConnection::establishDBConnection()
+  inc\includes.php:58                                include_once()
+  front\helpdesk.public.php:41                       include()
+  

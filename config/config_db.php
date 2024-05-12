@@ -1,9 +1,10 @@
 <?php
-class DB extends DBmysql {
-   public $dbhost = '10.0.26.6';
-   public $dbuser = 'halodev';
-   public $dbpassword = 'bh!nneKa1';
-   public $dbdefault = 'glpi_dev';
+class DB extends DBmysql
+{
+   public $dbhost = 'localhost';
+   public $dbuser = 'root';
+   public $dbpassword = '';
+   public $dbdefault = 'halobps-rebase';
    public $use_timezones = true;
    public $use_utf8mb4 = true;
    public $allow_myisam = false;
