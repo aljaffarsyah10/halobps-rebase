@@ -3962,7 +3962,6 @@ JS;
                   if ($('#$id').attr('required') == 'required') {
                      $('#$id').removeAttr('required'); // Necessary to bypass browser validation
 
-<<<<<<< HEAD
                      editor.on('submit', function (e) {
                         if ($('#$id').val() == '') {
                            const field = $('#$id').closest('.form-field').find('label').text().replace('*', '').trim();
@@ -3974,15 +3973,7 @@ JS;
                            e.stopPropagation();
                         }
                      });
-                     editor.on('keyup', function (e) {
-                        editor.save();
-                        if ($('#$id').val() == '') {
-                           $(editor.container).addClass('required');
-                        } else {
-                           $(editor.container).removeClass('required');
-                        }
-                     });
-=======
+
                     //  editor.on('keyup', function (e) {
                     //     editor.save();
                     //     if ($('#$id').val() == '') {
@@ -3991,7 +3982,6 @@ JS;
                     //        $(editor.container).removeClass('required');
                     //     }
                     //  });
->>>>>>> e135c42af (Adjust request ticket form)
                      editor.on('init', function (e) {
                         $('.tox.tox-tinymce').addClass('form-control');
                      });

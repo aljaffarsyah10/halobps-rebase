@@ -111,3 +111,129 @@ Compile css/palettes/auror.scss  {"user":"2@yosrals-MacBook-Pro.local"}
   front/locale.php:41                                include()
 >>>>>>> 12d6ef34 (resolve conflict development vs pusher)
   
+[2024-05-13 05:50:32] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("syntax error, unexpected token "<<", expecting "function" or "const"")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\templates\layout\parts\user_header.html.twig" at line 81
+  Backtrace :
+  vendor\twig\twig\src\Template.php:335              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:38        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1332 Twig\TemplateWrapper->render()
+  ...2ea572cab2654983f9f8d5bdc7124897f391812.php:123 Twig\Extension\CoreExtension::include()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_78e92cc7afaacfa23a5636ba4d419325d8005d85029755f679ed615be6149b93->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Html.php:1982                                  Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:99                       Html::helpHeader()
+  
+[2024-05-13 05:50:32] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("Class "Dropdown" not found")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\templates\components\itilobject\selfservice.html.twig" at line 133
+  Backtrace :
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4062                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:101                      Ticket->showFormHelpdesk()
+  
+[2024-05-13 05:51:44] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("syntax error, unexpected token "<<", expecting "function" or "const"")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\templates\layout\parts\user_header.html.twig" at line 81
+  Backtrace :
+  vendor\twig\twig\src\Template.php:335              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:38        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1332 Twig\TemplateWrapper->render()
+  ...2ea572cab2654983f9f8d5bdc7124897f391812.php:123 Twig\Extension\CoreExtension::include()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_78e92cc7afaacfa23a5636ba4d419325d8005d85029755f679ed615be6149b93->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Html.php:1982                                  Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:99                       Html::helpHeader()
+  
+[2024-05-13 05:51:44] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("Class "Dropdown" not found")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\templates\components\itilobject\selfservice.html.twig" at line 133
+  Backtrace :
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4062                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:101                      Ticket->showFormHelpdesk()
+  
+[2024-05-13 05:52:36] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("syntax error, unexpected token "<<", expecting "function" or "const"")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\templates\layout\parts\user_header.html.twig" at line 81
+  Backtrace :
+  vendor\twig\twig\src\Template.php:335              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:38        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1332 Twig\TemplateWrapper->render()
+  ...2ea572cab2654983f9f8d5bdc7124897f391812.php:123 Twig\Extension\CoreExtension::include()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_78e92cc7afaacfa23a5636ba4d419325d8005d85029755f679ed615be6149b93->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Html.php:1982                                  Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:99                       Html::helpHeader()
+  
+[2024-05-13 05:52:36] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("Class "Dropdown" not found")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\templates\components\itilobject\selfservice.html.twig" at line 133
+  Backtrace :
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4062                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:101                      Ticket->showFormHelpdesk()
+  
+[2024-05-13 05:53:58] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("syntax error, unexpected token "<<", expecting "function" or "const"")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\templates\layout\parts\user_header.html.twig" at line 81
+  Backtrace :
+  vendor\twig\twig\src\Template.php:335              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:38        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1332 Twig\TemplateWrapper->render()
+  ...2ea572cab2654983f9f8d5bdc7124897f391812.php:123 Twig\Extension\CoreExtension::include()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_78e92cc7afaacfa23a5636ba4d419325d8005d85029755f679ed615be6149b93->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Html.php:1982                                  Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:99                       Html::helpHeader()
+  
+[2024-05-13 05:53:59] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("Class "Dropdown" not found")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\templates\components\itilobject\selfservice.html.twig" at line 133
+  Backtrace :
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4062                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:101                      Ticket->showFormHelpdesk()
+  
+[2024-05-13 05:55:14] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("syntax error, unexpected token "<<", expecting "function" or "const"")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\templates\layout\parts\user_header.html.twig" at line 81
+  Backtrace :
+  vendor\twig\twig\src\Template.php:335              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:38        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1332 Twig\TemplateWrapper->render()
+  ...2ea572cab2654983f9f8d5bdc7124897f391812.php:123 Twig\Extension\CoreExtension::include()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_78e92cc7afaacfa23a5636ba4d419325d8005d85029755f679ed615be6149b93->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Html.php:1982                                  Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:99                       Html::helpHeader()
+  
+[2024-05-13 05:55:15] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("Class "Dropdown" not found")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\templates\components\itilobject\selfservice.html.twig" at line 133
+  Backtrace :
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4062                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:101                      Ticket->showFormHelpdesk()
+  
+[2024-05-13 05:56:45] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("syntax error, unexpected token "<<", expecting "function" or "const"")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\templates\layout\parts\user_header.html.twig" at line 81
+  Backtrace :
+  vendor\twig\twig\src\Template.php:335              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:38        Twig\Template->render()
+  ...\twig\twig\src\Extension\CoreExtension.php:1332 Twig\TemplateWrapper->render()
+  ...2ea572cab2654983f9f8d5bdc7124897f391812.php:123 Twig\Extension\CoreExtension::include()
+  vendor\twig\twig\src\Template.php:360              __TwigTemplate_78e92cc7afaacfa23a5636ba4d419325d8005d85029755f679ed615be6149b93->doDisplay()
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Html.php:1982                                  Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:99                       Html::helpHeader()
+  
+[2024-05-13 05:56:46] glpiphplog.CRITICAL:   *** Twig Error (Twig\Error\RuntimeError): "An exception has been thrown during the rendering of a template ("Class "Dropdown" not found")." in template "D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\templates\components\itilobject\selfservice.html.twig" at line 133
+  Backtrace :
+  vendor\twig\twig\src\Template.php:327              Twig\Template->yield()
+  vendor\twig\twig\src\TemplateWrapper.php:45        Twig\Template->display()
+  src\Application\View\TemplateRenderer.php:184      Twig\TemplateWrapper->display()
+  src\Ticket.php:4062                                Glpi\Application\View\TemplateRenderer->display()
+  front\helpdesk.public.php:101                      Ticket->showFormHelpdesk()
+  
