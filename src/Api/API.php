@@ -73,7 +73,7 @@ use User;
 
 abstract class API
 {
-   // permit writing to $_SESSION
+    // permit writing to $_SESSION
     protected $session_write = false;
 
     public static $api_url = "";
@@ -146,7 +146,7 @@ abstract class API
     {
         global $CFG_GLPI;
 
-       // Load GLPI configuration
+        // Load GLPI configuration
         include_once(GLPI_ROOT . '/inc/includes.php');
         $variables = get_defined_vars();
         foreach ($variables as $var => $value) {
@@ -155,25 +155,25 @@ abstract class API
             }
         }
 
-       // construct api url
+        // construct api url
         self::$api_url = trim($CFG_GLPI['url_base_api'], "/");
 
-       // Don't display error in result
+        // Don't display error in result
         ini_set('display_errors', 'Off');
 
-       // Avoid keeping messages between api calls
+        // Avoid keeping messages between api calls
         $_SESSION["MESSAGE_AFTER_REDIRECT"] = [];
 
-       // check if api is enabled
+        // check if api is enabled
         if (!$CFG_GLPI['enable_api']) {
             $this->returnError(__("API disabled"), "", "", false);
         }
 
-       // retrieve ip of client
+        // retrieve ip of client
         $this->iptxt = Toolbox::getRemoteIpAddress();
         $this->ipnum = (strstr($this->iptxt, ':') === false ? ip2long($this->iptxt) : '');
 
-       // check ip access
+        // check ip access
         $apiclient = new APIClient();
         $where_ip = [];
         if ($this->ipnum) {
@@ -198,7 +198,7 @@ abstract class API
         if (count($found_clients) <= 0) {
             $this->returnError(
                 __("There isn't an active API client matching your IP address in the configuration") .
-                            " (" . $this->iptxt . ")",
+                    " (" . $this->iptxt . ")",
                 "",
                 "ERROR_NOT_ALLOWED_IP",
                 false
@@ -231,7 +231,7 @@ abstract class API
 
             if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS'])) {
                 header("Access-Control-Allow-Headers: " .
-                   "origin, content-type, accept, session-token, authorization, app-token");
+                    "origin, content-type, accept, session-token, authorization, app-token");
             }
             exit(0);
         }
@@ -257,11 +257,11 @@ abstract class API
 
         if (
             (!isset($params['login'])
-            || empty($params['login'])
-            || !isset($params['password'])
-            || empty($params['password']))
+                || empty($params['login'])
+                || !isset($params['password'])
+                || empty($params['password']))
             && (!isset($params['user_token'])
-             || empty($params['user_token']))
+                || empty($params['user_token']))
         ) {
             $this->returnError(
                 __("parameter(s) login, password or user_token are missing"),
@@ -272,7 +272,7 @@ abstract class API
 
         $auth = new Auth();
 
-       // fill missing params (in case of user_token)
+        // fill missing params (in case of user_token)
         if (!isset($params['login'])) {
             $params['login'] = '';
         }
@@ -297,7 +297,7 @@ abstract class API
             $params['auth'] = '';
         }
 
-       // login on glpi
+        // login on glpi
         if (!$auth->login($params['login'], $params['password'], $noAuto, false, $params['auth'])) {
             $err = Toolbox::stripTags($auth->getErr());
             if (
@@ -309,11 +309,11 @@ abstract class API
             $this->returnError($err, 401, "ERROR_GLPI_LOGIN", false);
         }
 
-       // stop session and return session key
+        // stop session and return session key
         session_write_close();
         $data = ['session_token' => $_SESSION['valid_id']];
 
-       // Insert session data if requested
+        // Insert session data if requested
         $get_full_session = $params['get_full_session'] ?? false;
         if ($get_full_session) {
             $data['session'] = $_SESSION;
@@ -417,7 +417,8 @@ abstract class API
                 $sons = getSonsOf('glpi_entities', $entity['id']);
                 foreach ($sons as $entity_id) {
                     if ($entity_id != $entity['id']) {
-                        $myentities[] = ['id'   => $entity_id,
+                        $myentities[] = [
+                            'id'   => $entity_id,
                             'name' => Dropdown::getDropdownName(
                                 "glpi_entities",
                                 $entity_id
@@ -426,7 +427,8 @@ abstract class API
                     }
                 }
             }
-            $myentities[] = ['id' => $entity['id'],
+            $myentities[] = [
+                'id' => $entity['id'],
                 'name' => Dropdown::getDropdownName(
                     "glpi_entities",
                     $entity['id']
@@ -454,11 +456,12 @@ abstract class API
             $actives_entities[] = ['id' => $active_entity];
         }
 
-        return ["active_entity" => [
-            "id"                      => $_SESSION['glpiactive_entity'],
-            "active_entity_recursive" => $_SESSION['glpiactive_entity_recursive'],
-            "active_entities"         => $actives_entities
-        ]
+        return [
+            "active_entity" => [
+                "id"                      => $_SESSION['glpiactive_entity'],
+                "active_entity_recursive" => $_SESSION['glpiactive_entity_recursive'],
+                "active_entities"         => $actives_entities
+            ]
         ];
     }
 
@@ -500,13 +503,13 @@ abstract class API
     {
         $myprofiles = [];
         foreach ($_SESSION['glpiprofiles'] as $profiles_id => $profile) {
-           // append if of the profile into values
+            // append if of the profile into values
             $profile = ['id' => $profiles_id] + $profile;
 
-           // don't keep keys for entities
+            // don't keep keys for entities
             $profile['entities'] = array_values($profile['entities']);
 
-           // don't keep keys for profiles
+            // don't keep keys for profiles
             $myprofiles[] = $profile;
         }
         return ['myprofiles' => $myprofiles];
@@ -583,8 +586,9 @@ abstract class API
 
         $itemtype = $this->handleDepreciation($itemtype);
 
-       // default params
-        $default = ['expand_dropdowns'  => false,
+        // default params
+        $default = [
+            'expand_dropdowns'  => false,
             'get_hateoas'       => true,
             'get_sha1'          => false,
             'with_devices'   => false,
@@ -614,10 +618,10 @@ abstract class API
 
         $fields = $item->fields;
 
-       // avoid disclosure of critical fields
+        // avoid disclosure of critical fields
         $item::unsetUndisclosedFields($fields);
 
-       // retrieve devices
+        // retrieve devices
         if (
             isset($params['with_devices'])
             && $params['with_devices']
@@ -636,9 +640,9 @@ abstract class API
                 );
 
                 foreach ($found_devices as &$device) {
-                     unset($device['items_id']);
-                     unset($device['itemtype']);
-                     unset($device['is_deleted']);
+                    unset($device['items_id']);
+                    unset($device['itemtype']);
+                    unset($device['is_deleted']);
                 }
 
                 if (!empty($found_devices)) {
@@ -648,13 +652,13 @@ abstract class API
             $fields['_devices'] = $all_devices;
         }
 
-       // retrieve computer disks
+        // retrieve computer disks
         if (
             isset($params['with_disks'])
             && $params['with_disks']
             && in_array($itemtype, $CFG_GLPI['itemdeviceharddrive_types'])
         ) {
-           // build query to retrive filesystems
+            // build query to retrive filesystems
             $fs_iterator = $DB->request([
                 'SELECT'    => [
                     'glpi_filesystems.name AS fsname',
@@ -683,7 +687,7 @@ abstract class API
             }
         }
 
-       // retrieve computer softwares
+        // retrieve computer softwares
         if (
             isset($params['with_softwares'])
             && $params['with_softwares']
@@ -733,7 +737,7 @@ abstract class API
             }
         }
 
-       // retrieve item connections
+        // retrieve item connections
         if (
             isset($params['with_connections'])
             && $params['with_connections']
@@ -775,12 +779,12 @@ abstract class API
             }
         }
 
-       // retrieve item networkports
+        // retrieve item networkports
         if (isset($params['with_networkports']) && $params['with_networkports']) {
             $fields['_networkports'] = $this->getNetworkPorts($id, $itemtype);
         }
 
-       // retrieve item infocoms
+        // retrieve item infocoms
         if (
             isset($params['with_infocoms'])
             && $params['with_infocoms']
@@ -796,7 +800,7 @@ abstract class API
             }
         }
 
-       // retrieve item contracts
+        // retrieve item contracts
         if (
             isset($params['with_contracts'])
             && $params['with_contracts']
@@ -834,7 +838,7 @@ abstract class API
             }
         }
 
-       // retrieve item documents
+        // retrieve item documents
         if (
             isset($params['with_documents'])
             && $params['with_documents']
@@ -896,7 +900,7 @@ abstract class API
             }
         }
 
-       // retrieve item tickets
+        // retrieve item tickets
         if (
             isset($params['with_tickets'])
             && $params['with_tickets']
@@ -906,10 +910,10 @@ abstract class API
                 $fields['_tickets'] = $this->arrayRightError();
             } else {
                 $criteria = Ticket::getCommonCriteria();
-                $criteria['WHERE'] = [
-                    'glpi_items_tickets.items_id' => $id,
-                    'glpi_items_tickets.itemtype' => $itemtype
-                ] + getEntitiesRestrictCriteria(Ticket::getTable());
+                // $criteria['WHERE'] = [
+                //     'glpi_items_tickets.items_id' => $id,
+                //     'glpi_items_tickets.itemtype' => $itemtype
+                // ] + getEntitiesRestrictCriteria(Ticket::getTable());
                 $iterator = $DB->request($criteria);
                 foreach ($iterator as $data) {
                     $fields['_tickets'][] = $data;
@@ -917,7 +921,7 @@ abstract class API
             }
         }
 
-       // retrieve item problems
+        // retrieve item problems
         if (
             isset($params['with_problems'])
             && $params['with_problems']
@@ -938,7 +942,7 @@ abstract class API
             }
         }
 
-       // retrieve item changes
+        // retrieve item changes
         if (
             isset($params['with_changes'])
             && $params['with_changes']
@@ -959,7 +963,7 @@ abstract class API
             }
         }
 
-       // retrieve item notes
+        // retrieve item notes
         if (
             isset($params['with_notes'])
             && $params['with_notes']
@@ -972,7 +976,7 @@ abstract class API
             }
         }
 
-       // retrieve item logs
+        // retrieve item logs
         if (
             isset($params['with_logs'])
             && $params['with_logs']
@@ -991,24 +995,25 @@ abstract class API
             }
         }
 
-       // expand dropdown (retrieve name of dropdowns) and get hateoas from foreign keys
+        // expand dropdown (retrieve name of dropdowns) and get hateoas from foreign keys
         $fields = self::parseDropdowns($fields, $params);
 
-       // get hateoas from children
+        // get hateoas from children
         if ($params['get_hateoas']) {
             $hclasses = self::getHatoasClasses($itemtype);
             foreach ($hclasses as $hclass) {
-                $fields['links'][] = ['rel'  => $hclass,
+                $fields['links'][] = [
+                    'rel'  => $hclass,
                     'href' => self::$api_url . "/$itemtype/" . $item->getID() . "/$hclass/"
                 ];
             }
         }
 
-       // get sha1 footprint if needed
+        // get sha1 footprint if needed
         if ($params['get_sha1']) {
             $fields = sha1(json_encode($fields, JSON_UNESCAPED_UNICODE
-                                             | JSON_UNESCAPED_SLASHES
-                                             | JSON_NUMERIC_CHECK));
+                | JSON_UNESCAPED_SLASHES
+                | JSON_NUMERIC_CHECK));
         }
 
         if (count($params['add_keys_names']) > 0) {
@@ -1019,7 +1024,7 @@ abstract class API
             );
         }
 
-       // Convert fields to the format expected by the deprecated type
+        // Convert fields to the format expected by the deprecated type
         if ($this->isDeprecated()) {
             $fields = $this->deprecated_item->mapCurrentToDeprecatedFields($fields);
             $fields["links"] = $this->deprecated_item->mapCurrentToDeprecatedHateoas(
@@ -1048,7 +1053,8 @@ abstract class API
     protected function arrayRightError()
     {
 
-        return ['error'   => 401,
+        return [
+            'error'   => 401,
             'message' => __("You don't have permission to perform this action.")
         ];
     }
@@ -1085,7 +1091,8 @@ abstract class API
         $itemtype = $this->handleDepreciation($itemtype);
 
         // default params
-        $default = ['expand_dropdowns' => false,
+        $default = [
+            'expand_dropdowns' => false,
             'get_hateoas'       => true,
             'only_id'           => false,
             'range'             => "0-" . ($_SESSION['glpilist_limit'] - 1),
@@ -1128,7 +1135,7 @@ abstract class API
             $this->returnError("sort param is not a field of $table");
         }
 
-       //specific case for restriction
+        //specific case for restriction
         $already_linked_table = [];
         $join = Search::addDefaultJoin($itemtype, $table, $already_linked_table);
         $where = Search::addDefaultWhere($itemtype);
@@ -1140,12 +1147,12 @@ abstract class API
             $where .= "AND " . $DB->quoteName("$table.is_deleted") . " = " . (int)$params['is_deleted'];
         }
 
-       // add filter for a parent itemtype
+        // add filter for a parent itemtype
         if (
             isset($this->parameters['parent_itemtype'])
             && isset($this->parameters['parent_id'])
         ) {
-           // check parent itemtype
+            // check parent itemtype
             if (
                 !Toolbox::isCommonDBTM($this->parameters['parent_itemtype'])
                 && !Toolbox::isAPIDeprecated($this->parameters['parent_itemtype'])
@@ -1160,7 +1167,7 @@ abstract class API
             $fk_parent = getForeignKeyFieldForItemType($this->parameters['parent_itemtype']);
             $fk_child = getForeignKeyFieldForItemType($itemtype);
 
-           // check parent rights
+            // check parent rights
             $parent_item = new $this->parameters['parent_itemtype']();
             if (!$parent_item->getFromDB($this->parameters['parent_id'])) {
                 $this->messageNotfoundError();
@@ -1169,12 +1176,12 @@ abstract class API
                 $this->messageRightError();
             }
 
-           // filter with parents fields
+            // filter with parents fields
             if (isset($item->fields[$fk_parent])) {
                 $where .= " AND " . $DB->quoteName("$table.$fk_parent") . " = " . (int)$this->parameters['parent_id'];
             } else if (
                 isset($item->fields['itemtype'])
-                 && isset($item->fields['items_id'])
+                && isset($item->fields['items_id'])
             ) {
                 $where .= " AND " . $DB->quoteName("$table.itemtype") . " = " . $DB->quoteValue($this->parameters['parent_itemtype']) . "
                        AND " . $DB->quoteName("$table.items_id") . " = " . (int)$this->parameters['parent_id'];
@@ -1184,7 +1191,7 @@ abstract class API
                 $where .= " AND " . $DB->quoteName("$parentTable.id") . " = " . (int)$this->parameters['parent_id'];
             } else if (
                 isset($parent_item->fields['itemtype'])
-                 && isset($parent_item->fields['items_id'])
+                && isset($parent_item->fields['items_id'])
             ) {
                 $parentTable = getTableForItemType($this->parameters['parent_itemtype']);
                 $join .= " LEFT JOIN " . $DB->quoteName($parentTable) . " ON " . $DB->quoteName("itemtype") . "=" . $DB->quoteValue($itemtype) . " AND " . $DB->quoteName("$parentTable.items_id") . " = " . $DB->quoteName("$table.id");
@@ -1192,7 +1199,7 @@ abstract class API
             }
         }
 
-       // filter by searchText parameter
+        // filter by searchText parameter
         if (is_array($params['searchText'])) {
             if (array_keys($params['searchText']) == ['all']) {
                 $labelfield = "name";
@@ -1208,7 +1215,7 @@ abstract class API
                 }
             }
 
-           // make text search
+            // make text search
             foreach ($params['searchText'] as $filter_field => $filter_value) {
                 if (!empty($filter_value)) {
                     $search_value = Search::makeTextSearch($DB->escape($filter_value));
@@ -1217,7 +1224,7 @@ abstract class API
             }
         }
 
-       // filter with entity
+        // filter with entity
         if ($item->getType() == 'Entity') {
             $where .= " AND (" . getEntitiesRestrictRequest("", $itemtype::getTable()) . ")";
         } else if (
@@ -1241,10 +1248,10 @@ abstract class API
             $where .= ")";
         }
 
-       // Check if we need to add raw names later on
+        // Check if we need to add raw names later on
         $add_keys_names = count($params['add_keys_names']) > 0;
 
-       // build query
+        // build query
         $query = "SELECT DISTINCT " . $DB->quoteName("$table.id") . ",  " . $DB->quoteName("$table.*") . "
                 FROM " . $DB->quoteName($table) . "
                 $join
@@ -1270,7 +1277,7 @@ abstract class API
             }
         }
 
-       // get result full row counts
+        // get result full row counts
         $count_query = "SELECT COUNT(*) FROM {$DB->quoteName($table)} $join WHERE $where";
         $totalcount = $DB->query($count_query)->fetch_row()[0];
 
@@ -1283,22 +1290,23 @@ abstract class API
         }
 
         foreach ($found as &$fields) {
-           // only keep id in field list
+            // only keep id in field list
             if ($params['only_id']) {
                 $fields = ['id' => $fields['id']];
             }
 
-           // avioid disclosure of critical fields
+            // avioid disclosure of critical fields
             $item::unsetUndisclosedFields($fields);
 
-           // expand dropdown (retrieve name of dropdowns) and get hateoas
+            // expand dropdown (retrieve name of dropdowns) and get hateoas
             $fields = self::parseDropdowns($fields, $params);
 
-           // get hateoas from children
+            // get hateoas from children
             if ($params['get_hateoas']) {
                 $hclasses = self::getHatoasClasses($itemtype);
                 foreach ($hclasses as $hclass) {
-                    $fields['links'][] = ['rel' => $hclass,
+                    $fields['links'][] = [
+                        'rel' => $hclass,
                         'href' => self::$api_url . "/$itemtype/" . $fields['id'] . "/$hclass/"
                     ];
                 }
@@ -1312,10 +1320,10 @@ abstract class API
                 );
             }
         }
-       // Break reference
+        // Break reference
         unset($fields);
 
-       // Map values for deprecated itemtypes
+        // Map values for deprecated itemtypes
         if ($this->isDeprecated()) {
             $found = array_map(function ($fields) {
                 return $this->deprecated_item->mapCurrentToDeprecatedFields($fields);
@@ -1410,18 +1418,19 @@ abstract class API
                 unset($available_searchtypes['searchopt']);
                 $available_searchtypes = array_keys($available_searchtypes);
 
-                $cleaned_soptions[$sID] = ['name'                  => $option['name'],
+                $cleaned_soptions[$sID] = [
+                    'name'                  => $option['name'],
                     'table'                 => $option['table'],
                     'field'                 => $option['field'],
                     'datatype'              => isset($option['datatype'])
-                                                                       ? $option['datatype']
-                                                                       : "",
+                        ? $option['datatype']
+                        : "",
                     'nosearch'              => isset($option['nosearch'])
-                                                                       ? $option['nosearch']
-                                                                       : false,
+                        ? $option['nosearch']
+                        : false,
                     'nodisplay'             => isset($option['nodisplay'])
-                                                                       ? $option['nodisplay']
-                                                                       : false,
+                        ? $option['nodisplay']
+                        : false,
                     'available_searchtypes' => $available_searchtypes
                 ];
                 $cleaned_soptions[$sID]['uid'] = $this->getSearchOptionUniqID(
@@ -1464,7 +1473,7 @@ abstract class API
 
         if (
             (isset($option['joinparams']['beforejoin']['table'])
-            || empty($option['joinparams']))
+                || empty($option['joinparams']))
             && $option['linkfield'] != getForeignKeyFieldForItemType($sub_itemtype)
             && $option['linkfield'] != $option['field']
         ) {
@@ -1556,12 +1565,12 @@ abstract class API
 
         $itemtype = $this->handleDepreciation($itemtype);
 
-       // check rights
+        // check rights
         if (!$itemtype::canView()) {
             $this->messageRightError();
         }
 
-       // retrieve searchoptions
+        // retrieve searchoptions
         $soptions = $this->listSearchOptions($itemtype, [], false);
 
         if ($this->isDeprecated()) {
@@ -1574,12 +1583,12 @@ abstract class API
             }
         }
 
-       // Check the criterias are valid
+        // Check the criterias are valid
         if (isset($params['criteria']) && is_array($params['criteria'])) {
-           // use a recursive closure to check each nested criteria
+            // use a recursive closure to check each nested criteria
             $check_criteria = function (&$criteria) use (&$check_criteria, $soptions) {
                 foreach ($criteria as &$criterion) {
-                     // recursive call
+                    // recursive call
                     if (isset($criterion['criteria'])) {
                         return $check_criteria($criterion['criteria']);
                     }
@@ -1606,21 +1615,21 @@ abstract class API
                         return __("Forbidden field ID in search criteria");
                     }
 
-                  // Escape value to prevent SQL injection
+                    // Escape value to prevent SQL injection
                     $criterion['value'] = Toolbox::addslashes_deep($criterion['value']);
                 }
 
                 return true;
             };
 
-           // call the closure
+            // call the closure
             $check_criteria_result = $check_criteria($params['criteria']);
             if ($check_criteria_result !== true) {
                 $this->returnError($check_criteria_result);
             }
         }
 
-       // manage forcedisplay
+        // manage forcedisplay
         if (isset($params['forcedisplay'])) {
             if (!is_array($params['forcedisplay'])) {
                 $params['forcedisplay'] = [intval($params['forcedisplay'])];
@@ -1638,7 +1647,7 @@ abstract class API
             }
         }
 
-       // transform range parameter in start and limit variables
+        // transform range parameter in start and limit variables
         if (isset($params['range'])) {
             if (preg_match("/^[0-9]+-[0-9]+\$/", $params['range'])) {
                 $range = explode("-", $params['range']);
@@ -1652,16 +1661,16 @@ abstract class API
             $params['range'] = [0, $_SESSION['glpilist_limit'] - 1];
         }
 
-       // force reset
+        // force reset
         $params['reset'] = 'reset';
 
-       // force logging sql queries
+        // force logging sql queries
         $_SESSION['glpi_use_mode'] = Session::DEBUG_MODE;
 
-       // call Core Search method
+        // call Core Search method
         $rawdata = Search::getDatas($itemtype, $params, $params['forcedisplay']);
 
-       // probably a sql error
+        // probably a sql error
         if (!isset($rawdata['data']) || count($rawdata['data']) === 0) {
             $this->returnError(
                 "Unexpected SQL Error : " . array_splice($DEBUG_SQL['errors'], -2)[0],
@@ -1671,7 +1680,8 @@ abstract class API
             );
         }
 
-        $cleaned_data = ['totalcount' => $rawdata['data']['totalcount'],
+        $cleaned_data = [
+            'totalcount' => $rawdata['data']['totalcount'],
             'count'      => count($rawdata['data']['rows']),
             'sort'       => $rawdata['search']['sort'],
             'order'      => $rawdata['search']['order']
@@ -1685,18 +1695,18 @@ abstract class API
             );
         }
 
-       // fix end range
+        // fix end range
         if ($params['range'][1] > $cleaned_data['totalcount'] - 1) {
             $params['range'][1] = $cleaned_data['totalcount'] - 1;
         }
 
-       //prepare cols (searchoptions_id) for cleaned data
+        //prepare cols (searchoptions_id) for cleaned data
         $cleaned_cols = [];
         $uid_cols = [];
         foreach ($rawdata['data']['cols'] as $col) {
             $cleaned_cols[] = $col['id'];
             if (isset($params['uid_cols'])) {
-               // prepare cols with uid
+                // prepare cols with uid
                 $uid_cols[] = $soptions[$col['id']]['uid'];
             }
         }
@@ -1705,18 +1715,18 @@ abstract class API
             $raw = $row['raw'];
             $id = $raw['id'];
 
-           // keep row itemtype for all asset
+            // keep row itemtype for all asset
             if ($itemtype == AllAssets::getType()) {
                 $current_id       = $raw['id'];
                 $current_itemtype = $raw['TYPE'];
             }
 
-           // retrive value (and manage multiple values)
+            // retrive value (and manage multiple values)
             $clean_values = [];
             foreach ($rawdata['data']['cols'] as $col) {
                 $rvalues = $row[$col['itemtype'] . '_' . $col['id']];
 
-               // manage multiple values (ex: IP adresses)
+                // manage multiple values (ex: IP adresses)
                 $current_values = [];
                 for ($valindex = 0; $valindex < $rvalues['count']; $valindex++) {
                     $current_values[] = $rvalues[$valindex]['name'];
@@ -1728,20 +1738,20 @@ abstract class API
                 $clean_values[] = $current_values;
             }
 
-           // combine cols (searchoptions_id) with values (raws data)
+            // combine cols (searchoptions_id) with values (raws data)
             if (isset($params['uid_cols'])) {
                 $current_line = array_combine($uid_cols, $clean_values);
             } else {
                 $current_line = array_combine($cleaned_cols, $clean_values);
             }
 
-           // if all asset, provide type in returned data
+            // if all asset, provide type in returned data
             if ($itemtype == AllAssets::getType()) {
                 $current_line['id']       = $current_id;
                 $current_line['itemtype'] = $current_itemtype;
             }
 
-           // append to final array
+            // append to final array
             if (isset($params['withindexes'])) {
                 $cleaned_data['data'][$id] = $current_line;
             } else {
@@ -1749,7 +1759,7 @@ abstract class API
             }
         }
 
-       // add rows with their html
+        // add rows with their html
         if (isset($params['giveItems'])) {
             $cleaned_data['data_html'] = [];
             foreach ($rawdata['data']['rows'] as $row) {
@@ -1777,9 +1787,9 @@ abstract class API
         }
 
         $cleaned_data['content-range'] = implode('-', $params['range']) .
-                                       "/" . $cleaned_data['totalcount'];
+            "/" . $cleaned_data['totalcount'];
 
-       // return data
+        // return data
         return $cleaned_data;
     }
 
@@ -1823,23 +1833,24 @@ abstract class API
                 $object      = $this->inputObjectToArray($object);
                 $current_res = [];
 
-               //check rights
+                //check rights
                 if (!$item->can(-1, CREATE, $object)) {
                     $failed++;
-                    $current_res = ['id'      => false,
+                    $current_res = [
+                        'id'      => false,
                         'message' => __("You don't have permission to perform this action.")
                     ];
                 } else {
-                   // add missing entity
+                    // add missing entity
                     if (!isset($object['entities_id'])) {
                         $object['entities_id'] = $_SESSION['glpiactive_entity'];
                     }
 
-                   // add an entry to match gui post (which contains submit button)
-                   // to force having messages after redirect
+                    // add an entry to match gui post (which contains submit button)
+                    // to force having messages after redirect
                     $object["_add"] = true;
 
-                   //add current item
+                    //add current item
                     $object = Sanitizer::sanitize($object);
                     $new_id = $item->add($object);
                     if ($new_id === false) {
@@ -1852,12 +1863,13 @@ abstract class API
                         // contains some encoded html
                         $message = Sanitizer::decodeHtmlSpecialChars($message);
                     }
-                    $current_res = ['id'      => $new_id,
+                    $current_res = [
+                        'id'      => $new_id,
                         'message' => $message
                     ];
                 }
 
-               // attach fileupload answer
+                // attach fileupload answer
                 if (
                     isset($params['upload_result'])
                     && isset($params['upload_result'][$index])
@@ -1865,7 +1877,7 @@ abstract class API
                     $current_res['upload_result'] = $params['upload_result'][$index];
                 }
 
-               // append current result to final collection
+                // append current result to final collection
                 $idCollection[] = $current_res;
                 $index++;
             }
@@ -1954,7 +1966,8 @@ abstract class API
                 if (isset($object->id)) {
                     if (!$item->getFromDB($object->id)) {
                         $failed++;
-                        $current_res = [$object->id => false,
+                        $current_res = [
+                            $object->id => false,
                             'message'   => __("Item not found")
                         ];
                         continue;
@@ -1963,36 +1976,38 @@ abstract class API
                     //check rights
                     if (!$item->can($object->id, UPDATE)) {
                         $failed++;
-                        $current_res = [$object->id => false,
+                        $current_res = [
+                            $object->id => false,
                             'message'    => __("You don't have permission to perform this action.")
                         ];
                     } else {
-                     // if parent key not provided in input and present in parameter
-                     // (detected from url for example), try to appent it do input
-                     // This is usefull to have logs in parent (and avoid some warnings in commonDBTM)
+                        // if parent key not provided in input and present in parameter
+                        // (detected from url for example), try to appent it do input
+                        // This is usefull to have logs in parent (and avoid some warnings in commonDBTM)
                         if (
                             isset($params['parent_itemtype'])
                             && isset($params['parent_id'])
                         ) {
-                              $fk_parent = getForeignKeyFieldForItemType($params['parent_itemtype']);
+                            $fk_parent = getForeignKeyFieldForItemType($params['parent_itemtype']);
                             if (!property_exists($input, $fk_parent)) {
                                 $input->$fk_parent = $params['parent_id'];
                             }
                         }
 
-                     //update item
+                        //update item
                         $object = Sanitizer::sanitize((array)$object);
                         $update_return = $item->update($object);
                         if ($update_return === false) {
-                             $failed++;
+                            $failed++;
                         }
-                        $current_res = [$item->fields["id"] => $update_return,
+                        $current_res = [
+                            $item->fields["id"] => $update_return,
                             'message'           => $this->getGlpiLastMessage()
                         ];
                     }
                 }
 
-               // attach fileupload answer
+                // attach fileupload answer
                 if (
                     isset($params['upload_result'])
                     && isset($params['upload_result'][$index])
@@ -2000,7 +2015,7 @@ abstract class API
                     $current_res['upload_result'] = $params['upload_result'][$index];
                 }
 
-               // append current result to final collection
+                // append current result to final collection
                 $idCollection[] = $current_res;
                 $index++;
             }
@@ -2043,7 +2058,8 @@ abstract class API
     {
         $itemtype = $this->handleDepreciation($itemtype);
 
-        $default  = ['force_purge' => false,
+        $default  = [
+            'force_purge' => false,
             'history'     => true
         ];
         $params   = array_merge($default, $params);
@@ -2082,34 +2098,34 @@ abstract class API
                         || !$item->maybeDeleted()
                         // Do not take into account deleted field if maybe dynamic but not dynamic
                         || ($item->useDeletedToLockIfDynamic()
-                        && !$item->isDynamic())
+                            && !$item->isDynamic())
                     ) {
                         $params['force_purge'] = 1;
                     } else {
                         $params['force_purge'] = filter_var($params['force_purge'], FILTER_VALIDATE_BOOLEAN);
                     }
 
-                   //check rights
+                    //check rights
                     if (
                         ($params['force_purge']
-                        && !$item->can($object->id, PURGE))
+                            && !$item->can($object->id, PURGE))
                         || (!$params['force_purge']
-                        && !$item->can($object->id, DELETE))
+                            && !$item->can($object->id, DELETE))
                     ) {
-                          $failed++;
-                          $idCollection[] = [
-                              $object->id => false,
-                              'message' => __("You don't have permission to perform this action.")
-                          ];
+                        $failed++;
+                        $idCollection[] = [
+                            $object->id => false,
+                            'message' => __("You don't have permission to perform this action.")
+                        ];
                     } else {
-                   //delete item
+                        //delete item
                         $delete_return = $item->delete(
                             (array) $object,
                             $params['force_purge'],
                             $params['history']
                         );
                         if ($delete_return === false) {
-                             $failed++;
+                            $failed++;
                         }
                         $idCollection[] = [$object->id => $delete_return, 'message' => $this->getGlpiLastMessage()];
                     }
@@ -2228,7 +2244,7 @@ abstract class API
     private function checkAppToken()
     {
 
-       // check app token (if needed)
+        // check app token (if needed)
         if (!isset($this->parameters['app_token'])) {
             $this->parameters['app_token'] = "";
         }
@@ -2352,18 +2368,18 @@ abstract class API
             && count($_SESSION["MESSAGE_AFTER_REDIRECT"]) > 0
         ) {
             $messages_after_redirect = $_SESSION["MESSAGE_AFTER_REDIRECT"];
-           // Clean messages
+            // Clean messages
             $_SESSION["MESSAGE_AFTER_REDIRECT"] = [];
         };
 
-       // clean html
+        // clean html
         foreach ($messages_after_redirect as $messages) {
             foreach ($messages as $message) {
                 $all_messages[] = Toolbox::stripTags($message);
             }
         }
 
-       // get sql errors
+        // get sql errors
         if (
             count($all_messages) <= 0
             && $DEBUG_SQL['errors'] !== null
@@ -2403,14 +2419,14 @@ abstract class API
     protected function header($html = false, $title = "")
     {
 
-       // Send UTF8 Headers
+        // Send UTF8 Headers
         $content_type = static::$content_type;
         if ($html) {
             $content_type = "text/html";
         }
         header("Content-Type: $content_type; charset=UTF-8");
 
-       // Send extra expires header
+        // Send extra expires header
         Html::header_nocache();
 
         if ($html) {
@@ -2420,7 +2436,7 @@ abstract class API
 
             Html::includeHeader($title);
 
-           // Body with configured stuff
+            // Body with configured stuff
             echo "<body>";
             echo "<div id='page'>";
         }
@@ -2471,13 +2487,14 @@ abstract class API
     protected static function parseDropdowns($fields, $params = [])
     {
 
-       // default params
-        $default = ['expand_dropdowns' => false,
+        // default params
+        $default = [
+            'expand_dropdowns' => false,
             'get_hateoas'      => true
         ];
         $params = array_merge($default, $params);
 
-       // parse fields recursively
+        // parse fields recursively
         foreach ($fields as $key => &$value) {
             if (is_array($value)) {
                 $value = self::parseDropdowns($value, $params);
@@ -2486,7 +2503,7 @@ abstract class API
                 continue;
             }
             if (isForeignKeyField($key)) {
-               // specific key transformations
+                // specific key transformations
                 if ($key == "items_id" && isset($fields['itemtype'])) {
                     $key = getForeignKeyFieldForItemType($fields['itemtype']);
                 }
@@ -2499,7 +2516,7 @@ abstract class API
                 if ($key == "default_requesttypes_id") {
                     $key = "requesttypes_id";
                 }
-               // mainitems_id mainitemtype
+                // mainitems_id mainitemtype
                 if ($key == "mainitems_id" && isset($fields['mainitemtype'])) {
                     $key = getForeignKeyFieldForItemType($fields['mainitemtype']);
                 }
@@ -2511,14 +2528,15 @@ abstract class API
                     $tablename = getTableNameForForeignKeyField($key);
                     $itemtype = getItemTypeForTable($tablename);
 
-                   // get hateoas
+                    // get hateoas
                     if ($params['get_hateoas'] && is_integer($value)) {
-                        $fields['links'][] = ['rel'  => $itemtype,
+                        $fields['links'][] = [
+                            'rel'  => $itemtype,
                             'href' => self::$api_url . "/$itemtype/" . $value
                         ];
                     }
 
-                   // expand dropdown
+                    // expand dropdown
                     if ($params['expand_dropdowns']) {
                         $value = Dropdown::getDropdownName($tablename, $value, false, true, false, '');
                     }
@@ -2555,22 +2573,23 @@ abstract class API
         }
         if (in_array($itemtype, $CFG_GLPI["ticket_types"])) {
             $hclasses[] = "Item_Ticket";
-        }if (in_array($itemtype, $CFG_GLPI["project_asset_types"])) {
+        }
+        if (in_array($itemtype, $CFG_GLPI["project_asset_types"])) {
             $hclasses[] = "Item_Project";
         }
         if (in_array($itemtype, $CFG_GLPI["networkport_types"])) {
             $hclasses[] = "NetworkPort";
         }
         if (in_array($itemtype, $CFG_GLPI["itemdevices_types"])) {
-           //$hclasses[] = "Item_Devices";
+            //$hclasses[] = "Item_Devices";
             foreach ($CFG_GLPI['device_types'] as $device_type) {
                 if (
                     (($device_type == "DeviceMemory")
-                    && !in_array($itemtype, $CFG_GLPI["itemdevicememory_types"]))
+                        && !in_array($itemtype, $CFG_GLPI["itemdevicememory_types"]))
                     || (($device_type == "DevicePowerSupply")
-                    && !in_array($itemtype, $CFG_GLPI["itemdevicepowersupply_types"]))
+                        && !in_array($itemtype, $CFG_GLPI["itemdevicepowersupply_types"]))
                     || (($device_type == "DeviceNetworkCard")
-                    && !in_array($itemtype, $CFG_GLPI["itemdevicenetworkcard_types"]))
+                        && !in_array($itemtype, $CFG_GLPI["itemdevicenetworkcard_types"]))
                 ) {
                     continue;
                 }
@@ -2578,7 +2597,7 @@ abstract class API
             }
         }
 
-       //specific case
+        //specific case
         switch ($itemtype) {
             case 'Ticket':
                 $hclasses[] = "TicketTask";
@@ -2836,12 +2855,12 @@ abstract class API
                     continue;
                 }
 
-               // Get friendlyname for given fkey
+                // Get friendlyname for given fkey
                 $kn_itemtype = getItemtypeForForeignKeyField($kn_fkey);
                 $kn_id = $data[$kn_fkey];
             }
 
-           // Check itemtype is valid
+            // Check itemtype is valid
             $kn_item = getItemForItemtype($kn_itemtype);
             if (!$kn_item) {
                 trigger_error(sprintf('Invalid itemtype "%s" for fkey "%s".', $kn_itemtype, $kn_fkey), E_USER_WARNING);
@@ -2910,7 +2929,7 @@ abstract class API
 
                 foreach ($netp_iterator as $data) {
                     if (isset($data['netport_id'])) {
-                       // append network name
+                        // append network name
                         $concat_expr = new QueryExpression(
                             "GROUP_CONCAT(CONCAT(" . $DB->quoteName('ipadr.id') . ", " . $DB->quoteValue(Search::SHORTSEP) . " , " . $DB->quoteName('ipadr.name') . ")
                      SEPARATOR " . $DB->quoteValue(Search::LONGSEP) . ") AS " . $DB->quoteName('ipadresses')
@@ -2970,14 +2989,14 @@ abstract class API
                         ]);
 
                         if (count($netn_iterator)) {
-                               $data_netn = $netn_iterator->current();
+                            $data_netn = $netn_iterator->current();
 
-                               $raw_ipadresses = explode(Search::LONGSEP, $data_netn['ipadresses']);
-                               $ipadresses = [];
+                            $raw_ipadresses = explode(Search::LONGSEP, $data_netn['ipadresses']);
+                            $ipadresses = [];
                             foreach ($raw_ipadresses as $ipadress) {
                                 $ipadress = explode(Search::SHORTSEP, $ipadress);
 
-                               //find ip network attached to these ip
+                                //find ip network attached to these ip
                                 $ipnetworks = [];
                                 $ipnet_iterator = $DB->request([
                                     'SELECT'       => [
@@ -3004,7 +3023,7 @@ abstract class API
                                     ]
                                 ]);
                                 foreach ($ipnet_iterator as $data_ipnet) {
-                                              $ipnetworks[] = $data_ipnet;
+                                    $ipnetworks[] = $data_ipnet;
                                 }
 
                                 $ipadresses[] = [
@@ -3014,21 +3033,21 @@ abstract class API
                                 ];
                             }
 
-                               $data['NetworkName'] = [
-                                   'id'         => $data_netn['networknames_id'],
-                                   'name'       => $data_netn['networkname'],
-                                   'fqdns_id'   => $data_netn['fqdns_id'],
-                                   'FQDN'       => [
-                                       'id'   => $data_netn['fqdns_id'],
-                                       'name' => $data_netn['fqdn_name'],
-                                       'fqdn' => $data_netn['fqdn']
-                                   ],
-                                   'IPAddress' => $ipadresses
-                               ];
+                            $data['NetworkName'] = [
+                                'id'         => $data_netn['networknames_id'],
+                                'name'       => $data_netn['networkname'],
+                                'fqdns_id'   => $data_netn['fqdns_id'],
+                                'FQDN'       => [
+                                    'id'   => $data_netn['fqdns_id'],
+                                    'name' => $data_netn['fqdn_name'],
+                                    'fqdn' => $data_netn['fqdn']
+                                ],
+                                'IPAddress' => $ipadresses
+                            ];
                         }
                     }
 
-                     $_networkports[$networkport_type][] = $data;
+                    $_networkports[$networkport_type][] = $data;
                 }
             }
         }
@@ -3054,11 +3073,11 @@ abstract class API
         }
 
         if (!empty($user->fields['picture'])) {
-           // Send file
+            // Send file
             $file = GLPI_PICTURE_DIR . '/' . $user->fields['picture'];
             Toolbox::sendFile($file, $user->fields['picture']);
         } else {
-           // No content
+            // No content
             http_response_code(204);
         }
         die;
@@ -3077,11 +3096,11 @@ abstract class API
         $deprecated = Toolbox::isAPIDeprecated($itemtype);
 
         if ($deprecated) {
-           // Keep a reference to deprecated item
+            // Keep a reference to deprecated item
             $class = "Glpi\Api\Deprecated\\$itemtype";
             $this->deprecated_item = new $class();
 
-           // Get correct itemtype
+            // Get correct itemtype
             $itemtype = $this->deprecated_item->getType();
         }
 
@@ -3114,7 +3133,7 @@ abstract class API
         bool $is_deleted = false
     ) {
         if (is_null($id)) {
-           // No id supplied, show massive actions for the given itemtype
+            // No id supplied, show massive actions for the given itemtype
             $actions = $this->getMassiveActionsForItemtype(
                 $itemtype,
                 $is_deleted
@@ -3122,7 +3141,7 @@ abstract class API
         } else {
             $item = new $itemtype();
             if (!$item->getFromDB($id)) {
-               // Id was supplied but item can't be loaded -> error
+                // Id was supplied but item can't be loaded -> error
                 return $this->returnError(
                     "Failed to load item (itemtype = '$itemtype', id = '$id')",
                     400,
@@ -3130,8 +3149,8 @@ abstract class API
                 );
             }
 
-           // Id supplied and item was loaded, show massive action for this
-           // specific item
+            // Id supplied and item was loaded, show massive action for this
+            // specific item
             $actions = $this->getMassiveActionsForItem($item);
         }
 
@@ -3140,7 +3159,7 @@ abstract class API
             return;
         }
 
-       // Build response array
+        // Build response array
         $response = [];
         foreach ($actions as $key => $label) {
             $response[] = [
@@ -3183,7 +3202,7 @@ abstract class API
      */
     public function getMassiveActionsForItem(CommonDBTM $item): array
     {
-       // Return massive actions for a given item
+        // Return massive actions for a given item
         $actions = MassiveAction::getAllMassiveActions(
             $item::getType(),
             $item->isDeleted(),
@@ -3226,7 +3245,7 @@ abstract class API
 
         $action = explode(':', $action_key);
         if (($action[1] ?? "") == 'update') {
-           // Specific case, update form call "exit" function so we don't want to run the actual code
+            // Specific case, update form call "exit" function so we don't want to run the actual code
             return [];
         }
 
@@ -3256,26 +3275,26 @@ abstract class API
             'is_deleted' => $is_deleted
         ], [], 'specialize');
 
-       // Capture form display
+        // Capture form display
         ob_start();
         $ma->showSubForm();
         $html = ob_get_clean();
 
-       // Parse html to find all non hidden inputs, textareas and select
+        // Parse html to find all non hidden inputs, textareas and select
         $inputs = [];
         $crawler = new Crawler($html);
         $crawler->filterXPath('//input')->each(function (Crawler $node, $i) use (&$inputs) {
             if ($node->attr('type') != "hidden") {
-                  $inputs[] = [
-                      'name' => $node->attr('name'),
-                      'type' => $node->attr('type'),
-                  ];
+                $inputs[] = [
+                    'name' => $node->attr('name'),
+                    'type' => $node->attr('type'),
+                ];
             }
         });
         $crawler->filterXPath('//select')->each(function (Crawler $node, $i) use (&$inputs) {
             $type = 'select';
             if (str_starts_with($node->attr('id'), 'dropdown_')) {
-                  $type = 'dropdown';
+                $type = 'dropdown';
             }
             $inputs[] = [
                 'name' => $node->attr('name'),
@@ -3317,7 +3336,7 @@ abstract class API
             );
         }
 
-       // Get processor
+        // Get processor
         $action = explode(':', $action_key);
         $processor = $action[0];
 
@@ -3332,20 +3351,20 @@ abstract class API
         unset($results['redirect']);
 
         if ($results['ok'] == 0 && $results['noaction'] == 0 && $results['ko'] == 0 && $results['noright'] == 0) {
-           // No items were processed, invalid action key -> 400
+            // No items were processed, invalid action key -> 400
             $this->returnError(
                 "Invalid action key parameter, run 'getMassiveActions' endpoint to see available keys",
                 400,
                 "ERROR_MASSIVEACTION_KEY"
             );
         } else if ($results['ok'] > 0 && $results['ko'] == 0) {
-           // Success -> 200
+            // Success -> 200
             $code = 200;
         } else if ($results['ko'] > 0 && $results['ok'] > 0) {
-           // Failure AND success -> 207
+            // Failure AND success -> 207
             $code = 207;
         } else {
-           // Failure -> 422
+            // Failure -> 422
             $code = 422;
         }
 

@@ -67,7 +67,8 @@
                <a class="dropdown-item"
                   href="{{ path(firstlevel['default_dashboard']) }}">
                   <i class="ti ti-dashboard"></i>
-                  {{ __('Dashboard') }}
+                  {# {{ __('Dashboard') }} #}
+                  {{ __('Homepage') }}
                </a>
             {% endif %}
             {% for sublevel in firstlevel['content'] %}

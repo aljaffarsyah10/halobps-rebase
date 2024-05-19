@@ -7,7 +7,7 @@ class DB extends DBmysql
    // public $dbpassword = 'bh!nneKa1';
    public $dbpassword = '';
    // public $dbdefault = 'halosisw_dev';
-   public $dbdefault = 'dev-halobps';
+   public $dbdefault = 'cube-halobps';
    public $use_timezones = true;
    public $use_utf8mb4 = true;
    public $allow_myisam = false;

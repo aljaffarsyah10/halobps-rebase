@@ -193,8 +193,10 @@ class PluginMydashboardMenu extends CommonGLPI
         $menu['title']           = self::getTypeName();
         $menu['page']            = $plugin_page;
         $menu['links']['search'] = $plugin_page;
-        if (Session::haveRightsOr("plugin_mydashboard_config", [CREATE, UPDATE])
-            || Session::haveRight("config", UPDATE)) {
+        if (
+            Session::haveRightsOr("plugin_mydashboard_config", [CREATE, UPDATE])
+            || Session::haveRight("config", UPDATE)
+        ) {
             //Entry icon in breadcrumb
             $menu['links']['config'] = PluginMydashboardConfig::getFormURL(false);
         }
@@ -272,24 +274,26 @@ class PluginMydashboardMenu extends CommonGLPI
             }
         }
         $iterator = $DB->request(
-            ['SELECT'    => [
-                'glpi_profiles.name',
-                'glpi_profiles.id'
-            ],
-             'FROM'      => Profile::getTable(),
-             'LEFT JOIN' => [
-                 'glpi_profilerights' => [
-                     'FKEY' => [
-                         'glpi_profilerights' => 'profiles_id',
-                         'glpi_profiles'      => 'id'
-                     ]
-                 ]
-             ],
-             'WHERE'     => [Profile::getUnderActiveProfileRestrictCriteria(),
-                             'glpi_profilerights.name'   => 'plugin_mydashboard',
-                             'glpi_profilerights.rights' => ['>', 0],
-             ],
-             'ORDER'     => 'glpi_profilerights.name'
+            [
+                'SELECT'    => [
+                    'glpi_profiles.name',
+                    'glpi_profiles.id'
+                ],
+                'FROM'      => Profile::getTable(),
+                'LEFT JOIN' => [
+                    'glpi_profilerights' => [
+                        'FKEY' => [
+                            'glpi_profilerights' => 'profiles_id',
+                            'glpi_profiles'      => 'id'
+                        ]
+                    ]
+                ],
+                'WHERE'     => [
+                    Profile::getUnderActiveProfileRestrictCriteria(),
+                    'glpi_profilerights.name'   => 'plugin_mydashboard',
+                    'glpi_profilerights.rights' => ['>', 0],
+                ],
+                'ORDER'     => 'glpi_profilerights.name'
             ]
         );
 
@@ -333,16 +337,16 @@ class PluginMydashboardMenu extends CommonGLPI
         //list item click with the adding on the mydashboard, and we need to display
         //this div contains the header and the content (basically the ul used by sDashboard)
 
-        echo "<div class='plugin_mydashboard_dashboard' >";//(div.plugin_mydashboard_dashboard)
+        echo "<div class='plugin_mydashboard_dashboard' >"; //(div.plugin_mydashboard_dashboard)
 
         //This first div is the header of the mydashboard, basically it display a name, informations and a button to toggle full screen
-        echo "<div class='plugin_mydashboard_header'>";//(div.plugin_mydashboard_header)
-        echo "</div>";//end(div.plugin_mydashboard_header)
+        echo "<div class='plugin_mydashboard_header'>"; //(div.plugin_mydashboard_header)
+        echo "</div>"; //end(div.plugin_mydashboard_header)
         //Now the content
         //      echo "<div class='plugin_mydashboard_content'>";//(div.plugin_mydashboard_content)
         //
         //      echo "</div>";//end(div.plugin_mydashboard_content)
-        echo "</div>";//end(div.plugin_mydashboard_dashboard)
+        echo "</div>"; //end(div.plugin_mydashboard_dashboard)
 
         //      //Automatic refreshing of the widgets (that wants to be refreshed -> see PluginMydashboardModule::toggleRefresh() )
         if (self::$_PLUGIN_MYDASHBOARD_CFG['automatic_refresh']) {
@@ -405,16 +409,20 @@ class PluginMydashboardMenu extends CommonGLPI
             $dashboard = new PluginMydashboardDashboard();
 
             if ($edit == 2) {
-                $options = ["users_id"    => 0,
-                            "profiles_id" => $selected_profile];
+                $options = [
+                    "users_id"    => 0,
+                    "profiles_id" => $selected_profile
+                ];
                 $id      = PluginMydashboardDashboard::checkIfPreferenceExists($options);
                 if ($dashboard->getFromDB($id)) {
                     $grid = stripslashes($dashboard->fields['grid']);
                 }
             }
             if ($edit == 1) {
-                $option_users = ["users_id"    => Session::getLoginUserID(),
-                                 "profiles_id" => $selected_profile];
+                $option_users = [
+                    "users_id"    => Session::getLoginUserID(),
+                    "profiles_id" => $selected_profile
+                ];
                 $id           = PluginMydashboardDashboard::checkIfPreferenceExists($option_users);
                 if ($dashboard->getFromDB($id)) {
                     $grid = stripslashes($dashboard->fields['grid']);
@@ -534,9 +542,11 @@ class PluginMydashboardMenu extends CommonGLPI
             }
 
             $this->interface = (Session::getCurrentInterface() == 'central') ? 1 : 0;
-            if (self::$_PLUGIN_MYDASHBOARD_CFG['enable_fullscreen']
+            if (
+                self::$_PLUGIN_MYDASHBOARD_CFG['enable_fullscreen']
                 && $edit < 1
-                && $this->interface == 1) {
+                && $this->interface == 1
+            ) {
                 echo "<a id='header_fullscreen' class='submit btn btn-info'>";
                 echo "<i class='ti ti-maximize pointer btn-mydashboard' title='" . __("Fullscreen", "mydashboard") . "'
                            data-hasqtip='0' aria-hidden='true'></i>";
@@ -621,9 +631,11 @@ class PluginMydashboardMenu extends CommonGLPI
             }
 
             $this->interface = (Session::getCurrentInterface() == 'central') ? 1 : 0;
-            if (self::$_PLUGIN_MYDASHBOARD_CFG['enable_fullscreen']
+            if (
+                self::$_PLUGIN_MYDASHBOARD_CFG['enable_fullscreen']
                 && $edit < 1
-                && $this->interface == 1) {
+                && $this->interface == 1
+            ) {
                 echo "<a id='header_fullscreen' class='submit btn btn-info'>";
                 echo "<i class='ti ti-maximize pointer btn-mydashboard' title='" . __("Fullscreen", "mydashboard") . "'
                            data-hasqtip='0' aria-hidden='true'></i>";
@@ -938,7 +950,7 @@ class PluginMydashboardMenu extends CommonGLPI
                 ];
                 $languages['select']          = [
                     "rows" => [
-                        "_" => "",// __('You have selected %d rows', 'mydashboard')
+                        "_" => "", // __('You have selected %d rows', 'mydashboard')
                         //                  "0" => "Click a row to select",
                         "1" => __('1 row selected', 'mydashboard')
                     ]
@@ -1095,11 +1107,13 @@ class PluginMydashboardMenu extends CommonGLPI
 
                     $id          = substr($v["id"], 2);
                     $widget_name = $obj->getWidgetNameById($id);
-                    if (strpos($widget_name, "PluginMydashboardReports_Bar") === 0
+                    if (
+                        strpos($widget_name, "PluginMydashboardReports_Bar") === 0
                         || strpos($widget_name, "PluginMydashboardReports_Line") === 0
                         || strpos($widget_name, "PluginMydashboardReports_Pie") === 0
                         || strpos($widget_name, "PluginMydashboardReports_Funnel") === 0
-                        || strpos($widget_name, "PluginMydashboardReports_Custom") === 0) {
+                        || strpos($widget_name, "PluginMydashboardReports_Custom") === 0
+                    ) {
                         $displayed_widgets[]    = $widget_name;
                         $displayed_widgets_id[] = $v["id"];
                     }
@@ -1124,8 +1138,10 @@ class PluginMydashboardMenu extends CommonGLPI
         $allwidgetjson = [];
 
         if ($edit > 0) {
-            if (isset($_SESSION["glpi_plugin_mydashboard_allwidgets"])
-                && count($_SESSION["glpi_plugin_mydashboard_allwidgets"]) > 0) {
+            if (
+                isset($_SESSION["glpi_plugin_mydashboard_allwidgets"])
+                && count($_SESSION["glpi_plugin_mydashboard_allwidgets"]) > 0
+            ) {
                 $allwidgetjson = $_SESSION["glpi_plugin_mydashboard_allwidgets"];
             } else {
                 //            if (empty($grid) && count($widgets) < 1) {
@@ -1604,7 +1620,7 @@ class PluginMydashboardMenu extends CommonGLPI
         $out = "<script type='text/javascript'>\n";
         $out .= "$(function() {";
         $out .= "$('<div id=\'$name\' class=\'slidepanel on{$param['position']}\'><div class=\"header\">" .
-                "<button type=\'button\' class=\'close ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close\' title=\'" . __s('Close') . "\'><span class=\'ui-button-icon-primary ui-icon ui-icon-closethick\'></span><span class=\'ui-button-text\'>X</span></button>";
+            "<button type=\'button\' class=\'close ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close\' title=\'" . __s('Close') . "\'><span class=\'ui-button-icon-primary ui-icon ui-icon-closethick\'></span><span class=\'ui-button-text\'>X</span></button>";
 
         if ($param['icon']) {
             $icon = "<img class=\'icon\' src=\'{$CFG_GLPI['root_doc']}{$param['icon']}\' alt=\'{$param['icon_txt']}\' title=\'{$param['icon_txt']}\'/>";

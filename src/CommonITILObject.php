@@ -3008,26 +3008,26 @@ abstract class CommonITILObject extends CommonDBTM
 
         $email = UserEmail::getDefaultForUser(Session::getLoginUserID());
         $email = "zulhan@bps.go.id";
-        // if (!isset($_SESSION['bmn']['nup_bmn'])) {
-        $apiUrl = 'http://localhost:8000/api/v1/users/' . $email . '/assets-email';
-        $response = static::getApiMania($apiUrl);
-        if ($response) {
-            $responseData = json_decode($response, true);
+        if (!isset($_SESSION['bmn']['nup_bmn'])) {
+            $apiUrl = 'http://localhost:8000/api/v1/users/' . $email . '/assets-email';
+            $response = static::getApiMania($apiUrl);
+            if ($response) {
+                $responseData = json_decode($response, true);
 
-            foreach ($responseData['rows'] as $item) {
-                if (isset($item['nup_bmn']) && $item['nup_bmn'] !== null) {
-                    $bmn['nup_bmn_value'][] = $item['nup_bmn'];
-                    $bmn['dropdown_value'][] = $item['nama_barang'] . ' - ' . $item['nup_bmn'];
+                foreach ($responseData['rows'] as $item) {
+                    if (isset($item['nup_bmn']) && $item['nup_bmn'] !== null) {
+                        $bmn['nup_bmn_value'][] = $item['nup_bmn'];
+                        $bmn['dropdown_value'][] = $item['nama_barang'] . ' - ' . $item['nup_bmn'];
+                    }
                 }
+                array_unshift($bmn['nup_bmn_value'], null);
+                array_unshift($bmn['dropdown_value'], 'Pilih NUP BMN');
+                $_SESSION['bmn']['nup_bmn'] = array_values($bmn['nup_bmn_value']);
+                $_SESSION['bmn']['dropdown_value'] = array_values($bmn['dropdown_value']);
+            } else {
+                echo 'Error: Unable to fetch data from the API.';
             }
-            array_unshift($bmn['nup_bmn_value'], null);
-            array_unshift($bmn['dropdown_value'], 'Pilih NUP BMN');
-            $_SESSION['bmn']['nup_bmn'] = array_values($bmn['nup_bmn_value']);
-            $_SESSION['bmn']['dropdown_value'] = array_values($bmn['dropdown_value']);
-        } else {
-            echo 'Error: Unable to fetch data from the API.';
         }
-        // }
         $values = $_SESSION['bmn']['dropdown_value'];
         return Dropdown::showFromArray($p['name'], $values, $p);
     }
