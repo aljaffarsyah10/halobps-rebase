@@ -29231,3 +29231,13 @@ Compile css/palettes/lightblue.scss  {"user":"2@YOSRAL-34005894"}
   default.php:89                                     include()
   
 [2024-05-14 10:19:45] glpiphplog.ALERT:   *** PHP Compile Error (64): Cannot redeclare KnowbaseItem::showRecentPopular() in D:\Data Aplikasi\xampp php 8.0.2\htdocs\b\halobps-rebase\src\KnowbaseItem.php at line 2401  
+[2024-05-23 15:37:15] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\User.php at line 941
+  Backtrace :
+  src\CommonDBTM.php:1612                            User->prepareInputForUpdate()
+  ajax\itillayout.php:56                             CommonDBTM->update()
+  
+[2024-05-23 15:37:17] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\User.php at line 941
+  Backtrace :
+  src\CommonDBTM.php:1612                            User->prepareInputForUpdate()
+  ajax\itillayout.php:56                             CommonDBTM->update()
+  

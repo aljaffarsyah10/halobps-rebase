@@ -141,6 +141,6 @@ class __TwigTemplate_3253f05b224c2fe5d69262f9f26d6f8a3a1644dc1f7c106548e4d4c5d8e
 
     public function getSourceContext()
     {
-        return new Source("", "components/user/picture.html.twig", "D:\\Data Aplikasi\\xampp php 8.0.2\\htdocs\\b\\halobps-rebase\\templates\\components\\user\\picture.html.twig");
+        return new Source("", "components/user/picture.html.twig", "D:\\Data Aplikasi\\xampp php 8.0.2\\htdocs\\merging-manual\\halobps-rebase\\templates\\components\\user\\picture.html.twig");
     }
 }
