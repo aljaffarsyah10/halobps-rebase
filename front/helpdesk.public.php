@@ -187,14 +187,6 @@ if (isset($_GET['create_ticket'])) {
     //     Html::redirect($CFG_GLPI['root_doc'] . "/front/ticket.form.php?id=" . $ticket_satisfactions_id . "&forcetab=Ticket$3");
     // }
 
-<<<<<<< HEAD
-=======
-        //redirect to satisfaction survey form
-        $ticket_satisfactions_id = Ticket::getIDTicketSatisfactions();
-        Html::redirect($CFG_GLPI['root_doc'] . "/front/ticket.form.php?id=" . $ticket_satisfactions_id . "&forcetab=Ticket$3");
-    }
-
->>>>>>> 429933fc5 (add field hidden bmn_value,js,used current email)
     Html::helpHeader(__('New ticket'), "create_ticket");
     $ticket = new Ticket();
     $ticket->showFormHelpdesk(Session::getLoginUserID());

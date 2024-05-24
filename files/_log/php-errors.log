@@ -33668,3 +33668,10 @@ Compile css/palettes/lightblue.scss  {"user":"@LAPTOP-3QJ309BV"}
   ajax\common.tabs.php:113                           CommonGLPI::displayStandardTab()
 >>>>>>> 65893f8b5 (Tambah spesifikasi bmn pada deskripsi bmn)
   
+[2024-05-24 04:27:27] glpiphplog.WARNING:   *** PHP Warning (2): Undefined array key "picture" in D:\Data Aplikasi\xampp php 8.0.2\htdocs\merging-manual\halobps-rebase\src\User.php at line 941
+  Backtrace :
+  src\CommonDBTM.php:1612                            User->prepareInputForUpdate()
+  src\User.php:6023                                  CommonDBTM->update()
+  src\Auth.php:1094                                  User->getAuthToken()
+  front\login.php:94                                 Auth->login()
+  
