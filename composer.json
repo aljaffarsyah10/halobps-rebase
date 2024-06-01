@@ -35,7 +35,7 @@
         "laminas/laminas-mail": "^2.15",
         "laminas/laminas-mime": "^2.9",
         "laminas/laminas-servicemanager": "~3.10.0",
-        "league/csv": "^9.7",
+        "league/csv": "^9.8",
         "mexitek/phpcolors": "^1.0",
         "michelf/php-markdown": "^1.9",
         "monolog/monolog": "^2.8",
