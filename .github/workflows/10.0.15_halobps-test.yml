@@ -27,14 +27,6 @@ jobs:
         with:
           files: 'composer.json'
 
-      - name: Cache node modules
-        uses: actions/cache@v2
-        with:
-          path: ~/.composer/cache
-          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-composer-
-            
       - name: Run composer install if composer.json exists
         if: steps.check_files.outputs.files_exists == 'true'
         run: composer validate --no-check-publish && composer install --prefer-dist --no-progress
@@ -69,9 +61,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_EFD8182ABA80412883F02F838290D536 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_E77D6FB9571A4D96A3AB6B66F63EA2B3 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_ADABEC7D126C41D9869FD75FED287E81 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_58CDFCF338544C76907C1B973784435B }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5F7649D056754F8D8A18F85FC2D4ED3C }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_03CDA41FB83A4F7683B2C599DC289F68 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
